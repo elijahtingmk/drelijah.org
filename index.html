@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr Elijah Ting | Corporate Trainer & Consultant</title>
+    <title>Dr Elijah Ting | The Art of Connection - Corporate Training</title>
     <!-- Favicon Links -->
     <link rel="icon" type="image/png" href="/assets/favicons/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg" />
@@ -15,211 +15,456 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            200: '#bfdbfe',
+                            300: '#93c5fd',
+                            400: '#60a5fa',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
     <style>
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Plus Jakarta Sans', sans-serif;
         }
-        .gradient-bg {
-            background-color: #f8fafc; /* slate-50 */
-            background-image: 
-                radial-gradient(at 15% 20%, hsla(223, 67%, 32%, 0.05) 0px, transparent 50%),
-                radial-gradient(at 85% 70%, hsla(223, 67%, 32%, 0.07) 0px, transparent 50%);
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 50%, #2563eb 100%);
         }
-        .brand-text {
-            color: #1e40af; /* blue-800 */
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        .cta-button-primary {
-            @apply bg-blue-800 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-900 transition duration-300 shadow-md;
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
         }
-        .cta-button-secondary {
-            @apply bg-white text-blue-800 px-6 py-3 rounded-lg font-semibold hover:bg-slate-100 transition duration-300 shadow-md ring-1 ring-inset ring-slate-300;
+        .section-pattern {
+            background-color: #f8fafc;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231e40af' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
         }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-700 antialiased">
+<body class="bg-white text-slate-700 antialiased">
 
     <!-- Header -->
-    <header class="bg-white/90 backdrop-blur-lg shadow-sm sticky top-0 z-50">
-        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <a href="#" class="text-xl md:text-2xl font-bold text-slate-900 truncate">
+    <header class="bg-white/95 backdrop-blur-lg shadow-sm sticky top-0 z-50 border-b border-slate-100">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold text-slate-900">
                 Dr Elijah Ting
             </a>
             <!-- Desktop Menu -->
-            <div class="hidden md:flex items-center space-x-6">
-                <a href="#problem" class="text-slate-600 hover:text-blue-800 transition duration-300">The Problem</a>
-                <a href="#framework" class="text-slate-600 hover:text-blue-800 transition duration-300">The Framework</a>
-                <a href="#guide" class="text-slate-600 hover:text-blue-800 transition duration-300">Your Guide</a>
-                <a href="#testimonials" class="text-slate-600 hover:text-blue-800 transition duration-300">Testimonials</a>
-                <a href="#faq" class="text-slate-600 hover:text-blue-800 transition duration-300">FAQ</a>
-                <a href="https://www.linkedin.com/in/drelijah/" target="_blank" aria-label="LinkedIn" class="text-slate-600">
-                    <i data-lucide="linkedin" class="w-6 h-6"></i>
+            <div class="hidden lg:flex items-center space-x-8">
+                <a href="#programs" class="text-slate-600 hover:text-primary-700 transition duration-300 font-medium">Programs</a>
+                <a href="#framework" class="text-slate-600 hover:text-primary-700 transition duration-300 font-medium">Framework</a>
+                <a href="#about" class="text-slate-600 hover:text-primary-700 transition duration-300 font-medium">About</a>
+                <a href="#testimonials" class="text-slate-600 hover:text-primary-700 transition duration-300 font-medium">Testimonials</a>
+                <a href="#faq" class="text-slate-600 hover:text-primary-700 transition duration-300 font-medium">FAQ</a>
+            </div>
+            <div class="hidden lg:flex items-center gap-4">
+                <a href="https://www.linkedin.com/in/drelijah/" target="_blank" aria-label="LinkedIn" class="text-slate-500 hover:text-primary-700 transition">
+                    <i data-lucide="linkedin" class="w-5 h-5"></i>
+                </a>
+                <a href="#contact" class="bg-primary-700 text-white px-5 py-2.5 rounded-xl font-semibold hover:bg-primary-800 transition duration-300 shadow-lg shadow-primary-700/25">
+                    Book Consultation
                 </a>
             </div>
-             <div class="hidden md:block">
-                 <a href="#contact" class="bg-blue-800 text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-blue-900 transition duration-300 shadow-sm text-sm">Book a Consultation</a>
-            </div>
             <!-- Mobile Menu Button -->
-            <div class="md:hidden">
-                <button id="mobile-menu-button" class="text-slate-900 focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            <div class="lg:hidden">
+                <button id="mobile-menu-button" class="text-slate-900 focus:outline-none p-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                 </button>
             </div>
         </nav>
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4 bg-white border-t border-slate-100">
-            <a href="#problem" class="block py-2 text-slate-600 hover:text-blue-800">The Problem</a>
-            <a href="#framework" class="block py-2 text-slate-600 hover:text-blue-800">The Framework</a>
-            <a href="#guide" class="block py-2 text-slate-600 hover:text-blue-800">Your Guide</a>
-            <a href="#testimonials" class="block py-2 text-slate-600 hover:text-blue-800">Testimonials</a>
-            <a href="#faq" class="block py-2 text-slate-600 hover:text-blue-800">FAQ</a>
-            <a href="#contact" class="block mt-4 bg-blue-800 text-white text-center px-4 py-2 rounded-lg font-semibold hover:bg-blue-900">Book a Consultation</a>
+        <div id="mobile-menu" class="hidden lg:hidden px-6 pt-2 pb-4 bg-white border-t border-slate-100">
+            <a href="#programs" class="block py-3 text-slate-600 hover:text-primary-700 font-medium">Programs</a>
+            <a href="#framework" class="block py-3 text-slate-600 hover:text-primary-700 font-medium">Framework</a>
+            <a href="#about" class="block py-3 text-slate-600 hover:text-primary-700 font-medium">About</a>
+            <a href="#testimonials" class="block py-3 text-slate-600 hover:text-primary-700 font-medium">Testimonials</a>
+            <a href="#faq" class="block py-3 text-slate-600 hover:text-primary-700 font-medium">FAQ</a>
+            <a href="#contact" class="block mt-4 bg-primary-700 text-white text-center px-4 py-3 rounded-xl font-semibold hover:bg-primary-800">Book Consultation</a>
         </div>
     </header>
 
     <main>
         <!-- Hero Section -->
-        <section class="gradient-bg py-20 md:py-28">
-            <div class="container mx-auto px-6 text-center">
-                <span class="inline-block bg-green-100 text-green-800 text-xs md:text-sm font-bold px-4 py-1.5 rounded-full mb-4 tracking-wide">HRD CORP CLAIMABLE</span>
-                <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 leading-tight">
-                    Unlock High-Performance Teams With <br class="hidden md:block"/> 
-                    <span class="brand-text">The Art of Connection.</span>
+        <section class="hero-gradient py-20 md:py-28 relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10">
+                <div class="absolute top-20 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
+                <div class="absolute bottom-10 right-10 w-96 h-96 bg-blue-300 rounded-full blur-3xl"></div>
+            </div>
+            <div class="container mx-auto px-6 text-center relative z-10">
+                <span class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white text-sm font-semibold px-5 py-2 rounded-full mb-6 border border-white/30">
+                    <i data-lucide="badge-check" class="w-4 h-4"></i>
+                    HRD CORP CLAIMABLE
+                </span>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight max-w-4xl mx-auto">
+                    Master <span class="text-blue-200">The Art of Connection</span>
                 </h1>
-                <p class="mt-6 text-lg md:text-xl text-slate-600 max-w-3xl mx-auto">
-                    Move beyond generic soft skills. Implement the <span class="font-semibold text-blue-800">EMPATH Framework</span>—a research-backed roadmap to resolve conflict, build psychological safety, and drive leadership impact.
+                <p class="mt-6 text-lg md:text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
+                    Transform how your teams communicate, collaborate, and resolve conflict. Research-backed training programs powered by the proprietary <span class="font-semibold text-white">EMPATH Framework</span> and Nonviolent Communication principles.
                 </p>
                 <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4">
-                    <a href="#contact" class="cta-button-primary">Start the Transformation</a>
-                    <a href="#framework" class="cta-button-secondary">Explore the Framework</a>
+                    <a href="#programs" class="bg-white text-primary-700 px-8 py-4 rounded-xl font-bold hover:bg-blue-50 transition duration-300 shadow-xl text-lg">
+                        Explore Programs
+                    </a>
+                    <a href="#contact" class="bg-transparent text-white px-8 py-4 rounded-xl font-bold hover:bg-white/10 transition duration-300 ring-2 ring-white/50 text-lg">
+                        Free Consultation
+                    </a>
+                </div>
+                <!-- Stats -->
+                <div class="mt-16 grid grid-cols-3 gap-8 max-w-2xl mx-auto">
+                    <div class="text-center">
+                        <div class="text-3xl md:text-4xl font-bold text-white">7</div>
+                        <div class="text-blue-200 text-sm mt-1">Specialized Modules</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl md:text-4xl font-bold text-white">NVC</div>
+                        <div class="text-blue-200 text-sm mt-1">Based Methodology</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl md:text-4xl font-bold text-white">Doctoral</div>
+                        <div class="text-blue-200 text-sm mt-1">Research-Backed</div>
+                    </div>
                 </div>
             </div>
         </section>
 
-       <!-- The Problem Section -->
-       <section id="problem" class="py-20 bg-white">
+        <!-- The Problem Section -->
+        <section class="py-20 bg-white">
             <div class="container mx-auto px-6">
-                <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <div class="flex justify-center">
-                        <img src="assets/images/profile-photo.jpg" alt="Corporate team looking disengaged in a meeting" class="rounded-2xl object-cover shadow-2xl w-full h-full max-h-[450px]"> 
-                    </div>
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
                     <div>
-                        <h2 class="text-3xl font-bold text-slate-900 mb-4">The High Cost of Poor Communication</h2>
-                        <p class="text-slate-600 mb-4 text-lg">Disengaged teams, missed deadlines, and low morale aren't just culture problems—they are expensive business problems. Most often, they stem from a lack of genuine connection and psychological safety.</p>
-                        <p class="text-slate-600 mb-6 text-lg">Traditional leadership training focuses on strategy but ignores the human element. As a <span class="font-semibold text-slate-900">Scholar-Practitioner</span>, I bridge this gap using applied doctoral research. I don't just teach theory; I equip your team with the proprietary <span class="font-semibold text-blue-800">EMPATH Framework</span> to foster empathy, build trust, and drive performance.</p>
+                        <span class="text-primary-700 font-bold tracking-wide uppercase text-sm">The Challenge</span>
+                        <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mt-2 mb-6">The High Cost of Poor Communication</h2>
+                        <p class="text-lg text-slate-600 mb-4">
+                            Disengaged teams, missed deadlines, and low morale aren't just culture problems—they are expensive business problems. Most often, they stem from a lack of genuine connection and psychological safety.
+                        </p>
+                        <p class="text-lg text-slate-600 mb-6">
+                            Traditional leadership training focuses on strategy but ignores the human element. As a <span class="font-semibold text-slate-900">Scholar-Practitioner</span>, I bridge this gap using applied doctoral research. I don't just teach theory; I equip your team with practical skills to foster empathy, build trust, and drive performance.
+                        </p>
+                        <div class="grid grid-cols-2 gap-4 mt-8">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 bg-red-100 text-red-600 rounded-lg flex items-center justify-center">
+                                    <i data-lucide="alert-triangle" class="w-5 h-5"></i>
+                                </div>
+                                <span class="text-slate-700 font-medium">Unresolved Conflict</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 bg-red-100 text-red-600 rounded-lg flex items-center justify-center">
+                                    <i data-lucide="users-x" class="w-5 h-5"></i>
+                                </div>
+                                <span class="text-slate-700 font-medium">Team Disconnection</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 bg-red-100 text-red-600 rounded-lg flex items-center justify-center">
+                                    <i data-lucide="trending-down" class="w-5 h-5"></i>
+                                </div>
+                                <span class="text-slate-700 font-medium">Low Engagement</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 bg-red-100 text-red-600 rounded-lg flex items-center justify-center">
+                                    <i data-lucide="message-circle-x" class="w-5 h-5"></i>
+                                </div>
+                                <span class="text-slate-700 font-medium">Miscommunication</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex justify-center">
+                        <img src="assets/images/profile-photo.jpg" alt="Corporate team in a meeting" class="rounded-3xl object-cover shadow-2xl w-full max-w-lg">
                     </div>
                 </div>
             </div>
         </section>
-        
-        <!-- The Framework Section (Formerly The Program) -->
-        <section id="framework" class="py-20 gradient-bg">
+
+        <!-- Training Programs Section -->
+        <section id="programs" class="py-20 section-pattern">
             <div class="container mx-auto px-6">
-                <div class="text-center max-w-3xl mx-auto">
-                    <span class="text-blue-800 font-bold tracking-wide uppercase text-sm">Proprietary Methodology</span>
-                    <h2 class="text-4xl font-bold text-slate-900 mb-3 mt-2">The EMPATH Leadership Framework</h2>
-                    <p class="text-lg text-slate-600">Developed through doctoral research on Nonviolent Communication (NVC), this 6-part model moves empathy from a "soft skill" to an operational strategy.</p>
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <span class="text-primary-700 font-bold tracking-wide uppercase text-sm">Training Programs</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mt-2 mb-4">The Art of Connection Series</h2>
+                    <p class="text-lg text-slate-600">Seven specialized modules designed to build empathetic communication skills rooted in Nonviolent Communication (NVC) principles. All programs are HRD Corp claimable.</p>
                 </div>
-                
-                <div class="mt-12 grid md:grid-cols-1 gap-10 max-w-5xl mx-auto">
-                    <div class="bg-white p-8 md:p-10 rounded-2xl shadow-xl border border-slate-200">
-                        <div class="grid md:grid-cols-2 gap-y-8 gap-x-12">
-                            <!-- E -->
-                            <div class="flex gap-4">
-                                <div class="flex-shrink-0 w-12 h-12 bg-blue-100 text-blue-800 rounded-full flex items-center justify-center font-bold text-xl">E</div>
-                                <div>
-                                    <h4 class="text-xl font-bold text-slate-900">Enhance Self-Awareness</h4>
-                                    <p class="text-slate-600 mt-1">Leaders identify emotional triggers to regulate responses rather than reacting impulsively.</p>
-                                </div>
+
+                <!-- Program Cards Grid -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+
+                    <!-- Flagship Program -->
+                    <div class="md:col-span-2 lg:col-span-3 bg-gradient-to-br from-primary-700 to-primary-900 rounded-2xl p-8 text-white shadow-xl card-hover">
+                        <div class="flex flex-col md:flex-row md:items-center gap-6">
+                            <div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="heart-handshake" class="w-8 h-8"></i>
                             </div>
-                            <!-- M -->
-                            <div class="flex gap-4">
-                                <div class="flex-shrink-0 w-12 h-12 bg-blue-100 text-blue-800 rounded-full flex items-center justify-center font-bold text-xl">M</div>
-                                <div>
-                                    <h4 class="text-xl font-bold text-slate-900">Modify Structures</h4>
-                                    <p class="text-slate-600 mt-1"> redesigning workflows and decision-making processes to be inclusive rather than top-down.</p>
+                            <div class="flex-grow">
+                                <div class="flex items-center gap-3 mb-2">
+                                    <span class="bg-white/20 text-xs font-bold px-3 py-1 rounded-full">FLAGSHIP PROGRAM</span>
                                 </div>
+                                <h3 class="text-2xl font-bold">Effective Communication Skills for Personal and Professional Success</h3>
+                                <p class="text-blue-100 mt-2">Master the fundamentals of impactful communication across all contexts. This comprehensive program covers the core principles that form the foundation of all Art of Connection modules.</p>
                             </div>
-                            <!-- P -->
-                            <div class="flex gap-4">
-                                <div class="flex-shrink-0 w-12 h-12 bg-blue-100 text-blue-800 rounded-full flex items-center justify-center font-bold text-xl">P</div>
-                                <div>
-                                    <h4 class="text-xl font-bold text-slate-900">Promote Cultural Sensitivity</h4>
-                                    <p class="text-slate-600 mt-1">Adapting communication styles to diverse backgrounds to build trust across all levels.</p>
-                                </div>
-                            </div>
-                            <!-- A -->
-                            <div class="flex gap-4">
-                                <div class="flex-shrink-0 w-12 h-12 bg-blue-100 text-blue-800 rounded-full flex items-center justify-center font-bold text-xl">A</div>
-                                <div>
-                                    <h4 class="text-xl font-bold text-slate-900">Advance Communication</h4>
-                                    <p class="text-slate-600 mt-1">Mastering Nonviolent Communication (NVC) to separate observations from judgments.</p>
-                                </div>
-                            </div>
-                            <!-- T -->
-                            <div class="flex gap-4">
-                                <div class="flex-shrink-0 w-12 h-12 bg-blue-100 text-blue-800 rounded-full flex items-center justify-center font-bold text-xl">T</div>
-                                <div>
-                                    <h4 class="text-xl font-bold text-slate-900">Transform Policies</h4>
-                                    <p class="text-slate-600 mt-1">Embedding conflict resolution mechanisms directly into HR and operational policy.</p>
-                                </div>
-                            </div>
-                            <!-- H -->
-                            <div class="flex gap-4">
-                                <div class="flex-shrink-0 w-12 h-12 bg-blue-100 text-blue-800 rounded-full flex items-center justify-center font-bold text-xl">H</div>
-                                <div>
-                                    <h4 class="text-xl font-bold text-slate-900">Harness Feedback</h4>
-                                    <p class="text-slate-600 mt-1">Creating sustainable loops where feedback is welcomed as data, not rejected as criticism.</p>
-                                </div>
+                            <a href="#contact" class="bg-white text-primary-700 px-6 py-3 rounded-xl font-bold hover:bg-blue-50 transition flex-shrink-0 text-center">
+                                Learn More
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Program Card 1 -->
+                    <div class="bg-white rounded-2xl p-6 shadow-lg border border-slate-100 card-hover">
+                        <div class="w-12 h-12 bg-primary-100 text-primary-700 rounded-xl flex items-center justify-center mb-4">
+                            <i data-lucide="shield-heart" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Building Emotional Resilience Through Self-Empathy</h3>
+                        <p class="text-slate-600 text-sm">Develop inner strength and self-compassion for sustained leadership effectiveness.</p>
+                        <div class="mt-4 pt-4 border-t border-slate-100">
+                            <div class="flex items-center gap-2 text-primary-700">
+                                <i data-lucide="target" class="w-4 h-4"></i>
+                                <span class="text-sm font-medium">Self-awareness & Regulation</span>
                             </div>
                         </div>
                     </div>
+
+                    <!-- Program Card 2 -->
+                    <div class="bg-white rounded-2xl p-6 shadow-lg border border-slate-100 card-hover">
+                        <div class="w-12 h-12 bg-primary-100 text-primary-700 rounded-xl flex items-center justify-center mb-4">
+                            <i data-lucide="ear" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Elevating Teamwork with Empathetic Listening</h3>
+                        <p class="text-slate-600 text-sm">Transform team dynamics through the power of deep, active listening techniques.</p>
+                        <div class="mt-4 pt-4 border-t border-slate-100">
+                            <div class="flex items-center gap-2 text-primary-700">
+                                <i data-lucide="users" class="w-4 h-4"></i>
+                                <span class="text-sm font-medium">Team Collaboration</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Program Card 3 -->
+                    <div class="bg-white rounded-2xl p-6 shadow-lg border border-slate-100 card-hover">
+                        <div class="w-12 h-12 bg-primary-100 text-primary-700 rounded-xl flex items-center justify-center mb-4">
+                            <i data-lucide="megaphone" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Expressing Yourself Clearly for Impact and Success</h3>
+                        <p class="text-slate-600 text-sm">Communicate with clarity and confidence to drive results and influence outcomes.</p>
+                        <div class="mt-4 pt-4 border-t border-slate-100">
+                            <div class="flex items-center gap-2 text-primary-700">
+                                <i data-lucide="message-square" class="w-4 h-4"></i>
+                                <span class="text-sm font-medium">Clear Communication</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Program Card 4 -->
+                    <div class="bg-white rounded-2xl p-6 shadow-lg border border-slate-100 card-hover">
+                        <div class="w-12 h-12 bg-primary-100 text-primary-700 rounded-xl flex items-center justify-center mb-4">
+                            <i data-lucide="flame" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Transforming Anger into Constructive Action</h3>
+                        <p class="text-slate-600 text-sm">Channel intense emotions into productive workplace outcomes and positive change.</p>
+                        <div class="mt-4 pt-4 border-t border-slate-100">
+                            <div class="flex items-center gap-2 text-primary-700">
+                                <i data-lucide="zap" class="w-4 h-4"></i>
+                                <span class="text-sm font-medium">Emotional Intelligence</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Program Card 5 -->
+                    <div class="bg-white rounded-2xl p-6 shadow-lg border border-slate-100 card-hover">
+                        <div class="w-12 h-12 bg-primary-100 text-primary-700 rounded-xl flex items-center justify-center mb-4">
+                            <i data-lucide="scale" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Navigating Conflict with Confidence</h3>
+                        <p class="text-slate-600 text-sm">Turn disagreements into opportunities for growth, innovation, and stronger relationships.</p>
+                        <div class="mt-4 pt-4 border-t border-slate-100">
+                            <div class="flex items-center gap-2 text-primary-700">
+                                <i data-lucide="handshake" class="w-4 h-4"></i>
+                                <span class="text-sm font-medium">Conflict Resolution</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Program Card 6 -->
+                    <div class="bg-white rounded-2xl p-6 shadow-lg border border-slate-100 card-hover">
+                        <div class="w-12 h-12 bg-primary-100 text-primary-700 rounded-xl flex items-center justify-center mb-4">
+                            <i data-lucide="brain" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Mindful Communication for Workplace Success</h3>
+                        <p class="text-slate-600 text-sm">Integrate mindfulness practices with communication skills for enhanced workplace relationships.</p>
+                        <div class="mt-4 pt-4 border-t border-slate-100">
+                            <div class="flex items-center gap-2 text-primary-700">
+                                <i data-lucide="sparkles" class="w-4 h-4"></i>
+                                <span class="text-sm font-medium">Mindfulness & Empathy</span>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-        
+
                 <div class="text-center mt-12">
-                    <a href="#contact" class="inline-flex items-center gap-2 text-blue-800 font-bold hover:text-blue-900 transition-colors text-lg group">
-                        Bring EMPATH to your organization <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+                    <a href="#contact" class="inline-flex items-center gap-2 bg-primary-700 text-white px-8 py-4 rounded-xl font-bold hover:bg-primary-800 transition duration-300 shadow-lg shadow-primary-700/25 text-lg">
+                        <i data-lucide="calendar" class="w-5 h-5"></i>
+                        Discuss Your Training Needs
                     </a>
                 </div>
             </div>
         </section>
 
-        <!-- Meet Your Guide Section -->
-        <section id="guide" class="py-20 bg-slate-900 text-white">
+        <!-- The Framework Section -->
+        <section id="framework" class="py-20 bg-white">
             <div class="container mx-auto px-6">
-                 <div class="grid lg:grid-cols-2 gap-12 items-start">
-                    <!-- Bio Column -->
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
                     <div>
-                        <div class="flex items-center gap-4 mb-6">
-                            <img src="assets/images/profile-photo-1.jpg" alt="Dr Elijah Ting" class="w-24 h-24 rounded-full object-cover ring-4 ring-blue-500">
-                            <div>
-                                <h2 class="text-3xl font-bold">Dr Elijah Ting</h2>
-                                <p class="text-blue-400 font-medium">Ting Moi Kieng | Corporate Trainer & Consultant</p>
+                        <span class="text-primary-700 font-bold tracking-wide uppercase text-sm">Proprietary Methodology</span>
+                        <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mt-2 mb-4">The EMPATH Leadership Framework</h2>
+                        <p class="text-lg text-slate-600 mb-6">Developed through doctoral research on Nonviolent Communication (NVC), this 6-part model transforms empathy from a "soft skill" into an operational strategy that drives measurable results.</p>
+
+                        <div class="space-y-4">
+                            <div class="flex gap-4 p-4 bg-slate-50 rounded-xl">
+                                <div class="w-12 h-12 bg-primary-700 text-white rounded-xl flex items-center justify-center font-bold text-lg flex-shrink-0">E</div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900">Enhance Self-Awareness</h4>
+                                    <p class="text-slate-600 text-sm">Identify emotional triggers to regulate responses rather than reacting impulsively.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 p-4 bg-slate-50 rounded-xl">
+                                <div class="w-12 h-12 bg-primary-700 text-white rounded-xl flex items-center justify-center font-bold text-lg flex-shrink-0">M</div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900">Modify Structures</h4>
+                                    <p class="text-slate-600 text-sm">Redesign workflows and decision-making processes to be inclusive rather than top-down.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 p-4 bg-slate-50 rounded-xl">
+                                <div class="w-12 h-12 bg-primary-700 text-white rounded-xl flex items-center justify-center font-bold text-lg flex-shrink-0">P</div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900">Promote Cultural Sensitivity</h4>
+                                    <p class="text-slate-600 text-sm">Adapt communication styles to diverse backgrounds to build trust across all levels.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 p-4 bg-slate-50 rounded-xl">
+                                <div class="w-12 h-12 bg-primary-700 text-white rounded-xl flex items-center justify-center font-bold text-lg flex-shrink-0">A</div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900">Advance Communication</h4>
+                                    <p class="text-slate-600 text-sm">Master Nonviolent Communication (NVC) to separate observations from judgments.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 p-4 bg-slate-50 rounded-xl">
+                                <div class="w-12 h-12 bg-primary-700 text-white rounded-xl flex items-center justify-center font-bold text-lg flex-shrink-0">T</div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900">Transform Policies</h4>
+                                    <p class="text-slate-600 text-sm">Embed conflict resolution mechanisms directly into HR and operational policy.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 p-4 bg-slate-50 rounded-xl">
+                                <div class="w-12 h-12 bg-primary-700 text-white rounded-xl flex items-center justify-center font-bold text-lg flex-shrink-0">H</div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900">Harness Feedback</h4>
+                                    <p class="text-slate-600 text-sm">Create sustainable loops where feedback is welcomed as data, not rejected as criticism.</p>
+                                </div>
                             </div>
                         </div>
-                        
-                        <p class="text-slate-300 mb-4 text-lg leading-relaxed">
-                            "True leadership isn't just about strategy; it’s about the Art of Connection."
+                    </div>
+
+                    <div class="lg:pl-8">
+                        <div class="bg-gradient-to-br from-primary-700 to-primary-900 rounded-3xl p-8 text-white shadow-2xl">
+                            <h3 class="text-2xl font-bold mb-6">Why EMPATH Works</h3>
+                            <div class="space-y-6">
+                                <div class="flex gap-4">
+                                    <div class="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                        <i data-lucide="microscope" class="w-5 h-5"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold">Research-Backed</h4>
+                                        <p class="text-blue-100 text-sm">Developed through rigorous doctoral research on NVC in organizational settings.</p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-4">
+                                    <div class="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                        <i data-lucide="settings-2" class="w-5 h-5"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold">Customizable</h4>
+                                        <p class="text-blue-100 text-sm">Adapted to your industry, culture, and specific leadership challenges.</p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-4">
+                                    <div class="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                        <i data-lucide="bar-chart-3" class="w-5 h-5"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold">Measurable</h4>
+                                        <p class="text-blue-100 text-sm">Clear metrics to track improvement in team dynamics and communication.</p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-4">
+                                    <div class="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                        <i data-lucide="repeat" class="w-5 h-5"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold">Sustainable</h4>
+                                        <p class="text-blue-100 text-sm">Creates lasting behavioral change, not just temporary motivation.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 bg-slate-900 text-white">
+            <div class="container mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 lg:order-1">
+                        <span class="text-blue-400 font-bold tracking-wide uppercase text-sm">Your Guide</span>
+                        <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-6">Dr Elijah Ting</h2>
+
+                        <p class="text-slate-300 mb-4 text-lg leading-relaxed italic">
+                            "True leadership isn't just about strategy; it's about the Art of Connection."
                         </p>
                         <p class="text-slate-300 mb-4 leading-relaxed">
-                            Unlike traditional trainers who rely on off-the-shelf modules, I bring deep, proprietary research to the training room. I hold an <strong>Executive Doctorate in Learning & Development</strong>, where my research focused on bridging the gap between academic theory and daily operational practice.
+                            Unlike traditional trainers who rely on off-the-shelf modules, I bring deep, proprietary research to the training room. I hold an <strong class="text-white">Executive Doctorate in Learning & Development</strong>, where my research focused on bridging the gap between academic theory and daily operational practice.
                         </p>
                         <p class="text-slate-300 mb-6 leading-relaxed">
-                            This rigorous study culminated in the creation of the <strong>EMPATH Framework</strong>—a structured roadmap designed to help leaders navigate conflict and build psychological safety. Combined with my certification as a <strong>Certified Learning & Development Professional (CLDP)</strong>, I ensure that my training solutions are not only intellectually robust but also delivered with global industry standards.
+                            This rigorous study culminated in the creation of the <strong class="text-white">EMPATH Framework</strong>—a structured roadmap designed to help leaders navigate conflict and build psychological safety. Combined with my certification as a <strong class="text-white">Certified Learning & Development Professional (CLDP)</strong>, I ensure that my training solutions are not only intellectually robust but also delivered with global industry standards.
                         </p>
-                        <!-- NEW DISSERTATION LINK -->
-                        <a href="https://www.cnvc.org/learn/research/developing-a-theoretical-framework-for-implementing-nonviolent-communication-to-enhance-leadership-effectiveness-a-conceptual-study" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-blue-700 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-600 transition duration-300 shadow-lg text-sm mb-4">
-                            <i data-lucide="book-open" class="w-4 h-4"></i> View CNVC Research Archive
-                        </a>
-                        <!-- End NEW DISSERTATION LINK -->
 
-                        <div class="flex flex-wrap gap-3 text-sm mt-8">
-                            <span class="bg-blue-900/50 border border-blue-700 text-blue-200 px-3 py-1.5 rounded-full">Executive Doctorate in L&D</span>
-                            <span class="bg-blue-900/50 border border-blue-700 text-blue-200 px-3 py-1.5 rounded-full">Certified L&D Professional (GSDC)</span>
-                            <span class="bg-blue-900/50 border border-blue-700 text-blue-200 px-3 py-1.5 rounded-full">HRD Corp Accredited Trainer</span>
+                        <a href="https://www.cnvc.org/learn/research/developing-a-theoretical-framework-for-implementing-nonviolent-communication-to-enhance-leadership-effectiveness-a-conceptual-study" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-blue-600 text-white px-5 py-3 rounded-xl font-semibold hover:bg-blue-500 transition duration-300 shadow-lg mb-6">
+                            <i data-lucide="book-open" class="w-5 h-5"></i>
+                            View CNVC Research Archive
+                        </a>
+
+                        <div class="flex flex-wrap gap-3 text-sm mt-6">
+                            <span class="bg-blue-900/50 border border-blue-700 text-blue-200 px-4 py-2 rounded-full">Executive Doctorate in L&D</span>
+                            <span class="bg-blue-900/50 border border-blue-700 text-blue-200 px-4 py-2 rounded-full">Certified L&D Professional (GSDC)</span>
+                            <span class="bg-blue-900/50 border border-blue-700 text-blue-200 px-4 py-2 rounded-full">HRD Corp Accredited Trainer</span>
+                        </div>
+                    </div>
+
+                    <div class="order-1 lg:order-2 flex justify-center">
+                        <div class="relative">
+                            <div class="absolute -inset-4 bg-gradient-to-br from-blue-500 to-primary-700 rounded-3xl blur-lg opacity-30"></div>
+                            <img src="assets/images/profile-photo-1.jpg" alt="Dr Elijah Ting" class="relative w-full max-w-md rounded-3xl object-cover shadow-2xl ring-4 ring-white/10">
                         </div>
                     </div>
                 </div>
@@ -227,25 +472,46 @@
         </section>
 
         <!-- Testimonials Section -->
-        <section id="testimonials" class="py-20 gradient-bg">
+        <section id="testimonials" class="py-20 section-pattern">
             <div class="container mx-auto px-6">
-                 <div class="text-center max-w-3xl mx-auto">
-                    <h2 class="text-3xl font-bold text-slate-900 mb-4">What Our Clients Say</h2>
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <span class="text-primary-700 font-bold tracking-wide uppercase text-sm">Testimonials</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mt-2 mb-4">What Our Clients Say</h2>
                 </div>
-                <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8 mt-12">
-                    <div class="bg-white p-8 rounded-xl shadow-lg border border-slate-200">
-                        <div class="flex text-yellow-400 mb-4">
-                            <i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <div class="bg-white p-8 rounded-2xl shadow-xl border border-slate-100 card-hover">
+                        <div class="flex text-yellow-400 mb-4 gap-1">
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
                         </div>
-                        <p class="text-slate-600 italic leading-relaxed">"Thank you Elijah Ting, for the 5 days of training us to be the best trainer versions of ourselves. Your personal story on your training journey has been very inspiring."</p>
-                        <div class="mt-4 pt-4 border-t border-slate-200"><p class="font-semibold text-slate-800">KK, Training Participant</p></div>
+                        <p class="text-slate-600 italic leading-relaxed text-lg">"Thank you Elijah Ting, for the 5 days of training us to be the best trainer versions of ourselves. Your personal story on your training journey has been very inspiring."</p>
+                        <div class="mt-6 pt-6 border-t border-slate-100 flex items-center gap-3">
+                            <div class="w-10 h-10 bg-primary-100 text-primary-700 rounded-full flex items-center justify-center font-bold">K</div>
+                            <div>
+                                <p class="font-semibold text-slate-800">KK</p>
+                                <p class="text-slate-500 text-sm">Training Participant</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="bg-white p-8 rounded-xl shadow-lg border border-slate-200">
-                        <div class="flex text-yellow-400 mb-4">
-                            <i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                    <div class="bg-white p-8 rounded-2xl shadow-xl border border-slate-100 card-hover">
+                        <div class="flex text-yellow-400 mb-4 gap-1">
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
                         </div>
-                        <p class="text-slate-600 italic leading-relaxed">"Thank you for guiding us throughout the joyful learning sessions."</p>
-                        <div class="mt-4 pt-4 border-t border-slate-200"><p class="font-semibold text-slate-800">CL, Training Participant</p></div>
+                        <p class="text-slate-600 italic leading-relaxed text-lg">"Thank you for guiding us throughout the joyful learning sessions."</p>
+                        <div class="mt-6 pt-6 border-t border-slate-100 flex items-center gap-3">
+                            <div class="w-10 h-10 bg-primary-100 text-primary-700 rounded-full flex items-center justify-center font-bold">C</div>
+                            <div>
+                                <p class="font-semibold text-slate-800">CL</p>
+                                <p class="text-slate-500 text-sm">Training Participant</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -254,58 +520,97 @@
         <!-- FAQ Section -->
         <section id="faq" class="py-20 bg-white" x-data="{ open: 1 }">
             <div class="container mx-auto px-6 max-w-4xl">
-                 <div class="text-center max-w-3xl mx-auto mb-12">
-                    <h2 class="text-3xl font-bold text-slate-900 mb-4">Frequently Asked Questions</h2>
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <span class="text-primary-700 font-bold tracking-wide uppercase text-sm">FAQ</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mt-2 mb-4">Frequently Asked Questions</h2>
                 </div>
                 <div class="space-y-4">
-                    <div class="border-b border-slate-200 pb-4">
-                        <button @click="open = (open === 1 ? 0 : 1)" class="w-full flex justify-between items-center text-left text-xl font-semibold text-slate-800">
-                            <span>Is this program claimable under HRD Corp?</span>
-                            <i data-lucide="chevron-down" class="transition-transform" :class="open === 1 && 'rotate-180'"></i>
+                    <div class="bg-slate-50 rounded-xl overflow-hidden">
+                        <button @click="open = (open === 1 ? 0 : 1)" class="w-full flex justify-between items-center text-left p-6 text-lg font-semibold text-slate-800 hover:bg-slate-100 transition">
+                            <span>Are programs claimable under HRD Corp?</span>
+                            <i data-lucide="chevron-down" class="transition-transform w-5 h-5 text-primary-700" :class="open === 1 && 'rotate-180'"></i>
                         </button>
-                        <div x-show="open === 1" x-collapse class="pt-2 text-slate-600">
-                            <p>Yes, "The Art of Connection" and other EMPATH-based modules are fully claimable for eligible companies registered with the Human Resource Development Corporation (HRD Corp) in Malaysia.</p>
+                        <div x-show="open === 1" x-collapse class="px-6 pb-6 text-slate-600">
+                            <p>Yes, all Art of Connection training programs are fully claimable for eligible companies registered with the Human Resource Development Corporation (HRD Corp) in Malaysia.</p>
                         </div>
                     </div>
-                     <div class="border-b border-slate-200 pb-4">
-                        <button @click="open = (open === 2 ? 0 : 2)" class="w-full flex justify-between items-center text-left text-xl font-semibold text-slate-800">
-                            <span>Can you customize the EMPATH Framework for us?</span>
-                            <i data-lucide="chevron-down" class="transition-transform" :class="open === 2 && 'rotate-180'"></i>
+                    <div class="bg-slate-50 rounded-xl overflow-hidden">
+                        <button @click="open = (open === 2 ? 0 : 2)" class="w-full flex justify-between items-center text-left p-6 text-lg font-semibold text-slate-800 hover:bg-slate-100 transition">
+                            <span>Can you customize programs for our organization?</span>
+                            <i data-lucide="chevron-down" class="transition-transform w-5 h-5 text-primary-700" :class="open === 2 && 'rotate-180'"></i>
                         </button>
-                        <div x-show="open === 2" x-collapse class="pt-2 text-slate-600">
-                            <p>Absolutely. While the framework variables (E-M-P-A-T-H) remain consistent, I customize the case studies, role-plays, and focus areas based on your specific industry and leadership gaps.</p>
+                        <div x-show="open === 2" x-collapse class="px-6 pb-6 text-slate-600">
+                            <p>Absolutely. While the EMPATH Framework and NVC principles remain consistent, I customize the case studies, role-plays, and focus areas based on your specific industry, organizational culture, and leadership development gaps.</p>
                         </div>
                     </div>
-                     <div class="border-b border-slate-200 pb-4">
-                        <button @click="open = (open === 3 ? 0 : 3)" class="w-full flex justify-between items-center text-left text-xl font-semibold text-slate-800">
+                    <div class="bg-slate-50 rounded-xl overflow-hidden">
+                        <button @click="open = (open === 3 ? 0 : 3)" class="w-full flex justify-between items-center text-left p-6 text-lg font-semibold text-slate-800 hover:bg-slate-100 transition">
                             <span>Do you offer virtual or in-person sessions?</span>
-                            <i data-lucide="chevron-down" class="transition-transform" :class="open === 3 && 'rotate-180'"></i>
+                            <i data-lucide="chevron-down" class="transition-transform w-5 h-5 text-primary-700" :class="open === 3 && 'rotate-180'"></i>
                         </button>
-                        <div x-show="open === 3" x-collapse class="pt-2 text-slate-600">
-                            <p>I offer both. We can conduct the workshop in-person at your location or a venue of your choice, or deliver it as a highly interactive virtual session designed for remote teams.</p>
+                        <div x-show="open === 3" x-collapse class="px-6 pb-6 text-slate-600">
+                            <p>I offer both options. Programs can be conducted in-person at your location or a venue of your choice, or delivered as highly interactive virtual sessions designed for remote teams with full engagement.</p>
+                        </div>
+                    </div>
+                    <div class="bg-slate-50 rounded-xl overflow-hidden">
+                        <button @click="open = (open === 4 ? 0 : 4)" class="w-full flex justify-between items-center text-left p-6 text-lg font-semibold text-slate-800 hover:bg-slate-100 transition">
+                            <span>Which module should we start with?</span>
+                            <i data-lucide="chevron-down" class="transition-transform w-5 h-5 text-primary-700" :class="open === 4 && 'rotate-180'"></i>
+                        </button>
+                        <div x-show="open === 4" x-collapse class="px-6 pb-6 text-slate-600">
+                            <p>I recommend starting with "Effective Communication Skills for Personal and Professional Success" as it covers the foundational principles. From there, we can assess your team's specific needs and recommend follow-up modules that address your key challenges.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="py-20 bg-slate-800 text-white">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-4xl font-bold">Invest in Your Most Valuable Asset: Your People.</h2>
-                <p class="mt-4 text-lg max-w-2xl mx-auto text-slate-300">Stop letting miscommunication create unnecessary costs. Schedule a complimentary consultation with Dr Elijah to diagnose your leadership gaps using the EMPATH model.</p>
-                <a href="https://wa.me/message/DTN4ST4TTRBWG1" target="_blank" rel="noopener noreferrer" class="mt-8 cta-button-primary inline-flex items-center gap-2 text-lg">
-                    <i data-lucide="phone" class="w-5 h-5"></i>
-                    Book Your Free Consultation
-                </a>
+        <!-- CTA Section -->
+        <section id="contact" class="py-20 hero-gradient relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10">
+                <div class="absolute top-10 right-20 w-72 h-72 bg-white rounded-full blur-3xl"></div>
+                <div class="absolute bottom-10 left-10 w-96 h-96 bg-blue-300 rounded-full blur-3xl"></div>
+            </div>
+            <div class="container mx-auto px-6 text-center relative z-10">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Transform Your Team's Communication?</h2>
+                <p class="text-xl text-blue-100 max-w-2xl mx-auto mb-10">Schedule a complimentary consultation to discuss how The Art of Connection can help your organization build stronger, more empathetic teams.</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="https://wa.me/message/DTN4ST4TTRBWG1" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-3 bg-white text-primary-700 px-8 py-4 rounded-xl font-bold hover:bg-blue-50 transition duration-300 shadow-xl text-lg">
+                        <i data-lucide="message-circle" class="w-6 h-6"></i>
+                        WhatsApp Consultation
+                    </a>
+                    <a href="https://www.linkedin.com/in/drelijah/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-3 bg-transparent text-white px-8 py-4 rounded-xl font-bold hover:bg-white/10 transition duration-300 ring-2 ring-white/50 text-lg">
+                        <i data-lucide="linkedin" class="w-6 h-6"></i>
+                        Connect on LinkedIn
+                    </a>
+                </div>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-slate-900 text-slate-400 py-8">
-        <div class="container mx-auto px-6 text-center">
-            <p>&copy; 2025 Ting Moi Kieng. All Rights Reserved.</p>
+    <footer class="bg-slate-900 text-slate-400 py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <span class="text-white font-semibold">Dr Elijah Ting</span>
+                <div class="flex gap-6">
+                    <a href="#programs" class="hover:text-white transition">Programs</a>
+                    <a href="#framework" class="hover:text-white transition">Framework</a>
+                    <a href="#about" class="hover:text-white transition">About</a>
+                    <a href="#contact" class="hover:text-white transition">Contact</a>
+                </div>
+                <div class="flex gap-4">
+                    <a href="https://www.linkedin.com/in/drelijah/" target="_blank" aria-label="LinkedIn" class="hover:text-white transition">
+                        <i data-lucide="linkedin" class="w-5 h-5"></i>
+                    </a>
+                    <a href="https://wa.me/message/DTN4ST4TTRBWG1" target="_blank" aria-label="WhatsApp" class="hover:text-white transition">
+                        <i data-lucide="message-circle" class="w-5 h-5"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-slate-800 text-center text-sm">
+                <p>&copy; 2026 Ting Moi Kieng. All Rights Reserved.</p>
+            </div>
         </div>
     </footer>
 
