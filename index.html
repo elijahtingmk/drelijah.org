@@ -1,946 +1,492 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Dr Elijah Ting — The Transformation Architect™. Building Change That Lasts. Trainer Masterclass: a 14-hour, 4-module program for trainers ready to create their own signature training programs.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr Elijah Ting | The Transformation Architect™ — Building Change That Lasts</title>
-    <!-- Favicon Links -->
-    <link rel="icon" type="image/png" href="/assets/favicons/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg" />
-    <link rel="shortcut icon" href="/assets/favicons/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png" />
-    <meta name="apple-mobile-web-app-title" content="Trainer Masterclass" />
-    <link rel="manifest" href="/assets/favicons/site.webmanifest" />
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: {
-                            50: '#eff6ff',
-                            100: '#dbeafe',
-                            200: '#bfdbfe',
-                            300: '#93c5fd',
-                            400: '#60a5fa',
-                            500: '#3b82f6',
-                            600: '#2563eb',
-                            700: '#1d4ed8',
-                            800: '#1e40af',
-                            900: '#1e3a8a',
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['Plus Jakarta Sans', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-        }
-        .hero-gradient {
-            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #1e40af 100%);
-        }
-        .card-hover {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .card-hover:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-        }
-        .section-pattern {
-            background-color: #f8fafc;
-            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231e40af' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dr Elijah — The Transformation Architect™</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Cinzel:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --gold: #C8A96E;
+      --gold-dim: #C8A96E44;
+      --bg: #0E0D0B;
+      --bg-alt: #13120F;
+      --bg-card: #1A1813;
+      --border: #2A2720;
+      --text: #E8E4DC;
+      --text-muted: #9A9080;
+      --text-dim: #5A5650;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      background: var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    ::selection { background: #C8A96E33; color: var(--gold); }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.025;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+
+    @keyframes reveal {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes pulse-line {
+      0%, 100% { opacity: 0.2; }
+      50%       { opacity: 0.8; }
+    }
+
+    .reveal { opacity: 0; animation: reveal 0.9s cubic-bezier(0.16,1,0.3,1) forwards; }
+    .d1 { animation-delay: 0.1s; }
+    .d2 { animation-delay: 0.25s; }
+    .d3 { animation-delay: 0.4s; }
+    .d4 { animation-delay: 0.55s; }
+    .d5 { animation-delay: 0.7s; }
+
+    .cinzel { font-family: 'Cinzel', serif; }
+    .cormorant { font-family: 'Cormorant Garamond', Georgia, serif; }
+
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 20px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid transparent;
+      transition: all 0.4s ease;
+    }
+    nav.scrolled {
+      border-bottom-color: var(--border);
+      background: rgba(14,13,11,0.88);
+      backdrop-filter: blur(12px);
+    }
+    .nav-logo {
+      font-family: 'Cinzel', serif;
+      font-size: 12px;
+      letter-spacing: 0.25em;
+      color: var(--gold);
+      text-decoration: none;
+    }
+    .nav-links { display: flex; gap: 36px; list-style: none; }
+    .nav-links a {
+      font-family: 'Cinzel', serif;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .nav-links a:hover { color: var(--gold); }
+
+    .btn {
+      font-family: 'Cinzel', serif;
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 14px 36px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.3s ease;
+    }
+    .btn-outline { background: transparent; border: 1px solid var(--gold); color: var(--gold); }
+    .btn-outline:hover { background: var(--gold); color: var(--bg); }
+    .btn-fill { background: var(--gold); border: 1px solid var(--gold); color: var(--bg); }
+    .btn-fill:hover { background: transparent; color: var(--gold); }
+
+    .gold-divider { width: 60px; height: 1px; background: var(--gold); margin: 0 auto; }
+    .gold-line-v { width: 1px; background: linear-gradient(to bottom, transparent, var(--gold), transparent); }
+
+    .section-label {
+      font-family: 'Cinzel', serif;
+      font-size: 10px;
+      letter-spacing: 0.35em;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    #hero {
+      min-height: 100vh;
+      display: flex; flex-direction: column;
+      justify-content: center; align-items: center;
+      text-align: center;
+      padding: 120px 48px 80px;
+      position: relative; overflow: hidden;
+    }
+    .hero-glow {
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%,-50%);
+      width: 700px; height: 700px; border-radius: 50%;
+      background: radial-gradient(circle, #C8A96E08 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-side { position: absolute; display: flex; flex-direction: column; align-items: center; gap: 8px; }
+    .hero-side-text { font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: 0.3em; color: #C8A96E55; writing-mode: vertical-rl; }
+    .hero-tag { margin-bottom: 24px; text-align: center; }
+    .hero-tag .section-label { margin-bottom: 12px; }
+    h1.hero-name { font-size: clamp(52px, 8vw, 96px); font-weight: 300; line-height: 1.05; letter-spacing: -0.01em; margin-bottom: 8px; color: var(--text); }
+    h2.hero-sub { font-size: clamp(20px, 3vw, 32px); font-weight: 300; font-style: italic; color: var(--text-muted); margin-bottom: 32px; letter-spacing: 0.05em; }
+    .hero-desc { max-width: 560px; font-size: 17px; line-height: 1.8; color: #B0A898; font-weight: 300; margin-bottom: 48px; }
+    .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
+    .scroll-hint { position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 8px; }
+    .scroll-hint span { font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: 0.3em; color: #C8A96E44; }
+    .scroll-line { width: 1px; height: 40px; background: linear-gradient(to bottom, var(--gold), transparent); animation: pulse-line 2s ease-in-out infinite; }
+
+    #roles { padding: 100px 48px; max-width: 1200px; margin: 0 auto; }
+    .roles-header { text-align: center; margin-bottom: 64px; }
+    .roles-header h2 { font-size: clamp(32px, 4vw, 48px); font-weight: 300; letter-spacing: 0.02em; }
+    .roles-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1px; background: var(--border); }
+    .role-card { background: var(--bg); padding: 48px 36px; border: 1px solid var(--border); transition: all 0.4s cubic-bezier(0.16,1,0.3,1); }
+    .role-card:hover { border-color: var(--gold-dim); transform: translateY(-4px); background: var(--bg-card); }
+    .role-icon { font-size: 24px; color: var(--gold); margin-bottom: 20px; }
+    .role-title { font-family: 'Cinzel', serif; font-size: 12px; letter-spacing: 0.15em; color: var(--gold); margin-bottom: 16px; text-transform: uppercase; }
+    .role-body { font-size: 15px; line-height: 1.8; color: var(--text-muted); font-weight: 300; }
+
+    #frameworks { padding: 100px 48px; background: var(--bg-alt); }
+    .frameworks-inner { max-width: 1200px; margin: 0 auto; }
+    .frameworks-header { text-align: center; margin-bottom: 64px; }
+    .frameworks-header h2 { font-size: clamp(32px, 4vw, 48px); font-weight: 300; }
+    .framework-item { display: flex; align-items: center; gap: 48px; padding: 40px 0; border-bottom: 1px solid var(--border); }
+    .framework-item:last-child { border-bottom: none; }
+    .framework-num { font-family: 'Cinzel', serif; font-size: 36px; opacity: 0.3; min-width: 60px; text-align: center; }
+    .framework-name { font-size: 26px; font-weight: 500; margin-bottom: 8px; }
+    .framework-desc { font-size: 16px; line-height: 1.7; color: var(--text-muted); font-weight: 300; max-width: 640px; }
+
+    #book { padding: 100px 48px; }
+    .book-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .book-cover-wrap { position: relative; }
+    .book-cover { aspect-ratio: 3/4; background: linear-gradient(135deg, #1A1813 0%, #2A2318 50%, #1A1813 100%); border: 1px solid #3A3228; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 48px; text-align: center; position: relative; overflow: hidden; }
+    .book-cover::before { content: ''; position: absolute; inset: 16px; border: 1px solid #C8A96E22; }
+    .book-cover-tag { font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: 0.35em; color: var(--gold); margin-bottom: 24px; }
+    .book-cover-title { font-size: 28px; font-weight: 300; line-height: 1.3; color: var(--text); margin-bottom: 16px; }
+    .book-cover-rule { width: 40px; height: 1px; background: var(--gold); margin: 0 auto 16px; }
+    .book-cover-sub { font-size: 14px; font-style: italic; color: var(--text-muted); }
+    .book-shadow { position: absolute; bottom: -20px; left: 10%; right: 10%; height: 40px; background: radial-gradient(ellipse, #C8A96E22 0%, transparent 70%); filter: blur(8px); }
+    .book-content .section-label { margin-bottom: 24px; }
+    .book-content h2 { font-size: clamp(28px, 3.5vw, 42px); font-weight: 300; line-height: 1.3; margin-bottom: 24px; }
+    .book-content h2 em { font-style: italic; color: var(--text-muted); }
+    .book-content p { font-size: 16px; line-height: 1.9; color: var(--text-muted); font-weight: 300; margin-bottom: 16px; }
+    .book-content p:last-of-type { margin-bottom: 40px; }
+
+    #quote { padding: 100px 48px; background: var(--bg-alt); text-align: center; }
+    .quote-mark { font-size: 72px; color: #C8A96E18; line-height: 1; margin-bottom: -8px; }
+    blockquote { font-size: clamp(22px, 3vw, 32px); font-weight: 300; font-style: italic; line-height: 1.6; color: #D0C8BC; max-width: 800px; margin: 0 auto 32px; }
+    .quote-attr { font-family: 'Cinzel', serif; font-size: 10px; letter-spacing: 0.3em; color: var(--gold); }
+
+    #credentials { padding: 80px 48px; }
+    .cred-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 48px 40px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .cred-item { text-align: center; }
+    .cred-label { font-family: 'Cinzel', serif; font-size: 13px; color: var(--gold); margin-bottom: 6px; }
+    .cred-sub { font-size: 12px; color: var(--text-dim); letter-spacing: 0.1em; font-family: 'Cinzel', serif; }
+
+    #cta { padding: 120px 48px; text-align: center; position: relative; overflow: hidden; }
+    .cta-glow { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle, #C8A96E06 0%, transparent 65%); pointer-events: none; }
+    #cta .section-label { margin-bottom: 24px; }
+    #cta h2 { font-size: clamp(36px, 5vw, 64px); font-weight: 300; line-height: 1.2; margin-bottom: 24px; }
+    #cta h2 em { font-style: italic; }
+    #cta p { font-size: 17px; color: var(--text-muted); max-width: 500px; margin: 0 auto 48px; line-height: 1.8; }
+    .cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+    footer {
+      padding: 40px 48px 32px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+    .footer-top {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .footer-brand { font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 0.2em; color: var(--gold); }
+    .footer-location { font-size: 13px; color: var(--text-dim); letter-spacing: 0.05em; font-style: italic; }
+    .footer-domain { font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 0.1em; color: var(--text-dim); }
+    .footer-social {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+    }
+    .footer-social a {
+      color: var(--text-dim);
+      text-decoration: none;
+      font-family: 'Cinzel', serif;
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      transition: color 0.3s;
+    }
+    .footer-social a:hover { color: var(--gold); }
+    .footer-divider {
+      width: 1px;
+      height: 12px;
+      background: var(--border);
+    }
+
+    @media (max-width: 768px) {
+      nav { padding: 16px 24px; }
+      .nav-links { display: none; }
+      #hero { padding: 100px 24px 60px; }
+      .hero-side { display: none; }
+      #roles { padding: 60px 24px; }
+      #frameworks { padding: 60px 24px; }
+      .framework-item { flex-direction: column; gap: 16px; }
+      .framework-num { min-width: auto; }
+      #book { padding: 60px 24px; }
+      .book-inner { grid-template-columns: 1fr; gap: 48px; }
+      #quote { padding: 60px 24px; }
+      #credentials { padding: 60px 24px; }
+      #cta { padding: 80px 24px; }
+      footer { padding: 32px 24px; flex-direction: column; text-align: center; }
+    }
+  </style>
 </head>
-<body class="bg-white text-slate-700 antialiased">
+<body>
 
-    <!-- Header -->
-    <header class="bg-white/95 backdrop-blur-lg shadow-sm sticky top-0 z-50 border-b border-slate-100">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="flex flex-col">
-                <span class="text-xl font-bold text-slate-900">Dr Elijah Ting</span>
-                <span class="text-xs text-amber-600 font-medium tracking-wide hidden sm:inline">The Transformation Architect&trade;</span>
-            </a>
-            <!-- Desktop Menu -->
-            <div class="hidden lg:flex items-center space-x-8">
-                <a href="#modules" class="text-slate-600 hover:text-amber-600 transition duration-300 font-medium">Modules</a>
-                <a href="#outcomes" class="text-slate-600 hover:text-amber-600 transition duration-300 font-medium">Outcomes</a>
-                <a href="#book" class="text-slate-600 hover:text-amber-600 transition duration-300 font-medium">Book</a>
-                <a href="#about" class="text-slate-600 hover:text-amber-600 transition duration-300 font-medium">About</a>
-                <a href="#testimonials" class="text-slate-600 hover:text-amber-600 transition duration-300 font-medium">Testimonials</a>
-                <a href="#faq" class="text-slate-600 hover:text-amber-600 transition duration-300 font-medium">FAQ</a>
-            </div>
-            <div class="hidden lg:flex items-center gap-4">
-                <a href="https://www.linkedin.com/in/drelijah/" target="_blank" aria-label="LinkedIn" class="text-slate-500 hover:text-amber-600 transition">
-                    <i data-lucide="linkedin" class="w-5 h-5"></i>
-                </a>
-                <a href="https://www.facebook.com/DrElijah.org/" target="_blank" aria-label="Facebook" class="text-slate-500 hover:text-amber-600 transition">
-                    <i data-lucide="facebook" class="w-5 h-5"></i>
-                </a>
-                <a href="https://www.instagram.com/dr.elijahting/" target="_blank" aria-label="Instagram" class="text-slate-500 hover:text-amber-600 transition">
-                    <i data-lucide="instagram" class="w-5 h-5"></i>
-                </a>
-                <a href="https://x.com/DrElijahTing" target="_blank" aria-label="X" class="text-slate-500 hover:text-amber-600 transition">
-                    <i data-lucide="twitter" class="w-5 h-5"></i>
-                </a>
-                <a href="#contact" class="bg-amber-500 text-slate-900 px-5 py-2.5 rounded-xl font-semibold hover:bg-amber-600 transition duration-300 shadow-lg shadow-amber-500/25">
-                    Enroll Now
-                </a>
-            </div>
-            <!-- Mobile Menu Button -->
-            <div class="lg:hidden">
-                <button id="mobile-menu-button" class="text-slate-900 focus:outline-none p-2">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-                </button>
-            </div>
-        </nav>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden lg:hidden px-6 pt-2 pb-4 bg-white border-t border-slate-100">
-            <a href="#modules" class="block py-3 text-slate-600 hover:text-amber-600 font-medium">Modules</a>
-            <a href="#outcomes" class="block py-3 text-slate-600 hover:text-amber-600 font-medium">Outcomes</a>
-            <a href="#book" class="block py-3 text-slate-600 hover:text-amber-600 font-medium">Book</a>
-            <a href="#about" class="block py-3 text-slate-600 hover:text-amber-600 font-medium">About</a>
-            <a href="#testimonials" class="block py-3 text-slate-600 hover:text-amber-600 font-medium">Testimonials</a>
-            <a href="#faq" class="block py-3 text-slate-600 hover:text-amber-600 font-medium">FAQ</a>
-            <a href="#contact" class="block mt-4 bg-amber-500 text-slate-900 text-center px-4 py-3 rounded-xl font-semibold hover:bg-amber-600">Enroll Now</a>
+  <!-- NAV -->
+  <nav id="nav">
+    <a href="#hero" class="nav-logo">DR ELIJAH</a>
+    <ul class="nav-links">
+      <li><a href="#roles">About</a></li>
+      <li><a href="#frameworks">Frameworks</a></li>
+      <li><a href="#book">Book</a></li>
+      <li><a href="#cta">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-glow"></div>
+    <div class="hero-side" style="top:20%; left:8%;">
+      <div class="gold-line-v" style="height:80px;"></div>
+      <span class="hero-side-text">SIBU · SARAWAK · MALAYSIA</span>
+    </div>
+    <div class="hero-side" style="bottom:20%; right:8%;">
+      <span class="hero-side-text">TRANSFORM · LEAD · FLOURISH</span>
+      <div class="gold-line-v" style="height:80px;"></div>
+    </div>
+    <div class="hero-tag reveal">
+      <p class="section-label">THE TRANSFORMATION ARCHITECT™</p>
+      <div class="gold-divider"></div>
+    </div>
+    <h1 class="hero-name cormorant reveal d1">Dr Elijah</h1>
+    <h2 class="hero-sub cormorant reveal d2">Ting Moi Kieng</h2>
+    <p class="hero-desc reveal d3">
+      Bridging the wisdom of embodied practice with the rigour of evidence-based leadership development.
+    </p>
+    <div class="hero-btns reveal d4">
+      <a href="https://a.co/d/0bMXPtXt" class="btn btn-fill" target="_blank">Get the Book</a>
+      <a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-outline">Work With Me</a>
+    </div>
+    <div class="scroll-hint reveal d5">
+      <span>SCROLL</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ROLES -->
+  <section id="roles">
+    <div class="roles-header">
+      <p class="section-label">WHAT I DO</p>
+      <h2 class="cormorant">Four Callings. One Architecture.</h2>
+    </div>
+    <div class="roles-grid">
+      <div class="role-card">
+        <div class="role-icon">◈</div>
+        <p class="role-title">Executive L&amp;D Consultant</p>
+        <p class="role-body">HRD Corp–accredited trainer delivering transformational programmes across Malaysia and beyond.</p>
+      </div>
+      <div class="role-card">
+        <div class="role-icon">✦</div>
+        <p class="role-title">The Transformation Architect™</p>
+        <p class="role-body">Author of the book helping trainers build their signature programmes with clarity, conviction, and lasting impact.</p>
+      </div>
+      <div class="role-card">
+        <div class="role-icon">◉</div>
+        <p class="role-title">Pastoral Leader</p>
+        <p class="role-body">Providing oversight and strategic leadership across churches in Sibu, Nang Sang, and Kuching — guiding faith communities where people are supported, grounded, and transformed.</p>
+      </div>
+      <div class="role-card">
+        <div class="role-icon">⬡</div>
+        <p class="role-title">Practitioner-Scholar</p>
+        <p class="role-body">Grounded in Executive Doctoral research and continuing inquiry into the Psychology of Transformation — bringing academic rigour into every training room.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FRAMEWORKS -->
+  <section id="frameworks">
+    <div class="frameworks-inner">
+      <div class="frameworks-header">
+        <p class="section-label">SIGNATURE FRAMEWORKS</p>
+        <h2 class="cormorant">The Methodologies Behind the Work</h2>
+      </div>
+      <div>
+        <div class="framework-item">
+          <div class="framework-num cinzel" style="color:#C8A96E;">01</div>
+          <div>
+            <h3 class="framework-name cormorant" style="color:#C8A96E;">EMPATH™</h3>
+            <p class="framework-desc">Nonviolent Communication integrated into transformational leadership practice — the capstone of doctoral research and the heartbeat of every programme.</p>
+          </div>
         </div>
-    </header>
-
-    <main>
-        <!-- Hero Section -->
-        <section class="hero-gradient py-20 md:py-28 relative overflow-hidden">
-            <div class="absolute inset-0 opacity-10">
-                <div class="absolute top-20 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
-                <div class="absolute bottom-10 right-10 w-96 h-96 bg-blue-300 rounded-full blur-3xl"></div>
-            </div>
-            <div class="container mx-auto px-6 text-center relative z-10">
-                <div class="flex flex-wrap justify-center gap-3 mb-6">
-                    <span class="inline-flex items-center gap-2 bg-amber-500/20 backdrop-blur-sm text-amber-200 text-sm font-semibold px-5 py-2 rounded-full border border-amber-400/40">
-                        <i data-lucide="award" class="w-4 h-4"></i>
-                        FLAGSHIP PROGRAM
-                    </span>
-                    <span class="inline-flex items-center gap-2 bg-amber-500/20 backdrop-blur-sm text-amber-200 text-sm font-semibold px-5 py-2 rounded-full border border-amber-400/40">
-                        <i data-lucide="badge-check" class="w-4 h-4"></i>
-                        HRD CORP CLAIMABLE
-                    </span>
-                    <a href="#book" class="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm text-white text-sm font-semibold px-5 py-2 rounded-full border border-white/30 hover:bg-white/25 transition">
-                        <i data-lucide="book-open" class="w-4 h-4"></i>
-                        NEW BOOK OUT NOW
-                    </a>
-                </div>
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight max-w-5xl mx-auto">
-                    Trainer Masterclass
-                </h1>
-                <p class="mt-4 text-2xl md:text-3xl font-bold text-amber-300 max-w-3xl mx-auto">
-                    From Trainer to Transformation Architect&trade;
-                </p>
-                <p class="mt-6 text-lg md:text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
-                    Transform from a generic program deliverer into a strategic program creator with your own signature training offering. Through self-discovery, niche selection, program design, and practical marketing, you'll build a market-ready program that commands premium positioning.
-                </p>
-                <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4">
-                    <a href="#contact" class="bg-amber-500 text-slate-900 px-8 py-4 rounded-xl font-bold hover:bg-amber-400 transition duration-300 shadow-xl text-lg">
-                        Enroll Now
-                    </a>
-                    <a href="#modules" class="bg-transparent text-white px-8 py-4 rounded-xl font-bold hover:bg-white/10 transition duration-300 ring-2 ring-white/50 text-lg">
-                        View Curriculum
-                    </a>
-                </div>
-                <!-- Stats -->
-                <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl mx-auto">
-                    <div class="text-center">
-                        <div class="text-3xl md:text-4xl font-bold text-white">4</div>
-                        <div class="text-amber-200/70 text-sm mt-1">Core Modules</div>
-                    </div>
-                    <div class="text-center">
-                        <div class="text-3xl md:text-4xl font-bold text-white">14</div>
-                        <div class="text-amber-200/70 text-sm mt-1">Hours of Training</div>
-                    </div>
-                    <div class="text-center">
-                        <div class="text-3xl md:text-4xl font-bold text-white">6</div>
-                        <div class="text-amber-200/70 text-sm mt-1">Learning Outcomes</div>
-                    </div>
-                    <div class="text-center">
-                        <div class="text-3xl md:text-4xl font-bold text-white">30</div>
-                        <div class="text-amber-200/70 text-sm mt-1">Day Action Plan</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- The Challenge Section -->
-        <section class="py-20 bg-white">
-            <div class="container mx-auto px-6">
-                <div class="grid lg:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <span class="text-amber-600 font-bold tracking-wide uppercase text-sm">The Challenge</span>
-                        <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mt-2 mb-6">Good Trainers Are Everywhere. Transformation Architects Are Rare.</h2>
-                        <p class="text-lg text-slate-600 mb-4">
-                            Most trainers are stuck delivering other people's content, competing on price, and struggling to differentiate themselves. They have the skills and passion, but lack a clear strategy to turn their expertise into a signature program that commands premium fees.
-                        </p>
-                        <p class="text-lg text-slate-600 mb-6">
-                            This masterclass bridges the gap between being a competent trainer and becoming a <span class="font-semibold text-slate-900">Transformation Architect</span> — someone who doesn't just deliver training, but designs transformative learning experiences that create measurable impact.
-                        </p>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
-                            <div class="flex items-center gap-3">
-                                <div class="w-10 h-10 bg-red-100 text-red-600 rounded-lg flex items-center justify-center">
-                                    <i data-lucide="help-circle" class="w-5 h-5"></i>
-                                </div>
-                                <span class="text-slate-700 font-medium">Unclear Positioning</span>
-                            </div>
-                            <div class="flex items-center gap-3">
-                                <div class="w-10 h-10 bg-red-100 text-red-600 rounded-lg flex items-center justify-center">
-                                    <i data-lucide="copy" class="w-5 h-5"></i>
-                                </div>
-                                <span class="text-slate-700 font-medium">Generic Content</span>
-                            </div>
-                            <div class="flex items-center gap-3">
-                                <div class="w-10 h-10 bg-red-100 text-red-600 rounded-lg flex items-center justify-center">
-                                    <i data-lucide="trending-down" class="w-5 h-5"></i>
-                                </div>
-                                <span class="text-slate-700 font-medium">Race-to-Bottom Pricing</span>
-                            </div>
-                            <div class="flex items-center gap-3">
-                                <div class="w-10 h-10 bg-red-100 text-red-600 rounded-lg flex items-center justify-center">
-                                    <i data-lucide="compass" class="w-5 h-5"></i>
-                                </div>
-                                <span class="text-slate-700 font-medium">No Signature Program</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flex justify-center">
-                        <img src="assets/images/profile-photo.jpg" alt="Dr Elijah Ting leading a training session" class="rounded-3xl object-cover shadow-2xl w-full max-w-lg">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Who Is This For + Delivery Format Section -->
-        <section class="py-20 section-pattern">
-            <div class="container mx-auto px-6">
-                <div class="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-
-                    <!-- Who Is This For -->
-                    <div>
-                        <span class="text-amber-600 font-bold tracking-wide uppercase text-sm">Who Is This For</span>
-                        <h2 class="text-2xl md:text-3xl font-bold text-slate-900 mt-2 mb-6">Built for Trainers Ready to Level Up</h2>
-                        <div class="space-y-3">
-                            <div class="flex items-center gap-3">
-                                <i data-lucide="check-circle-2" class="w-5 h-5 text-amber-600 flex-shrink-0"></i>
-                                <span class="text-slate-700">HRD Corp Accredited Trainers</span>
-                            </div>
-                            <div class="flex items-center gap-3">
-                                <i data-lucide="check-circle-2" class="w-5 h-5 text-amber-600 flex-shrink-0"></i>
-                                <span class="text-slate-700">Corporate & In-house Trainers</span>
-                            </div>
-                            <div class="flex items-center gap-3">
-                                <i data-lucide="check-circle-2" class="w-5 h-5 text-amber-600 flex-shrink-0"></i>
-                                <span class="text-slate-700">Learning & Development Professionals</span>
-                            </div>
-                            <div class="flex items-center gap-3">
-                                <i data-lucide="check-circle-2" class="w-5 h-5 text-amber-600 flex-shrink-0"></i>
-                                <span class="text-slate-700">Training Consultants & Freelance Trainers</span>
-                            </div>
-                            <div class="flex items-center gap-3">
-                                <i data-lucide="check-circle-2" class="w-5 h-5 text-amber-600 flex-shrink-0"></i>
-                                <span class="text-slate-700">Subject Matter Experts transitioning to Training</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Delivery Format -->
-                    <div>
-                        <span class="text-amber-600 font-bold tracking-wide uppercase text-sm">Delivery Format</span>
-                        <h2 class="text-2xl md:text-3xl font-bold text-slate-900 mt-2 mb-6">Choose Your Format</h2>
-                        <div class="space-y-4">
-                            <div class="bg-white rounded-xl p-5 shadow-md border border-slate-100">
-                                <div class="flex items-center gap-3 mb-2">
-                                    <div class="w-10 h-10 bg-amber-100 text-amber-600 rounded-lg flex items-center justify-center">
-                                        <i data-lucide="users" class="w-5 h-5"></i>
-                                    </div>
-                                    <h3 class="font-bold text-slate-900">Face-to-Face Intensive</h3>
-                                </div>
-                                <p class="text-slate-600 text-sm">2-day in-person workshop with hands-on exercises, group activities, and gallery walks</p>
-                            </div>
-                            <div class="bg-white rounded-xl p-5 shadow-md border border-slate-100">
-                                <div class="flex items-center gap-3 mb-2">
-                                    <div class="w-10 h-10 bg-amber-100 text-amber-600 rounded-lg flex items-center justify-center">
-                                        <i data-lucide="monitor" class="w-5 h-5"></i>
-                                    </div>
-                                    <h3 class="font-bold text-slate-900">Virtual Sessions</h3>
-                                </div>
-                                <p class="text-slate-600 text-sm">4 sessions of 3.5 hours each via Zoom, with breakout rooms, digital whiteboarding, and full interactivity</p>
-                            </div>
-                            <p class="text-slate-500 text-sm italic">Both formats deliver 14 hours of training and identical learning outcomes.</p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- Journey Overview Section -->
-        <section class="py-20 bg-white">
-            <div class="container mx-auto px-6">
-                <div class="text-center max-w-3xl mx-auto mb-16">
-                    <span class="text-amber-600 font-bold tracking-wide uppercase text-sm">The Journey</span>
-                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mt-2 mb-4">Your Path to Becoming a Transformation Architect</h2>
-                    <p class="text-lg text-slate-600">Four progressive modules that take you from self-discovery to market-ready — each building on the last to create your complete signature program.</p>
-                </div>
-
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-                    <div class="text-center card-hover">
-                        <div class="w-16 h-16 bg-amber-500 text-white rounded-2xl flex items-center justify-center mx-auto mb-4 text-2xl font-bold shadow-lg shadow-amber-500/25">1</div>
-                        <h3 class="text-lg font-bold text-slate-900 mb-1">DISCOVERY</h3>
-                        <p class="text-amber-600 font-semibold text-sm mb-2">Who Am I as a Trainer?</p>
-                        <p class="text-slate-500 text-sm">Find your unique strengths and positioning through Ikigai mapping</p>
-                    </div>
-                    <div class="text-center card-hover">
-                        <div class="w-16 h-16 bg-amber-500 text-white rounded-2xl flex items-center justify-center mx-auto mb-4 text-2xl font-bold shadow-lg shadow-amber-500/25">2</div>
-                        <h3 class="text-lg font-bold text-slate-900 mb-1">DESIGN</h3>
-                        <p class="text-amber-600 font-semibold text-sm mb-2">What Will I Create?</p>
-                        <p class="text-slate-500 text-sm">Select your niche and blueprint your signature program</p>
-                    </div>
-                    <div class="text-center card-hover">
-                        <div class="w-16 h-16 bg-amber-500 text-white rounded-2xl flex items-center justify-center mx-auto mb-4 text-2xl font-bold shadow-lg shadow-amber-500/25">3</div>
-                        <h3 class="text-lg font-bold text-slate-900 mb-1">DEVELOPMENT</h3>
-                        <p class="text-amber-600 font-semibold text-sm mb-2">How Will I Structure It?</p>
-                        <p class="text-slate-500 text-sm">Build engaging sessions using a structured learning cycle and proven design principles</p>
-                    </div>
-                    <div class="text-center card-hover">
-                        <div class="w-16 h-16 bg-amber-500 text-white rounded-2xl flex items-center justify-center mx-auto mb-4 text-2xl font-bold shadow-lg shadow-amber-500/25">4</div>
-                        <h3 class="text-lg font-bold text-slate-900 mb-1">MARKET</h3>
-                        <p class="text-amber-600 font-semibold text-sm mb-2">How Will I Sell It?</p>
-                        <p class="text-slate-500 text-sm">Create marketing materials, pitch, price, and launch your program</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Detailed Modules Section -->
-        <section id="modules" class="py-20 section-pattern" x-data="{ openModule: 1 }">
-            <div class="container mx-auto px-6 max-w-5xl">
-                <div class="text-center max-w-3xl mx-auto mb-12">
-                    <span class="text-amber-600 font-bold tracking-wide uppercase text-sm">Curriculum</span>
-                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mt-2 mb-4">What You'll Learn</h2>
-                    <p class="text-lg text-slate-600">14 hours of intensive, hands-on learning across four modules. Click each module to explore the detailed curriculum.</p>
-                </div>
-
-                <div class="space-y-4">
-
-                    <!-- Module 1 -->
-                    <div class="rounded-2xl border border-slate-200 overflow-hidden shadow-sm" :class="openModule === 1 && 'ring-2 ring-amber-400 shadow-lg'">
-                        <button @click="openModule = (openModule === 1 ? 0 : 1)" class="w-full flex items-center gap-4 text-left p-6 hover:bg-slate-50 transition">
-                            <div class="w-12 h-12 rounded-xl flex items-center justify-center font-bold text-lg flex-shrink-0" :class="openModule === 1 ? 'bg-amber-500 text-white' : 'bg-amber-100 text-amber-700'">1</div>
-                            <div class="flex-grow">
-                                <div class="flex flex-wrap items-center gap-2 mb-1">
-                                    <h3 class="text-xl font-bold text-slate-900">DISCOVERY</h3>
-                                    <span class="text-slate-400">—</span>
-                                    <span class="text-amber-600 font-semibold">Who Am I as a Trainer?</span>
-                                </div>
-                                <p class="text-slate-500 text-sm">Ikigai mapping, strengths-based framework, trainer positioning</p>
-                            </div>
-                            <div class="flex items-center gap-3 flex-shrink-0">
-                                <span class="hidden sm:inline text-sm text-slate-400 font-medium">3.5 Hours</span>
-                                <i data-lucide="chevron-down" class="transition-transform w-5 h-5 text-amber-600" :class="openModule === 1 && 'rotate-180'"></i>
-                            </div>
-                        </button>
-                        <div x-show="openModule === 1" x-collapse>
-                            <div class="px-6 pb-6 border-t border-slate-100">
-                                <div class="space-y-3 mt-5">
-                                    <div class="flex items-start gap-3 p-3 bg-slate-50 rounded-lg">
-                                        <span class="text-xs text-slate-400 font-medium w-14 flex-shrink-0 pt-0.5">30 min</span>
-                                        <div>
-                                            <h4 class="font-semibold text-slate-900 text-sm">Opening & Program Overview</h4>
-                                            <p class="text-slate-500 text-sm">Introductions, objectives, and overview of the Transformation Architect journey</p>
-                                        </div>
-                                    </div>
-                                    <div class="flex items-start gap-3 p-3 bg-slate-50 rounded-lg">
-                                        <span class="text-xs text-slate-400 font-medium w-14 flex-shrink-0 pt-0.5">90 min</span>
-                                        <div>
-                                            <h4 class="font-semibold text-slate-900 text-sm">Ikigai Mapping for Trainers</h4>
-                                            <p class="text-slate-500 text-sm">Discover what you love, what you're good at, what the world needs, and what you can be paid for — then find the intersection for your signature program</p>
-                                        </div>
-                                    </div>
-                                    <div class="flex items-start gap-3 p-3 bg-slate-50 rounded-lg">
-                                        <span class="text-xs text-slate-400 font-medium w-14 flex-shrink-0 pt-0.5">75 min</span>
-                                        <div>
-                                            <h4 class="font-semibold text-slate-900 text-sm">Strengths-Based Positioning</h4>
-                                            <p class="text-slate-500 text-sm">Apply strengths-based assessments and Competency Self-Assessment to identify your high-skill, high-enjoyment training areas</p>
-                                        </div>
-                                    </div>
-                                    <div class="flex items-start gap-3 p-3 bg-slate-50 rounded-lg">
-                                        <span class="text-xs text-slate-400 font-medium w-14 flex-shrink-0 pt-0.5">25 min</span>
-                                        <div>
-                                            <h4 class="font-semibold text-slate-900 text-sm">Module Integration</h4>
-                                            <p class="text-slate-500 text-sm">Synthesize Ikigai and Strengths into a preliminary positioning statement</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Module 2 -->
-                    <div class="rounded-2xl border border-slate-200 overflow-hidden shadow-sm" :class="openModule === 2 && 'ring-2 ring-amber-400 shadow-lg'">
-                        <button @click="openModule = (openModule === 2 ? 0 : 2)" class="w-full flex items-center gap-4 text-left p-6 hover:bg-slate-50 transition">
-                            <div class="w-12 h-12 rounded-xl flex items-center justify-center font-bold text-lg flex-shrink-0" :class="openModule === 2 ? 'bg-amber-500 text-white' : 'bg-amber-100 text-amber-700'">2</div>
-                            <div class="flex-grow">
-                                <div class="flex flex-wrap items-center gap-2 mb-1">
-                                    <h3 class="text-xl font-bold text-slate-900">DESIGN</h3>
-                                    <span class="text-slate-400">—</span>
-                                    <span class="text-amber-600 font-semibold">What Will I Create?</span>
-                                </div>
-                                <p class="text-slate-500 text-sm">Niche selection, market differentiation strategy, Backward Design, Program Blueprint</p>
-                            </div>
-                            <div class="flex items-center gap-3 flex-shrink-0">
-                                <span class="hidden sm:inline text-sm text-slate-400 font-medium">3.5 Hours</span>
-                                <i data-lucide="chevron-down" class="transition-transform w-5 h-5 text-amber-600" :class="openModule === 2 && 'rotate-180'"></i>
-                            </div>
-                        </button>
-                        <div x-show="openModule === 2" x-collapse>
-                            <div class="px-6 pb-6 border-t border-slate-100">
-                                <div class="space-y-3 mt-5">
-                                    <div class="flex items-start gap-3 p-3 bg-slate-50 rounded-lg">
-                                        <span class="text-xs text-slate-400 font-medium w-14 flex-shrink-0 pt-0.5">15 min</span>
-                                        <div>
-                                            <h4 class="font-semibold text-slate-900 text-sm">Opening & Reconnection</h4>
-                                            <p class="text-slate-500 text-sm">Recap of Module 1 insights and Module 2 objectives</p>
-                                        </div>
-                                    </div>
-                                    <div class="flex items-start gap-3 p-3 bg-slate-50 rounded-lg">
-                                        <span class="text-xs text-slate-400 font-medium w-14 flex-shrink-0 pt-0.5">90 min</span>
-                                        <div>
-                                            <h4 class="font-semibold text-slate-900 text-sm">Niche Selection & Market Analysis</h4>
-                                            <p class="text-slate-500 text-sm">Apply market differentiation strategies to find uncontested market space, craft a clear niche statement, and plan validation through the 5 conversations methodology</p>
-                                        </div>
-                                    </div>
-                                    <div class="flex items-start gap-3 p-3 bg-slate-50 rounded-lg">
-                                        <span class="text-xs text-slate-400 font-medium w-14 flex-shrink-0 pt-0.5">90 min</span>
-                                        <div>
-                                            <h4 class="font-semibold text-slate-900 text-sm">Program Blueprint Development</h4>
-                                            <p class="text-slate-500 text-sm">Apply Backward Design (Wiggins & McTighe) to define desired results, evidence of learning, and complete your Program Blueprint Canvas</p>
-                                        </div>
-                                    </div>
-                                    <div class="flex items-start gap-3 p-3 bg-slate-50 rounded-lg">
-                                        <span class="text-xs text-slate-400 font-medium w-14 flex-shrink-0 pt-0.5">25 min</span>
-                                        <div>
-                                            <h4 class="font-semibold text-slate-900 text-sm">Program Naming Workshop</h4>
-                                            <p class="text-slate-500 text-sm">Brainstorm, evaluate, and finalize a compelling name for your signature program</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Module 3 -->
-                    <div class="rounded-2xl border border-slate-200 overflow-hidden shadow-sm" :class="openModule === 3 && 'ring-2 ring-amber-400 shadow-lg'">
-                        <button @click="openModule = (openModule === 3 ? 0 : 3)" class="w-full flex items-center gap-4 text-left p-6 hover:bg-slate-50 transition">
-                            <div class="w-12 h-12 rounded-xl flex items-center justify-center font-bold text-lg flex-shrink-0" :class="openModule === 3 ? 'bg-amber-500 text-white' : 'bg-amber-100 text-amber-700'">3</div>
-                            <div class="flex-grow">
-                                <div class="flex flex-wrap items-center gap-2 mb-1">
-                                    <h3 class="text-xl font-bold text-slate-900">DEVELOPMENT</h3>
-                                    <span class="text-slate-400">—</span>
-                                    <span class="text-amber-600 font-semibold">How Will I Structure It?</span>
-                                </div>
-                                <p class="text-slate-500 text-sm">Learning cycle design, session structure, 90-20-8 Rule, visual frameworks</p>
-                            </div>
-                            <div class="flex items-center gap-3 flex-shrink-0">
-                                <span class="hidden sm:inline text-sm text-slate-400 font-medium">3.5 Hours</span>
-                                <i data-lucide="chevron-down" class="transition-transform w-5 h-5 text-amber-600" :class="openModule === 3 && 'rotate-180'"></i>
-                            </div>
-                        </button>
-                        <div x-show="openModule === 3" x-collapse>
-                            <div class="px-6 pb-6 border-t border-slate-100">
-                                <div class="space-y-3 mt-5">
-                                    <div class="flex items-start gap-3 p-3 bg-slate-50 rounded-lg">
-                                        <span class="text-xs text-slate-400 font-medium w-14 flex-shrink-0 pt-0.5">15 min</span>
-                                        <div>
-                                            <h4 class="font-semibold text-slate-900 text-sm">Opening & Recap</h4>
-                                            <p class="text-slate-500 text-sm">Review your program blueprint and name, set Module 3 objectives</p>
-                                        </div>
-                                    </div>
-                                    <div class="flex items-start gap-3 p-3 bg-slate-50 rounded-lg">
-                                        <span class="text-xs text-slate-400 font-medium w-14 flex-shrink-0 pt-0.5">90 min</span>
-                                        <div>
-                                            <h4 class="font-semibold text-slate-900 text-sm">Learning Cycle Module Design</h4>
-                                            <p class="text-slate-500 text-sm">Design engaging sessions using a four-phase learning cycle — WHY (motivation), WHAT (content), HOW (practice), WHAT IF (adaptation) — with hands-on design exercises and peer review</p>
-                                        </div>
-                                    </div>
-                                    <div class="flex items-start gap-3 p-3 bg-slate-50 rounded-lg">
-                                        <span class="text-xs text-slate-400 font-medium w-14 flex-shrink-0 pt-0.5">75 min</span>
-                                        <div>
-                                            <h4 class="font-semibold text-slate-900 text-sm">Session Outline Development</h4>
-                                            <p class="text-slate-500 text-sm">Create a full-day session outline using the 90-20-8 Rule for energy management, activity sequencing, and your signature visual framework</p>
-                                        </div>
-                                    </div>
-                                    <div class="flex items-start gap-3 p-3 bg-slate-50 rounded-lg">
-                                        <span class="text-xs text-slate-400 font-medium w-14 flex-shrink-0 pt-0.5">30 min</span>
-                                        <div>
-                                            <h4 class="font-semibold text-slate-900 text-sm">Module Integration</h4>
-                                            <p class="text-slate-500 text-sm">Prepare your rapid prototype for teach-back and peer review session outlines</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Module 4 -->
-                    <div class="rounded-2xl border border-slate-200 overflow-hidden shadow-sm" :class="openModule === 4 && 'ring-2 ring-amber-400 shadow-lg'">
-                        <button @click="openModule = (openModule === 4 ? 0 : 4)" class="w-full flex items-center gap-4 text-left p-6 hover:bg-slate-50 transition">
-                            <div class="w-12 h-12 rounded-xl flex items-center justify-center font-bold text-lg flex-shrink-0" :class="openModule === 4 ? 'bg-amber-500 text-white' : 'bg-amber-100 text-amber-700'">4</div>
-                            <div class="flex-grow">
-                                <div class="flex flex-wrap items-center gap-2 mb-1">
-                                    <h3 class="text-xl font-bold text-slate-900">MARKET</h3>
-                                    <span class="text-slate-400">—</span>
-                                    <span class="text-amber-600 font-semibold">How Will I Sell It?</span>
-                                </div>
-                                <p class="text-slate-500 text-sm">Teach-back, marketing materials, pitch & pricing strategy, 30-day action plan</p>
-                            </div>
-                            <div class="flex items-center gap-3 flex-shrink-0">
-                                <span class="hidden sm:inline text-sm text-slate-400 font-medium">3.5 Hours</span>
-                                <i data-lucide="chevron-down" class="transition-transform w-5 h-5 text-amber-600" :class="openModule === 4 && 'rotate-180'"></i>
-                            </div>
-                        </button>
-                        <div x-show="openModule === 4" x-collapse>
-                            <div class="px-6 pb-6 border-t border-slate-100">
-                                <div class="space-y-3 mt-5">
-                                    <div class="flex items-start gap-3 p-3 bg-slate-50 rounded-lg">
-                                        <span class="text-xs text-slate-400 font-medium w-14 flex-shrink-0 pt-0.5">15 min</span>
-                                        <div>
-                                            <h4 class="font-semibold text-slate-900 text-sm">Opening & Context</h4>
-                                            <p class="text-slate-500 text-sm">Review completed program design and prepare for teach-back</p>
-                                        </div>
-                                    </div>
-                                    <div class="flex items-start gap-3 p-3 bg-slate-50 rounded-lg">
-                                        <span class="text-xs text-slate-400 font-medium w-14 flex-shrink-0 pt-0.5">60 min</span>
-                                        <div>
-                                            <h4 class="font-semibold text-slate-900 text-sm">Teach-Back Demonstrations</h4>
-                                            <p class="text-slate-500 text-sm">Deliver 10-minute micro-teaching demos in triads with structured peer feedback and refinement</p>
-                                        </div>
-                                    </div>
-                                    <div class="flex items-start gap-3 p-3 bg-slate-50 rounded-lg">
-                                        <span class="text-xs text-slate-400 font-medium w-14 flex-shrink-0 pt-0.5">60 min</span>
-                                        <div>
-                                            <h4 class="font-semibold text-slate-900 text-sm">Marketing Materials Creation</h4>
-                                            <p class="text-slate-500 text-sm">Build your marketing one-pager (value proposition, outcomes, methodology) and pitch deck outline (10-slide structure)</p>
-                                        </div>
-                                    </div>
-                                    <div class="flex items-start gap-3 p-3 bg-slate-50 rounded-lg">
-                                        <span class="text-xs text-slate-400 font-medium w-14 flex-shrink-0 pt-0.5">45 min</span>
-                                        <div>
-                                            <h4 class="font-semibold text-slate-900 text-sm">Pitch & Pricing Strategy</h4>
-                                            <p class="text-slate-500 text-sm">Craft your 60-second elevator pitch, practice with peers, and develop your pricing strategy using value-based and market benchmarks</p>
-                                        </div>
-                                    </div>
-                                    <div class="bg-gradient-to-br from-primary-700 to-primary-900 rounded-lg p-4 text-white">
-                                        <div class="flex items-center gap-2 mb-3">
-                                            <i data-lucide="rocket" class="w-4 h-4"></i>
-                                            <h4 class="font-semibold text-sm">Action Planning & Closing</h4>
-                                            <span class="text-xs text-blue-200 ml-auto">30 min</span>
-                                        </div>
-                                        <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
-                                            <div class="bg-white/10 rounded-lg p-2.5">
-                                                <p class="text-xs text-blue-200 font-semibold">WEEK 1</p>
-                                                <p class="text-sm mt-0.5">Refine materials</p>
-                                            </div>
-                                            <div class="bg-white/10 rounded-lg p-2.5">
-                                                <p class="text-xs text-blue-200 font-semibold">WEEK 2</p>
-                                                <p class="text-sm mt-0.5">Validate niche</p>
-                                            </div>
-                                            <div class="bg-white/10 rounded-lg p-2.5">
-                                                <p class="text-xs text-blue-200 font-semibold">WEEK 3</p>
-                                                <p class="text-sm mt-0.5">Complete design</p>
-                                            </div>
-                                            <div class="bg-white/10 rounded-lg p-2.5">
-                                                <p class="text-xs text-blue-200 font-semibold">WEEK 4</p>
-                                                <p class="text-sm mt-0.5">Launch preparation</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- Learning Outcomes Section -->
-        <section id="outcomes" class="py-20 bg-white">
-            <div class="container mx-auto px-6">
-                <div class="text-center max-w-3xl mx-auto mb-12">
-                    <span class="text-amber-600 font-bold tracking-wide uppercase text-sm">Learning Outcomes</span>
-                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mt-2 mb-4">What You'll Walk Away With</h2>
-                    <p class="text-lg text-slate-600">You leave with completed worksheets, marketing materials, and a concrete 30-day action plan — tangible assets you can use immediately.</p>
-                </div>
-
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-                    <div class="bg-white rounded-2xl p-6 shadow-lg border border-slate-100 card-hover">
-                        <div class="w-12 h-12 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center mb-4">
-                            <i data-lucide="fingerprint" class="w-6 h-6"></i>
-                        </div>
-                        <h3 class="text-lg font-bold text-slate-900 mb-2">Unique Trainer Positioning</h3>
-                        <p class="text-slate-600 text-sm">Identify your unique trainer positioning using Ikigai and strengths-based frameworks to stand out in a crowded market.</p>
-                    </div>
-                    <div class="bg-white rounded-2xl p-6 shadow-lg border border-slate-100 card-hover">
-                        <div class="w-12 h-12 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center mb-4">
-                            <i data-lucide="compass" class="w-6 h-6"></i>
-                        </div>
-                        <h3 class="text-lg font-bold text-slate-900 mb-2">Profitable Niche Selection</h3>
-                        <p class="text-slate-600 text-sm">Select a profitable niche aligned with market demand using proven differentiation strategies to find your uncontested space.</p>
-                    </div>
-                    <div class="bg-white rounded-2xl p-6 shadow-lg border border-slate-100 card-hover">
-                        <div class="w-12 h-12 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center mb-4">
-                            <i data-lucide="layers" class="w-6 h-6"></i>
-                        </div>
-                        <h3 class="text-lg font-bold text-slate-900 mb-2">Complete Program Design</h3>
-                        <p class="text-slate-600 text-sm">Design a complete training program using Backward Design and learning cycle principles for maximum learner engagement.</p>
-                    </div>
-                    <div class="bg-white rounded-2xl p-6 shadow-lg border border-slate-100 card-hover">
-                        <div class="w-12 h-12 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center mb-4">
-                            <i data-lucide="file-text" class="w-6 h-6"></i>
-                        </div>
-                        <h3 class="text-lg font-bold text-slate-900 mb-2">Professional Marketing Materials</h3>
-                        <p class="text-slate-600 text-sm">Create professional marketing materials including one-pagers and pitch decks that communicate your value clearly.</p>
-                    </div>
-                    <div class="bg-white rounded-2xl p-6 shadow-lg border border-slate-100 card-hover">
-                        <div class="w-12 h-12 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center mb-4">
-                            <i data-lucide="banknote" class="w-6 h-6"></i>
-                        </div>
-                        <h3 class="text-lg font-bold text-slate-900 mb-2">Strategic Pricing</h3>
-                        <p class="text-slate-600 text-sm">Price your programs appropriately for your target market using value-based strategies and market benchmarks.</p>
-                    </div>
-                    <div class="bg-white rounded-2xl p-6 shadow-lg border border-slate-100 card-hover">
-                        <div class="w-12 h-12 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center mb-4">
-                            <i data-lucide="rocket" class="w-6 h-6"></i>
-                        </div>
-                        <h3 class="text-lg font-bold text-slate-900 mb-2">30-Day Launch Plan</h3>
-                        <p class="text-slate-600 text-sm">Develop a concrete 30-day action plan to refine, validate, complete, and launch your signature program.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Book Section -->
-        <section id="book" class="py-20 section-pattern">
-            <div class="container mx-auto px-6">
-                <div class="text-center max-w-3xl mx-auto mb-12">
-                    <span class="text-amber-600 font-bold tracking-wide uppercase text-sm">New Book</span>
-                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mt-2 mb-4">The Companion Guide to the Masterclass</h2>
-                    <p class="text-lg text-slate-600">Everything you need to start building your signature program — now available on Amazon.</p>
-                </div>
-                <div class="grid lg:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
-                    <div class="flex justify-center">
-                        <div class="relative">
-                            <div class="absolute -inset-4 bg-gradient-to-br from-amber-400 to-amber-600 rounded-2xl blur-lg opacity-20"></div>
-                            <img src="assets/images/book-cover.jpg" alt="The Transformation Architect — A Quick-Start Guide to Building Your Signature Training Program by Dr Elijah Ting" class="relative w-full max-w-xs rounded-xl shadow-2xl">
-                        </div>
-                    </div>
-                    <div>
-                        <h3 class="text-2xl md:text-3xl font-bold text-slate-900 mb-2">The Transformation Architect</h3>
-                        <p class="text-amber-600 font-semibold mb-4">A Quick-Start Guide to Building Your Signature Training Program</p>
-                        <p class="text-slate-600 mb-4 text-lg italic">"A certificate proves you CAN train. A signature program proves you SHOULD be chosen."</p>
-                        <p class="text-slate-600 mb-6">This book is for certified trainers ready to stop competing on price and start building something uniquely theirs. Discover how to find your training niche, design transformational learning experiences, price with confidence, and launch your signature program in 30 days.</p>
-                        <div class="space-y-2 mb-8">
-                            <div class="flex items-center gap-3">
-                                <i data-lucide="check-circle-2" class="w-5 h-5 text-amber-600 flex-shrink-0"></i>
-                                <span class="text-slate-700">Find your unique training intersection</span>
-                            </div>
-                            <div class="flex items-center gap-3">
-                                <i data-lucide="check-circle-2" class="w-5 h-5 text-amber-600 flex-shrink-0"></i>
-                                <span class="text-slate-700">Create a market space only you occupy</span>
-                            </div>
-                            <div class="flex items-center gap-3">
-                                <i data-lucide="check-circle-2" class="w-5 h-5 text-amber-600 flex-shrink-0"></i>
-                                <span class="text-slate-700">Design transformational learning experiences</span>
-                            </div>
-                            <div class="flex items-center gap-3">
-                                <i data-lucide="check-circle-2" class="w-5 h-5 text-amber-600 flex-shrink-0"></i>
-                                <span class="text-slate-700">Escape the commodity trap with value-based pricing</span>
-                            </div>
-                            <div class="flex items-center gap-3">
-                                <i data-lucide="check-circle-2" class="w-5 h-5 text-amber-600 flex-shrink-0"></i>
-                                <span class="text-slate-700">Launch with a concrete 30-day action plan</span>
-                            </div>
-                        </div>
-                        <div class="flex flex-wrap items-center gap-3">
-                            <a href="https://www.amazon.com/TRANSFORMATION-ARCHITECTTM-Quick-Start-Building-Signature-ebook/dp/B0GM1L5JBV?ref_=ast_author_mpb" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-amber-500 text-slate-900 px-6 py-3 rounded-xl font-bold hover:bg-amber-600 transition duration-300 shadow-lg shadow-amber-500/25">
-                                <i data-lucide="book-open" class="w-5 h-5"></i>
-                                Get It on Amazon
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ARCH™ Framework Section -->
-        <section class="py-20 bg-white">
-            <div class="container mx-auto px-6">
-                <div class="text-center max-w-3xl mx-auto mb-12">
-                    <span class="text-amber-600 font-bold tracking-wide uppercase text-sm">The Philosophy</span>
-                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mt-2 mb-4">The ARCH&trade; Framework</h2>
-                    <p class="text-lg text-slate-600">The underlying philosophy behind every Transformation Architect&trade; program — four pillars that turn knowledge into lasting change.</p>
-                </div>
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-                    <div class="relative bg-slate-50 rounded-2xl p-6 border border-slate-200 card-hover text-center">
-                        <div class="w-14 h-14 bg-amber-500 text-white rounded-2xl flex items-center justify-center mx-auto mb-4 text-2xl font-extrabold shadow-lg shadow-amber-500/25">A</div>
-                        <h3 class="text-lg font-bold text-slate-900 mb-2">Aware</h3>
-                        <p class="text-slate-500 text-sm">Recognize where you are today — your strengths, gaps, and the opportunity ahead</p>
-                    </div>
-                    <div class="relative bg-slate-50 rounded-2xl p-6 border border-slate-200 card-hover text-center">
-                        <div class="w-14 h-14 bg-amber-500 text-white rounded-2xl flex items-center justify-center mx-auto mb-4 text-2xl font-extrabold shadow-lg shadow-amber-500/25">R</div>
-                        <h3 class="text-lg font-bold text-slate-900 mb-2">Reframe</h3>
-                        <p class="text-slate-500 text-sm">Shift perspectives and challenge assumptions to see new possibilities</p>
-                    </div>
-                    <div class="relative bg-slate-50 rounded-2xl p-6 border border-slate-200 card-hover text-center">
-                        <div class="w-14 h-14 bg-amber-500 text-white rounded-2xl flex items-center justify-center mx-auto mb-4 text-2xl font-extrabold shadow-lg shadow-amber-500/25">C</div>
-                        <h3 class="text-lg font-bold text-slate-900 mb-2">Construct</h3>
-                        <p class="text-slate-500 text-sm">Build new skills, strategies, and structures through hands-on practice</p>
-                    </div>
-                    <div class="relative bg-slate-50 rounded-2xl p-6 border border-slate-200 card-hover text-center">
-                        <div class="w-14 h-14 bg-amber-500 text-white rounded-2xl flex items-center justify-center mx-auto mb-4 text-2xl font-extrabold shadow-lg shadow-amber-500/25">H</div>
-                        <h3 class="text-lg font-bold text-slate-900 mb-2">Habitate</h3>
-                        <p class="text-slate-500 text-sm">Embed new behaviours as lasting practice — turning learning into habit</p>
-                        <p class="text-slate-400 text-xs mt-2 italic">habitate: to make habitual; to dwell in new practice</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- About Section -->
-        <section id="about" class="py-20 bg-slate-900 text-white">
-            <div class="container mx-auto px-6">
-                <div class="grid lg:grid-cols-2 gap-12 items-center">
-                    <div class="order-2 lg:order-1">
-                        <span class="text-amber-400 font-bold tracking-wide uppercase text-sm">Your Guide</span>
-                        <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-1">Dr Elijah Ting</h2>
-                        <p class="text-amber-300 font-semibold text-lg mb-6">The Transformation Architect&trade; · <span class="italic font-normal text-amber-200/80">Building Change That Lasts</span></p>
-
-                        <p class="text-slate-300 mb-4 text-lg leading-relaxed italic">
-                            "A great trainer doesn't just transfer knowledge — they architect transformation."
-                        </p>
-                        <p class="text-slate-300 mb-4 leading-relaxed">
-                            With an <strong class="text-white">Executive Doctorate in Learning & Development</strong>, an <strong class="text-white">Executive MBA</strong>, and years of experience training trainers across Malaysia and internationally, I've seen firsthand what separates trainers who struggle from those who thrive. It's not just talent — it's having a clear identity, a signature program, and a strategy to bring it to market.
-                        </p>
-                        <p class="text-slate-300 mb-6 leading-relaxed">
-                            This masterclass distills everything I've learned — from building my own signature programs to growing a thriving training practice — into a structured journey that gives you the same strategic advantage. As a <strong class="text-white">Certified Learning & Development Professional (CLDP)</strong> and <strong class="text-white">HRD Corp Accredited Trainer</strong>, I bring both academic rigor and real-world market insight to every session.
-                        </p>
-
-                        <div class="flex flex-wrap gap-3 text-sm mt-6">
-                            <span class="bg-amber-900/30 border border-amber-600/50 text-amber-200 px-4 py-2 rounded-full">Executive Doctorate in L&D</span>
-                            <span class="bg-amber-900/30 border border-amber-600/50 text-amber-200 px-4 py-2 rounded-full">Executive MBA</span>
-                            <span class="bg-amber-900/30 border border-amber-600/50 text-amber-200 px-4 py-2 rounded-full">Certified L&D Professional (GSDC)</span>
-                            <span class="bg-amber-900/30 border border-amber-600/50 text-amber-200 px-4 py-2 rounded-full">HRD Corp Accredited Trainer</span>
-                            <a href="https://www.amazon.com/author/dr.elijah" target="_blank" rel="noopener noreferrer" class="bg-amber-900/30 border border-amber-600/50 text-amber-200 px-4 py-2 rounded-full hover:bg-amber-800/40 transition">Published Author</a>
-                        </div>
-                    </div>
-
-                    <div class="order-1 lg:order-2 flex justify-center">
-                        <div class="relative">
-                            <div class="absolute -inset-4 bg-gradient-to-br from-amber-500 to-amber-700 rounded-3xl blur-lg opacity-30"></div>
-                            <img src="assets/images/profile-photo-1.jpg" alt="Dr Elijah Ting" class="relative w-full max-w-md rounded-3xl object-cover shadow-2xl ring-4 ring-white/10">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Testimonials Section -->
-        <section id="testimonials" class="py-20 section-pattern">
-            <div class="container mx-auto px-6">
-                <div class="text-center max-w-3xl mx-auto mb-12">
-                    <span class="text-amber-600 font-bold tracking-wide uppercase text-sm">Testimonials</span>
-                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mt-2 mb-4">What Past Participants Say</h2>
-                </div>
-                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                    <div class="bg-white p-8 rounded-2xl shadow-xl border border-slate-100 card-hover">
-                        <div class="flex text-yellow-400 mb-4 gap-1">
-                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
-                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
-                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
-                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
-                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
-                        </div>
-                        <p class="text-slate-600 italic leading-relaxed text-lg">"Thank you Elijah Ting, for the 5 days of training us to be the best trainer versions of ourselves. Your personal story on your training journey has been very inspiring."</p>
-                        <div class="mt-6 pt-6 border-t border-slate-100 flex items-center gap-3">
-                            <div class="w-10 h-10 bg-amber-100 text-amber-700 rounded-full flex items-center justify-center font-bold">K</div>
-                            <div>
-                                <p class="font-semibold text-slate-800">KK</p>
-                                <p class="text-slate-500 text-sm">Training Participant</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-white p-8 rounded-2xl shadow-xl border border-slate-100 card-hover">
-                        <div class="flex text-yellow-400 mb-4 gap-1">
-                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
-                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
-                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
-                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
-                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
-                        </div>
-                        <p class="text-slate-600 italic leading-relaxed text-lg">"Thank you for guiding us throughout the joyful learning sessions."</p>
-                        <div class="mt-6 pt-6 border-t border-slate-100 flex items-center gap-3">
-                            <div class="w-10 h-10 bg-amber-100 text-amber-700 rounded-full flex items-center justify-center font-bold">C</div>
-                            <div>
-                                <p class="font-semibold text-slate-800">CL</p>
-                                <p class="text-slate-500 text-sm">Training Participant</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- FAQ Section -->
-        <section id="faq" class="py-20 bg-white" x-data="{ open: 1 }">
-            <div class="container mx-auto px-6 max-w-4xl">
-                <div class="text-center max-w-3xl mx-auto mb-12">
-                    <span class="text-amber-600 font-bold tracking-wide uppercase text-sm">FAQ</span>
-                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mt-2 mb-4">Frequently Asked Questions</h2>
-                </div>
-                <div class="space-y-4">
-                    <div class="bg-slate-50 rounded-xl overflow-hidden">
-                        <button @click="open = (open === 1 ? 0 : 1)" class="w-full flex justify-between items-center text-left p-6 text-lg font-semibold text-slate-800 hover:bg-slate-100 transition">
-                            <span>Who is this masterclass for?</span>
-                            <i data-lucide="chevron-down" class="transition-transform w-5 h-5 text-amber-600" :class="open === 1 && 'rotate-180'"></i>
-                        </button>
-                        <div x-show="open === 1" x-collapse class="px-6 pb-6 text-slate-600">
-                            <p>This masterclass is designed for practicing trainers, facilitators, and subject-matter experts who want to move beyond delivering generic content. If you want to create your own signature training program, command premium fees, and build a recognized brand as a Transformation Architect, this program is for you.</p>
-                        </div>
-                    </div>
-                    <div class="bg-slate-50 rounded-xl overflow-hidden">
-                        <button @click="open = (open === 2 ? 0 : 2)" class="w-full flex justify-between items-center text-left p-6 text-lg font-semibold text-slate-800 hover:bg-slate-100 transition">
-                            <span>Is this available as virtual or in-person?</span>
-                            <i data-lucide="chevron-down" class="transition-transform w-5 h-5 text-amber-600" :class="open === 2 && 'rotate-180'"></i>
-                        </button>
-                        <div x-show="open === 2" x-collapse class="px-6 pb-6 text-slate-600">
-                            <p>Both options are available. The program can be delivered as a 2-day face-to-face intensive or as four virtual sessions (one module per session). The content and hands-on exercises are identical in both formats, with virtual sessions adapted for full remote engagement.</p>
-                        </div>
-                    </div>
-                    <div class="bg-slate-50 rounded-xl overflow-hidden">
-                        <button @click="open = (open === 3 ? 0 : 3)" class="w-full flex justify-between items-center text-left p-6 text-lg font-semibold text-slate-800 hover:bg-slate-100 transition">
-                            <span>What will I have by the end of the program?</span>
-                            <i data-lucide="chevron-down" class="transition-transform w-5 h-5 text-amber-600" :class="open === 3 && 'rotate-180'"></i>
-                        </button>
-                        <div x-show="open === 3" x-collapse class="px-6 pb-6 text-slate-600">
-                            <p>You will walk away with a clear trainer positioning statement, a validated niche, a complete program blueprint with session outlines, a marketing one-pager, a pitch deck outline, a pricing strategy, and a 30-day action plan to launch your signature program. These are tangible assets you can use immediately.</p>
-                        </div>
-                    </div>
-                    <div class="bg-slate-50 rounded-xl overflow-hidden">
-                        <button @click="open = (open === 4 ? 0 : 4)" class="w-full flex justify-between items-center text-left p-6 text-lg font-semibold text-slate-800 hover:bg-slate-100 transition">
-                            <span>Is this claimable under HRD Corp?</span>
-                            <i data-lucide="chevron-down" class="transition-transform w-5 h-5 text-amber-600" :class="open === 4 && 'rotate-180'"></i>
-                        </button>
-                        <div x-show="open === 4" x-collapse class="px-6 pb-6 text-slate-600">
-                            <p>Yes, this program is fully claimable for eligible companies registered with the Human Resource Development Corporation (HRD Corp) in Malaysia. Contact us for details on the claim process.</p>
-                        </div>
-                    </div>
-                    <div class="bg-slate-50 rounded-xl overflow-hidden">
-                        <button @click="open = (open === 5 ? 0 : 5)" class="w-full flex justify-between items-center text-left p-6 text-lg font-semibold text-slate-800 hover:bg-slate-100 transition">
-                            <span>Do I need prior experience as a trainer?</span>
-                            <i data-lucide="chevron-down" class="transition-transform w-5 h-5 text-amber-600" :class="open === 5 && 'rotate-180'"></i>
-                        </button>
-                        <div x-show="open === 5" x-collapse class="px-6 pb-6 text-slate-600">
-                            <p>While the program is designed for practicing trainers and facilitators, it is also suitable for subject-matter experts who are transitioning into the training profession. Some foundational training experience or a strong desire to build a training career is recommended to get the most out of the masterclass.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA Section -->
-        <section id="contact" class="py-20 hero-gradient relative overflow-hidden">
-            <div class="absolute inset-0 opacity-10">
-                <div class="absolute top-10 right-20 w-72 h-72 bg-white rounded-full blur-3xl"></div>
-                <div class="absolute bottom-10 left-10 w-96 h-96 bg-blue-300 rounded-full blur-3xl"></div>
-            </div>
-            <div class="container mx-auto px-6 text-center relative z-10">
-                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Become a Transformation Architect?</h2>
-                <p class="text-xl text-blue-100 max-w-2xl mx-auto mb-10">Take the first step toward building your signature program. Reach out to discuss enrollment, group rates, or customized delivery for your organization.</p>
-                <div class="flex flex-col sm:flex-row justify-center gap-4">
-                    <a href="https://wa.me/message/DTN4ST4TTRBWG1" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-3 bg-amber-500 text-slate-900 px-8 py-4 rounded-xl font-bold hover:bg-amber-400 transition duration-300 shadow-xl text-lg">
-                        <i data-lucide="message-circle" class="w-6 h-6"></i>
-                        WhatsApp to Enroll
-                    </a>
-                    <a href="https://www.linkedin.com/in/drelijah/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-3 bg-transparent text-white px-8 py-4 rounded-xl font-bold hover:bg-white/10 transition duration-300 ring-2 ring-white/50 text-lg">
-                        <i data-lucide="linkedin" class="w-6 h-6"></i>
-                        Connect on LinkedIn
-                    </a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-slate-900 text-slate-400 py-12">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
-                <div class="text-center md:text-left">
-                    <span class="text-white font-semibold">Dr Elijah Ting</span>
-                    <span class="text-slate-500 text-xs block mt-1">ECS Training & Consultancy Sdn. Bhd.</span>
-                </div>
-                <div class="flex gap-6">
-                    <a href="#modules" class="hover:text-white transition">Modules</a>
-                    <a href="#outcomes" class="hover:text-white transition">Outcomes</a>
-                    <a href="#book" class="hover:text-white transition">Book</a>
-                    <a href="#about" class="hover:text-white transition">About</a>
-                    <a href="#contact" class="hover:text-white transition">Contact</a>
-                </div>
-                <div class="flex gap-4">
-                    <a href="https://www.linkedin.com/in/drelijah/" target="_blank" aria-label="LinkedIn" class="hover:text-white transition">
-                        <i data-lucide="linkedin" class="w-5 h-5"></i>
-                    </a>
-                    <a href="https://www.facebook.com/DrElijah.org/" target="_blank" aria-label="Facebook" class="hover:text-white transition">
-                        <i data-lucide="facebook" class="w-5 h-5"></i>
-                    </a>
-                    <a href="https://www.instagram.com/dr.elijahting/" target="_blank" aria-label="Instagram" class="hover:text-white transition">
-                        <i data-lucide="instagram" class="w-5 h-5"></i>
-                    </a>
-                    <a href="https://x.com/DrElijahTing" target="_blank" aria-label="X" class="hover:text-white transition">
-                        <i data-lucide="twitter" class="w-5 h-5"></i>
-                    </a>
-                    <a href="https://wa.me/message/DTN4ST4TTRBWG1" target="_blank" aria-label="WhatsApp" class="hover:text-white transition">
-                        <i data-lucide="message-circle" class="w-5 h-5"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="mt-8 pt-8 border-t border-slate-800 text-center text-sm">
-                <p>&copy; 2026 Ting Moi Kieng. All Rights Reserved.</p>
-            </div>
+        <div class="framework-item">
+          <div class="framework-num cinzel" style="color:#8BA89A;">02</div>
+          <div>
+            <h3 class="framework-name cormorant" style="color:#8BA89A;">ARCH™</h3>
+            <p class="framework-desc">Aware → Reframe → Construct → Habitate. The signature change methodology guiding individuals and organisations from insight to lasting transformation.</p>
+          </div>
         </div>
-    </footer>
+        <div class="framework-item">
+          <div class="framework-num cinzel" style="color:#B8967E;">03</div>
+          <div>
+            <h3 class="framework-name cormorant" style="color:#B8967E;">Core16 Dynamics™</h3>
+            <p class="framework-desc">A proprietary framework mapping the sixteen core dynamics that drive human behaviour and team performance — built for practical application in leadership and organisational development.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <script>
-        // --- Lucide Icons ---
-        lucide.createIcons();
+  <!-- BOOK -->
+  <section id="book">
+    <div class="book-inner">
+      <div class="book-cover-wrap">
+        <div class="book-cover">
+          <p class="book-cover-tag">AMAZON · KINDLE &amp; PAPERBACK · FEBRUARY 2026</p>
+          <h3 class="book-cover-title cormorant">The Transformation<br>Architect™</h3>
+          <div class="book-cover-rule"></div>
+          <p class="book-cover-sub cormorant">A Quick-Start Guide to Building Your Signature Training Program</p>
+        </div>
+        <div class="book-shadow"></div>
+      </div>
+      <div class="book-content">
+        <p class="section-label">THE BOOK</p>
+        <h2 class="cormorant">Your Signature Programme<br><em>Starts Here</em></h2>
+        <p>Born from years of training design and delivery, this guide distils the architecture of transformational programme design into an accessible, actionable framework.</p>
+        <p>Whether you are a seasoned facilitator or beginning your journey, this book gives you the blueprint to build something that bears your mark.</p>
+        <a href="https://a.co/d/0dLt3b9M" class="btn btn-outline" target="_blank">Read on Amazon →</a>
+      </div>
+    </div>
+  </section>
 
-        // --- Mobile Menu Toggle ---
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
+  <!-- QUOTE -->
+  <section id="quote">
+    <div class="quote-mark cormorant">"</div>
+    <blockquote class="cormorant">
+      Transformation is not an event. It is an architecture — designed with intention, built with courage, and sustained by wisdom.
+    </blockquote>
+    <p class="quote-attr cinzel">DR ELIJAH · THE TRANSFORMATION ARCHITECT™</p>
+  </section>
 
-        if (mobileMenuButton && mobileMenu) {
-            mobileMenuButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
+  <!-- CREDENTIALS -->
+  <section id="credentials">
+    <div class="cred-grid">
+      <div class="cred-item">
+        <p class="cred-label cinzel">HRD Corp</p>
+        <p class="cred-sub cinzel">Accredited Trainer</p>
+      </div>
+      <div class="cred-item">
+        <p class="cred-label cinzel">BSc (Hons) Nursing</p>
+        <p class="cred-sub cinzel">Holistic Development</p>
+      </div>
+      <div class="cred-item">
+        <p class="cred-label cinzel">Master of Divinity</p>
+        <p class="cred-sub cinzel">Spiritually Grounded</p>
+      </div>
+      <div class="cred-item">
+        <p class="cred-label cinzel">Executive MBA</p>
+        <p class="cred-sub cinzel">Business Strategy</p>
+      </div>
+      <div class="cred-item">
+        <p class="cred-label cinzel">CFP®</p>
+        <p class="cred-sub cinzel">Financial Stewardship</p>
+      </div>
+      <div class="cred-item">
+        <p class="cred-label cinzel">Exec. Doctorate L&amp;D</p>
+        <p class="cred-sub cinzel">Transformation Framework</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="cta">
+    <div class="cta-glow"></div>
+    <p class="section-label">BEGIN YOUR TRANSFORMATION</p>
+    <h2 class="cormorant">Ready to Build<br><em>Something That Lasts?</em></h2>
+    <p class="cormorant">Whether you are seeking a corporate training partner, spiritual guidance, or a speaking engagement — let's build together.</p>
+    <div class="cta-btns">
+      <a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-fill">Get in Touch</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-top">
+      <p class="footer-brand cinzel">DR ELIJAH · THE TRANSFORMATION ARCHITECT™</p>
+      <p class="footer-location cormorant">Sibu, Sarawak, Malaysia · ECS Training &amp; Consultancy Sdn. Bhd.</p>
+      <p class="footer-domain cinzel">DrElijah.org</p>
+    </div>
+    <div class="footer-social">
+      <a href="https://www.linkedin.com/in/drelijah/" target="_blank">LinkedIn</a>
+      <div class="footer-divider"></div>
+      <a href="https://www.facebook.com/DrElijah.org" target="_blank">Facebook</a>
+      <div class="footer-divider"></div>
+      <a href="https://www.instagram.com/dr.elijahting/" target="_blank">Instagram</a>
+      <div class="footer-divider"></div>
+      <a href="https://x.com/DrElijahTing" target="_blank">X</a>
+    </div>
+  </footer>
+
+  <script>
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+          observer.unobserve(entry.target);
         }
-    </script>
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.role-card, .framework-item, .cred-item').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(24px)';
+      el.style.transition = 'opacity 0.7s ease, transform 0.7s cubic-bezier(0.16,1,0.3,1)';
+      observer.observe(el);
+    });
+  </script>
 </body>
 </html>
