@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dr Elijah — The Transformation Architect™</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230E0D0B'/%3E%3Crect x='1' y='1' width='30' height='30' fill='none' stroke='%23C8A96E' stroke-width='0.75'/%3E%3Ctext x='16' y='23' font-family='Georgia%2C serif' font-size='20' font-weight='400' fill='%23C8A96E' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Cinzel:wght@400;500&display=swap" rel="stylesheet" />
@@ -229,13 +230,8 @@
       gap: 16px;
     }
     .footer-brand { font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 0.2em; color: var(--gold); }
-    .footer-location { font-size: 13px; color: var(--text-dim); letter-spacing: 0.05em; font-style: italic; }
     .footer-domain { font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 0.1em; color: var(--text-dim); }
-    .footer-social {
-      display: flex;
-      gap: 24px;
-      align-items: center;
-    }
+    .footer-social { display: flex; gap: 24px; align-items: center; }
     .footer-social a {
       color: var(--text-dim);
       text-decoration: none;
@@ -245,11 +241,7 @@
       transition: color 0.3s;
     }
     .footer-social a:hover { color: var(--gold); }
-    .footer-divider {
-      width: 1px;
-      height: 12px;
-      background: var(--border);
-    }
+    .footer-divider { width: 1px; height: 12px; background: var(--border); }
 
     @media (max-width: 768px) {
       nav { padding: 16px 24px; }
@@ -263,9 +255,11 @@
       #book { padding: 60px 24px; }
       .book-inner { grid-template-columns: 1fr; gap: 48px; }
       #quote { padding: 60px 24px; }
-      #credentials { padding: 60px 24px; }
+      #credentials { padding: 60px 24px; .cred-grid { grid-template-columns: repeat(2, 1fr); } }
       #cta { padding: 80px 24px; }
       footer { padding: 32px 24px; flex-direction: column; text-align: center; }
+      .footer-top { justify-content: center; }
+      .footer-social { flex-wrap: wrap; justify-content: center; }
     }
   </style>
 </head>
