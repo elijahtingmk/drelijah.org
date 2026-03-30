@@ -4,6 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dr Elijah — Transformation Architect™</title>
+  <meta name="description" content="Dr Elijah — Transformation Architect™. Executive L&D consultant, practitioner-scholar, and pastoral leader bridging embodied practice with evidence-based leadership development." />
+  <meta property="og:title" content="Dr Elijah — Transformation Architect™" />
+  <meta property="og:description" content="Bridging the wisdom of embodied practice with the rigour of evidence-based leadership development." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://drelijah.org" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Dr Elijah — Transformation Architect™" />
+  <meta name="twitter:description" content="Bridging the wisdom of embodied practice with the rigour of evidence-based leadership development." />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230E0D0B'/%3E%3Crect x='1' y='1' width='30' height='30' fill='none' stroke='%23C8A96E' stroke-width='0.75'/%3E%3Ctext x='16' y='23' font-family='Georgia%2C serif' font-size='20' font-weight='400' fill='%23C8A96E' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -117,6 +125,27 @@
     }
     .nav-links a:hover { color: var(--gold); }
 
+    .nav-hamburger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      flex-direction: column;
+      gap: 5px;
+      z-index: 101;
+    }
+    .nav-hamburger span {
+      display: block;
+      width: 24px;
+      height: 1.5px;
+      background: var(--gold);
+      transition: all 0.3s ease;
+    }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
     .btn {
       font-family: 'Cinzel', serif;
       font-size: 14px;
@@ -204,7 +233,7 @@
     .framework-item:last-child { border-bottom: none; }
     .framework-num { font-family: 'Cinzel', serif; font-size: 36px; opacity: 0.3; min-width: 60px; text-align: center; }
     .framework-name { font-size: 26px; font-weight: 500; margin-bottom: 8px; }
-    .framework-desc { font-size: 18px; line-height: 1.8; color: var(--text-muted); font-weight: 300; max-width: 640px; }
+    .framework-desc { font-size: 18px; line-height: 1.8; color: var(--text-muted); font-weight: 300; max-width: 800px; }
 
     #book { padding: 100px 48px; }
     .book-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
@@ -276,10 +305,26 @@
     }
     .footer-social a:hover { color: var(--gold); }
     .footer-divider { width: 1px; height: 12px; background: var(--border); }
+    .footer-copy { font-family: 'Cinzel', serif; font-size: 12px; letter-spacing: 0.1em; color: var(--text-dim); }
 
     @media (max-width: 768px) {
       nav { padding: 16px 24px; }
-      .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        gap: 0;
+        background: rgba(14,13,11,0.95);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border);
+        padding: 16px 24px;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links a { padding: 12px 0; }
       #hero { padding: 100px 24px 60px; }
       .hero-side { display: none; }
       #roles { padding: 60px 24px; }
@@ -325,6 +370,9 @@
       <li><a href="#book">Book</a></li>
       <li><a href="#cta">Contact</a></li>
     </ul>
+    <button class="nav-hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
 
   <!-- HERO -->
@@ -348,8 +396,8 @@
       Bridging the wisdom of embodied practice with the rigour of evidence-based leadership development.
     </p>
     <div class="hero-btns reveal d4">
-      <a href="https://a.co/d/0bMXPtXt" class="btn btn-fill" target="_blank">Get the Book</a>
-      <a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-terracotta" target="_blank">Work With Me</a>
+      <a href="https://a.co/d/0bMXPtXt" class="btn btn-fill" target="_blank" rel="noopener noreferrer">Get the Book</a>
+      <a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-terracotta" target="_blank" rel="noopener noreferrer">Work With Me</a>
     </div>
     <div class="scroll-hint reveal d5">
       <span>SCROLL</span>
@@ -365,22 +413,22 @@
     </div>
     <div class="roles-grid">
       <div class="role-card">
-        <div class="role-icon">◈</div>
+        <div class="role-icon"><span aria-hidden="true">◈</span></div>
         <p class="role-title">Executive L&amp;D Consultant</p>
         <p class="role-body">HRD Corp accredited trainer delivering transformational programmes across Malaysia and beyond.</p>
       </div>
       <div class="role-card">
-        <div class="role-icon">✦</div>
+        <div class="role-icon"><span aria-hidden="true">✦</span></div>
         <p class="role-title">Transformation Architect™</p>
         <p class="role-body">Author of the book helping trainers build their signature programmes with clarity, conviction, and lasting impact.</p>
       </div>
       <div class="role-card role-card--pastoral">
-        <div class="role-icon">◉</div>
+        <div class="role-icon"><span aria-hidden="true">◉</span></div>
         <p class="role-title">Pastoral Leader</p>
         <p class="role-body">Providing oversight and strategic leadership across churches in Sibu and Kuching — guiding faith communities where people are supported, grounded, and transformed.</p>
       </div>
       <div class="role-card">
-        <div class="role-icon">⬡</div>
+        <div class="role-icon"><span aria-hidden="true">⬡</span></div>
         <p class="role-title">Practitioner-Scholar</p>
         <p class="role-body">Grounded in Executive Doctoral research and continuing inquiry into the Psychology of Transformation — bringing academic rigour into every training room.</p>
       </div>
@@ -430,7 +478,7 @@
         <h2 class="cormorant">Your Signature Programme<br><em>Starts Here</em></h2>
         <p>Born from years of training design and delivery, this guide distils the architecture of transformational programme design into an accessible, actionable framework.</p>
         <p>Whether you are a seasoned facilitator or beginning your journey, this book gives you the blueprint to build something that bears your mark.</p>
-        <a href="https://a.co/d/0dLt3b9M" class="btn btn-outline" target="_blank">Read on Amazon →</a>
+        <a href="https://a.co/d/0dLt3b9M" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Read on Amazon →</a>
       </div>
     </div>
   </section>
@@ -481,7 +529,7 @@
     <h2 class="cormorant">Ready to Build<br><em>Something That Lasts?</em></h2>
     <p class="cormorant">Whether you are seeking a corporate training partner, spiritual guidance, or a speaking engagement — let's build together.</p>
     <div class="cta-btns">
-      <a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-terracotta" target="_blank">Get in Touch</a>
+      <a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-terracotta" target="_blank" rel="noopener noreferrer">Get in Touch</a>
     </div>
   </section>
 
@@ -492,20 +540,36 @@
       <p class="footer-domain cinzel">DrElijah.org</p>
     </div>
     <div class="footer-social">
-      <a href="https://www.linkedin.com/in/drelijah/" target="_blank">LinkedIn</a>
+      <a href="https://www.linkedin.com/in/drelijah/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       <div class="footer-divider"></div>
-      <a href="https://www.facebook.com/DrElijah.org" target="_blank">Facebook</a>
+      <a href="https://www.facebook.com/DrElijah.org" target="_blank" rel="noopener noreferrer">Facebook</a>
       <div class="footer-divider"></div>
-      <a href="https://www.instagram.com/dr.elijahting/" target="_blank">Instagram</a>
+      <a href="https://www.instagram.com/dr.elijahting/" target="_blank" rel="noopener noreferrer">Instagram</a>
       <div class="footer-divider"></div>
-      <a href="https://x.com/DrElijahTing" target="_blank">X</a>
+      <a href="https://x.com/DrElijahTing" target="_blank" rel="noopener noreferrer">X</a>
     </div>
+    <p class="footer-copy">&copy; 2026 Dr Elijah. All rights reserved.</p>
   </footer>
 
   <script>
     const nav = document.getElementById('nav');
     window.addEventListener('scroll', () => {
       nav.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    const hamburger = document.querySelector('.nav-hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      navLinks.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', navLinks.classList.contains('open'));
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        navLinks.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+      });
     });
 
     const observer = new IntersectionObserver((entries) => {
