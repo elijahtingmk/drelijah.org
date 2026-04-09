@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dr Elijah — Transformation Architect™</title>
-  <meta name="description" content="Dr Elijah — Transformation Architect™. Executive L&D consultant, practitioner-scholar, and pastoral leader bridging embodied practice with evidence-based leadership development." />
-  <meta property="og:title" content="Dr Elijah — Transformation Architect™" />
-  <meta property="og:description" content="Bridging the wisdom of embodied practice with the rigour of evidence-based leadership development." />
+  <title>Dr Elijah — Resilience Training &amp; Consulting</title>
+  <meta name="description" content="Dr Elijah — Certified Resilience Coach (CReC), PR6 Certified. Evidence-based resilience training for organisations in Malaysia and beyond." />
+  <meta property="og:title" content="Dr Elijah — Resilience Training &amp; Consulting" />
+  <meta property="og:description" content="Helping teams and leaders perform under pressure, recover with intention, and build resilience that lasts — powered by the science of PR6." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://drelijah.org" />
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Dr Elijah — Transformation Architect™" />
-  <meta name="twitter:description" content="Bridging the wisdom of embodied practice with the rigour of evidence-based leadership development." />
+  <meta name="twitter:title" content="Dr Elijah — Resilience Training &amp; Consulting" />
+  <meta name="twitter:description" content="Helping teams and leaders perform under pressure, recover with intention, and build resilience that lasts — powered by the science of PR6." />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230E0D0B'/%3E%3Crect x='1' y='1' width='30' height='30' fill='none' stroke='%23C8A96E' stroke-width='0.75'/%3E%3Ctext x='16' y='23' font-family='Georgia%2C serif' font-size='20' font-weight='400' fill='%23C8A96E' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -225,31 +225,48 @@
     .role-title { font-family: 'Cinzel', serif; font-size: 15px; letter-spacing: 0.15em; color: var(--gold); margin-bottom: 16px; text-transform: uppercase; }
     .role-body { font-size: 17px; line-height: 1.9; color: var(--text-muted); font-weight: 300; }
 
-    #frameworks { padding: 100px 48px; background: var(--bg-alt); }
-    .frameworks-inner { max-width: 1200px; margin: 0 auto; }
-    .frameworks-header { text-align: center; margin-bottom: 64px; }
-    .frameworks-header h2 { font-size: clamp(32px, 4vw, 48px); font-weight: 300; }
+    #methodology { padding: 100px 48px; background: var(--bg-alt); }
+    .methodology-inner { max-width: 1200px; margin: 0 auto; }
+    .methodology-header { text-align: center; margin-bottom: 64px; }
+    .methodology-header h2 { font-size: clamp(32px, 4vw, 48px); font-weight: 300; }
     .framework-item { display: flex; align-items: center; gap: 48px; padding: 40px 0; border-bottom: 1px solid var(--border); }
     .framework-item:last-child { border-bottom: none; }
     .framework-num { font-family: 'Cinzel', serif; font-size: 36px; opacity: 0.3; min-width: 60px; text-align: center; }
     .framework-name { font-size: 26px; font-weight: 500; margin-bottom: 8px; }
     .framework-desc { font-size: 18px; line-height: 1.8; color: var(--text-muted); font-weight: 300; max-width: 800px; }
+    .methodology-cta { text-align: center; margin-top: 48px; }
+    .methodology-cta a {
+      font-family: 'Cinzel', serif;
+      font-size: 14px;
+      letter-spacing: 0.2em;
+      color: var(--gold);
+      text-decoration: none;
+      border-bottom: 1px solid var(--gold-dim);
+      padding-bottom: 2px;
+      transition: border-color 0.3s;
+    }
+    .methodology-cta a:hover { border-color: var(--gold); }
 
-    #book { padding: 100px 48px; }
-    .book-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
-    .book-cover-wrap { position: relative; }
-    .book-cover { aspect-ratio: 3/4; background: linear-gradient(135deg, #1A1813 0%, #2A2318 50%, #1A1813 100%); border: 1px solid #3A3228; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 48px; text-align: center; position: relative; overflow: hidden; }
-    .book-cover::before { content: ''; position: absolute; inset: 16px; border: 1px solid #C8A96E22; }
-    .book-cover-tag { font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 0.35em; color: var(--gold); margin-bottom: 24px; }
-    .book-cover-title { font-size: 30px; font-weight: 300; line-height: 1.3; color: var(--text); margin-bottom: 16px; }
-    .book-cover-rule { width: 40px; height: 1px; background: var(--gold); margin: 0 auto 16px; }
-    .book-cover-sub { font-size: 16px; font-style: italic; color: var(--text-muted); }
-    .book-shadow { position: absolute; bottom: -20px; left: 10%; right: 10%; height: 40px; background: radial-gradient(ellipse, #C8A96E22 0%, transparent 70%); filter: blur(8px); }
-    .book-content .section-label { margin-bottom: 24px; }
-    .book-content h2 { font-size: clamp(28px, 3.5vw, 42px); font-weight: 300; line-height: 1.3; margin-bottom: 24px; }
-    .book-content h2 em { font-style: italic; color: var(--text-muted); }
-    .book-content p { font-size: 18px; line-height: 1.9; color: var(--text-muted); font-weight: 300; margin-bottom: 16px; }
-    .book-content p:last-of-type { margin-bottom: 40px; }
+    #flagship { padding: 100px 48px; }
+    .flagship-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .flagship-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      padding: 48px;
+      position: relative;
+    }
+    .flagship-card::before { content: ''; position: absolute; inset: 12px; border: 1px solid #C8A96E18; pointer-events: none; }
+    .flagship-card-tag { font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 0.35em; color: var(--gold); margin-bottom: 20px; }
+    .flagship-card-title { font-size: 28px; font-weight: 300; line-height: 1.3; color: var(--text); margin-bottom: 8px; }
+    .flagship-card-rule { width: 40px; height: 1px; background: var(--gold); margin: 16px 0; }
+    .flagship-card-sub { font-size: 16px; font-style: italic; color: var(--text-muted); margin-bottom: 24px; }
+    .flagship-detail { font-size: 15px; color: var(--text-dim); font-family: 'Cinzel', serif; letter-spacing: 0.1em; margin-bottom: 8px; }
+    .flagship-detail span { color: var(--text-muted); font-family: 'Cormorant Garamond', serif; font-size: 17px; letter-spacing: 0; }
+    .flagship-content .section-label { margin-bottom: 24px; }
+    .flagship-content h2 { font-size: clamp(28px, 3.5vw, 42px); font-weight: 300; line-height: 1.3; margin-bottom: 24px; }
+    .flagship-content h2 em { font-style: italic; color: var(--text-muted); }
+    .flagship-content p { font-size: 18px; line-height: 1.9; color: var(--text-muted); font-weight: 300; margin-bottom: 16px; }
+    .flagship-content p:last-of-type { margin-bottom: 40px; }
 
     #quote { padding: 100px 48px; background: linear-gradient(135deg, var(--bg-alt) 0%, #141A16 100%); text-align: center; }
     .quote-mark { font-size: 72px; color: #344E4130; line-height: 1; margin-bottom: -8px; }
@@ -267,13 +284,14 @@
     .cred-item { text-align: center; }
     .cred-label { font-family: 'Cinzel', serif; font-size: 16px; color: var(--gold); margin-bottom: 6px; }
     .cred-sub { font-size: 14px; color: var(--text-dim); letter-spacing: 0.1em; font-family: 'Cinzel', serif; }
+    .cred-item--new .cred-label { color: var(--green-muted); }
 
     #cta { padding: 120px 48px; text-align: center; position: relative; overflow: hidden; }
     .cta-glow { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle, #C8A96E06 0%, transparent 65%); pointer-events: none; }
     #cta .section-label { margin-bottom: 24px; }
     #cta h2 { font-size: clamp(36px, 5vw, 64px); font-weight: 300; line-height: 1.2; margin-bottom: 24px; }
     #cta h2 em { font-style: italic; }
-    #cta p { font-size: 20px; color: var(--text-muted); max-width: 500px; margin: 0 auto 48px; line-height: 1.8; }
+    #cta p { font-size: 20px; color: var(--text-muted); max-width: 560px; margin: 0 auto 48px; line-height: 1.8; }
     .cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
 
     footer {
@@ -306,6 +324,7 @@
     .footer-social a:hover { color: var(--gold); }
     .footer-divider { width: 1px; height: 12px; background: var(--border); }
     .footer-copy { font-family: 'Cinzel', serif; font-size: 12px; letter-spacing: 0.1em; color: var(--text-dim); }
+    .footer-powered { font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 0.15em; color: var(--text-dim); opacity: 0.6; }
 
     @media (max-width: 768px) {
       nav { padding: 16px 24px; }
@@ -328,11 +347,11 @@
       #hero { padding: 100px 24px 60px; }
       .hero-side { display: none; }
       #roles { padding: 60px 24px; }
-      #frameworks { padding: 60px 24px; }
+      #methodology { padding: 60px 24px; }
       .framework-item { flex-direction: column; gap: 16px; }
       .framework-num { min-width: auto; font-size: 28px; }
-      #book { padding: 60px 24px; }
-      .book-inner { grid-template-columns: 1fr; gap: 48px; }
+      #flagship { padding: 60px 24px; }
+      .flagship-inner { grid-template-columns: 1fr; gap: 48px; }
       #quote { padding: 60px 24px; }
       #credentials { padding: 60px 24px; }
       .cred-grid { grid-template-columns: repeat(2, 1fr); gap: 36px 24px; }
@@ -349,9 +368,9 @@
       .footer-social a { font-size: 16px; }
       .footer-brand { font-size: 14px; letter-spacing: 0.15em; }
       .footer-domain { font-size: 14px; }
-      .book-cover-tag { font-size: 12px; letter-spacing: 0.2em; }
-      .book-cover-sub { font-size: 16px; }
-      .book-content p { font-size: 18px; }
+      .flagship-card { padding: 32px 24px; }
+      .flagship-card-title { font-size: 24px; }
+      .flagship-content p { font-size: 18px; }
       .nav-logo { font-size: 16px; }
       footer { padding: 32px 24px; flex-direction: column; text-align: center; }
       .footer-top { justify-content: center; }
@@ -366,8 +385,8 @@
     <a href="#hero" class="nav-logo">DR ELIJAH</a>
     <ul class="nav-links">
       <li><a href="#roles">About</a></li>
-      <li><a href="#frameworks">Frameworks</a></li>
-      <li><a href="#book">Book</a></li>
+      <li><a href="programmes.html">Programmes</a></li>
+      <li><a href="#methodology">Methodology</a></li>
       <li><a href="#cta">Contact</a></li>
     </ul>
     <button class="nav-hamburger" aria-label="Toggle menu" aria-expanded="false">
@@ -383,20 +402,20 @@
       <span class="hero-side-text">SIBU · SARAWAK · MALAYSIA</span>
     </div>
     <div class="hero-side" style="bottom:20%; right:8%;">
-      <span class="hero-side-text">TRANSFORM · LEAD · FLOURISH</span>
+      <span class="hero-side-text">PERFORM · RECOVER · THRIVE</span>
       <div class="gold-line-v" style="height:80px;"></div>
     </div>
     <div class="hero-tag reveal">
-      <p class="section-label">TRANSFORMATION ARCHITECT™</p>
+      <p class="section-label">RESILIENCE TRAINING &amp; CONSULTING</p>
       <div class="gold-divider"></div>
     </div>
     <h1 class="hero-name cormorant reveal d1">Dr Elijah</h1>
     <h2 class="hero-sub cormorant reveal d2">Ting Moi Kieng</h2>
     <p class="hero-desc reveal d3">
-      Bridging the wisdom of embodied practice with the rigour of evidence-based leadership development.
+      Helping teams and leaders perform under pressure, recover with intention, and build resilience that lasts — powered by the science of PR6.
     </p>
     <div class="hero-btns reveal d4">
-      <a href="https://a.co/d/0bMXPtXt" class="btn btn-fill" target="_blank" rel="noopener noreferrer">Get the Book</a>
+      <a href="programmes.html" class="btn btn-fill">View Programmes →</a>
       <a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-terracotta" target="_blank" rel="noopener noreferrer">Work With Me</a>
     </div>
     <div class="scroll-hint reveal d5">
@@ -405,22 +424,22 @@
     </div>
   </section>
 
-  <!-- ROLES -->
+  <!-- ABOUT / ROLES -->
   <section id="roles">
     <div class="roles-header">
       <p class="section-label">WHAT I DO</p>
-      <h2 class="cormorant">Four Callings. One Architecture.</h2>
+      <h2 class="cormorant">Four Dimensions. One Foundation.</h2>
     </div>
     <div class="roles-grid">
       <div class="role-card">
         <div class="role-icon"><span aria-hidden="true">◈</span></div>
-        <p class="role-title">Executive L&amp;D Consultant</p>
-        <p class="role-body">HRD Corp accredited trainer delivering transformational programmes across Malaysia and beyond.</p>
+        <p class="role-title">Certified Resilience Coach</p>
+        <p class="role-body">Delivering evidence-based resilience programmes grounded in the PR6 Model and Hello Driven Resilience Science — CReC, PR6+JSECC+PURE, and PR6+BIG5 certified.</p>
       </div>
       <div class="role-card">
         <div class="role-icon"><span aria-hidden="true">✦</span></div>
-        <p class="role-title">Transformation Architect™</p>
-        <p class="role-body">Author of the book helping trainers build their signature programmes with clarity, conviction, and lasting impact.</p>
+        <p class="role-title">Executive L&amp;D Consultant</p>
+        <p class="role-body">HRD Corp accredited trainer bringing structured, measurable learning experiences to organisations across Malaysia and the wider region.</p>
       </div>
       <div class="role-card role-card--pastoral">
         <div class="role-icon"><span aria-hidden="true">◉</span></div>
@@ -430,55 +449,71 @@
       <div class="role-card">
         <div class="role-icon"><span aria-hidden="true">⬡</span></div>
         <p class="role-title">Practitioner-Scholar</p>
-        <p class="role-body">Grounded in Executive Doctoral research and continuing inquiry into the Psychology of Transformation — bringing academic rigour into every training room.</p>
+        <p class="role-body">Executive Doctoral research in L&amp;D, now applied to the science and practice of human resilience under pressure — bringing academic rigour into every training room.</p>
       </div>
     </div>
   </section>
 
-  <!-- FRAMEWORKS -->
-  <section id="frameworks">
-    <div class="frameworks-inner">
-      <div class="frameworks-header">
-        <p class="section-label">SIGNATURE FRAMEWORKS</p>
-        <h2 class="cormorant">The Blueprints of Transformation</h2>
+  <!-- METHODOLOGY -->
+  <section id="methodology">
+    <div class="methodology-inner">
+      <div class="methodology-header">
+        <p class="section-label">THE METHODOLOGY</p>
+        <h2 class="cormorant">Built on PR6 Resilience Science</h2>
       </div>
       <div>
         <div class="framework-item">
           <div class="framework-num cinzel" style="color:#C8A96E;">I.</div>
           <div>
-            <h3 class="framework-name cormorant" style="color:#C8A96E;">The Architect's Matrix™</h3>
-            <p class="framework-desc"><strong>The Structural Foundation for Organizational Change.</strong><br>This is our master diagnostic and execution system. We utilize High-Resolution Human Mapping to look past surface-level labels and identify the deep structural dynamics of your leaders. We then apply the ARCH™ Methodology (Aware, Reframe, Construct, Habitate) to turn those insights into a permanent, high-performance leadership culture.</p>
+            <h3 class="framework-name cormorant" style="color:#C8A96E;">PR6 Model</h3>
+            <p class="framework-desc"><strong>Six evidence-based domains of human resilience.</strong><br>Vision, Composure, Reasoning, Tenacity, Collaboration, and Health — each measured, profiled, and developed through a structured, science-backed approach that gives participants a clear picture of where they stand and what to build.</p>
           </div>
         </div>
         <div class="framework-item">
           <div class="framework-num cinzel" style="color:var(--green-muted);">II.</div>
           <div>
-            <h3 class="framework-name cormorant" style="color:var(--green-muted);">EMPATH™</h3>
-            <p class="framework-desc"><strong>The Relational Heart of Transformational Leadership.</strong><br>Structure alone isn't enough; it requires a pulse. EMPATH™ is the capstone of my doctoral research, integrating Nonviolent Communication (NVC) into the executive suite. It provides leaders with the tools to handle conflict with a "Non-Anxious Presence," building trust through radical authenticity and deep empathy.</p>
+            <h3 class="framework-name cormorant" style="color:var(--green-muted);">Live Measurement</h3>
+            <p class="framework-desc"><strong>Real-time PR6 assessment via QR code.</strong><br>Every participant receives a personal resilience baseline at the start of each programme — making the learning immediately relevant, data-driven, and individually meaningful rather than generic.</p>
           </div>
         </div>
+        <div class="framework-item">
+          <div class="framework-num cinzel" style="color:#C8A96E;">III.</div>
+          <div>
+            <h3 class="framework-name cormorant" style="color:#C8A96E;">1-Month App Reinforcement</h3>
+            <p class="framework-desc"><strong>Learning that extends beyond the training room.</strong><br>App-driven reinforcement over 30 days keeps skills active, builds habits progressively, and ensures the investment in resilience development translates into sustainable behaviour change.</p>
+          </div>
+        </div>
+        <div class="framework-item">
+          <div class="framework-num cinzel" style="color:var(--green-muted);">IV.</div>
+          <div>
+            <h3 class="framework-name cormorant" style="color:var(--green-muted);">Onsite &amp; Virtual Delivery</h3>
+            <p class="framework-desc"><strong>Delivered flexibly to meet your teams where they are.</strong><br>From full-day bootcamps to half-day workshops and multi-week consulting engagements — programmes are designed to fit operational reality without compromising depth or impact.</p>
+          </div>
+        </div>
+      </div>
+      <div class="methodology-cta">
+        <a href="programmes.html">→ See the full programme catalogue</a>
       </div>
     </div>
   </section>
 
-  <!-- BOOK -->
-  <section id="book">
-    <div class="book-inner">
-      <div class="book-cover-wrap">
-        <div class="book-cover">
-          <p class="book-cover-tag">AMAZON · KINDLE &amp; PAPERBACK · FEBRUARY 2026</p>
-          <h3 class="book-cover-title cormorant">The Transformation<br>Architect™</h3>
-          <div class="book-cover-rule"></div>
-          <p class="book-cover-sub cormorant">A Quick-Start Guide to Building Your Signature Training Program</p>
-        </div>
-        <div class="book-shadow"></div>
+  <!-- FLAGSHIP PROGRAMME -->
+  <section id="flagship">
+    <div class="flagship-inner">
+      <div class="flagship-card">
+        <p class="flagship-card-tag">FLAGSHIP · 2 DAYS · HIGH-DEMAND TEAMS</p>
+        <h3 class="flagship-card-title cormorant">Resilience for Performance Under Pressure</h3>
+        <div class="flagship-card-rule"></div>
+        <p class="flagship-card-sub cormorant">2-Day Resilience Skills Lab</p>
+        <p class="flagship-detail">Best for: <span>High-demand teams, leadership cohorts</span></p>
+        <p class="flagship-detail">Includes: <span>Live PR6 (QR) + Cohort PR6 Snapshot + Cohort Insights Summary + 1-Month App + recommended programme pathway</span></p>
       </div>
-      <div class="book-content">
-        <p class="section-label">THE BOOK</p>
-        <h2 class="cormorant">Your Signature Programme<br><em>Starts Here</em></h2>
-        <p>Born from years of training design and delivery, this guide distils the architecture of transformational programme design into an accessible, actionable framework.</p>
-        <p>Whether you are a seasoned facilitator or beginning your journey, this book gives you the blueprint to build something that bears your mark.</p>
-        <a href="https://a.co/d/0dLt3b9M" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Read on Amazon →</a>
+      <div class="flagship-content">
+        <p class="section-label">FLAGSHIP PROGRAMME</p>
+        <h2 class="cormorant">The Deepest<br><em>Resilience Experience</em></h2>
+        <p>Two full days of immersive resilience development — measurement, skills, and a cohort-level debrief that gives leaders data they can act on.</p>
+        <p>Built for teams under sustained pressure who need more than a workshop — they need a shift in how they think, recover, and lead.</p>
+        <a href="programmes.html" class="btn btn-outline">View All Programmes →</a>
       </div>
     </div>
   </section>
@@ -487,14 +522,26 @@
   <section id="quote">
     <div class="quote-mark cormorant">"</div>
     <blockquote class="cormorant">
-      Transformation is not an event. It is an architecture — designed with intention, built with courage, and sustained by wisdom.
+      Resilience is not the absence of pressure.<br>It is the architecture of how you respond to it.
     </blockquote>
-    <p class="quote-attr cinzel">DR ELIJAH · TRANSFORMATION ARCHITECT™</p>
+    <p class="quote-attr cinzel">DR ELIJAH · RESILIENCE TRAINING &amp; CONSULTING</p>
   </section>
 
   <!-- CREDENTIALS -->
   <section id="credentials">
     <div class="cred-grid">
+      <div class="cred-item cred-item--new">
+        <p class="cred-label cinzel">CReC</p>
+        <p class="cred-sub cinzel">Certified Resilience Coach</p>
+      </div>
+      <div class="cred-item cred-item--new">
+        <p class="cred-label cinzel">PR6 + JSECC + PURE</p>
+        <p class="cred-sub cinzel">Certified Practitioner</p>
+      </div>
+      <div class="cred-item cred-item--new">
+        <p class="cred-label cinzel">PR6 + BIG5</p>
+        <p class="cred-sub cinzel">Certified Practitioner</p>
+      </div>
       <div class="cred-item">
         <p class="cred-label cinzel">HRD Corp</p>
         <p class="cred-sub cinzel">Accredited Trainer</p>
@@ -525,18 +572,19 @@
   <!-- CTA -->
   <section id="cta">
     <div class="cta-glow"></div>
-    <p class="section-label">BEGIN YOUR TRANSFORMATION</p>
-    <h2 class="cormorant">Ready to Build<br><em>Something That Lasts?</em></h2>
-    <p class="cormorant">Whether you are seeking a corporate training partner, spiritual guidance, or a speaking engagement — let's build together.</p>
+    <p class="section-label">BUILD RESILIENCE THAT LASTS</p>
+    <h2 class="cormorant">Ready to Strengthen<br><em>Your Team's Resilience?</em></h2>
+    <p class="cormorant">Whether you're planning a half-day workshop, a full team resilience assessment, or a flagship 2-day skills lab — let's talk.</p>
     <div class="cta-btns">
       <a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-terracotta" target="_blank" rel="noopener noreferrer">Get in Touch</a>
+      <a href="programmes.html" class="btn btn-outline">View Programmes</a>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer>
     <div class="footer-top">
-      <p class="footer-brand cinzel">DR ELIJAH · TRANSFORMATION ARCHITECT™</p>
+      <p class="footer-brand cinzel">DR ELIJAH · RESILIENCE TRAINING &amp; CONSULTING</p>
       <p class="footer-domain cinzel">DrElijah.org</p>
     </div>
     <div class="footer-social">
@@ -549,6 +597,7 @@
       <a href="https://x.com/DrElijahTing" target="_blank" rel="noopener noreferrer">X</a>
     </div>
     <p class="footer-copy">&copy; 2026 Dr Elijah. All rights reserved.</p>
+    <p class="footer-powered">Powered by Hello Driven PR6 Resilience Science</p>
   </footer>
 
   <script>
@@ -582,7 +631,7 @@
       });
     }, { threshold: 0.12 });
 
-    document.querySelectorAll('.role-card, .framework-item, .cred-item').forEach(el => {
+    document.querySelectorAll('.role-card, .framework-item, .cred-item, .flagship-card').forEach(el => {
       el.style.opacity = '0';
       el.style.transform = 'translateY(24px)';
       el.style.transition = 'opacity 0.7s ease, transform 0.7s cubic-bezier(0.16,1,0.3,1)';
