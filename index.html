@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dr Elijah — Resilience Training &amp; Consulting</title>
-  <meta name="description" content="Dr Elijah — Certified Resilience Coach (CReC), PR6 Certified. Evidence-based resilience training for organisations in Malaysia and beyond." />
+  <meta name="description" content="Dr Elijah — Certified Resilience Coach (CReC). Evidence-based resilience training and measurement for organisations in Malaysia and beyond, powered by PR6 Resilience Science." />
   <meta property="og:title" content="Dr Elijah — Resilience Training &amp; Consulting" />
   <meta property="og:description" content="Helping teams and leaders perform under pressure, recover with intention, and build resilience that lasts — powered by the science of PR6." />
   <meta property="og:type" content="website" />
@@ -31,22 +31,22 @@
      */
 
     :root {
-      --gold: #C8A96E;
-      --gold-dim: #C8A96E44;
-      --green: #344E41;
-      --green-light: #344E4133;
-      --green-dim: #344E4144;
-      --green-muted: #5A7A66;
-      --terracotta: #C06C54;
-      --terracotta-light: #C06C5433;
-      --terracotta-dim: #C06C5444;
-      --bg: #0E0D0B;
-      --bg-alt: #13120F;
-      --bg-card: #1A1813;
-      --border: #2A2720;
-      --text: #E8E4DC;
-      --text-muted: #9A9080;
-      --text-dim: #5A5650;
+      --gold:#C8A96E;
+      --gold-dim:#C8A96E44;
+      --green:#344E41;
+      --green-light:#344E4133;
+      --green-dim:#344E4144;
+      --green-muted:#5A7A66;
+      --terracotta:#C06C54;
+      --terracotta-light:#C06C5433;
+      --terracotta-dim:#C06C5444;
+      --bg:#0E0D0B;
+      --bg-alt:#13120F;
+      --bg-card:#1A1813;
+      --border:#2A2720;
+      --text:#E8E4DC;
+      --text-muted:#9A9080;
+      --text-dim:#5A5650;
     }
 
     html { scroll-behavior: smooth; font-size: 18px; }
@@ -60,7 +60,7 @@
       line-height: 1.7;
     }
 
-    ::selection { background: #C8A96E33; color: var(--gold); }
+    ::selection { background:#C8A96E33; color: var(--gold); }
 
     body::before {
       content: '';
@@ -176,7 +176,7 @@
       margin-bottom: 16px;
     }
 
-    #hero {
+   #hero {
       min-height: 100vh;
       display: flex; flex-direction: column;
       justify-content: center; align-items: center;
@@ -188,16 +188,16 @@
       position: absolute; top: 50%; left: 50%;
       transform: translate(-50%,-50%);
       width: 700px; height: 700px; border-radius: 50%;
-      background: radial-gradient(circle, #C8A96E08 0%, transparent 70%);
+      background: radial-gradient(circle,#C8A96E08 0%, transparent 70%);
       pointer-events: none;
     }
     .hero-side { position: absolute; display: flex; flex-direction: column; align-items: center; gap: 8px; }
-    .hero-side-text { font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 0.3em; color: #C8A96E55; writing-mode: vertical-rl; }
+    .hero-side-text { font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 0.3em; color:#C8A96E55; writing-mode: vertical-rl; }
     .hero-tag { margin-bottom: 24px; text-align: center; }
     .hero-tag .section-label { margin-bottom: 12px; }
     h1.hero-name { font-size: clamp(52px, 8vw, 96px); font-weight: 300; line-height: 1.05; letter-spacing: -0.01em; margin-bottom: 8px; color: var(--text); }
     h2.hero-sub { font-size: clamp(20px, 3vw, 32px); font-weight: 300; font-style: italic; color: var(--text-muted); margin-bottom: 32px; letter-spacing: 0.05em; }
-    .hero-desc { max-width: 560px; font-size: 20px; line-height: 1.8; color: #B0A898; font-weight: 300; margin-bottom: 48px; }
+    .hero-desc { max-width: 560px; font-size: 20px; line-height: 1.8; color:#B0A898; font-weight: 300; margin-bottom: 48px; }
     .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
     .scroll-hint {
       position: absolute;
@@ -209,10 +209,10 @@
       align-items: center;
       gap: 8px;
     }
-    .scroll-hint span { font-family: 'Cinzel', serif; font-size: 13px; letter-spacing: 0.3em; color: #C8A96E44; }
+    .scroll-hint span { font-family: 'Cinzel', serif; font-size: 13px; letter-spacing: 0.3em; color:#C8A96E44; }
     .scroll-line { width: 1px; height: 40px; background: linear-gradient(to bottom, var(--gold), transparent); animation: pulse-line 2s ease-in-out infinite; }
 
-    #roles { padding: 100px 48px; max-width: 1200px; margin: 0 auto; }
+   #roles { padding: 100px 48px; max-width: 1200px; margin: 0 auto; }
     .roles-header { text-align: center; margin-bottom: 64px; }
     .roles-header h2 { font-size: clamp(32px, 4vw, 48px); font-weight: 300; letter-spacing: 0.02em; }
     .roles-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1px; background: var(--border); }
@@ -225,7 +225,7 @@
     .role-title { font-family: 'Cinzel', serif; font-size: 15px; letter-spacing: 0.15em; color: var(--gold); margin-bottom: 16px; text-transform: uppercase; }
     .role-body { font-size: 17px; line-height: 1.9; color: var(--text-muted); font-weight: 300; }
 
-    #methodology { padding: 100px 48px; background: var(--bg-alt); }
+   #methodology { padding: 100px 48px; background: var(--bg-alt); }
     .methodology-inner { max-width: 1200px; margin: 0 auto; }
     .methodology-header { text-align: center; margin-bottom: 64px; }
     .methodology-header h2 { font-size: clamp(32px, 4vw, 48px); font-weight: 300; }
@@ -247,7 +247,7 @@
     }
     .methodology-cta a:hover { border-color: var(--gold); }
 
-    #flagship { padding: 100px 48px; }
+   #flagship { padding: 100px 48px; }
     .flagship-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
     .flagship-card {
       background: var(--bg-card);
@@ -255,7 +255,7 @@
       padding: 48px;
       position: relative;
     }
-    .flagship-card::before { content: ''; position: absolute; inset: 12px; border: 1px solid #C8A96E18; pointer-events: none; }
+    .flagship-card::before { content: ''; position: absolute; inset: 12px; border: 1px solid#C8A96E18; pointer-events: none; }
     .flagship-card-tag { font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 0.35em; color: var(--gold); margin-bottom: 20px; }
     .flagship-card-title { font-size: 28px; font-weight: 300; line-height: 1.3; color: var(--text); margin-bottom: 8px; }
     .flagship-card-rule { width: 40px; height: 1px; background: var(--gold); margin: 16px 0; }
@@ -268,12 +268,12 @@
     .flagship-content p { font-size: 18px; line-height: 1.9; color: var(--text-muted); font-weight: 300; margin-bottom: 16px; }
     .flagship-content p:last-of-type { margin-bottom: 40px; }
 
-    #quote { padding: 100px 48px; background: linear-gradient(135deg, var(--bg-alt) 0%, #141A16 100%); text-align: center; }
-    .quote-mark { font-size: 72px; color: #344E4130; line-height: 1; margin-bottom: -8px; }
-    blockquote { font-size: clamp(22px, 3vw, 32px); font-weight: 300; font-style: italic; line-height: 1.6; color: #D0C8BC; max-width: 800px; margin: 0 auto 32px; }
+   #quote { padding: 100px 48px; background: linear-gradient(135deg, var(--bg-alt) 0%,#141A16 100%); text-align: center; }
+    .quote-mark { font-size: 72px; color:#344E4130; line-height: 1; margin-bottom: -8px; }
+    blockquote { font-size: clamp(22px, 3vw, 32px); font-weight: 300; font-style: italic; line-height: 1.6; color:#D0C8BC; max-width: 800px; margin: 0 auto 32px; }
     .quote-attr { font-family: 'Cinzel', serif; font-size: 14px; letter-spacing: 0.3em; color: var(--gold); }
 
-    #credentials { padding: 80px 48px; }
+   #credentials { padding: 80px 48px; }
     .cred-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -286,12 +286,12 @@
     .cred-sub { font-size: 14px; color: var(--text-dim); letter-spacing: 0.1em; font-family: 'Cinzel', serif; }
     .cred-item--new .cred-label { color: var(--green-muted); }
 
-    #cta { padding: 120px 48px; text-align: center; position: relative; overflow: hidden; }
-    .cta-glow { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle, #C8A96E06 0%, transparent 65%); pointer-events: none; }
-    #cta .section-label { margin-bottom: 24px; }
-    #cta h2 { font-size: clamp(36px, 5vw, 64px); font-weight: 300; line-height: 1.2; margin-bottom: 24px; }
-    #cta h2 em { font-style: italic; }
-    #cta p { font-size: 20px; color: var(--text-muted); max-width: 560px; margin: 0 auto 48px; line-height: 1.8; }
+   #cta { padding: 120px 48px; text-align: center; position: relative; overflow: hidden; }
+    .cta-glow { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle,#C8A96E06 0%, transparent 65%); pointer-events: none; }
+   #cta .section-label { margin-bottom: 24px; }
+   #cta h2 { font-size: clamp(36px, 5vw, 64px); font-weight: 300; line-height: 1.2; margin-bottom: 24px; }
+   #cta h2 em { font-style: italic; }
+   #cta p { font-size: 20px; color: var(--text-muted); max-width: 560px; margin: 0 auto 48px; line-height: 1.8; }
     .cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
 
     footer {
@@ -344,20 +344,20 @@
       }
       .nav-links.open { display: flex; }
       .nav-links a { padding: 12px 0; }
-      #hero { padding: 100px 24px 60px; }
+     #hero { padding: 100px 24px 60px; }
       .hero-side { display: none; }
-      #roles { padding: 60px 24px; }
-      #methodology { padding: 60px 24px; }
+     #roles { padding: 60px 24px; }
+     #methodology { padding: 60px 24px; }
       .framework-item { flex-direction: column; gap: 16px; }
       .framework-num { min-width: auto; font-size: 28px; }
-      #flagship { padding: 60px 24px; }
+     #flagship { padding: 60px 24px; }
       .flagship-inner { grid-template-columns: 1fr; gap: 48px; }
-      #quote { padding: 60px 24px; }
-      #credentials { padding: 60px 24px; }
+     #quote { padding: 60px 24px; }
+     #credentials { padding: 60px 24px; }
       .cred-grid { grid-template-columns: repeat(2, 1fr); gap: 36px 24px; }
       .cred-label { font-size: 18px; }
       .cred-sub { font-size: 15px; }
-      #cta { padding: 80px 24px; }
+     #cta { padding: 80px 24px; }
       .section-label { font-size: 16px; letter-spacing: 0.2em; }
       .btn { font-size: 15px; padding: 16px 32px; }
       .role-title { font-size: 16px; letter-spacing: 0.1em; }
@@ -434,7 +434,7 @@
       <div class="role-card">
         <div class="role-icon"><span aria-hidden="true">◈</span></div>
         <p class="role-title">Certified Resilience Coach</p>
-        <p class="role-body">Delivering evidence-based resilience programmes grounded in the PR6 Model and Hello Driven Resilience Science — CReC, PR6+JSECC+PURE, and PR6+BIG5 certified.</p>
+        <p class="role-body">Delivering evidence-based resilience programmes grounded in the PR6 Model and Hello Driven Resilience Science — CReC, JSECC certified, and Big 5 certified.</p>
       </div>
       <div class="role-card">
         <div class="role-icon"><span aria-hidden="true">✦</span></div>
@@ -472,15 +472,15 @@
         <div class="framework-item">
           <div class="framework-num cinzel" style="color:var(--green-muted);">II.</div>
           <div>
-            <h3 class="framework-name cormorant" style="color:var(--green-muted);">Live Measurement</h3>
-            <p class="framework-desc"><strong>Real-time PR6 assessment via QR code.</strong><br>Every participant receives a personal resilience baseline at the start of each programme — making the learning immediately relevant, data-driven, and individually meaningful rather than generic.</p>
+            <h3 class="framework-name cormorant" style="color:var(--green-muted);">PR6 Measurement</h3>
+            <p class="framework-desc"><strong>Baseline PR6 assessment where appropriate.</strong><br>PR6 measurement is included in the flagship 2-day lab and available as an optional add-on for workshops and bootcamps — giving teams a clear, de-identified cohort snapshot and actionable insights.</p>
           </div>
         </div>
         <div class="framework-item">
           <div class="framework-num cinzel" style="color:#C8A96E;">III.</div>
           <div>
-            <h3 class="framework-name cormorant" style="color:#C8A96E;">1-Month App Reinforcement</h3>
-            <p class="framework-desc"><strong>Learning that extends beyond the training room.</strong><br>App-driven reinforcement over 30 days keeps skills active, builds habits progressively, and ensures the investment in resilience development translates into sustainable behaviour change.</p>
+            <h3 class="framework-name cormorant" style="color:#C8A96E;">Driven Resilience App Reinforcement</h3>
+            <p class="framework-desc"><strong>30-day reinforcement beyond the room.</strong><br>The Driven Resilience App is included in the flagship programme and available as an optional add-on for other programmes — helping teams sustain habits and reduce training decay.</p>
           </div>
         </div>
         <div class="framework-item">
@@ -506,12 +506,13 @@
         <div class="flagship-card-rule"></div>
         <p class="flagship-card-sub cormorant">2-Day Resilience Skills Lab</p>
         <p class="flagship-detail">Best for: <span>High-demand teams, leadership cohorts</span></p>
-        <p class="flagship-detail">Includes: <span>Live PR6 (QR) + Cohort PR6 Snapshot + Cohort Insights Summary + 1-Month App + recommended programme pathway</span></p>
+        <p class="flagship-detail">Includes: <span>PR6 Assessment + De-identified Cohort PR6 Snapshot + Cohort Insights Summary + Driven Resilience App (1 month) + recommended programme pathway</span></p>
+        <p class="flagship-detail" style="text-transform:none; letter-spacing:0.06em;"><span style="font-style:italic;">Cohort reporting is aggregated and de-identified.</span></p>
       </div>
       <div class="flagship-content">
         <p class="section-label">FLAGSHIP PROGRAMME</p>
         <h2 class="cormorant">The Deepest<br><em>Resilience Experience</em></h2>
-        <p>Two full days of immersive resilience development — measurement, skills, and a cohort-level debrief that gives leaders data they can act on.</p>
+        <p>Two full days of immersive resilience development — baseline PR6 measurement, targeted skills training across the six PR6 domains, and a cohort-level debrief that gives leaders data they can act on.</p>
         <p>Built for teams under sustained pressure who need more than a workshop — they need a shift in how they think, recover, and lead.</p>
         <a href="programmes.html" class="btn btn-outline">View All Programmes →</a>
       </div>
@@ -535,12 +536,12 @@
         <p class="cred-sub cinzel">Certified Resilience Coach</p>
       </div>
       <div class="cred-item cred-item--new">
-        <p class="cred-label cinzel">PR6 + JSECC + PURE</p>
-        <p class="cred-sub cinzel">Certified Practitioner</p>
+        <p class="cred-label cinzel">JSECC</p>
+        <p class="cred-sub cinzel">Certified</p>
       </div>
       <div class="cred-item cred-item--new">
-        <p class="cred-label cinzel">PR6 + BIG5</p>
-        <p class="cred-sub cinzel">Certified Practitioner</p>
+        <p class="cred-label cinzel">Big 5</p>
+        <p class="cred-sub cinzel">Certified</p>
       </div>
       <div class="cred-item">
         <p class="cred-label cinzel">HRD Corp</p>
