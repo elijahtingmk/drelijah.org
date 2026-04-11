@@ -506,9 +506,9 @@
           <div class="flagship-corner flagship-corner--bl"></div>
           <div class="flagship-corner flagship-corner--br"></div>
           <p class="flagship-card-tag cinzel">INTENSIVE · 2 DAYS · HIGH-DEMAND TEAMS</p>
-          <h3 class="flagship-card-title cormorant">Resilience Performance Lab</h3>
+          <h3 class="flagship-card-title cormorant">Resilience for Performance Under Pressure</h3>
           <div class="flagship-card-rule"></div>
-          <p class="flagship-card-sub cormorant">PR6E Baseline + Skills Intensive + Team Debrief</p>
+          <p class="flagship-card-sub cormorant">A 2-Day Resilience Skills Lab</p>
           <p class="flagship-detail cinzel">Best for: <span>High-demand teams, leadership cohorts, sustained pressure environments</span></p>
           <div class="flagship-includes">
             <p class="flagship-includes-label cinzel">What's Included</p>
@@ -564,7 +564,7 @@
         <h3 class="consulting-card-title cormorant">PR6E Team Pulse + HR Insights Briefing</h3>
         <div class="consulting-card-rule"></div>
         <div class="consulting-card-row"><span class="consulting-card-row-label cinzel">Best for</span><span class="consulting-card-row-value">Targeting interventions before committing to training</span></div>
-        <div class="consulting-card-row"><span class="consulting-card-row-label cinzel">HR receives</span><span class="consulting-card-row-value">De-identified PR6E snapshot + top capability gaps + variance/risk pockets + recommended pathway</span></div>
+        <div class="consulting-card-row"><span class="consulting-card-row-label cinzel">Outputs</span><span class="consulting-card-row-value">De-identified PR6E snapshot + top capability gaps + variance/risk pockets + recommended pathway</span></div>
         <div class="consulting-card-spacer"></div>
         <div class="consulting-card-cta"><a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-green btn-sm" target="_blank" rel="noopener noreferrer">Enquire →</a></div>
       </div>
@@ -574,7 +574,7 @@
         <h3 class="consulting-card-title cormorant">PR6E Re-measure + Impact Report</h3>
         <div class="consulting-card-rule"></div>
         <div class="consulting-card-row"><span class="consulting-card-row-label cinzel">Best for</span><span class="consulting-card-row-value">Demonstrating measurable ROI to leadership and stakeholders</span></div>
-        <div class="consulting-card-row"><span class="consulting-card-row-label cinzel">HR receives</span><span class="consulting-card-row-value">Pre/post comparison, impact narrative, sustain recommendations</span></div>
+        <div class="consulting-card-row"><span class="consulting-card-row-label cinzel">Outputs</span><span class="consulting-card-row-value">Pre/post comparison, impact narrative, sustain recommendations</span></div>
         <div class="consulting-card-spacer"></div>
         <div class="consulting-card-cta"><a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-green btn-sm" target="_blank" rel="noopener noreferrer">Enquire →</a></div>
       </div>
@@ -584,10 +584,10 @@
         <h3 class="consulting-card-title cormorant">JSECC + PR6 Pulse Psychosocial Risk &amp; Resilience Mapping</h3>
         <div class="consulting-card-rule"></div>
         <div class="consulting-card-row"><span class="consulting-card-row-label cinzel">Best for</span><span class="consulting-card-row-value">Hotspots, psychosocial risk prioritisation, and capability uplift planning</span></div>
-        <div class="consulting-card-row"><span class="consulting-card-row-label cinzel">HR receives</span><span class="consulting-card-row-value">Heatmap insights + prioritised controls &amp; capability plan + leadership briefing + recommended programme pathway</span></div>
+        <div class="consulting-card-row"><span class="consulting-card-row-label cinzel">Outputs</span><span class="consulting-card-row-value">Heatmap insights + prioritised controls &amp; capability plan + leadership briefing + recommended programme pathway</span></div>
         <div class="consulting-card-row">
-          <span class="consulting-card-row-label cinzel">Measured with</span>
-          <span class="consulting-card-row-value"><strong>JSECC + PR6 Pulse</strong></span>
+          <span class="consulting-card-row-label cinzel">Measure</span>
+          <span class="consulting-card-row-value"><strong>JSECC + PR6 Pulse</strong> (short PR6 measure)</span>
         </div>
         <div class="consulting-card-spacer"></div>
         <div class="consulting-card-cta"><a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-green btn-sm" target="_blank" rel="noopener noreferrer">Enquire →</a></div>
@@ -708,8 +708,8 @@
           }
         });
 
-        // Upgrade callout: show with consulting or all
-        if (filter === 'all' || filter === 'consulting') {
+        // Upgrade callout: show with training-related sections or all (hide for Risk + Strategy)
+        if (filter === 'all' || filter === 'training' || filter === 'bootcamp' || filter === 'flagship') {
           upgradeSection.classList.remove('hidden');
         } else {
           upgradeSection.classList.add('hidden');
