@@ -4,18 +4,25 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dr Elijah — Resilience Training &amp; Consulting</title>
-  <meta name="description" content="Dr Elijah — Certified Resilience Coach (CReC). Evidence-based resilience training and measurement for organisations in Malaysia and beyond, powered by PR6 Resilience Science." />
+
+  <!-- SEO -->
+  <meta name="description" content="Dr Elijah — Certified Resilience Coach (CReC) and CReW Implementation Partner. Corporate resilience: Training (4 hours), Intensives (1–2 days), and Risk + Strategy mapping (JSECC + PR6 Pulse), powered by PR6 Resilience Science and measured with PR6E." />
+
+  <!-- Social -->
   <meta property="og:title" content="Dr Elijah — Resilience Training &amp; Consulting" />
-  <meta property="og:description" content="Helping teams and leaders perform under pressure, recover with intention, and build resilience that lasts — powered by the science of PR6." />
+  <meta property="og:description" content="Three ways to strengthen resilience: Training (4 hours), Intensives (1–2 days), and Risk + Strategy mapping (JSECC + PR6 Pulse) — powered by PR6 Resilience Science and measured with PR6E." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://drelijah.org" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Dr Elijah — Resilience Training &amp; Consulting" />
-  <meta name="twitter:description" content="Helping teams and leaders perform under pressure, recover with intention, and build resilience that lasts — powered by the science of PR6." />
+  <meta name="twitter:description" content="Three ways to strengthen resilience: Training (4 hours), Intensives (1–2 days), and Risk + Strategy mapping (JSECC + PR6 Pulse) — powered by PR6 Resilience Science and measured with PR6E." />
+
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230E0D0B'/%3E%3Crect x='1' y='1' width='30' height='30' fill='none' stroke='%23C8A96E' stroke-width='0.75'/%3E%3Ctext x='16' y='23' font-family='Georgia%2C serif' font-size='20' font-weight='400' fill='%23C8A96E' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Cinzel:wght@400;500&display=swap" rel="stylesheet" />
+
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -210,7 +217,7 @@
     }
 
     h2.hero-sub { font-size: clamp(20px, 3vw, 32px); font-weight: 300; font-style: italic; color: var(--text-muted); margin-bottom: 32px; letter-spacing: 0.05em; }
-    .hero-desc { max-width: 560px; font-size: 20px; line-height: 1.8; color:#B0A898; font-weight: 300; margin-bottom: 48px; }
+    .hero-desc { max-width: 740px; font-size: 20px; line-height: 1.8; color:#B0A898; font-weight: 300; margin-bottom: 48px; }
     .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
     .scroll-hint {
       position: absolute;
@@ -275,6 +282,7 @@
     .flagship-card-sub { font-size: 16px; font-style: italic; color: var(--text-muted); margin-bottom: 24px; }
     .flagship-detail { font-size: 15px; color: var(--text-dim); font-family: 'Cinzel', serif; letter-spacing: 0.1em; margin-bottom: 8px; }
     .flagship-detail span { color: var(--text-muted); font-family: 'Cormorant Garamond', serif; font-size: 17px; letter-spacing: 0; }
+
     .flagship-content .section-label { margin-bottom: 24px; }
     .flagship-content h2 { font-size: clamp(28px, 3.5vw, 42px); font-weight: 300; line-height: 1.3; margin-bottom: 24px; }
     .flagship-content h2 em { font-style: italic; color: var(--text-muted); }
@@ -291,7 +299,7 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 48px 40px;
-      max-width: 900px;
+      max-width: 980px;
       margin: 0 auto;
     }
     .cred-item { text-align: center; }
@@ -304,7 +312,7 @@
    #cta .section-label { margin-bottom: 24px; }
    #cta h2 { font-size: clamp(36px, 5vw, 64px); font-weight: 300; line-height: 1.2; margin-bottom: 24px; }
    #cta h2 em { font-style: italic; }
-   #cta p { font-size: 20px; color: var(--text-muted); max-width: 560px; margin: 0 auto 48px; line-height: 1.8; }
+   #cta p { font-size: 20px; color: var(--text-muted); max-width: 760px; margin: 0 auto 48px; line-height: 1.8; }
     .cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
 
     footer {
@@ -357,40 +365,53 @@
       }
       .nav-links.open { display: flex; }
       .nav-links a { padding: 12px 0; }
+
      #hero { padding: 100px 24px 60px; }
       .hero-side { display: none; }
+
      #roles { padding: 60px 24px; }
      #methodology { padding: 60px 24px; }
       .framework-item { flex-direction: column; gap: 16px; }
       .framework-num { min-width: auto; font-size: 28px; }
+
      #flagship { padding: 60px 24px; }
       .flagship-inner { grid-template-columns: 1fr; gap: 48px; }
+
      #quote { padding: 60px 24px; }
+
      #credentials { padding: 60px 24px; }
       .cred-grid { grid-template-columns: repeat(2, 1fr); gap: 36px 24px; }
       .cred-label { font-size: 18px; }
       .cred-sub { font-size: 15px; }
+
      #cta { padding: 80px 24px; }
+
       .section-label { font-size: 16px; letter-spacing: 0.2em; }
       .btn { font-size: 15px; padding: 16px 32px; }
+
       .role-title { font-size: 16px; letter-spacing: 0.1em; }
       .role-body { font-size: 18px; }
       .framework-name { font-size: 24px; }
       .framework-desc { font-size: 18px; }
       .quote-attr { font-size: 15px; letter-spacing: 0.2em; }
+
       .footer-social a { font-size: 16px; }
       .footer-brand { font-size: 14px; letter-spacing: 0.15em; }
       .footer-domain { font-size: 14px; }
+
       .flagship-card { padding: 32px 24px; }
       .flagship-card-title { font-size: 24px; }
       .flagship-content p { font-size: 18px; }
+
       .nav-logo { font-size: 16px; }
+
       footer { padding: 32px 24px; flex-direction: column; text-align: center; }
       .footer-top { justify-content: center; }
       .footer-social { flex-wrap: wrap; justify-content: center; gap: 16px; }
     }
   </style>
 </head>
+
 <body>
 
   <!-- NAV -->
@@ -402,7 +423,7 @@
       <li><a href="#methodology">Methodology</a></li>
       <li><a href="#cta">Contact</a></li>
     </ul>
-    <button class="nav-hamburger" aria-label="Toggle menu" aria-expanded="false">
+    <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </nav>
@@ -410,28 +431,37 @@
   <!-- HERO -->
   <section id="hero">
     <div class="hero-glow"></div>
+
     <div class="hero-side" style="top:20%; left:8%;">
       <div class="gold-line-v" style="height:80px;"></div>
       <span class="hero-side-text">SIBU · SARAWAK · MALAYSIA</span>
     </div>
+
     <div class="hero-side" style="bottom:20%; right:8%;">
       <span class="hero-side-text">PERFORM · RECOVER · THRIVE</span>
       <div class="gold-line-v" style="height:80px;"></div>
     </div>
+
     <div class="hero-tag reveal">
       <p class="section-label">RESILIENCE TRAINING &amp; CONSULTING</p>
       <div class="gold-divider"></div>
     </div>
+
     <h1 class="hero-name cormorant reveal d1">Dr Elijah</h1>
     <p class="hero-brand reveal d2">Transformation Architect™</p>
     <h2 class="hero-sub cormorant reveal d3">Ting Moi Kieng</h2>
+
     <p class="hero-desc reveal d4">
-      Helping teams and leaders perform under pressure, recover with intention, and build resilience that lasts — powered by the science of PR6.
+      Three ways to strengthen resilience: <strong>Training (4 hours)</strong> for broad uplift,
+      <strong>Intensives (1–2 days)</strong> for hotspots, and <strong>Risk + Strategy</strong> mapping using
+      <strong>JSECC + PR6 Pulse</strong>. Skills uplift is measured with <strong>PR6E</strong>.
     </p>
+
     <div class="hero-btns reveal d5">
-      <a href="programmes.html" class="btn btn-fill">View Programmes →</a>
+      <a href="programmes.html" class="btn btn-fill">Browse Programmes →</a>
       <a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-terracotta" target="_blank" rel="noopener noreferrer">Work With Me</a>
     </div>
+
     <div class="scroll-hint reveal d6">
       <span>SCROLL</span>
       <div class="scroll-line"></div>
@@ -442,24 +472,31 @@
   <section id="roles">
     <div class="roles-header">
       <p class="section-label">WHAT I DO</p>
-      <h2 class="cormorant">Four Dimensions. One Foundation.</h2>
+      <h2 class="cormorant">Four Roles. One Foundation.</h2>
     </div>
+
     <div class="roles-grid">
       <div class="role-card">
         <div class="role-icon"><span aria-hidden="true">◈</span></div>
         <p class="role-title">Certified Resilience Coach</p>
-        <p class="role-body">Delivering evidence-based resilience programmes grounded in the PR6 Model and Hello Driven Resilience Science — CReC, JSECC certified, and Big 5 certified.</p>
+        <p class="role-body">
+          Certified with Hello Driven: <strong>CReC</strong>, <strong>CReW Implementation Partner</strong>, <strong>PRE Instructor</strong>,
+          <strong>JSECC</strong> Certified, and <strong>Big 5</strong> Certified — delivering PR6-led programmes with measurement through <strong>PR6E</strong>.
+        </p>
       </div>
+
       <div class="role-card">
         <div class="role-icon"><span aria-hidden="true">✦</span></div>
         <p class="role-title">Executive L&amp;D Consultant</p>
         <p class="role-body">HRD Corp accredited trainer bringing structured, measurable learning experiences to organisations across Malaysia and the wider region.</p>
       </div>
+
       <div class="role-card role-card--pastoral">
         <div class="role-icon"><span aria-hidden="true">◉</span></div>
         <p class="role-title">Pastoral Leader</p>
         <p class="role-body">Providing oversight and strategic leadership across churches in Sibu and Kuching — guiding faith communities where people are supported, grounded, and transformed.</p>
       </div>
+
       <div class="role-card">
         <div class="role-icon"><span aria-hidden="true">⬡</span></div>
         <p class="role-title">Practitioner-Scholar</p>
@@ -475,36 +512,54 @@
         <p class="section-label">THE METHODOLOGY</p>
         <h2 class="cormorant">Built on PR6 Resilience Science</h2>
       </div>
+
       <div>
         <div class="framework-item">
           <div class="framework-num cinzel" style="color:#C8A96E;">I.</div>
           <div>
             <h3 class="framework-name cormorant" style="color:#C8A96E;">PR6 Model</h3>
-            <p class="framework-desc"><strong>Six evidence-based domains of human resilience.</strong><br>Vision, Composure, Reasoning, Tenacity, Collaboration, and Health — each measured, profiled, and developed through a structured, science-backed approach that gives participants a clear picture of where they stand and what to build.</p>
+            <p class="framework-desc">
+              <strong>Six evidence-based domains of human resilience.</strong><br>
+              Vision, Composure, Reasoning, Tenacity, Collaboration, and Health — each measured, profiled, and developed through a structured, science-backed approach that gives participants a clear picture of where they stand and what to build.
+            </p>
           </div>
         </div>
+
         <div class="framework-item">
           <div class="framework-num cinzel" style="color:var(--green-muted);">II.</div>
           <div>
-            <h3 class="framework-name cormorant" style="color:var(--green-muted);">PR6 Measurement</h3>
-            <p class="framework-desc"><strong>Baseline PR6 assessment where appropriate.</strong><br>PR6 measurement is included in the flagship 2-day lab and available as an optional add-on for workshops and bootcamps — giving teams a clear, de-identified cohort snapshot and actionable insights.</p>
+            <h3 class="framework-name cormorant" style="color:var(--green-muted);">PR6E Measurement</h3>
+            <p class="framework-desc">
+              <strong>Baseline and re-measurement for measurable capability uplift.</strong><br>
+              PR6E is included in PRE and Intensives where specified, and available as a Team Pulse + HR Insights Briefing —
+              giving teams a clear, de-identified cohort snapshot and practical priorities.
+            </p>
           </div>
         </div>
+
         <div class="framework-item">
           <div class="framework-num cinzel" style="color:#C8A96E;">III.</div>
           <div>
             <h3 class="framework-name cormorant" style="color:#C8A96E;">Driven Resilience App Reinforcement</h3>
-            <p class="framework-desc"><strong>30-day reinforcement beyond the room.</strong><br>The Driven Resilience App is included in the flagship programme and available as an optional add-on for other programmes — helping teams sustain habits and reduce training decay.</p>
+            <p class="framework-desc">
+              <strong>Reinforcement beyond the room (1–3 months).</strong><br>
+              The Driven Resilience App can be included to sustain habits, increase skill repetition, and reduce training decay after workshops and intensives.
+            </p>
           </div>
         </div>
+
         <div class="framework-item">
           <div class="framework-num cinzel" style="color:var(--green-muted);">IV.</div>
           <div>
             <h3 class="framework-name cormorant" style="color:var(--green-muted);">Onsite &amp; Virtual Delivery</h3>
-            <p class="framework-desc"><strong>Delivered flexibly to meet your teams where they are.</strong><br>From full-day bootcamps to half-day workshops and multi-week consulting engagements — programmes are designed to fit operational reality without compromising depth or impact.</p>
+            <p class="framework-desc">
+              <strong>Delivered flexibly to meet your teams where they are.</strong><br>
+              From 4-hour training sessions to 1–2 day intensives and multi-week consulting engagements — programmes are designed to fit operational reality without compromising depth or impact.
+            </p>
           </div>
         </div>
       </div>
+
       <div class="methodology-cta">
         <a href="programmes.html">→ See the full programme catalogue</a>
       </div>
@@ -520,13 +575,18 @@
         <div class="flagship-card-rule"></div>
         <p class="flagship-card-sub cormorant">2-Day Resilience Skills Lab</p>
         <p class="flagship-detail">Best for: <span>High-demand teams, leadership cohorts</span></p>
-        <p class="flagship-detail">Includes: <span>PR6 Assessment + De-identified Cohort PR6 Snapshot + Cohort Insights Summary + Driven Resilience App (1 month) + recommended programme pathway</span></p>
-        <p class="flagship-detail" style="text-transform:none; letter-spacing:0.06em;"><span style="font-style:italic;">Cohort reporting is aggregated and de-identified.</span></p>
+        <p class="flagship-detail">
+          Includes: <span><strong>PR6E baseline</strong> (individual reports) + de-identified cohort snapshot + leader insights summary + Driven Resilience App (1 month, recommend 3) + recommended PR6E re-measure at 6–8 weeks</span>
+        </p>
+        <p class="flagship-detail" style="text-transform:none; letter-spacing:0.06em;">
+          <span style="font-style:italic;">Cohort reporting is aggregated and de-identified. Individual results are not shared without explicit consent.</span>
+        </p>
       </div>
+
       <div class="flagship-content">
         <p class="section-label">FLAGSHIP PROGRAMME</p>
         <h2 class="cormorant">The Deepest<br><em>Resilience Experience</em></h2>
-        <p>Two full days of immersive resilience development — baseline PR6 measurement, targeted skills training across the six PR6 domains, and a cohort-level debrief that gives leaders data they can act on.</p>
+        <p>Two full days of immersive resilience development — baseline PR6E measurement, targeted skills training across the six PR6 domains, and a cohort-level debrief that gives leaders data they can act on.</p>
         <p>Built for teams under sustained pressure who need more than a workshop — they need a shift in how they think, recover, and lead.</p>
         <a href="programmes.html" class="btn btn-outline">View All Programmes →</a>
       </div>
@@ -550,6 +610,15 @@
         <p class="cred-sub cinzel">Certified Resilience Coach</p>
       </div>
       <div class="cred-item cred-item--new">
+        <p class="cred-label cinzel">CReW</p>
+        <p class="cred-sub cinzel">Implementation Partner</p>
+      </div>
+      <div class="cred-item cred-item--new">
+        <p class="cred-label cinzel">PRE</p>
+        <p class="cred-sub cinzel">Instructor</p>
+      </div>
+
+      <div class="cred-item cred-item--new">
         <p class="cred-label cinzel">JSECC</p>
         <p class="cred-sub cinzel">Certified</p>
       </div>
@@ -561,6 +630,7 @@
         <p class="cred-label cinzel">HRD Corp</p>
         <p class="cred-sub cinzel">Accredited Trainer</p>
       </div>
+
       <div class="cred-item">
         <p class="cred-label cinzel">BSc (Hons) Nursing</p>
         <p class="cred-sub cinzel">Holistic Development</p>
@@ -573,6 +643,7 @@
         <p class="cred-label cinzel">Executive MBA</p>
         <p class="cred-sub cinzel">Business Strategy</p>
       </div>
+
       <div class="cred-item">
         <p class="cred-label cinzel">CFP®</p>
         <p class="cred-sub cinzel">Financial Stewardship</p>
@@ -589,7 +660,10 @@
     <div class="cta-glow"></div>
     <p class="section-label">BUILD RESILIENCE THAT LASTS</p>
     <h2 class="cormorant">Ready to Strengthen<br><em>Your Team's Resilience?</em></h2>
-    <p class="cormorant">Whether you're planning a half-day workshop, a full team resilience assessment, or a flagship 2-day skills lab — let's talk.</p>
+    <p class="cormorant">
+      Share your <strong>cohort size</strong>, <strong>role mix</strong>, <strong>timeline</strong>, and <strong>pressure points</strong>.
+      I’ll recommend a clean pathway: Training (4 hours), Intensives (1–2 days), or Risk + Strategy mapping.
+    </p>
     <div class="cta-btns">
       <a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-terracotta" target="_blank" rel="noopener noreferrer">Get in Touch</a>
       <a href="programmes.html" class="btn btn-outline">View Programmes</a>
@@ -616,26 +690,34 @@
   </footer>
 
   <script>
+    // Scroll nav
     const nav = document.getElementById('nav');
     window.addEventListener('scroll', () => {
       nav.classList.toggle('scrolled', window.scrollY > 60);
     });
 
+    // Hamburger (with accessible Open/Close label)
     const hamburger = document.querySelector('.nav-hamburger');
     const navLinks = document.querySelector('.nav-links');
+
     hamburger.addEventListener('click', () => {
       hamburger.classList.toggle('open');
       navLinks.classList.toggle('open');
-      hamburger.setAttribute('aria-expanded', navLinks.classList.contains('open'));
+      const open = navLinks.classList.contains('open');
+      hamburger.setAttribute('aria-expanded', open);
+      hamburger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
     });
+
     navLinks.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         hamburger.classList.remove('open');
         navLinks.classList.remove('open');
         hamburger.setAttribute('aria-expanded', 'false');
+        hamburger.setAttribute('aria-label', 'Open menu');
       });
     });
 
+    // Scroll reveal
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -653,5 +735,6 @@
       observer.observe(el);
     });
   </script>
+
 </body>
 </html>
