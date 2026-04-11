@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Programmes — Dr Elijah · Resilience Training & Consulting</title>
-  <meta name="description" content="Full programme catalogue — evidence-based resilience training for organisations in Malaysia and beyond. Powered by PR6 Resilience Science." />
+  <meta name="description" content="Corporate resilience programmes — PR6E-led training, 1–2 day intensives, and JSECC + PR6 Pulse psychosocial risk mapping. Powered by PR6 Resilience Science." />
   <meta property="og:title" content="Programmes — Dr Elijah · Resilience Training & Consulting" />
-  <meta property="og:description" content="Training programmes, full-day bootcamps, a flagship 2-day lab, and measurement & consulting services — all powered by PR6 Resilience Science." />
+  <meta property="og:description" content="Three ways to engage: PRE (4 hours) for broad rollout, 1–2 day intensives for teams under pressure, and JSECC + PR6 Pulse mapping for risk & strategy — all powered by PR6 Resilience Science." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://drelijah.org/programmes.html" />
   <meta name="twitter:card" content="summary" />
@@ -63,10 +63,6 @@
       from { opacity: 0; transform: translateY(28px); }
       to   { opacity: 1; transform: translateY(0); }
     }
-    @keyframes pulse-line {
-      0%, 100% { opacity: 0.2; }
-      50%       { opacity: 0.8; }
-    }
 
     .reveal { opacity: 0; animation: reveal 0.9s cubic-bezier(0.16,1,0.3,1) forwards; }
     .d1 { animation-delay: 0.1s; }
@@ -104,8 +100,6 @@
     .btn { font-family:'Cinzel',serif; font-size:14px; letter-spacing:0.2em; text-transform:uppercase; padding:16px 40px; cursor:pointer; text-decoration:none; display:inline-block; transition:all 0.3s ease; }
     .btn-outline { background:transparent; border:1px solid var(--gold); color:var(--gold); }
     .btn-outline:hover { background:var(--gold); color:var(--bg); }
-    .btn-fill { background:var(--gold); border:1px solid var(--gold); color:var(--bg); }
-    .btn-fill:hover { background:transparent; color:var(--gold); }
     .btn-terracotta { background:transparent; border:1px solid var(--terracotta); color:var(--terracotta); }
     .btn-terracotta:hover { background:var(--terracotta); color:var(--bg); }
     .btn-green { background:transparent; border:1px solid var(--green-muted); color:var(--green-muted); }
@@ -119,7 +113,7 @@
     .page-hero-glow { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:700px; height:500px; border-radius:50%; background:radial-gradient(circle,#C8A96E07 0%,transparent 70%); pointer-events:none; }
    #page-hero h1 { font-size:clamp(40px,6vw,80px); font-weight:300; line-height:1.1; letter-spacing:-0.01em; margin-bottom:12px; }
    #page-hero h1 em { font-style:italic; color:var(--text-muted); }
-   #page-hero p.hero-desc { font-size:19px; line-height:1.85; color:#B0A898; font-weight:300; max-width:620px; margin:0 auto 48px; }
+   #page-hero p.hero-desc { font-size:19px; line-height:1.85; color:#B0A898; font-weight:300; max-width:820px; margin:0 auto 48px; }
 
     /* FILTER BAR */
    #filter-bar { padding:0 48px 60px; text-align:center; }
@@ -149,7 +143,7 @@
     .prog-card-title { font-size:22px; font-weight:400; line-height:1.35; color:var(--text); margin-bottom:6px; }
     .prog-card-rule { width:32px; height:1px; background:var(--gold-dim); margin:16px 0; }
     .prog-card-row { display:flex; gap:8px; margin-bottom:10px; font-size:15px; line-height:1.6; color:var(--text-muted); }
-    .prog-card-row-label { font-family:'Cinzel',serif; font-size:11px; letter-spacing:0.15em; color:var(--text-dim); white-space:nowrap; padding-top:2px; min-width:84px; }
+    .prog-card-row-label { font-family:'Cinzel',serif; font-size:11px; letter-spacing:0.15em; color:var(--text-dim); white-space:nowrap; padding-top:2px; min-width:108px; }
     .prog-card-row-value { font-weight:300; }
     .prog-card-spacer { flex:1; }
     .prog-card-cta { margin-top:28px; }
@@ -206,14 +200,14 @@
     .consulting-card-title { font-size:22px; font-weight:400; line-height:1.35; color:var(--text); margin-bottom:16px; }
     .consulting-card-rule { width:32px; height:1px; background:var(--green-muted); opacity:0.4; margin-bottom:20px; }
     .consulting-card-row { display:flex; gap:8px; margin-bottom:10px; font-size:15px; line-height:1.6; color:var(--text-muted); }
-    .consulting-card-row-label { font-family:'Cinzel',serif; font-size:11px; letter-spacing:0.12em; color:var(--text-dim); white-space:nowrap; padding-top:2px; min-width:84px; }
+    .consulting-card-row-label { font-family:'Cinzel',serif; font-size:11px; letter-spacing:0.12em; color:var(--text-dim); white-space:nowrap; padding-top:2px; min-width:120px; }
     .consulting-card-row-value { font-weight:300; }
     .consulting-card-spacer { flex:1; }
     .consulting-card-cta { margin-top:28px; }
 
     /* UPGRADE CALLOUT */
    #upgrade { padding:60px 48px; text-align:center; }
-    .upgrade-box { max-width:760px; margin:0 auto; border:1px solid var(--border); padding:40px 48px; background:var(--bg-card); position:relative; }
+    .upgrade-box { max-width:960px; margin:0 auto; border:1px solid var(--border); padding:40px 48px; background:var(--bg-card); position:relative; }
     .upgrade-box::before { content:''; position:absolute; inset:8px; border:1px solid#C8A96E0C; pointer-events:none; }
     .upgrade-label { font-family:'Cinzel',serif; font-size:11px; letter-spacing:0.35em; color:var(--gold); text-transform:uppercase; margin-bottom:16px; }
     .upgrade-text { font-size:20px; line-height:1.7; color:var(--text-muted); font-weight:300; }
@@ -231,7 +225,7 @@
    #cta .section-label { margin-bottom:24px; }
    #cta h2 { font-size:clamp(36px,5vw,64px); font-weight:300; line-height:1.2; margin-bottom:24px; }
    #cta h2 em { font-style:italic; }
-   #cta p { font-size:20px; color:var(--text-muted); max-width:560px; margin:0 auto 48px; line-height:1.8; }
+   #cta p { font-size:20px; color:var(--text-muted); max-width:720px; margin:0 auto 48px; line-height:1.8; }
     .cta-btns { display:flex; gap:16px; justify-content:center; flex-wrap:wrap; }
 
     /* FOOTER */
@@ -301,9 +295,15 @@
   <!-- PAGE HERO -->
   <section id="page-hero">
     <div class="page-hero-glow"></div>
-    <p class="section-label reveal d1">PROGRAMME CATALOGUE</p>
-    <h1 class="cormorant reveal d2">The Full<br><em>Resilience Catalogue</em></h1>
-    <p class="hero-desc reveal d3">From focused half-day workshops to immersive two-day labs and deep organisational consulting — every programme is built on PR6 Resilience Science, measured with baseline data where appropriate, and reinforced for 30 days beyond the room.</p>
+    <p class="section-label reveal d1">PROGRAMMES (CORPORATE)</p>
+    <h1 class="cormorant reveal d2">Three Ways to<br><em>Strengthen Resilience</em></h1>
+    <p class="hero-desc reveal d3">
+      The cleanest buying path for HR and L&amp;D:
+      <strong>PRE (4 hours)</strong> for broad rollout,
+      <strong>1–2 day intensives</strong> for teams under pressure,
+      and <strong>JSECC + PR6 Pulse</strong> mapping for psychosocial risk &amp; strategy.
+      All programmes are powered by <strong>PR6 resilience science</strong> and capability uplift is measured with <strong>PR6E</strong>.
+    </p>
     <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;" class="reveal d4">
       <a href="#cta" class="btn btn-terracotta">Enquire Now</a>
       <a href="#training" class="btn btn-outline">Browse Programmes</a>
@@ -313,11 +313,11 @@
   <!-- FILTER BAR -->
   <div id="filter-bar">
     <div class="filter-tabs cinzel">
-      <button class="filter-tab active" data-filter="all">All Programmes</button>
-      <button class="filter-tab" data-filter="training">Workshops · 4 hrs</button>
-      <button class="filter-tab" data-filter="bootcamp">Bootcamps · Full Day</button>
-      <button class="filter-tab" data-filter="flagship">Flagship · 2 Days</button>
-      <button class="filter-tab" data-filter="consulting">Measurement & Consulting</button>
+      <button class="filter-tab active" data-filter="all">All</button>
+      <button class="filter-tab" data-filter="training">PRE + Skills Labs · 4 hrs</button>
+      <button class="filter-tab" data-filter="bootcamp">Intensives · 1 Day</button>
+      <button class="filter-tab" data-filter="flagship">Intensives · 2 Days</button>
+      <button class="filter-tab" data-filter="consulting">Risk + Strategy</button>
     </div>
   </div>
 
@@ -328,31 +328,34 @@
     <div class="section-heading">
       <div>
         <p class="section-label">TRAINING PROGRAMMES</p>
-        <h2 class="cormorant">Half-Day Workshops<br><em>4 Hours Each</em></h2>
+        <h2 class="cormorant">PRE + Skills Labs<br><em>4 Hours Each</em></h2>
       </div>
       <span class="section-heading-meta cinzel">7 PROGRAMMES · ONSITE &amp; VIRTUAL</span>
     </div>
     <div class="section-rule"></div>
     <div class="prog-grid">
 
+      <!-- PRE (DEFAULT CORE) -->
       <div class="prog-card">
-        <p class="prog-card-tag cinzel">4 hrs · Broad Rollout</p>
-        <h3 class="prog-card-title cormorant">Resilience Essentials: Performance Under Pressure</h3>
+        <p class="prog-card-tag cinzel">4 hrs · Default Core</p>
+        <h3 class="prog-card-title cormorant">PRE: Personal Resilience Essentials (PR6E-led)</h3>
         <div class="prog-card-rule"></div>
         <div class="prog-card-row"><span class="prog-card-row-label cinzel">Best for</span><span class="prog-card-row-value">Mixed groups, onboarding cohorts, broad rollout</span></div>
-        <div class="prog-card-row"><span class="prog-card-row-label cinzel">Participants learn</span><span class="prog-card-row-value">PR6 foundations, rapid stress reset, practical actions under pressure, personal resilience plan</span></div>
-        <div class="prog-card-row"><span class="prog-card-row-label cinzel">Included</span><span class="prog-card-row-value">Under Pressure Reset Protocol · Action Plan</span></div>
+        <div class="prog-card-row"><span class="prog-card-row-label cinzel">Focus</span><span class="prog-card-row-value">PR6 foundations, practical skills, what to do when pressure hits, individual resilience plan</span></div>
+        <div class="prog-card-row"><span class="prog-card-row-label cinzel">Included</span><span class="prog-card-row-value"><strong>PR6E Individual Report (pre-work)</strong> + personal action plan</span></div>
+        <div class="prog-card-row"><span class="prog-card-row-label cinzel">Upgrades</span><span class="prog-card-row-value">App reinforcement (1–3 months) + PR6E re-measure &amp; impact report</span></div>
         <div class="prog-card-spacer"></div>
         <div class="prog-card-cta"><a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-outline btn-sm" target="_blank" rel="noopener noreferrer">Enquire →</a></div>
       </div>
 
+      <!-- Skills Labs -->
       <div class="prog-card">
         <p class="prog-card-tag cinzel">4 hrs · Composure</p>
         <h3 class="prog-card-title cormorant">Calm Under Pressure Skills Lab</h3>
         <div class="prog-card-rule"></div>
         <div class="prog-card-row"><span class="prog-card-row-label cinzel">Best for</span><span class="prog-card-row-value">High-stress roles, teams with reactivity or overwhelm</span></div>
-        <div class="prog-card-row"><span class="prog-card-row-label cinzel">Participants learn</span><span class="prog-card-row-value">Calm breathing, emotion labelling, mindfulness basics, cognitive reappraisal drills</span></div>
-        <div class="prog-card-row"><span class="prog-card-row-label cinzel">Included</span><span class="prog-card-row-value">Practice Drills</span></div>
+        <div class="prog-card-row"><span class="prog-card-row-label cinzel">Focus</span><span class="prog-card-row-value">Calm breathing, emotion labelling, mindfulness basics, cognitive reappraisal drills</span></div>
+        <div class="prog-card-row"><span class="prog-card-row-label cinzel">Included</span><span class="prog-card-row-value">Practice drills</span></div>
         <div class="prog-card-spacer"></div>
         <div class="prog-card-cta"><a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-outline btn-sm" target="_blank" rel="noopener noreferrer">Enquire →</a></div>
       </div>
@@ -362,8 +365,8 @@
         <h3 class="prog-card-title cormorant">Thinking Clearly Under Stress</h3>
         <div class="prog-card-rule"></div>
         <div class="prog-card-row"><span class="prog-card-row-label cinzel">Best for</span><span class="prog-card-row-value">Ops &amp; project teams, fast-changing environments</span></div>
-        <div class="prog-card-row"><span class="prog-card-row-label cinzel">Participants learn</span><span class="prog-card-row-value">Anticipation &amp; prevention, resourcefulness, belief-checking, embracing change, scenario planning</span></div>
-        <div class="prog-card-row"><span class="prog-card-row-label cinzel">Included</span><span class="prog-card-row-value">Scenario Tools</span></div>
+        <div class="prog-card-row"><span class="prog-card-row-label cinzel">Focus</span><span class="prog-card-row-value">Anticipation &amp; prevention, resourcefulness, belief-checking, embracing change, scenario planning</span></div>
+        <div class="prog-card-row"><span class="prog-card-row-label cinzel">Included</span><span class="prog-card-row-value">Scenario tools</span></div>
         <div class="prog-card-spacer"></div>
         <div class="prog-card-cta"><a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-outline btn-sm" target="_blank" rel="noopener noreferrer">Enquire →</a></div>
       </div>
@@ -373,8 +376,8 @@
         <h3 class="prog-card-title cormorant">Resilient Communication &amp; Boundaries Under Pressure</h3>
         <div class="prog-card-rule"></div>
         <div class="prog-card-row"><span class="prog-card-row-label cinzel">Best for</span><span class="prog-card-row-value">Cross-functional teams, client-facing teams</span></div>
-        <div class="prog-card-row"><span class="prog-card-row-label cinzel">Participants learn</span><span class="prog-card-row-value">Help-seeking scripts, boundary language, de-escalation, trust micro-skills, repair conversations</span></div>
-        <div class="prog-card-row"><span class="prog-card-row-label cinzel">Included</span><span class="prog-card-row-value">Role Practice</span></div>
+        <div class="prog-card-row"><span class="prog-card-row-label cinzel">Focus</span><span class="prog-card-row-value">Help-seeking scripts, boundary language, de-escalation, trust micro-skills, repair conversations</span></div>
+        <div class="prog-card-row"><span class="prog-card-row-label cinzel">Included</span><span class="prog-card-row-value">Role practice</span></div>
         <div class="prog-card-spacer"></div>
         <div class="prog-card-cta"><a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-outline btn-sm" target="_blank" rel="noopener noreferrer">Enquire →</a></div>
       </div>
@@ -384,8 +387,8 @@
         <h3 class="prog-card-title cormorant">Energy, Recovery &amp; Sustainable Performance</h3>
         <div class="prog-card-rule"></div>
         <div class="prog-card-row"><span class="prog-card-row-label cinzel">Best for</span><span class="prog-card-row-value">Burnout-risk teams, shift and meeting-heavy roles</span></div>
-        <div class="prog-card-row"><span class="prog-card-row-label cinzel">Participants learn</span><span class="prog-card-row-value">Sleep &amp; recovery basics, movement micro-habits, nutrition guidelines, mistake recovery, time &amp; priority method</span></div>
-        <div class="prog-card-row"><span class="prog-card-row-label cinzel">Included</span><span class="prog-card-row-value">Sustain Plan</span></div>
+        <div class="prog-card-row"><span class="prog-card-row-label cinzel">Focus</span><span class="prog-card-row-value">Sleep &amp; recovery basics, movement micro-habits, nutrition guidelines, mistake recovery, time &amp; priority method</span></div>
+        <div class="prog-card-row"><span class="prog-card-row-label cinzel">Included</span><span class="prog-card-row-value">Sustain plan</span></div>
         <div class="prog-card-spacer"></div>
         <div class="prog-card-cta"><a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-outline btn-sm" target="_blank" rel="noopener noreferrer">Enquire →</a></div>
       </div>
@@ -395,8 +398,8 @@
         <h3 class="prog-card-title cormorant">Purpose, Priorities &amp; Motivation at Work</h3>
         <div class="prog-card-rule"></div>
         <div class="prog-card-row"><span class="prog-card-row-label cinzel">Best for</span><span class="prog-card-row-value">Teams needing direction and renewed focus</span></div>
-        <div class="prog-card-row"><span class="prog-card-row-label cinzel">Participants learn</span><span class="prog-card-row-value">Values &amp; needs clarification, resilient vision, priorities, SMARTER goals, motivation skills</span></div>
-        <div class="prog-card-row"><span class="prog-card-row-label cinzel">Included</span><span class="prog-card-row-value">Goal Plan</span></div>
+        <div class="prog-card-row"><span class="prog-card-row-label cinzel">Focus</span><span class="prog-card-row-value">Values &amp; needs clarity, priorities, SMARTER goals, motivation skills</span></div>
+        <div class="prog-card-row"><span class="prog-card-row-label cinzel">Included</span><span class="prog-card-row-value">Goal plan</span></div>
         <div class="prog-card-spacer"></div>
         <div class="prog-card-cta"><a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-outline btn-sm" target="_blank" rel="noopener noreferrer">Enquire →</a></div>
       </div>
@@ -406,8 +409,8 @@
         <h3 class="prog-card-title cormorant">People Manager Resilience &amp; Team Performance Under Pressure</h3>
         <div class="prog-card-rule"></div>
         <div class="prog-card-row"><span class="prog-card-row-label cinzel">Best for</span><span class="prog-card-row-value">Supervisors and people managers</span></div>
-        <div class="prog-card-row"><span class="prog-card-row-label cinzel">Participants learn</span><span class="prog-card-row-value">Co-regulation, stress signals, team rituals, psychologically safe performance conversations</span></div>
-        <div class="prog-card-row"><span class="prog-card-row-label cinzel">Included</span><span class="prog-card-row-value">Manager Toolkit</span></div>
+        <div class="prog-card-row"><span class="prog-card-row-label cinzel">Focus</span><span class="prog-card-row-value">Co-regulation, stress signals, team rituals, psychologically safe performance conversations</span></div>
+        <div class="prog-card-row"><span class="prog-card-row-label cinzel">Included</span><span class="prog-card-row-value">Manager toolkit</span></div>
         <div class="prog-card-spacer"></div>
         <div class="prog-card-cta"><a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-outline btn-sm" target="_blank" rel="noopener noreferrer">Enquire →</a></div>
       </div>
@@ -415,24 +418,27 @@
     </div>
   </section>
 
+  <!-- STANDARD UPGRADES -->
   <section id="training-addons" class="prog-section" data-section="training">
     <div class="upgrade-box" style="max-width:1280px;margin:24px auto 0;background:var(--bg-card);border:1px solid var(--border);">
-      <p class="upgrade-label cinzel">Add-on (additional fee)</p>
+      <p class="upgrade-label cinzel">Standard Upgrades (optional)</p>
       <p class="upgrade-text cormorant" style="font-size:18px;">
-        <strong>PR6 Measurement Pack</strong> — PR6 Assessment (Individual Report) + De-identified Cohort PR6 Snapshot (for groups) + <strong>Driven Resilience App (1 month)</strong>.
+        <strong>Measurement Pack (PR6E Team)</strong> — de-identified cohort PR6E snapshot + leader readout.
+        <br><strong>Reinforcement Pack</strong> — Driven Resilience App (1–3 months) + nudges/check-ins.
+        <br><strong>Proof Pack</strong> — PR6E re-measure at 6–8 weeks + impact report.
       </p>
     </div>
   </section>
 
   <!-- ════════════════════════════════ -->
-  <!-- 2. BOOTCAMPS                    -->
+  <!-- 2. BOOTCAMPS (1 DAY)            -->
   <!-- ════════════════════════════════ -->
   <section class="prog-section--alt" data-section="bootcamp">
     <div class="prog-section-inner">
       <div class="section-heading">
         <div>
-          <p class="section-label" style="color:var(--green-muted);">BOOTCAMPS</p>
-          <h2 class="cormorant">Full-Day Immersion<br><em>7 Hours Each</em></h2>
+          <p class="section-label" style="color:var(--green-muted);">INTENSIVES</p>
+          <h2 class="cormorant">Bootcamps<br><em>1 Day (7 Hours)</em></h2>
         </div>
         <span class="section-heading-meta cinzel">3 PROGRAMMES · ONSITE &amp; VIRTUAL</span>
       </div>
@@ -445,7 +451,8 @@
           <h3 class="bootcamp-title cormorant">Resilience Under Pressure Bootcamp</h3>
           <div class="bootcamp-rule"></div>
           <div class="bootcamp-detail"><strong>Duration</strong>7 hours · Full Day</div>
-          <div class="bootcamp-detail"><strong>What it covers</strong>Essentials + Composure + scenarios + action plans — combining PR6 foundations with composure skills and team-based scenario simulations.</div>
+          <div class="bootcamp-detail"><strong>What it covers</strong>PR6E team hotspots + Composure deep dive + scenario simulations + action plans.</div>
+          <div class="bootcamp-detail"><strong>Measured with</strong>PR6E baseline (individual reports)</div>
           <div class="bootcamp-spacer"></div>
           <div class="bootcamp-cta"><a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-green btn-sm" target="_blank" rel="noopener noreferrer">Enquire →</a></div>
         </div>
@@ -456,7 +463,8 @@
           <h3 class="bootcamp-title cormorant">Decision Quality Under Pressure Bootcamp</h3>
           <div class="bootcamp-rule"></div>
           <div class="bootcamp-detail"><strong>Duration</strong>7 hours · Full Day</div>
-          <div class="bootcamp-detail"><strong>What it covers</strong>Composure + Reasoning + change-readiness simulations — sharpening decision-making and cognitive agility when the stakes are highest.</div>
+          <div class="bootcamp-detail"><strong>What it covers</strong>Composure + Reasoning + change-readiness simulations.</div>
+          <div class="bootcamp-detail"><strong>Measured with</strong>PR6E baseline (individual reports)</div>
           <div class="bootcamp-spacer"></div>
           <div class="bootcamp-cta"><a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-green btn-sm" target="_blank" rel="noopener noreferrer">Enquire →</a></div>
         </div>
@@ -467,7 +475,8 @@
           <h3 class="bootcamp-title cormorant">Resilient Teams Bootcamp</h3>
           <div class="bootcamp-rule"></div>
           <div class="bootcamp-detail"><strong>Duration</strong>7 hours · Full Day</div>
-          <div class="bootcamp-detail"><strong>What it covers</strong>Collaboration + Tenacity + accountability and recovery skills — rebuilding trust, refining team dynamics, and embedding sustainable recovery rituals.</div>
+          <div class="bootcamp-detail"><strong>What it covers</strong>Collaboration + Tenacity + accountability + recovery rituals.</div>
+          <div class="bootcamp-detail"><strong>Measured with</strong>PR6E baseline (individual reports)</div>
           <div class="bootcamp-spacer"></div>
           <div class="bootcamp-cta"><a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-green btn-sm" target="_blank" rel="noopener noreferrer">Enquire →</a></div>
         </div>
@@ -475,9 +484,10 @@
       </div>
 
       <div class="upgrade-box" style="max-width:1280px;margin:32px auto 0;background:var(--bg-card);border:1px solid var(--border);">
-        <p class="upgrade-label cinzel" style="color:var(--green-muted);">Add-on (additional fee)</p>
+        <p class="upgrade-label cinzel" style="color:var(--green-muted);">Optional upgrades</p>
         <p class="upgrade-text cormorant" style="font-size:18px;">
-          <strong>PR6 Measurement Pack</strong> — PR6 Assessment (Individual Report) + De-identified Cohort PR6 Snapshot (for groups) + <strong>Driven Resilience App (1 month)</strong>.
+          Extend impact with the <strong>Reinforcement Pack</strong> (Driven Resilience App 1–3 months) and the
+          <strong>Proof Pack</strong> (PR6E re-measure + impact report at 6–8 weeks).
         </p>
       </div>
 
@@ -485,7 +495,7 @@
   </section>
 
   <!-- ════════════════════════════════ -->
-  <!-- 3. FLAGSHIP                     -->
+  <!-- 3. FLAGSHIP (2 DAYS)            -->
   <!-- ════════════════════════════════ -->
   <section id="flagship-prog" data-section="flagship">
     <div class="flagship-inner">
@@ -495,20 +505,21 @@
           <div class="flagship-corner flagship-corner--tr"></div>
           <div class="flagship-corner flagship-corner--bl"></div>
           <div class="flagship-corner flagship-corner--br"></div>
-          <p class="flagship-card-tag cinzel">FLAGSHIP · 2 DAYS · HIGH-DEMAND TEAMS</p>
-          <h3 class="flagship-card-title cormorant">Resilience for Performance Under Pressure</h3>
+          <p class="flagship-card-tag cinzel">INTENSIVE · 2 DAYS · HIGH-DEMAND TEAMS</p>
+          <h3 class="flagship-card-title cormorant">Resilience Performance Lab</h3>
           <div class="flagship-card-rule"></div>
-          <p class="flagship-card-sub cormorant">2-Day Resilience Skills Lab</p>
-          <p class="flagship-detail cinzel">Best for: <span>High-demand teams, leadership cohorts</span></p>
+          <p class="flagship-card-sub cormorant">PR6E Baseline + Skills Intensive + Team Debrief</p>
+          <p class="flagship-detail cinzel">Best for: <span>High-demand teams, leadership cohorts, sustained pressure environments</span></p>
           <div class="flagship-includes">
             <p class="flagship-includes-label cinzel">What's Included</p>
             <ul class="flagship-includes-list">
-              <li>PR6 Assessment</li>
-              <li>De-identified Cohort PR6 Snapshot</li>
-              <li>Cohort Insights Summary for Leaders</li>
-              <li>Driven Resilience App reinforcement (1 month)</li>
-              <li>Individual Action Planning</li>
-              <li>Recommended Programme Pathway</li>
+              <li><strong>PR6E baseline</strong> (individual reports)</li>
+              <li>De-identified cohort PR6E snapshot</li>
+              <li>Cohort insights summary for leaders</li>
+              <li>Targeted skills training (delivered through the PR6 model)</li>
+              <li>Individual action planning + team operating rhythm</li>
+              <li>Driven Resilience App reinforcement (1 month) <span style="color:var(--text-dim)">(recommend 3 months)</span></li>
+              <li><strong>Recommended:</strong> PR6E re-measure + impact report at 6–8 weeks</li>
             </ul>
             <p style="margin-top:14px;font-size:14px;color:var(--text-dim);line-height:1.6;">
               Cohort reporting is aggregated and de-identified. Individual results are not shared with leaders without explicit consent.
@@ -517,61 +528,70 @@
         </div>
       </div>
       <div class="flagship-content">
-        <p class="section-label">FLAGSHIP PROGRAMME</p>
-        <h2 class="cormorant">The Deepest<br><em>Resilience Experience</em></h2>
-        <p>Two full days of immersive resilience development — baseline PR6 measurement, targeted skills training across the six PR6 domains, and a cohort-level debrief that gives leaders data they can act on immediately.</p>
-        <p>Built for teams under sustained pressure who need more than a workshop. They need a fundamental shift in how they think, recover, and lead — together.</p>
+        <p class="section-label">2-DAY FLAGSHIP</p>
+        <h2 class="cormorant">The Deepest<br><em>Capability Uplift</em></h2>
+        <p>
+          Two full days of immersive resilience development — measured with <strong>PR6E</strong>, translated into practical operating rhythms,
+          and reinforced beyond the room.
+        </p>
+        <p>
+          Ideal for teams under sustained pressure who need measurable change, not just motivation.
+        </p>
         <div class="flagship-btns">
           <a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-terracotta" target="_blank" rel="noopener noreferrer">Book a Conversation</a>
-          <a href="#training" class="btn btn-outline">See All Programmes</a>
+          <a href="#training" class="btn btn-outline">See 4-hour options</a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ════════════════════════════════ -->
-  <!-- 4. MEASUREMENT & CONSULTING     -->
+  <!-- 4. RISK + STRATEGY              -->
   <!-- ════════════════════════════════ -->
   <section class="prog-section" data-section="consulting">
     <div class="section-heading">
       <div>
-        <p class="section-label" style="color:var(--green-muted);">MEASUREMENT &amp; CONSULTING</p>
-        <h2 class="cormorant">For HR &amp; L&amp;D Leaders<br><em>Who Need Data, Not Just Training</em></h2>
+        <p class="section-label" style="color:var(--green-muted);">RISK + STRATEGY</p>
+        <h2 class="cormorant">Three Evidence-Based Options<br><em>for HR / WHS Leaders</em></h2>
       </div>
-      <span class="section-heading-meta cinzel">3 SERVICES · 4 HRS – 12 WKS</span>
+      <span class="section-heading-meta cinzel">3 SERVICES · 2 HRS – 12 WKS</span>
     </div>
     <div class="section-rule"></div>
     <div class="consulting-grid">
 
       <div class="consulting-card">
-        <p class="consulting-card-tag cinzel">4 hrs · Planning &amp; Pilots</p>
-        <h3 class="consulting-card-title cormorant">PR6 Team Pulse + HR Insights Briefing</h3>
+        <p class="consulting-card-tag cinzel">2–4 hrs · Planning &amp; Pilots</p>
+        <h3 class="consulting-card-title cormorant">PR6E Team Pulse + HR Insights Briefing</h3>
         <div class="consulting-card-rule"></div>
-        <div class="consulting-card-row"><span class="consulting-card-row-label cinzel">Best for</span><span class="consulting-card-row-value">Planning &amp; pilots, targeting interventions before committing to training</span></div>
-        <div class="consulting-card-row"><span class="consulting-card-row-label cinzel">HR receives</span><span class="consulting-card-row-value">De-identified Cohort PR6 Snapshot + Cohort Insights Summary + recommended programme pathway</span></div>
+        <div class="consulting-card-row"><span class="consulting-card-row-label cinzel">Best for</span><span class="consulting-card-row-value">Targeting interventions before committing to training</span></div>
+        <div class="consulting-card-row"><span class="consulting-card-row-label cinzel">HR receives</span><span class="consulting-card-row-value">De-identified PR6E snapshot + top capability gaps + variance/risk pockets + recommended pathway</span></div>
         <div class="consulting-card-spacer"></div>
         <div class="consulting-card-cta"><a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-green btn-sm" target="_blank" rel="noopener noreferrer">Enquire →</a></div>
       </div>
 
       <div class="consulting-card">
-        <p class="consulting-card-tag cinzel">4 hrs · Post-Programme ROI</p>
-        <h3 class="consulting-card-title cormorant">PR6 Re-measure + Impact Report Package</h3>
+        <p class="consulting-card-tag cinzel">2–4 hrs · Post-Programme ROI</p>
+        <h3 class="consulting-card-title cormorant">PR6E Re-measure + Impact Report</h3>
         <div class="consulting-card-rule"></div>
         <div class="consulting-card-row"><span class="consulting-card-row-label cinzel">Best for</span><span class="consulting-card-row-value">Demonstrating measurable ROI to leadership and stakeholders</span></div>
-        <div class="consulting-card-row"><span class="consulting-card-row-label cinzel">HR receives</span><span class="consulting-card-row-value">Pre/post comparison (where available), impact summary, sustain recommendations</span></div>
+        <div class="consulting-card-row"><span class="consulting-card-row-label cinzel">HR receives</span><span class="consulting-card-row-value">Pre/post comparison, impact narrative, sustain recommendations</span></div>
         <div class="consulting-card-spacer"></div>
         <div class="consulting-card-cta"><a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-green btn-sm" target="_blank" rel="noopener noreferrer">Enquire →</a></div>
       </div>
 
       <div class="consulting-card">
-        <p class="consulting-card-tag cinzel">6–12 Weeks · Systemic Risk</p>
-        <h3 class="consulting-card-title cormorant">PR6 + JSECC Psychosocial Risk &amp; Resilience Mapping</h3>
+        <p class="consulting-card-tag cinzel">6–12 Weeks · Risk mapping</p>
+        <h3 class="consulting-card-title cormorant">JSECC + PR6 Pulse Psychosocial Risk &amp; Resilience Mapping</h3>
         <div class="consulting-card-rule"></div>
-        <div class="consulting-card-row"><span class="consulting-card-row-label cinzel">Best for</span><span class="consulting-card-row-value">Hotspots, systemic psychosocial risk identification across the organisation</span></div>
-        <div class="consulting-card-row"><span class="consulting-card-row-label cinzel">HR receives</span><span class="consulting-card-row-value">Heatmap insights + prioritised controls &amp; capability plan + leadership briefing</span></div>
+        <div class="consulting-card-row"><span class="consulting-card-row-label cinzel">Best for</span><span class="consulting-card-row-value">Hotspots, psychosocial risk prioritisation, and capability uplift planning</span></div>
+        <div class="consulting-card-row"><span class="consulting-card-row-label cinzel">HR receives</span><span class="consulting-card-row-value">Heatmap insights + prioritised controls &amp; capability plan + leadership briefing + recommended programme pathway</span></div>
+        <div class="consulting-card-row">
+          <span class="consulting-card-row-label cinzel">Measured with</span>
+          <span class="consulting-card-row-value"><strong>JSECC + PR6 Pulse</strong> (short PR6 measure) to maximise response rates and minimise survey fatigue</span>
+        </div>
         <div class="consulting-card-row">
           <span class="consulting-card-row-label cinzel">Note</span>
-          <span class="consulting-card-row-value">Supports psychosocial risk identification and prioritisation and complements existing WHS processes (not a substitute for legal compliance advice).</span>
+          <span class="consulting-card-row-value">Complements WHS processes (not legal compliance advice).</span>
         </div>
         <div class="consulting-card-spacer"></div>
         <div class="consulting-card-cta"><a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-green btn-sm" target="_blank" rel="noopener noreferrer">Enquire →</a></div>
@@ -583,11 +603,10 @@
   <!-- UPGRADE CALLOUT -->
   <section id="upgrade">
     <div class="upgrade-box">
-      <p class="upgrade-label cinzel">Optional Upgrade — Available for Any Programme</p>
+      <p class="upgrade-label cinzel">Optional Proof Pack — available for any training programme</p>
       <p class="upgrade-text cormorant">
-        Add a <strong>PR6 Re-measure + Impact Report</strong> to any training programme, conducted
-        6–8 weeks post-delivery to capture real behaviour change and give your leadership team
-        measurable evidence of return on investment.
+        Add a <strong>PR6E Re-measure + Impact Report</strong> to capture real behaviour change
+        6–8 weeks post-delivery and give your leadership team measurable evidence of return on investment.
       </p>
     </div>
   </section>
@@ -606,7 +625,10 @@
     <div class="cta-glow"></div>
     <p class="section-label">BUILD RESILIENCE THAT LASTS</p>
     <h2 class="cormorant">Ready to Strengthen<br><em>Your Team's Resilience?</em></h2>
-    <p class="cormorant">Whether you're planning a half-day workshop, a full team resilience assessment, or a flagship 2-day skills lab — let's talk about what fits your team.</p>
+    <p class="cormorant">
+      Share your cohort size, role mix, and pressure points. I’ll recommend a clean pathway:
+      PRE for broad uplift, intensives for hotspots, and mapping when you need risk clarity.
+    </p>
     <div class="cta-btns">
       <a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-terracotta" target="_blank" rel="noopener noreferrer">Get in Touch</a>
       <a href="index.html" class="btn btn-outline">Back to Home</a>
