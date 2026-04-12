@@ -8,16 +8,27 @@
   <!-- SEO -->
   <meta name="description" content="Dr Elijah — Certified Resilience Coach (CReC) and CReW Implementation Partner. Corporate resilience: Training (4 hours), Intensives (1–2 days), and Risk + Strategy mapping (JSECC + PR6 Pulse), powered by PR6 Resilience Science and measured with PR6E." />
 
-  <!-- Social -->
+  <!-- Social / OG -->
   <meta property="og:title" content="Dr Elijah — Resilience Training &amp; Consulting" />
   <meta property="og:description" content="Three ways to strengthen resilience: Training (4 hours), Intensives (1–2 days), and Risk + Strategy mapping (JSECC + PR6 Pulse) — powered by PR6 Resilience Science and measured with PR6E." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://drelijah.org" />
-  <meta name="twitter:card" content="summary" />
+  <meta property="og:image" content="https://drelijah.org/assets/images/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Dr Elijah — Resilience Training &amp; Consulting" />
   <meta name="twitter:description" content="Three ways to strengthen resilience: Training (4 hours), Intensives (1–2 days), and Risk + Strategy mapping (JSECC + PR6 Pulse) — powered by PR6 Resilience Science and measured with PR6E." />
+  <meta name="twitter:image" content="https://drelijah.org/assets/images/og-image.jpg" />
 
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230E0D0B'/%3E%3Crect x='1' y='1' width='30' height='30' fill='none' stroke='%23C8A96E' stroke-width='0.75'/%3E%3Ctext x='16' y='23' font-family='Georgia%2C serif' font-size='20' font-weight='400' fill='%23C8A96E' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E" />
+  <!-- Favicon — SVG fallback (inline). When you generate favicon files from favicon.io, upload to root + assets/icons/ -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230E0D0B'/%3E%3Crect x='1' y='1' width='30' height='30' rx='5' fill='none' stroke='%23C8A96E' stroke-width='0.75'/%3E%3Ctext x='16' y='23' font-family='Georgia%2C serif' font-size='20' font-weight='400' fill='%23C8A96E' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E" />
+  <!-- When you generate favicon files from favicon.io, add these:
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png" />
+  -->
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -25,17 +36,6 @@
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    /*
-     * DESIGN PRINCIPLES — Non-Anxious Presence
-     *
-     * 1. RESTRAINT: Never use more than three accent colors on screen simultaneously
-     * 2. HIERARCHY: Gold is authority. Green is sanctuary. Terracotta is invitation.
-     * 3. WHITESPACE: Generous padding signals confidence, not emptiness
-     * 4. MOTION: Transitions are slow (0.3s+), easing is gentle (cubic-bezier)
-     * 5. TYPOGRAPHY: Light weights (300-400) for body; reserve bold for Cinzel labels only
-     * 6. CONTRAST: Muted tones preferred. No full-brightness colors on dark backgrounds
-     */
 
     :root {
       --gold:#C8A96E;
@@ -184,7 +184,8 @@
       margin-bottom: 16px;
     }
 
-   #hero {
+    /* ── HERO ── */
+    #hero {
       min-height: 100vh;
       display: flex; flex-direction: column;
       justify-content: center; align-items: center;
@@ -204,17 +205,18 @@
     .hero-tag { margin-bottom: 24px; text-align: center; }
     .hero-tag .section-label { margin-bottom: 12px; }
 
-    h1.hero-name { font-size: clamp(52px, 8vw, 96px); font-weight: 300; line-height: 1.05; letter-spacing: -0.01em; margin-bottom: 8px; color: var(--text); }
-
-    .hero-brand {
-      font-family: 'Cinzel', serif;
-      font-size: 13px;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 10px;
-      opacity: 0.95;
+    /* Hero photo */
+    .hero-photo {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center top;
+      border: 2px solid var(--gold-dim);
+      margin-bottom: 28px;
     }
+
+    h1.hero-name { font-size: clamp(52px, 8vw, 96px); font-weight: 300; line-height: 1.05; letter-spacing: -0.01em; margin-bottom: 8px; color: var(--text); }
 
     h2.hero-sub { font-size: clamp(20px, 3vw, 32px); font-weight: 300; font-style: italic; color: var(--text-muted); margin-bottom: 32px; letter-spacing: 0.05em; }
     .hero-desc { max-width: 740px; font-size: 20px; line-height: 1.8; color:#B0A898; font-weight: 300; margin-bottom: 48px; }
@@ -232,7 +234,8 @@
     .scroll-hint span { font-family: 'Cinzel', serif; font-size: 13px; letter-spacing: 0.3em; color:#C8A96E44; }
     .scroll-line { width: 1px; height: 40px; background: linear-gradient(to bottom, var(--gold), transparent); animation: pulse-line 2s ease-in-out infinite; }
 
-   #roles { padding: 100px 48px; max-width: 1200px; margin: 0 auto; }
+    /* ── ROLES ── */
+    #roles { padding: 100px 48px; max-width: 1200px; margin: 0 auto; }
     .roles-header { text-align: center; margin-bottom: 64px; }
     .roles-header h2 { font-size: clamp(32px, 4vw, 48px); font-weight: 300; letter-spacing: 0.02em; }
     .roles-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1px; background: var(--border); }
@@ -245,7 +248,8 @@
     .role-title { font-family: 'Cinzel', serif; font-size: 15px; letter-spacing: 0.15em; color: var(--gold); margin-bottom: 16px; text-transform: uppercase; }
     .role-body { font-size: 17px; line-height: 1.9; color: var(--text-muted); font-weight: 300; }
 
-   #methodology { padding: 100px 48px; background: var(--bg-alt); }
+    /* ── METHODOLOGY ── */
+    #methodology { padding: 100px 48px; background: var(--bg-alt); }
     .methodology-inner { max-width: 1200px; margin: 0 auto; }
     .methodology-header { text-align: center; margin-bottom: 64px; }
     .methodology-header h2 { font-size: clamp(32px, 4vw, 48px); font-weight: 300; }
@@ -267,7 +271,8 @@
     }
     .methodology-cta a:hover { border-color: var(--gold); }
 
-   #flagship { padding: 100px 48px; }
+    /* ── FLAGSHIP ── */
+    #flagship { padding: 100px 48px; }
     .flagship-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
     .flagship-card {
       background: var(--bg-card);
@@ -289,12 +294,14 @@
     .flagship-content p { font-size: 18px; line-height: 1.9; color: var(--text-muted); font-weight: 300; margin-bottom: 16px; }
     .flagship-content p:last-of-type { margin-bottom: 40px; }
 
-   #quote { padding: 100px 48px; background: linear-gradient(135deg, var(--bg-alt) 0%,#141A16 100%); text-align: center; }
+    /* ── QUOTE ── */
+    #quote { padding: 100px 48px; background: linear-gradient(135deg, var(--bg-alt) 0%,#141A16 100%); text-align: center; }
     .quote-mark { font-size: 72px; color:#344E4130; line-height: 1; margin-bottom: -8px; }
     blockquote { font-size: clamp(22px, 3vw, 32px); font-weight: 300; font-style: italic; line-height: 1.6; color:#D0C8BC; max-width: 800px; margin: 0 auto 32px; }
     .quote-attr { font-family: 'Cinzel', serif; font-size: 14px; letter-spacing: 0.3em; color: var(--gold); }
 
-   #credentials { padding: 80px 48px; }
+    /* ── CREDENTIALS ── */
+    #credentials { padding: 80px 48px; }
     .cred-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -307,14 +314,75 @@
     .cred-sub { font-size: 14px; color: var(--text-dim); letter-spacing: 0.1em; font-family: 'Cinzel', serif; }
     .cred-item--new .cred-label { color: var(--green-muted); }
 
-   #cta { padding: 120px 48px; text-align: center; position: relative; overflow: hidden; }
-    .cta-glow { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle,#C8A96E06 0%, transparent 65%); pointer-events: none; }
-   #cta .section-label { margin-bottom: 24px; }
-   #cta h2 { font-size: clamp(36px, 5vw, 64px); font-weight: 300; line-height: 1.2; margin-bottom: 24px; }
-   #cta h2 em { font-style: italic; }
-   #cta p { font-size: 20px; color: var(--text-muted); max-width: 760px; margin: 0 auto 48px; line-height: 1.8; }
-    .cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    /* ── TESTIMONIALS ── */
+    #testimonials { padding: 80px 48px; background: var(--bg-alt); }
+    .testimonials-inner { max-width: 900px; margin: 0 auto; text-align: center; }
+    .testimonials-inner h2 { font-size: clamp(28px, 3.5vw, 40px); font-weight: 300; margin-bottom: 48px; }
+    .testimonial-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+    .testimonial-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      padding: 36px;
+      text-align: left;
+      position: relative;
+    }
+    .testimonial-card::before {
+      content: '"';
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 48px;
+      color: var(--gold-dim);
+      line-height: 1;
+      position: absolute;
+      top: 20px;
+      left: 24px;
+    }
+    .testimonial-text {
+      font-size: 17px;
+      line-height: 1.8;
+      color: var(--text-muted);
+      font-weight: 300;
+      font-style: italic;
+      margin-bottom: 16px;
+      padding-top: 20px;
+    }
+    .testimonial-attr {
+      font-family: 'Cinzel', serif;
+      font-size: 12px;
+      letter-spacing: 0.15em;
+      color: var(--text-dim);
+    }
 
+    /* ── SECTORS ── */
+    #sectors { padding: 48px 48px 0; text-align: center; }
+    .sectors-text {
+      font-family: 'Cinzel', serif;
+      font-size: 13px;
+      letter-spacing: 0.15em;
+      color: var(--text-dim);
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.8;
+    }
+
+    /* ── CTA ── */
+    #cta { padding: 120px 48px; text-align: center; position: relative; overflow: hidden; }
+    .cta-glow { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle,#C8A96E06 0%, transparent 65%); pointer-events: none; }
+    #cta .section-label { margin-bottom: 24px; }
+    #cta h2 { font-size: clamp(36px, 5vw, 64px); font-weight: 300; line-height: 1.2; margin-bottom: 24px; }
+    #cta h2 em { font-style: italic; }
+    #cta p { font-size: 20px; color: var(--text-muted); max-width: 760px; margin: 0 auto 48px; line-height: 1.8; }
+    .cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .cta-email {
+      font-family: 'Cinzel', serif;
+      font-size: 13px;
+      letter-spacing: 0.15em;
+      color: var(--text-dim);
+      margin-top: 20px;
+    }
+    .cta-email a { color: var(--gold); text-decoration: none; border-bottom: 1px solid var(--gold-dim); transition: border-color 0.3s; }
+    .cta-email a:hover { border-color: var(--gold); }
+
+    /* ── FOOTER ── */
     footer {
       padding: 40px 48px 32px;
       border-top: 1px solid var(--border);
@@ -345,8 +413,9 @@
     .footer-social a:hover { color: var(--gold); }
     .footer-divider { width: 1px; height: 12px; background: var(--border); }
     .footer-copy { font-family: 'Cinzel', serif; font-size: 12px; letter-spacing: 0.1em; color: var(--text-dim); }
-    .footer-powered { font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 0.15em; color: var(--text-dim); opacity: 0.6; }
+    .footer-powered { font-family: 'Cinzel', serif; font-size: 10px; letter-spacing: 0.1em; color: var(--text-dim); opacity: 0.4; }
 
+    /* ── RESPONSIVE ── */
     @media (max-width: 768px) {
       nav { padding: 16px 24px; }
       .nav-hamburger { display: flex; }
@@ -366,25 +435,31 @@
       .nav-links.open { display: flex; }
       .nav-links a { padding: 12px 0; }
 
-     #hero { padding: 100px 24px 60px; }
+      #hero { padding: 100px 24px 60px; }
       .hero-side { display: none; }
+      .hero-photo { width: 120px; height: 120px; }
 
-     #roles { padding: 60px 24px; }
-     #methodology { padding: 60px 24px; }
+      #roles { padding: 60px 24px; }
+      #methodology { padding: 60px 24px; }
       .framework-item { flex-direction: column; gap: 16px; }
       .framework-num { min-width: auto; font-size: 28px; }
 
-     #flagship { padding: 60px 24px; }
+      #flagship { padding: 60px 24px; }
       .flagship-inner { grid-template-columns: 1fr; gap: 48px; }
 
-     #quote { padding: 60px 24px; }
+      #quote { padding: 60px 24px; }
 
-     #credentials { padding: 60px 24px; }
+      #credentials { padding: 60px 24px; }
       .cred-grid { grid-template-columns: repeat(2, 1fr); gap: 36px 24px; }
       .cred-label { font-size: 18px; }
       .cred-sub { font-size: 15px; }
 
-     #cta { padding: 80px 24px; }
+      #testimonials { padding: 60px 24px; }
+      .testimonial-grid { grid-template-columns: 1fr; }
+
+      #sectors { padding: 32px 24px 0; }
+
+      #cta { padding: 80px 24px; }
 
       .section-label { font-size: 16px; letter-spacing: 0.2em; }
       .btn { font-size: 15px; padding: 16px 32px; }
@@ -421,6 +496,7 @@
       <li><a href="#roles">About</a></li>
       <li><a href="programmes.html">Programmes</a></li>
       <li><a href="#methodology">Methodology</a></li>
+      <li><a href="about.html">Story</a></li>
       <li><a href="#cta">Contact</a></li>
     </ul>
     <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
@@ -447,8 +523,10 @@
       <div class="gold-divider"></div>
     </div>
 
-    <h1 class="hero-name cormorant reveal d1">Dr Elijah</h1>
-    <p class="hero-brand reveal d2">Transformation Architect™</p>
+    <!-- EDIT: Add your hero photo. Replace 'hero-photo.jpg' with your actual filename -->
+    <img src="assets/images/hero-photo.jpg" alt="Dr Elijah Ting" class="hero-photo reveal d1" />
+
+    <h1 class="hero-name cormorant reveal d2">Dr Elijah</h1>
     <h2 class="hero-sub cormorant reveal d3">Ting Moi Kieng</h2>
 
     <p class="hero-desc reveal d4">
@@ -491,16 +569,17 @@
         <p class="role-body">HRD Corp accredited trainer bringing structured, measurable learning experiences to organisations across Malaysia and the wider region.</p>
       </div>
 
+      <!-- EDIT: Softened pastoral role description -->
       <div class="role-card role-card--pastoral">
         <div class="role-icon"><span aria-hidden="true">◉</span></div>
         <p class="role-title">Pastoral Leader</p>
-        <p class="role-body">Providing oversight and strategic leadership across churches in Sibu and Kuching — guiding faith communities where people are supported, grounded, and transformed.</p>
+        <p class="role-body">Leadership formation and pastoral care across faith-based and community organisations — bringing depth, grounding, and human presence into every coaching relationship.</p>
       </div>
 
       <div class="role-card">
         <div class="role-icon"><span aria-hidden="true">⬡</span></div>
         <p class="role-title">Practitioner-Scholar</p>
-        <p class="role-body">Executive Doctoral research in L&amp;D, now applied to the science and practice of human resilience under pressure — bringing academic rigour into every training room.</p>
+        <p class="role-body">Doctoral research in L&amp;D, now applied to the science and practice of human resilience under pressure — bringing academic rigour into every training room. Author of <em>The Transformation Architect™</em> (2026).</p>
       </div>
     </div>
   </section>
@@ -514,8 +593,9 @@
       </div>
 
       <div>
+        <!-- EDIT: Roman numerals → plain numbers -->
         <div class="framework-item">
-          <div class="framework-num cinzel" style="color:#C8A96E;">I.</div>
+          <div class="framework-num cinzel" style="color:#C8A96E;">1</div>
           <div>
             <h3 class="framework-name cormorant" style="color:#C8A96E;">PR6 Model</h3>
             <p class="framework-desc">
@@ -526,7 +606,7 @@
         </div>
 
         <div class="framework-item">
-          <div class="framework-num cinzel" style="color:var(--green-muted);">II.</div>
+          <div class="framework-num cinzel" style="color:var(--green-muted);">2</div>
           <div>
             <h3 class="framework-name cormorant" style="color:var(--green-muted);">PR6E Measurement</h3>
             <p class="framework-desc">
@@ -538,7 +618,7 @@
         </div>
 
         <div class="framework-item">
-          <div class="framework-num cinzel" style="color:#C8A96E;">III.</div>
+          <div class="framework-num cinzel" style="color:#C8A96E;">3</div>
           <div>
             <h3 class="framework-name cormorant" style="color:#C8A96E;">Driven Resilience App Reinforcement</h3>
             <p class="framework-desc">
@@ -549,7 +629,7 @@
         </div>
 
         <div class="framework-item">
-          <div class="framework-num cinzel" style="color:var(--green-muted);">IV.</div>
+          <div class="framework-num cinzel" style="color:var(--green-muted);">4</div>
           <div>
             <h3 class="framework-name cormorant" style="color:var(--green-muted);">Onsite &amp; Virtual Delivery</h3>
             <p class="framework-desc">
@@ -603,6 +683,7 @@
   </section>
 
   <!-- CREDENTIALS -->
+  <!-- EDIT: Removed CFP® row -->
   <section id="credentials">
     <div class="cred-grid">
       <div class="cred-item cred-item--new">
@@ -643,16 +724,36 @@
         <p class="cred-label cinzel">Executive MBA</p>
         <p class="cred-sub cinzel">Business Strategy</p>
       </div>
-
-      <div class="cred-item">
-        <p class="cred-label cinzel">CFP®</p>
-        <p class="cred-sub cinzel">Financial Stewardship</p>
-      </div>
       <div class="cred-item">
         <p class="cred-label cinzel">Exec. Doctorate L&amp;D</p>
         <p class="cred-sub cinzel">Transformation Framework</p>
       </div>
     </div>
+  </section>
+
+  <!-- TESTIMONIALS — NEW SECTION -->
+  <section id="testimonials">
+    <div class="testimonials-inner">
+      <p class="section-label">FROM PAST TRAINING PARTICIPANTS</p>
+      <h2 class="cormorant">What They Say</h2>
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <p class="testimonial-text">Thank you for the five days of training us to be the best trainer versions of ourselves. Your personal story on your training journey has been very inspiring.</p>
+          <p class="testimonial-attr">KK · TRAINING PARTICIPANT</p>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-text">Thank you for guiding us throughout the joyful learning sessions.</p>
+          <p class="testimonial-attr">CL · TRAINING PARTICIPANT</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTORS — NEW SECTION -->
+  <section id="sectors">
+    <p class="sectors-text">
+      Delivered to teams across healthcare, education, financial services, public sector, and ministry leadership in in Malaysia and beyond.
+    </p>
   </section>
 
   <!-- CTA -->
@@ -662,12 +763,14 @@
     <h2 class="cormorant">Ready to Strengthen<br><em>Your Team's Resilience?</em></h2>
     <p class="cormorant">
       Share your <strong>cohort size</strong>, <strong>role mix</strong>, <strong>timeline</strong>, and <strong>pressure points</strong>.
-      I’ll recommend a clean pathway: Training (4 hours), Intensives (1–2 days), or Risk + Strategy mapping.
+      I'll recommend a clean pathway: Training (4 hours), Intensives (1–2 days), or Risk + Strategy mapping.
     </p>
     <div class="cta-btns">
       <a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-terracotta" target="_blank" rel="noopener noreferrer">Get in Touch</a>
       <a href="programmes.html" class="btn btn-outline">View Programmes</a>
     </div>
+    <!-- EDIT: Added email as secondary CTA -->
+    <p class="cta-email">Or email directly: <a href="mailto:elijah@DrElijah.org">elijah@DrElijah.org</a></p>
   </section>
 
   <!-- FOOTER -->
@@ -686,7 +789,8 @@
       <a href="https://x.com/DrElijahTing" target="_blank" rel="noopener noreferrer">X</a>
     </div>
     <p class="footer-copy">&copy; 2026 Dr Elijah. All rights reserved.</p>
-    <p class="footer-powered">Powered by Hello Driven PR6 Resilience Science</p>
+    <!-- EDIT: Smaller, more subdued powered-by line -->
+    <p class="footer-powered">Resilience programmes powered by PR6 · Hello Driven</p>
   </footer>
 
   <script>
@@ -696,7 +800,7 @@
       nav.classList.toggle('scrolled', window.scrollY > 60);
     });
 
-    // Hamburger (with accessible Open/Close label)
+    // Hamburger
     const hamburger = document.querySelector('.nav-hamburger');
     const navLinks = document.querySelector('.nav-links');
 
@@ -728,7 +832,7 @@
       });
     }, { threshold: 0.12 });
 
-    document.querySelectorAll('.role-card, .framework-item, .cred-item, .flagship-card').forEach(el => {
+    document.querySelectorAll('.role-card, .framework-item, .cred-item, .flagship-card, .testimonial-card').forEach(el => {
       el.style.opacity = '0';
       el.style.transform = 'translateY(24px)';
       el.style.transition = 'opacity 0.7s ease, transform 0.7s cubic-bezier(0.16,1,0.3,1)';
