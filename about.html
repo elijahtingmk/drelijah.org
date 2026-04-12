@@ -84,7 +84,11 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 1px solid var(--border);
+      border-bottom: 1px solid transparent;
+      transition: all 0.4s ease;
+    }
+    nav.scrolled {
+      border-bottom-color: var(--border);
       background: rgba(14,13,11,0.88);
       backdrop-filter: blur(12px);
     }
@@ -336,7 +340,7 @@
 <body>
 
   <!-- NAV -->
-  <nav>
+  <nav id="nav">
     <a href="index.html" class="nav-logo">DR ELIJAH</a>
     <ul class="nav-links">
       <li><a href="about.html">About</a></li>
@@ -444,6 +448,12 @@
   </footer>
 
   <script>
+    // Scroll nav
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
     const hamburger = document.querySelector('.nav-hamburger');
     const navLinks = document.querySelector('.nav-links');
     hamburger.addEventListener('click', () => {
