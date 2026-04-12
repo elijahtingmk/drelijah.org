@@ -10,9 +10,13 @@
   <meta property="og:description" content="Three ways to engage: Training (4 hours) for broad rollout, Intensives (1–2 days) for teams under pressure, and Risk + Strategy mapping for psychosocial risk and capability planning — all powered by PR6 Resilience Science and measured with PR6E." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://drelijah.org/programmes.html" />
-  <meta name="twitter:card" content="summary" />
+  <meta property="og:image" content="https://drelijah.org/assets/images/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://drelijah.org/assets/images/og-image.jpg" />
 
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230E0D0B'/%3E%3Crect x='1' y='1' width='30' height='30' fill='none' stroke='%23C8A96E' stroke-width='0.75'/%3E%3Ctext x='16' y='23' font-family='Georgia%2C serif' font-size='20' font-weight='400' fill='%23C8A96E' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230E0D0B'/%3E%3Crect x='1' y='1' width='30' height='30' rx='5' fill='none' stroke='%23C8A96E' stroke-width='0.75'/%3E%3Ctext x='16' y='23' font-family='Georgia%2C serif' font-size='20' font-weight='400' fill='%23C8A96E' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -231,6 +235,15 @@
    #cta h2 em { font-style:italic; }
    #cta p { font-size:20px; color:var(--text-muted); max-width:760px; margin:0 auto 48px; line-height:1.8; }
     .cta-btns { display:flex; gap:16px; justify-content:center; flex-wrap:wrap; }
+    .cta-email {
+      font-family:'Cinzel',serif;
+      font-size:13px;
+      letter-spacing:0.15em;
+      color:var(--text-dim);
+      margin-top:20px;
+    }
+    .cta-email a { color:var(--gold); text-decoration:none; border-bottom:1px solid var(--gold-dim); transition:border-color 0.3s; }
+    .cta-email a:hover { border-color:var(--gold); }
 
     /* FOOTER */
     footer { padding:40px 48px 32px; border-top:1px solid var(--border); display:flex; flex-direction:column; align-items:center; gap:16px; text-align:center; }
@@ -242,7 +255,7 @@
     .footer-social a:hover { color:var(--gold); }
     .footer-divider { width:1px; height:12px; background:var(--border); }
     .footer-copy { font-family:'Cinzel',serif; font-size:12px; letter-spacing:0.1em; color:var(--text-dim); }
-    .footer-powered { font-family:'Cinzel',serif; font-size:11px; letter-spacing:0.15em; color:#3A3830; }
+    .footer-powered { font-family:'Cinzel',serif; font-size:10px; letter-spacing:0.1em; color:var(--text-dim); opacity:0.4; }
 
     /* MOBILE */
     @media (max-width:900px) {
@@ -293,6 +306,7 @@
       <li><a href="about.html">About</a></li>
       <li><a href="programmes.html" class="active">Programmes</a></li>
       <li><a href="index.html#methodology">Methodology</a></li>
+      <li><a href="about.html#story">Story</a></li>
       <li><a href="#cta">Contact</a></li>
     </ul>
   </nav>
@@ -494,7 +508,7 @@
           <p class="section-label" style="color:var(--green-muted);">INTENSIVES</p>
           <h2 class="cormorant">Bootcamps<br><em>1 Day (7 Hours)</em></h2>
         </div>
-        <span class="section-heading-meta cinzel">4 PROGRAMMES · ONSITE &amp; VIRTUAL</span>
+        <span class="section-heading-meta cinzel">3 BOOTCAMPS + FLAGSHIP · ONSITE &amp; VIRTUAL</span>
       </div>
       <div class="section-rule"></div>
 
@@ -712,6 +726,7 @@
     <div class="cta-btns">
       <a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-terracotta" target="_blank" rel="noopener noreferrer">Get in Touch</a>
       <a href="index.html" class="btn btn-outline">Back to Home</a>
+      <p class="cta-email">Or email directly: <a href="mailto:elijah@DrElijah.org">elijah@DrElijah.org</a></p>
     </div>
   </section>
 
@@ -731,7 +746,7 @@
       <a href="https://x.com/DrElijahTing" target="_blank" rel="noopener noreferrer">X</a>
     </div>
     <p class="footer-copy">&copy; 2026 Dr Elijah. All rights reserved.</p>
-    <p class="footer-powered">Powered by Hello Driven PR6 Resilience Science</p>
+    <p class="footer-powered">Resilience programmes powered by PR6 · Hello Driven</p>
   </footer>
 
   <script>
