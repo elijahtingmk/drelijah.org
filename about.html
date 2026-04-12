@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Dr Elijah · Resilience Training &amp; Consulting</title>
+
+  <meta name="description" content="Dr Elijah Ting — from nursing to ministry to corporate resilience. The story behind the practice." />
+
+  <meta property="og:title" content="About Dr Elijah — Resilience Training &amp; Consulting" />
+  <meta property="og:description" content="From nursing to ministry to corporate resilience — the story behind the practice." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://drelijah.org/about.html" />
+  <meta property="og:image" content="https://drelijah.org/assets/images/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230E0D0B'/%3E%3Crect x='1' y='1' width='30' height='30' rx='5' fill='none' stroke='%23C8A96E' stroke-width='0.75'/%3E%3Ctext x='16' y='23' font-family='Georgia%2C serif' font-size='20' font-weight='400' fill='%23C8A96E' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Cinzel:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --gold:#C8A96E;
+      --gold-dim:#C8A96E44;
+      --green-muted:#5A7A66;
+      --bg:#0E0D0B;
+      --bg-alt:#13120F;
+      --bg-card:#1A1813;
+      --border:#2A2720;
+      --text:#E8E4DC;
+      --text-muted:#9A9080;
+      --text-dim:#5A5650;
+      --terracotta:#C06C54;
+    }
+
+    html { scroll-behavior: smooth; font-size: 18px; }
+
+    body {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      background: var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    ::selection { background:#C8A96E33; color: var(--gold); }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.025;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+
+    .cinzel { font-family: 'Cinzel', serif; }
+    .cormorant { font-family: 'Cormorant Garamond', Georgia, serif; }
+
+    @keyframes reveal {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .reveal { opacity: 0; animation: reveal 0.9s cubic-bezier(0.16,1,0.3,1) forwards; }
+    .d1 { animation-delay: 0.1s; }
+    .d2 { animation-delay: 0.25s; }
+    .d3 { animation-delay: 0.4s; }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 20px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--border);
+      background: rgba(14,13,11,0.88);
+      backdrop-filter: blur(12px);
+    }
+    .nav-logo {
+      font-family: 'Cinzel', serif;
+      font-size: 15px;
+      letter-spacing: 0.25em;
+      color: var(--gold);
+      text-decoration: none;
+    }
+    .nav-links { display: flex; gap: 36px; list-style: none; }
+    .nav-links a {
+      font-family: 'Cinzel', serif;
+      font-size: 14px;
+      letter-spacing: 0.15em;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-hamburger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      flex-direction: column;
+      gap: 5px;
+      z-index: 101;
+    }
+    .nav-hamburger span {
+      display: block;
+      width: 24px;
+      height: 1.5px;
+      background: var(--gold);
+      transition: all 0.3s ease;
+    }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+    .btn {
+      font-family: 'Cinzel', serif;
+      font-size: 14px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 16px 40px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.3s ease;
+    }
+    .btn-terracotta { background: transparent; border: 1px solid var(--terracotta); color: var(--terracotta); }
+    .btn-terracotta:hover { background: var(--terracotta); color: var(--bg); }
+    .btn-outline { background: transparent; border: 1px solid var(--gold); color: var(--gold); }
+    .btn-outline:hover { background: var(--gold); color: var(--bg); }
+
+    .section-label {
+      font-family: 'Cinzel', serif;
+      font-size: 14px;
+      letter-spacing: 0.35em;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .gold-divider { width: 60px; height: 1px; background: var(--gold); margin: 0 auto; }
+
+    /* HERO */
+    .about-hero {
+      padding: 160px 48px 100px;
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      gap: 64px;
+      align-items: flex-start;
+    }
+    .about-photo {
+      width: 220px;
+      min-width: 220px;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+    }
+    .about-intro h1 {
+      font-size: clamp(36px, 5vw, 56px);
+      font-weight: 300;
+      line-height: 1.15;
+      margin-bottom: 8px;
+    }
+    .about-intro .subtitle {
+      font-size: 20px;
+      font-style: italic;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+    }
+    .about-intro .location {
+      font-family: 'Cinzel', serif;
+      font-size: 12px;
+      letter-spacing: 0.2em;
+      color: var(--text-dim);
+      margin-bottom: 32px;
+    }
+    .about-intro p {
+      font-size: 19px;
+      line-height: 1.9;
+      color: var(--text-muted);
+      font-weight: 300;
+      margin-bottom: 16px;
+    }
+
+    /* JOURNEY */
+    .journey {
+      padding: 80px 48px;
+      background: var(--bg-alt);
+    }
+    .journey-inner {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .journey h2 {
+      font-size: clamp(28px, 3.5vw, 40px);
+      font-weight: 300;
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .journey-step {
+      display: flex;
+      gap: 32px;
+      padding: 28px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .journey-step:last-child { border-bottom: none; }
+    .journey-era {
+      font-family: 'Cinzel', serif;
+      font-size: 13px;
+      letter-spacing: 0.15em;
+      color: var(--gold);
+      min-width: 140px;
+      padding-top: 4px;
+    }
+    .journey-desc {
+      font-size: 18px;
+      line-height: 1.8;
+      color: var(--text-muted);
+      font-weight: 300;
+    }
+    .journey-desc strong { color: var(--text); font-weight: 400; }
+
+    /* CTA */
+    .about-cta {
+      padding: 100px 48px;
+      text-align: center;
+    }
+    .about-cta h2 {
+      font-size: clamp(28px, 4vw, 48px);
+      font-weight: 300;
+      margin-bottom: 24px;
+    }
+    .about-cta p {
+      font-size: 19px;
+      color: var(--text-muted);
+      max-width: 600px;
+      margin: 0 auto 40px;
+      line-height: 1.8;
+    }
+    .about-cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .about-cta-email {
+      font-family: 'Cinzel', serif;
+      font-size: 13px;
+      letter-spacing: 0.15em;
+      color: var(--text-dim);
+      margin-top: 20px;
+    }
+    .about-cta-email a { color: var(--gold); text-decoration: none; border-bottom: 1px solid var(--gold-dim); }
+
+    /* FOOTER */
+    footer {
+      padding: 40px 48px 32px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+    .footer-top {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .footer-brand { font-family: 'Cinzel', serif; font-size: 13px; letter-spacing: 0.2em; color: var(--gold); }
+    .footer-domain { font-family: 'Cinzel', serif; font-size: 13px; letter-spacing: 0.1em; color: var(--text-dim); }
+    .footer-social { display: flex; gap: 24px; align-items: center; }
+    .footer-social a {
+      color: var(--text-dim);
+      text-decoration: none;
+      font-family: 'Cinzel', serif;
+      font-size: 14px;
+      letter-spacing: 0.15em;
+      transition: color 0.3s;
+    }
+    .footer-social a:hover { color: var(--gold); }
+    .footer-divider { width: 1px; height: 12px; background: var(--border); }
+    .footer-copy { font-family: 'Cinzel', serif; font-size: 12px; letter-spacing: 0.1em; color: var(--text-dim); }
+    .footer-powered { font-family: 'Cinzel', serif; font-size: 10px; letter-spacing: 0.1em; color: var(--text-dim); opacity: 0.4; }
+
+    @media (max-width: 768px) {
+      nav { padding: 16px 24px; }
+      .nav-hamburger { display: flex; }
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0; right: 0;
+        flex-direction: column;
+        gap: 0;
+        background: rgba(14,13,11,0.95);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border);
+        padding: 16px 24px;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links a { padding: 12px 0; }
+
+      .about-hero {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 120px 24px 60px;
+        gap: 32px;
+      }
+      .about-photo { width: 160px; min-width: 160px; border-radius: 50%; }
+
+      .journey { padding: 60px 24px; }
+      .journey-step { flex-direction: column; gap: 8px; }
+      .journey-era { min-width: auto; }
+
+      .about-cta { padding: 60px 24px; }
+      .btn { font-size: 15px; padding: 16px 32px; }
+
+      footer { padding: 32px 24px; text-align: center; }
+      .footer-top { justify-content: center; }
+      .footer-social { flex-wrap: wrap; justify-content: center; gap: 16px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="nav-logo">DR ELIJAH</a>
+    <ul class="nav-links">
+      <li><a href="index.html#roles">About</a></li>
+      <li><a href="programmes.html">Programmes</a></li>
+      <li><a href="index.html#methodology">Methodology</a></li>
+      <li><a href="about.html" style="color:var(--gold);">Story</a></li>
+      <li><a href="#about-cta">Contact</a></li>
+    </ul>
+    <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HERO / INTRO -->
+  <section class="about-hero">
+    <!-- Replace 'about-photo.jpg' with your actual Image 3 filename -->
+    <img src="assets/images/about-photo.jpg" alt="Dr Elijah Ting" class="about-photo reveal" />
+
+    <div class="about-intro reveal d1">
+      <p class="section-label">THE STORY</p>
+      <h1 class="cormorant">Dr Elijah Ting</h1>
+      <p class="subtitle cormorant">Ting Moi Kieng · 陈梅钦</p>
+      <p class="location">SIBU · SARAWAK · MALAYSIA</p>
+      <p>
+        I started in nursing — learning to read the human body, stay calm under pressure, and care for people at their most vulnerable. That became the foundation for everything that followed.
+      </p>
+      <p>
+        Ministry came next. A Master of Divinity deepened my understanding of how people make meaning under suffering — and how identity, story, and community shape resilience long before any technique does. I still serve as a senior pastor across bilingual congregations in Sarawak.
+      </p>
+      <p>
+        The corporate world followed — an Executive MBA, then an Executive Doctorate in Learning and Development, where I built the EMPATH™ framework integrating nonviolent communication with leadership effectiveness. That research became the book <em>The Transformation Architect™</em> (2026).
+      </p>
+    </div>
+  </section>
+
+  <!-- JOURNEY TIMELINE -->
+  <section class="journey">
+    <div class="journey-inner">
+      <p class="section-label" style="text-align:center;">THE JOURNEY</p>
+      <h2 class="cormorant">From Bedside to Boardroom</h2>
+
+      <div class="journey-step">
+        <p class="journey-era">Nursing</p>
+        <p class="journey-desc"><strong>BSc (Hons) Nursing</strong> — clinical care, holistic assessment, and the discipline of staying composed when lives depend on it.</p>
+      </div>
+
+      <div class="journey-step">
+        <p class="journey-era">Ministry</p>
+        <p class="journey-desc"><strong>Master of Divinity</strong> — pastoral theology, prevenient grace, and three decades of walking with people through loss, change, and restoration.</p>
+      </div>
+
+      <div class="journey-step">
+        <p class="journey-era">Business</p>
+        <p class="journey-desc"><strong>Executive MBA</strong> — organisational strategy, financial stewardship, and the structures that make sustainable growth possible.</p>
+      </div>
+
+      <div class="journey-step">
+        <p class="journey-era">Research</p>
+        <p class="journey-desc"><strong>Executive Doctorate in L&amp;D</strong> — the EMPATH™ framework, bridging communication science and leadership effectiveness through original research.</p>
+      </div>
+
+      <div class="journey-step">
+        <p class="journey-era">Resilience</p>
+        <p class="journey-desc"><strong>Certified Resilience Coach (CReC)</strong> — now delivering PR6-powered resilience programmes with baseline measurement, skills training, and sustained reinforcement. HRD Corp accredited across Malaysia.</p>
+      </div>
+
+      <div class="journey-step">
+        <p class="journey-era">Current</p>
+        <p class="journey-desc">Current PhD research on <strong>moral injury and spiritual intelligence</strong> among Malaysian teachers — surfacing insights on how professionals sustain meaning and moral clarity under systemic pressure. The same questions that shape resilience work in high-demand corporate teams.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="about-cta" id="about-cta">
+    <p class="section-label">LET'S WORK TOGETHER</p>
+    <h2 class="cormorant">Ready to Build<br><em>Resilience That Lasts?</em></h2>
+    <p class="cormorant">
+      Share your team's context. I'll recommend the right pathway — training, intensives, or risk mapping.
+    </p>
+    <div class="about-cta-btns">
+      <a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-terracotta" target="_blank" rel="noopener noreferrer">Get in Touch</a>
+      <a href="programmes.html" class="btn btn-outline">View Programmes</a>
+    </div>
+    <p class="about-cta-email">Or email directly: <a href="mailto:elijah@DrElijah.org">elijah@DrElijah.org</a></p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-top">
+      <p class="footer-brand cinzel">DR ELIJAH · RESILIENCE TRAINING &amp; CONSULTING</p>
+      <p class="footer-domain cinzel">DrElijah.org</p>
+    </div>
+    <div class="footer-social">
+      <a href="https://www.linkedin.com/in/drelijah/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <div class="footer-divider"></div>
+      <a href="https://www.facebook.com/DrElijah.org" target="_blank" rel="noopener noreferrer">Facebook</a>
+      <div class="footer-divider"></div>
+      <a href="https://www.instagram.com/dr.elijahting/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <div class="footer-divider"></div>
+      <a href="https://x.com/DrElijahTing" target="_blank" rel="noopener noreferrer">X</a>
+    </div>
+    <p class="footer-copy">&copy; 2026 Dr Elijah. All rights reserved.</p>
+    <p class="footer-powered">Resilience programmes powered by PR6 · Hello Driven</p>
+  </footer>
+
+  <script>
+    const hamburger = document.querySelector('.nav-hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      navLinks.classList.toggle('open');
+      const open = navLinks.classList.contains('open');
+      hamburger.setAttribute('aria-expanded', open);
+      hamburger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        navLinks.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+        hamburger.setAttribute('aria-label', 'Open menu');
+      });
+    });
+  </script>
+
+</body>
+</html>
