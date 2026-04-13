@@ -236,6 +236,26 @@
     }
     .journey-desc strong { color: var(--text); font-weight: 400; }
 
+    /* HRD Corp Accredited Trainer Badge */
+    .hrd-trainer-section {
+      padding: 40px 48px;
+      text-align: center;
+    }
+    .hrd-trainer-section img {
+      width: 120px;
+      height: auto;
+      opacity: 0.95;
+      transition: opacity 0.3s ease;
+    }
+    .hrd-trainer-section img:hover {
+      opacity: 1;
+    }
+
+    @media (max-width: 768px) {
+      .hrd-trainer-section { padding: 32px 24px; }
+      .hrd-trainer-section img { width: 100px; }
+    }
+
     /* ── CTA ── */
     .about-cta {
       padding: 100px 48px;
@@ -411,6 +431,12 @@
         <p class="journey-desc">Current PhD research on <strong>moral injury and spiritual intelligence</strong> among Malaysian teachers — surfacing insights on how professionals sustain meaning and moral clarity under systemic pressure. The same questions that shape resilience work in high-demand corporate teams.</p>
       </div>
     </div>
+  </section>
+
+  <!-- HRD Corp Accredited Trainer -->
+  <section class="hrd-trainer-section">
+    <img src="/assets/images/hrd-corp-accredited-trainer.png" 
+         alt="HRD Corp Accredited Trainer" />
   </section>
 
   <!-- CTA -->
