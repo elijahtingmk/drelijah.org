@@ -362,6 +362,26 @@
       line-height: 1.8;
     }
 
+    /* HRD Corp Accredited Trainer Badge */
+    .hrd-trainer-section {
+      padding: 40px 48px;
+      text-align: center;
+    }
+    .hrd-trainer-section img {
+      width: 120px;
+      height: auto;
+      opacity: 0.95;
+      transition: opacity 0.3s ease;
+    }
+    .hrd-trainer-section img:hover {
+      opacity: 1;
+    }
+
+    @media (max-width: 768px) {
+      .hrd-trainer-section { padding: 32px 24px; }
+      .hrd-trainer-section img { width: 100px; }
+    }
+
     /* ── CTA ── */
     #cta { padding: 120px 48px; text-align: center; position: relative; overflow: hidden; }
     .cta-glow { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle,#C8A96E06 0%, transparent 65%); pointer-events: none; }
@@ -723,6 +743,12 @@
         <p class="cred-sub cinzel">Transformation Framework</p>
       </div>
     </div>
+  </section>
+
+  <!-- HRD Corp Accredited Trainer -->
+  <section class="hrd-trainer-section">
+    <img src="/assets/images/hrd-corp-accredited-trainer.png" 
+         alt="HRD Corp Accredited Trainer" />
   </section>
 
   <!-- TESTIMONIALS -->
