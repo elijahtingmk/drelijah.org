@@ -123,6 +123,26 @@
    #page-hero h1 em { font-style:italic; color:var(--text-muted); }
    #page-hero p.hero-desc { font-size:19px; line-height:1.85; color:#B0A898; font-weight:300; max-width:900px; margin:0 auto 48px; }
 
+    /* HRD Corp Accredited Trainer Badge */
+    .hrd-trainer-section {
+      padding: 40px 48px;
+      text-align: center;
+    }
+    .hrd-trainer-section img {
+      width: 120px;
+      height: auto;
+      opacity: 0.95;
+      transition: opacity 0.3s ease;
+    }
+    .hrd-trainer-section img:hover {
+      opacity: 1;
+    }
+
+    @media (max-width: 768px) {
+      .hrd-trainer-section { padding: 32px 24px; }
+      .hrd-trainer-section img { width: 100px; }
+    }
+    
     /* FILTER BAR */
    #filter-bar { padding:0 48px 60px; text-align:center; }
     .filter-tabs { display:inline-flex; flex-wrap:wrap; gap:12px; justify-content:center; border:1px solid var(--border); padding:16px 20px; background:var(--bg-card); }
@@ -329,6 +349,12 @@
       <a href="#cta" class="btn btn-terracotta">Enquire Now</a>
       <a href="#filter-bar" class="btn btn-outline">Browse Programmes</a>
     </div>
+  </section>
+
+  <!-- HRD Corp Accredited Trainer -->
+  <section class="hrd-trainer-section">
+    <img src="/assets/images/hrd-corp-accredited-trainer.png" 
+         alt="HRD Corp Accredited Trainer" />
   </section>
 
   <!-- FILTER BAR -->
