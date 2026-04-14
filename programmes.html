@@ -4,7 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Programmes — Dr Elijah · Resilience Training & Consulting</title>
-  <meta name="description" content="Resilience-building training for workplace psychosocial risk management. HRD Corp Claimable programmes that meet the recommendations of the PRiMA 2024 framework." />
+  <meta name="description" content="Corporate resilience programmes — PR6E-led training (4 hours), 1–2 day intensives, and JSECC + PR6 Pulse psychosocial risk mapping. Powered by PR6 Resilience Science." />
+
+  <meta property="og:title" content="Programmes — Dr Elijah · Resilience Training & Consulting" />
+  <meta property="og:description" content="Three ways to engage: Training (4 hours) for broad rollout, Intensives (1–2 days) for teams under pressure, and Risk + Strategy mapping for psychosocial risk and capability planning — all powered by PR6 Resilience Science and measured with PR6E." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://drelijah.org/programmes.html" />
+  <meta property="og:image" content="https://drelijah.org/assets/images/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://drelijah.org/assets/images/og-image.jpg" />
 
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230E0D0B'/%3E%3Crect x='1' y='1' width='30' height='30' rx='5' fill='none' stroke='%23C8A96E' stroke-width='0.75'/%3E%3Ctext x='16' y='23' font-family='Georgia%2C serif' font-size='20' font-weight='400' fill='%23C8A96E' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E" />
 
@@ -14,223 +24,831 @@
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --gold:#C8A96E; --gold-dim:#C8A96E44; --bg:#0E0D0B; --bg-alt:#13120F; --bg-card:#1A1813;
-      --border:#2A2720; --text:#E8E4DC; --text-muted:#9A9080; --text-dim:#5A5650; --terracotta:#C06C54;
-      --terracotta-dim:#C06C5444; --green-muted:#5A7A66;
-    }
-    html { scroll-behavior: smooth; font-size: 18px; }
-    body { font-family: 'Cormorant Garamond', Georgia, serif; background: var(--bg); color: var(--text); overflow-x: hidden; font-size: 1rem; line-height: 1.7; }
-    .cinzel { font-family: 'Cinzel', serif; } .cormorant { font-family: 'Cormorant Garamond', Georgia, serif; }
 
-    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 20px 48px; display: flex; justify-content: space-between; align-items: center; transition: all 0.4s ease; }
-    nav.scrolled { background: rgba(14,13,11,0.9); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+    :root {
+      --gold:#C8A96E;
+      --gold-dim:#C8A96E44;
+      --green:#344E41;
+      --green-light:#344E4133;
+      --green-dim:#344E4144;
+      --green-muted:#5A7A66;
+      --terracotta:#C06C54;
+      --terracotta-light:#C06C5433;
+      --terracotta-dim:#C06C5444;
+      --bg:#0E0D0B;
+      --bg-alt:#13120F;
+      --bg-card:#1A1813;
+      --border:#2A2720;
+      --text:#E8E4DC;
+      --text-muted:#9A9080;
+      --text-dim:#5A5650;
+    }
+
+    html { scroll-behavior: smooth; font-size: 18px; }
+
+    body {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      background: var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    ::selection { background:#C8A96E33; color: var(--gold); }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.025;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+
+    @keyframes reveal {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .reveal { opacity: 0; animation: reveal 0.9s cubic-bezier(0.16,1,0.3,1) forwards; }
+    .d1 { animation-delay: 0.1s; }
+    .d2 { animation-delay: 0.25s; }
+    .d3 { animation-delay: 0.4s; }
+    .d4 { animation-delay: 0.55s; }
+
+    .cinzel { font-family: 'Cinzel', serif; }
+    .cormorant { font-family: 'Cormorant Garamond', Georgia, serif; }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0;
+      z-index: 100; padding: 20px 48px;
+      display: flex; justify-content: space-between; align-items: center;
+      border-bottom: 1px solid transparent;
+      transition: all 0.4s ease;
+    }
+    nav.scrolled {
+      border-bottom-color: var(--border);
+      background: rgba(14,13,11,0.88);
+      backdrop-filter: blur(12px);
+    }
     .nav-logo { font-family:'Cinzel',serif; font-size:15px; letter-spacing:0.25em; color:var(--gold); text-decoration:none; }
     .nav-links { display:flex; gap:36px; list-style:none; }
     .nav-links a { font-family:'Cinzel',serif; font-size:14px; letter-spacing:0.15em; color:var(--text-muted); text-decoration:none; transition:color 0.3s; }
     .nav-links a:hover, .nav-links a.active { color:var(--gold); }
+    .nav-hamburger { display:none; background:none; border:none; cursor:pointer; padding:8px; flex-direction:column; gap:5px; z-index:101; }
+    .nav-hamburger span { display:block; width:24px; height:1.5px; background:var(--gold); transition:all 0.3s ease; }
+    .nav-hamburger.open span:nth-child(1) { transform:translateY(6.5px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity:0; }
+    .nav-hamburger.open span:nth-child(3) { transform:translateY(-6.5px) rotate(-45deg); }
 
-    .claimable-badge { display: inline-block; background: var(--terracotta-dim); border: 1px solid var(--terracotta); color: var(--terracotta); font-family: 'Cinzel', serif; font-size: 10px; padding: 4px 12px; border-radius: 2px; margin-bottom: 16px; text-transform: uppercase; }
-    .btn { font-family:'Cinzel',serif; font-size:13px; letter-spacing:0.2em; text-transform:uppercase; padding:16px 40px; cursor:pointer; text-decoration:none; display:inline-block; transition:all 0.3s ease; }
-    .btn-outline { border:1px solid var(--gold); color:var(--gold); }
-    .btn-terracotta { border:1px solid var(--terracotta); color:var(--terracotta); }
-    .btn-green { border:1px solid var(--green-muted); color:var(--green-muted); }
-    .btn-sm { padding:12px 28px; font-size:12px; }
+    /* BUTTONS */
+    .btn { font-family:'Cinzel',serif; font-size:14px; letter-spacing:0.2em; text-transform:uppercase; padding:16px 40px; cursor:pointer; text-decoration:none; display:inline-block; transition:all 0.3s ease; }
+    .btn-outline { background:transparent; border:1px solid var(--gold); color:var(--gold); }
+    .btn-outline:hover { background:var(--gold); color:var(--bg); }
+    .btn-terracotta { background:transparent; border:1px solid var(--terracotta); color:var(--terracotta); }
+    .btn-terracotta:hover { background:var(--terracotta); color:var(--bg); }
+    .btn-green { background:transparent; border:1px solid var(--green-muted); color:var(--green-muted); }
+    .btn-green:hover { background:var(--green-muted); color:var(--bg); }
+    .btn-sm { padding:12px 28px; font-size:13px; }
 
-    .section-label { font-family:'Cinzel',serif; font-size:13px; letter-spacing:0.3em; color:var(--gold); margin-bottom:16px; }
-    #page-hero { padding:160px 48px 80px; text-align:center; }
-    #page-hero h1 { font-size:clamp(40px,6vw,80px); font-weight:300; margin-bottom:16px; line-height: 1.1; }
-    .hero-desc { font-size:19px; color:var(--text-muted); max-width:850px; margin:0 auto 48px; }
-    
-    .prog-section { padding:80px 48px; max-width:1280px; margin:0 auto; }
-    .prog-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(340px,1fr)); gap:24px; }
-    .prog-card { background:var(--bg-card); padding:40px 36px; border:1px solid var(--border); display:flex; flex-direction:column; transition: transform 0.3s ease; }
-    .prog-card:hover { transform: translateY(-5px); border-color: var(--gold-dim); }
-    .prog-card-title { font-size:24px; margin-bottom:12px; font-weight:400; line-height: 1.3; }
-    .prog-card-row { display:flex; gap:12px; margin-bottom:12px; font-size:15px; }
-    .prog-card-label { font-family:'Cinzel',serif; font-size:11px; color:var(--text-dim); min-width:100px; text-transform:uppercase; }
-    .prog-card-spacer { flex: 1; }
+    .section-label { font-family:'Cinzel',serif; font-size:14px; letter-spacing:0.35em; color:var(--gold); text-transform:uppercase; margin-bottom:16px; }
 
-    #flagship-prog { padding:100px 48px; background:var(--bg-alt); }
-    .flagship-inner { max-width:1200px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; }
-    .flagship-card { background:var(--bg); border:1px solid var(--border); padding:48px; position:relative; }
-    .flagship-includes-list { list-style:none; margin-top:20px; }
-    .flagship-includes-list li { margin-bottom:10px; font-size:15px; color:var(--text-muted); }
-    .flagship-includes-list li strong { color: var(--gold); }
+    /* PAGE HERO */
+   #page-hero { padding:160px 48px 80px; text-align:center; position:relative; overflow:hidden; }
+    .page-hero-glow { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:700px; height:500px; border-radius:50%; background:radial-gradient(circle,#C8A96E07 0%,transparent 70%); pointer-events:none; }
+   #page-hero h1 { font-size:clamp(40px,6vw,80px); font-weight:300; line-height:1.1; letter-spacing:-0.01em; margin-bottom:12px; }
+   #page-hero h1 em { font-style:italic; color:var(--text-muted); }
+   #page-hero p.hero-desc { font-size:19px; line-height:1.85; color:#B0A898; font-weight:300; max-width:900px; margin:0 auto 48px; }
 
-    .consulting-card { background:var(--bg-card); padding:40px; border:1px solid var(--border); }
-    
-    footer { padding:60px 48px; border-top:1px solid var(--border); text-align:center; }
-    .disclaimer { font-size:13px; color:var(--text-dim); max-width:800px; margin:24px auto 0; line-height:1.6; }
-
-    @media (max-width:900px) {
-      .flagship-inner { grid-template-columns:1fr; }
-      nav { padding: 20px 24px; }
-      #page-hero { padding: 140px 24px 60px; }
+    /* HRD Corp Accredited Trainer Badge */
+    .hrd-trainer-section {
+      padding: 40px 48px;
+      text-align: center;
     }
+    .hrd-trainer-section img {
+      width: 120px;
+      height: auto;
+      opacity: 0.95;
+      transition: opacity 0.3s ease;
+    }
+    .hrd-trainer-section img:hover {
+      opacity: 1;
+    }
+    .hrd-trainer-caption {
+      margin-top: 12px;
+      font-family: 'Cinzel', serif;
+      font-size: 12px;
+      letter-spacing: 0.2em;
+      color: var(--text-dim);
+      text-transform: uppercase;
+    }
+    @media (max-width: 900px) {
+      .hrd-trainer-section { padding: 32px 24px; }
+      .hrd-trainer-section img { width: 100px; }
+      .hrd-trainer-caption { font-size: 11px; letter-spacing: 0.15em; }
+    }
+    
+    /* FILTER BAR */
+   #filter-bar { padding:0 48px 60px; text-align:center; }
+    .filter-tabs { display:inline-flex; flex-wrap:wrap; gap:12px; justify-content:center; border:1px solid var(--border); padding:16px 20px; background:var(--bg-card); }
+    .filter-tab { font-family:'Cinzel',serif; font-size:12px; letter-spacing:0.2em; color:var(--text-dim); background:none; border:1px solid transparent; cursor:pointer; padding:8px 20px; transition:all 0.3s ease; text-transform:uppercase; }
+    .filter-tab:hover { color:var(--text-muted); }
+    .filter-tab.active { color:var(--gold); border-color:var(--gold-dim); background:#C8A96E0A; }
+
+    /* SECTIONS */
+    .prog-section { padding:80px 48px; max-width:1280px; margin:0 auto; }
+    .prog-section--alt { background:var(--bg-alt); padding:80px 0; }
+    .prog-section--alt .prog-section-inner { max-width:1280px; margin:0 auto; padding:0 48px; }
+
+    .section-heading { margin-bottom:56px; display:flex; align-items:flex-end; justify-content:space-between; gap:24px; flex-wrap:wrap; }
+    .section-heading .section-label { margin-bottom:10px; }
+    .section-heading h2 { font-size:clamp(28px,3.5vw,44px); font-weight:300; line-height:1.2; }
+    .section-heading h2 em { font-style:italic; color:var(--text-muted); }
+    .section-heading-meta { font-family:'Cinzel',serif; font-size:13px; letter-spacing:0.15em; color:var(--text-dim); white-space:nowrap; }
+    .section-rule { width:100%; height:1px; background:var(--border); margin-bottom:56px; }
+
+    /* PROGRAMME CARDS */
+    .prog-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(340px,1fr)); gap:1px; background:var(--border); }
+    .prog-card { background:var(--bg); padding:40px 36px; border:1px solid var(--border); transition:all 0.4s cubic-bezier(0.16,1,0.3,1); display:flex; flex-direction:column; }
+    .prog-card:hover { background:var(--bg-card); border-color:var(--gold-dim); transform:translateY(-3px); }
+    .prog-card-tag { font-family:'Cinzel',serif; font-size:11px; letter-spacing:0.3em; color:var(--gold); text-transform:uppercase; margin-bottom:14px; display:flex; align-items:center; gap:10px; }
+    .prog-card-tag::after { content:''; flex:1; height:1px; background:var(--gold-dim); }
+    .prog-card-title { font-size:22px; font-weight:400; line-height:1.35; color:var(--text); margin-bottom:6px; }
+    .prog-card-rule { width:32px; height:1px; background:var(--gold-dim); margin:16px 0; }
+    .prog-card-row { display:flex; gap:8px; margin-bottom:10px; font-size:15px; line-height:1.6; color:var(--text-muted); }
+    .prog-card-row-label { font-family:'Cinzel',serif; font-size:11px; letter-spacing:0.15em; color:var(--text-dim); white-space:nowrap; padding-top:2px; min-width:90px; }
+    .prog-card-row-value { font-weight:300; }
+    .prog-card-spacer { flex:1; }
+    .prog-card-cta { margin-top:28px; }
+
+    /* BOOTCAMP CARDS */
+    .bootcamp-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:24px; }
+    .bootcamp-card { background:var(--bg-card); border:1px solid var(--border); padding:40px 36px; position:relative; transition:all 0.4s cubic-bezier(0.16,1,0.3,1); display:flex; flex-direction:column; }
+    .bootcamp-card::before { content:''; position:absolute; inset:10px; border:1px solid#C8A96E10; pointer-events:none; transition:border-color 0.4s; }
+    .bootcamp-card:hover { border-color:var(--gold-dim); transform:translateY(-3px); }
+    .bootcamp-card:hover::before { border-color:#C8A96E22; }
+    .bootcamp-num { font-family:'Cinzel',serif; font-size:48px; color:#C8A96E12; line-height:1; margin-bottom:16px; }
+    .bootcamp-tag { font-family:'Cinzel',serif; font-size:11px; letter-spacing:0.3em; color:var(--green-muted); text-transform:uppercase; margin-bottom:12px; }
+    .bootcamp-title { font-size:24px; font-weight:400; line-height:1.3; margin-bottom:20px; color:var(--text); }
+    .bootcamp-rule { width:32px; height:1px; background:var(--green-muted); opacity:0.5; margin-bottom:20px; }
+    .bootcamp-detail { font-size:15px; color:var(--text-muted); font-weight:300; line-height:1.7; margin-bottom:8px; }
+    .bootcamp-detail strong { font-family:'Cinzel',serif; font-size:11px; letter-spacing:0.15em; color:var(--text-dim); font-weight:400; display:block; margin-bottom:3px; }
+    .bootcamp-spacer { flex:1; }
+    .bootcamp-cta { margin-top:28px; }
+
+    /* FLAGSHIP */
+   #flagship-prog { padding:100px 48px; background:linear-gradient(135deg,var(--bg) 0%,#111410 100%); }
+    .flagship-inner { max-width:1200px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; }
+    .flagship-card { background:var(--bg-card); border:1px solid var(--border); padding:52px 48px; position:relative; }
+    .flagship-card::before { content:''; position:absolute; inset:12px; border:1px solid#C8A96E18; pointer-events:none; }
+    .flagship-corner { position:absolute; width:20px; height:20px; border-color:var(--gold); border-style:solid; opacity:0.4; }
+    .flagship-corner--tl { top:-1px; left:-1px; border-width:1px 0 0 1px; }
+    .flagship-corner--tr { top:-1px; right:-1px; border-width:1px 1px 0 0; }
+    .flagship-corner--bl { bottom:-1px; left:-1px; border-width:0 0 1px 1px; }
+    .flagship-corner--br { bottom:-1px; right:-1px; border-width:0 1px 1px 0; }
+    .flagship-card-tag { font-family:'Cinzel',serif; font-size:11px; letter-spacing:0.35em; color:var(--gold); margin-bottom:20px; }
+    .flagship-card-title { font-size:30px; font-weight:300; line-height:1.3; color:var(--text); margin-bottom:8px; }
+    .flagship-card-rule { width:40px; height:1px; background:var(--gold); margin:18px 0; }
+    .flagship-card-sub { font-size:17px; font-style:italic; color:var(--text-muted); margin-bottom:28px; }
+    .flagship-detail { font-family:'Cinzel',serif; font-size:12px; letter-spacing:0.12em; color:var(--text-dim); margin-bottom:10px; }
+    .flagship-detail span { color:var(--text-muted); font-family:'Cormorant Garamond',serif; font-size:16px; letter-spacing:0; font-style:italic; }
+    .flagship-includes { margin-top:24px; padding-top:24px; border-top:1px solid var(--border); }
+    .flagship-includes-label { font-family:'Cinzel',serif; font-size:11px; letter-spacing:0.25em; color:var(--text-dim); margin-bottom:12px; }
+    .flagship-includes-list { list-style:none; display:flex; flex-direction:column; gap:8px; }
+    .flagship-includes-list li { font-size:15px; color:var(--text-muted); font-weight:300; display:flex; align-items:flex-start; gap:10px; }
+    .flagship-includes-list li::before { content:'◈'; color:var(--gold); font-size:10px; margin-top:4px; flex-shrink:0; }
+    .flagship-content .section-label { margin-bottom:20px; }
+    .flagship-content h2 { font-size:clamp(30px,4vw,48px); font-weight:300; line-height:1.25; margin-bottom:24px; }
+    .flagship-content h2 em { font-style:italic; color:var(--text-muted); }
+    .flagship-content p { font-size:18px; line-height:1.9; color:var(--text-muted); font-weight:300; margin-bottom:16px; }
+    .flagship-content p:last-of-type { margin-bottom:40px; }
+    .flagship-btns { display:flex; gap:12px; flex-wrap:wrap; }
+
+    /* CONSULTING CARDS */
+    .consulting-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); gap:1px; background:var(--border); }
+    .consulting-card { background:var(--bg-alt); padding:40px 36px; border:1px solid var(--border); transition:all 0.4s cubic-bezier(0.16,1,0.3,1); display:flex; flex-direction:column; }
+    .consulting-card:hover { background:var(--bg-card); border-color:var(--green-dim); transform:translateY(-3px); }
+    .consulting-card-tag { font-family:'Cinzel',serif; font-size:11px; letter-spacing:0.3em; color:var(--green-muted); text-transform:uppercase; margin-bottom:14px; display:flex; align-items:center; gap:10px; }
+    .consulting-card-tag::after { content:''; flex:1; height:1px; background:var(--green-dim); }
+    .consulting-card-title { font-size:22px; font-weight:400; line-height:1.35; color:var(--text); margin-bottom:16px; }
+    .consulting-card-rule { width:32px; height:1px; background:var(--green-muted); opacity:0.4; margin-bottom:20px; }
+    .consulting-card-row { display:flex; gap:8px; margin-bottom:10px; font-size:15px; line-height:1.6; color:var(--text-muted); }
+    .consulting-card-row-label { font-family:'Cinzel',serif; font-size:11px; letter-spacing:0.12em; color:var(--text-dim); white-space:nowrap; padding-top:2px; min-width:96px; }
+    .consulting-card-row-value { font-weight:300; }
+    .consulting-card-spacer { flex:1; }
+    .consulting-card-cta { margin-top:28px; }
+
+    /* UPGRADE CALLOUT */
+   #upgrade { padding:60px 48px; text-align:center; }
+    .upgrade-box { max-width:960px; margin:0 auto; border:1px solid var(--border); padding:40px 48px; background:var(--bg-card); position:relative; }
+    .upgrade-box::before { content:''; position:absolute; inset:8px; border:1px solid#C8A96E0C; pointer-events:none; }
+    .upgrade-label { font-family:'Cinzel',serif; font-size:11px; letter-spacing:0.35em; color:var(--gold); text-transform:uppercase; margin-bottom:16px; }
+    .upgrade-text { font-size:20px; line-height:1.7; color:var(--text-muted); font-weight:300; }
+    .upgrade-text strong { color:var(--text); font-weight:400; }
+
+    /* QUOTE */
+   #quote { padding:100px 48px; background:linear-gradient(135deg,var(--bg-alt) 0%,#141A16 100%); text-align:center; }
+    .quote-mark { font-size:72px; color:#344E4130; line-height:1; margin-bottom:-8px; }
+    blockquote { font-size:clamp(22px,3vw,32px); font-weight:300; font-style:italic; line-height:1.6; color:#D0C8BC; max-width:800px; margin:0 auto 32px; }
+    .quote-attr { font-family:'Cinzel',serif; font-size:14px; letter-spacing:0.3em; color:var(--gold); }
+
+    /* CTA */
+   #cta { padding:120px 48px; text-align:center; position:relative; overflow:hidden; }
+    .cta-glow { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:600px; height:600px; border-radius:50%; background:radial-gradient(circle,#C8A96E06 0%,transparent 65%); pointer-events:none; }
+   #cta .section-label { margin-bottom:24px; }
+   #cta h2 { font-size:clamp(36px,5vw,64px); font-weight:300; line-height:1.2; margin-bottom:24px; }
+   #cta h2 em { font-style:italic; }
+   #cta p { font-size:20px; color:var(--text-muted); max-width:760px; margin:0 auto 48px; line-height:1.8; }
+    .cta-btns { display:flex; gap:16px; justify-content:center; flex-wrap:wrap; }
+    .cta-email {
+      font-family:'Cinzel',serif;
+      font-size:13px;
+      letter-spacing:0.15em;
+      color:var(--text-dim);
+      margin-top:20px;
+    }
+    .cta-email a { color:var(--gold); text-decoration:none; border-bottom:1px solid var(--gold-dim); transition:border-color 0.3s; }
+    .cta-email a:hover { border-color:var(--gold); }
+
+    /* FOOTER */
+    footer { padding:40px 48px 32px; border-top:1px solid var(--border); display:flex; flex-direction:column; align-items:center; gap:16px; text-align:center; }
+    .footer-top { display:flex; align-items:center; gap:24px; flex-wrap:wrap; justify-content:center; }
+    .footer-brand { font-family:'Cinzel',serif; font-size:13px; letter-spacing:0.2em; color:var(--gold); }
+    .footer-domain { font-family:'Cinzel',serif; font-size:13px; letter-spacing:0.15em; color:var(--text-dim); }
+    .footer-social { display:flex; align-items:center; gap:20px; flex-wrap:wrap; justify-content:center; }
+    .footer-social a { font-family:'Cinzel',serif; font-size:13px; letter-spacing:0.12em; color:var(--text-dim); text-decoration:none; transition:color 0.3s; }
+    .footer-social a:hover { color:var(--gold); }
+    .footer-divider { width:1px; height:12px; background:var(--border); }
+    .footer-copy { font-family:'Cinzel',serif; font-size:12px; letter-spacing:0.1em; color:var(--text-dim); }
+    .footer-powered { font-family:'Cinzel',serif; font-size:10px; letter-spacing:0.1em; color:var(--text-dim); opacity:0.4; }
+
+    /* MOBILE */
+    @media (max-width:900px) {
+      nav { padding:16px 24px; }
+      .nav-links { display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(14,13,11,0.97); flex-direction:column; justify-content:center; align-items:center; gap:32px; z-index:99; }
+      .nav-links.open { display:flex; }
+      .nav-links a { font-size:18px; letter-spacing:0.25em; }
+      .nav-hamburger { display:flex; }
+     #page-hero { padding:130px 24px 60px; }
+     #filter-bar { padding:0 24px 48px; }
+      .filter-tabs { padding:12px; gap:8px; }
+      .filter-tab { padding:6px 14px; font-size:11px; }
+      .prog-section { padding:60px 24px; }
+      .prog-section--alt .prog-section-inner { padding:0 24px; }
+      .prog-grid { grid-template-columns:1fr; }
+      .bootcamp-grid { grid-template-columns:1fr; }
+      .consulting-grid { grid-template-columns:1fr; }
+     #flagship-prog { padding:80px 24px; }
+      .flagship-inner { grid-template-columns:1fr; gap:40px; }
+      .flagship-card { padding:36px 28px; }
+     #quote { padding:80px 24px; }
+     #cta { padding:80px 24px; }
+     #upgrade { padding:48px 24px; }
+      .upgrade-box { padding:32px 24px; }
+      footer { padding:40px 24px 32px; }
+      .section-heading { flex-direction:column; align-items:flex-start; gap:8px; }
+    }
+    @media (max-width:560px) {
+      .btn { padding:14px 28px; font-size:13px; }
+      .flagship-btns { flex-direction:column; align-items:flex-start; }
+      .prog-card, .bootcamp-card, .consulting-card { padding:32px 24px; }
+    }
+
+    /* FILTER HIDE (use hidden attribute for semantics) */
+    [data-section][hidden],#upgrade[hidden] { display:none !important; }
   </style>
 </head>
 
 <body>
 
+  <!-- NAV -->
   <nav id="nav">
     <a href="index.html" class="nav-logo cinzel">DR ELIJAH</a>
+    <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
     <ul class="nav-links">
       <li><a href="about.html">About</a></li>
       <li><a href="programmes.html" class="active">Programmes</a></li>
+      <li><a href="index.html#methodology">Methodology</a></li>
+      <li><a href="about.html#story">Story</a></li>
       <li><a href="#cta">Contact</a></li>
     </ul>
   </nav>
 
+  <!-- PAGE HERO -->
   <section id="page-hero">
-    <p class="section-label cinzel">Capability uplift</p>
-    <h1 class="cormorant">Evidence-Based<br><em>Resilience-Building Training</em></h1>
-    <p class="hero-desc">
-      Meeting occupational health and safety objectives through targeted interventions—one of the key 
-      solutions recommended to address workplace psychosocial hazards within the <strong>PRiMA 2024</strong> framework.
+    <div class="page-hero-glow"></div>
+    <p class="section-label reveal d1">PROGRAMMES</p>
+    <h1 class="cormorant reveal d2">Three Ways to<br><em>Strengthen Resilience</em></h1>
+    <p class="hero-desc reveal d3">
+      Three entry points for HR and L&amp;D:
+      <strong>Training (4 hours)</strong> — PRE + PR6 Skills Labs for broad rollout,
+      <strong>Intensives (1–2 days)</strong> — bootcamps and the 2‑day flagship for hotspots,
+      and <strong>Risk + Strategy</strong> — psychosocial risk &amp; resilience mapping using
+      <strong>JSECC</strong> (psychosocial hazards/work design) + <strong>PR6 Pulse</strong> (short resilience snapshot).
+      All programmes are powered by <strong>PR6 resilience science</strong>, and skills uplift is measured with
+      <strong>PR6E</strong> (extended PR6 assessment).
     </p>
-    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
-      <a href="#cta" class="btn btn-terracotta">Request a Proposal</a>
-      <a href="#training" class="btn btn-outline">Browse Training</a>
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;" class="reveal d4">
+      <a href="#cta" class="btn btn-terracotta">Enquire Now</a>
+      <a href="#filter-bar" class="btn btn-outline">Browse Programmes</a>
     </div>
   </section>
 
-  <!-- Context Box -->
-  <section class="prog-section" style="padding-top:0;">
-    <div style="background:var(--bg-card); border:1px solid var(--border); padding:40px; border-radius:4px;">
-      <p class="section-label cinzel">Meeting PRiMA 2024 Training Recommendations</p>
-      <p style="font-size:18px; color:var(--text-muted);">
-        The <strong>PRiMA 2024</strong> framework recommends providing <strong>resilience-building training</strong> 
-        (Theme 4, Action 5) as a control measure for psychosocial hazards. Our evidence-based programmes 
-        fulfil this requirement, assisting HR and HSE departments in implementing effective 
-        <strong>Stage III: Risk Control</strong> interventions.
+  <!-- HRD Corp Accredited Trainer -->
+  <section class="hrd-trainer-section">
+    <img src="/assets/images/hrd-corp-accredited-trainer.png" 
+         alt="HRD Corp Accredited Trainer" />
+    <p class="hrd-trainer-caption">
+      Delivered by an HRD Corp Accredited Trainer
+    </p>
+  </section>
+
+  <!-- FILTER BAR -->
+  <div id="filter-bar">
+    <div class="filter-tabs cinzel">
+      <button class="filter-tab active" data-filter="all">All</button>
+      <button class="filter-tab" data-filter="training">Training · 4 hrs</button>
+      <button class="filter-tab" data-filter="intensives">Intensives · 1–2 days</button>
+      <button class="filter-tab" data-filter="consulting">Risk + Strategy</button>
+    </div>
+  </div>
+
+  <!-- HOW IT WORKS -->
+  <section class="prog-section" style="padding-top:20px;padding-bottom:20px;">
+    <div class="upgrade-box" style="max-width:1280px;margin:0 auto;background:var(--bg-card);border:1px solid var(--border);">
+      <p class="upgrade-label cinzel">How it works</p>
+      <p class="upgrade-text cormorant" style="font-size:18px;">
+        <strong>Cohort size:</strong> ideal 12–30 per session (larger by arrangement).
+        <br><strong>Delivery:</strong> onsite or virtual.
+        <br><strong>Privacy:</strong> cohort reporting is aggregated and de-identified; individual results are never shared without explicit consent.
       </p>
     </div>
   </section>
 
-  <!-- ── READY TRAINING ── -->
-  <section id="training" class="prog-section">
-    <div style="margin-bottom:50px;">
-      <p class="section-label">Stage III: Primary Prevention</p>
-      <h2 class="cormorant" style="font-size:40px;">Ready-to-Deploy<br><em>Resilience Controls</em></h2>
+<!-- ── TRAINING PROGRAMMES ── -->
+  <section id="training" class="prog-section" data-section="training">
+    <div class="section-heading">
+      <div>
+        <p class="section-label">TRAINING PROGRAMMES</p>
+        <h2 class="cormorant">PRE + Skills Labs<br><em>4 Hours Each</em></h2>
+      </div>
+      <span class="section-heading-meta cinzel">7 PROGRAMMES · ONSITE &amp; VIRTUAL</span>
     </div>
+    <div class="section-rule"></div>
 
     <div class="prog-grid">
-      <!-- PRE - FULL OFFICIAL TITLE -->
+
+      <!-- PRE (DEFAULT CORE) -->
       <div class="prog-card">
-        <div class="claimable-badge">HRD Corp Claimable</div>
-        <h3 class="prog-card-title cormorant">Personal Resilience Essentials (PRE): A 4-Hour Workplace Resilience Workshop</h3>
-        <div style="width:30px; height:1px; background:var(--gold-dim); margin-bottom:20px;"></div>
-        <div class="prog-card-row">
-          <span class="prog-card-label">PRiMA Use</span>
-          <span style="color:var(--text-muted);">Addressing Theme 4 (Action 5: Resilience-Building Training).</span>
-        </div>
-        <div class="prog-card-row">
-          <span class="prog-card-label">Focus</span>
-          <span style="color:var(--text-muted);">Broad workforce primary prevention, mental wellness awareness, and stress mitigation.</span>
-        </div>
+        <p class="prog-card-tag cinzel">4 hrs · Default Core</p>
+        <h3 class="prog-card-title cormorant">PRE: Personal Resilience Essentials (PR6E-led)</h3>
+        <div class="prog-card-rule"></div>
+
+        <div class="prog-card-row"><span class="prog-card-row-label cinzel">Best for</span><span class="prog-card-row-value">Mixed groups, onboarding cohorts, broad rollout</span></div>
+        <div class="prog-card-row"><span class="prog-card-row-label cinzel">Focus</span><span class="prog-card-row-value">PR6 foundations, practical skills, what to do when pressure hits, individual resilience plan</span></div>
+        <div class="prog-card-row"><span class="prog-card-row-label cinzel">Outcome</span><span class="prog-card-row-value">Shared PR6 language + practical skills across domains, with clear next actions per person</span></div>
+        <div class="prog-card-row"><span class="prog-card-row-label cinzel">Included</span><span class="prog-card-row-value">Facilitated workshop + <strong>PR6E Individual Report</strong> + personal action plan</span></div>
+        <div class="prog-card-row"><span class="prog-card-row-label cinzel">Upgrades</span><span class="prog-card-row-value">App reinforcement (1–3 months) + PR6E re-measure &amp; impact report</span></div>
+
         <div class="prog-card-spacer"></div>
-        <a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-outline btn-sm" style="margin-top:20px;">Enquire Now →</a>
+        <div class="prog-card-cta">
+          <a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-outline btn-sm" target="_blank" rel="noopener noreferrer">Enquire →</a>
+        </div>
       </div>
 
-      <!-- People Manager Resilience -->
+      <!-- Skills Labs -->
       <div class="prog-card">
-        <p class="cinzel" style="font-size:11px; color:var(--text-dim); margin-bottom:10px;">For Supervisors</p>
-        <h3 class="prog-card-title cormorant">People Manager Resilience & Team Performance</h3>
-        <div style="width:30px; height:1px; background:var(--gold-dim); margin-bottom:20px;"></div>
-        <div class="prog-card-row">
-          <span class="prog-card-label">PRiMA Use</span>
-          <span style="color:var(--text-muted);">Supporting supervisor infrastructure (EPC23 Checklist Item 10).</span>
-        </div>
-        <div class="prog-card-row">
-          <span class="prog-card-label">Status</span>
-          <span style="color:var(--terracotta);">In-design (Waitlist available)</span>
-        </div>
+        <p class="prog-card-tag cinzel">4 hrs · Composure</p>
+        <h3 class="prog-card-title cormorant">Calm Under Pressure Skills Lab</h3>
+        <div class="prog-card-rule"></div>
+
+        <div class="prog-card-row"><span class="prog-card-row-label cinzel">Best for</span><span class="prog-card-row-value">High-stress roles, teams with reactivity or overwhelm</span></div>
+        <div class="prog-card-row"><span class="prog-card-row-label cinzel">Focus</span><span class="prog-card-row-value">Calm breathing, emotion labelling, mindfulness basics, cognitive reappraisal drills</span></div>
+        <div class="prog-card-row"><span class="prog-card-row-label cinzel">Outcome</span><span class="prog-card-row-value">Faster down‑regulation in tense moments; fewer reactive escalations; calmer recovery after pressure</span></div>
+        <div class="prog-card-row"><span class="prog-card-row-label cinzel">Included</span><span class="prog-card-row-value">Practice drills</span></div>
+
         <div class="prog-card-spacer"></div>
-        <a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-outline btn-sm" style="margin-top:20px;">Join Waitlist →</a>
+        <div class="prog-card-cta">
+          <a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-outline btn-sm" target="_blank" rel="noopener noreferrer">Enquire →</a>
+        </div>
       </div>
+
+      <div class="prog-card">
+        <p class="prog-card-tag cinzel">4 hrs · Reasoning</p>
+        <h3 class="prog-card-title cormorant">Thinking Clearly Under Stress</h3>
+        <div class="prog-card-rule"></div>
+
+        <div class="prog-card-row"><span class="prog-card-row-label cinzel">Best for</span><span class="prog-card-row-value">Ops &amp; project teams, fast-changing environments</span></div>
+        <div class="prog-card-row"><span class="prog-card-row-label cinzel">Focus</span><span class="prog-card-row-value">Anticipation &amp; prevention, resourcefulness, belief-checking, embracing change, scenario planning</span></div>
+        <div class="prog-card-row"><span class="prog-card-row-label cinzel">Outcome</span><span class="prog-card-row-value">Better anticipation and decision quality under load; improved problem-solving when variables change</span></div>
+        <div class="prog-card-row"><span class="prog-card-row-label cinzel">Included</span><span class="prog-card-row-value">Scenario tools</span></div>
+
+        <div class="prog-card-spacer"></div>
+        <div class="prog-card-cta">
+          <a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-outline btn-sm" target="_blank" rel="noopener noreferrer">Enquire →</a>
+        </div>
+      </div>
+
+      <div class="prog-card">
+        <p class="prog-card-tag cinzel">4 hrs · Collaboration</p>
+        <h3 class="prog-card-title cormorant">Resilient Communication &amp; Boundaries Under Pressure</h3>
+        <div class="prog-card-rule"></div>
+
+        <div class="prog-card-row"><span class="prog-card-row-label cinzel">Best for</span><span class="prog-card-row-value">Cross-functional teams, client-facing teams</span></div>
+        <div class="prog-card-row"><span class="prog-card-row-label cinzel">Focus</span><span class="prog-card-row-value">Help-seeking scripts, boundary language, de-escalation, trust micro-skills, repair conversations</span></div>
+        <div class="prog-card-row"><span class="prog-card-row-label cinzel">Outcome</span><span class="prog-card-row-value">Clearer requests and boundaries; better repair conversations; increased help-seeking and support access</span></div>
+        <div class="prog-card-row"><span class="prog-card-row-label cinzel">Included</span><span class="prog-card-row-value">Role practice</span></div>
+
+        <div class="prog-card-spacer"></div>
+        <div class="prog-card-cta">
+          <a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-outline btn-sm" target="_blank" rel="noopener noreferrer">Enquire →</a>
+        </div>
+      </div>
+
+      <div class="prog-card">
+        <p class="prog-card-tag cinzel">4 hrs · Health + Tenacity</p>
+        <h3 class="prog-card-title cormorant">Energy, Recovery &amp; Sustainable Performance</h3>
+        <div class="prog-card-rule"></div>
+
+        <div class="prog-card-row"><span class="prog-card-row-label cinzel">Best for</span><span class="prog-card-row-value">Burnout-risk teams, shift and meeting-heavy roles</span></div>
+        <div class="prog-card-row"><span class="prog-card-row-label cinzel">Focus</span><span class="prog-card-row-value">Sleep &amp; recovery basics, movement micro-habits, nutrition guidelines, mistake recovery, time &amp; priority method</span></div>
+        <div class="prog-card-row"><span class="prog-card-row-label cinzel">Outcome</span><span class="prog-card-row-value">More consistent energy and recovery habits; improved sustainment during peak periods</span></div>
+        <div class="prog-card-row"><span class="prog-card-row-label cinzel">Included</span><span class="prog-card-row-value">Sustain plan</span></div>
+
+        <div class="prog-card-spacer"></div>
+        <div class="prog-card-cta">
+          <a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-outline btn-sm" target="_blank" rel="noopener noreferrer">Enquire →</a>
+        </div>
+      </div>
+
+      <div class="prog-card">
+        <p class="prog-card-tag cinzel">4 hrs · Vision + Tenacity</p>
+        <h3 class="prog-card-title cormorant">Purpose, Priorities &amp; Motivation at Work</h3>
+        <div class="prog-card-rule"></div>
+
+        <div class="prog-card-row"><span class="prog-card-row-label cinzel">Best for</span><span class="prog-card-row-value">Teams needing direction and renewed focus</span></div>
+        <div class="prog-card-row"><span class="prog-card-row-label cinzel">Focus</span><span class="prog-card-row-value">Values &amp; needs clarity, priorities, SMART goals, motivation skills</span></div>
+        <div class="prog-card-row"><span class="prog-card-row-label cinzel">Outcome</span><span class="prog-card-row-value">Sharper priorities and goal clarity; improved motivation and follow-through on the work that matters</span></div>
+        <div class="prog-card-row"><span class="prog-card-row-label cinzel">Included</span><span class="prog-card-row-value">Goal plan</span></div>
+
+        <div class="prog-card-spacer"></div>
+        <div class="prog-card-cta">
+          <a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-outline btn-sm" target="_blank" rel="noopener noreferrer">Enquire →</a>
+        </div>
+      </div>
+
+      <div class="prog-card">
+        <p class="prog-card-tag cinzel">4 hrs · For Managers</p>
+        <h3 class="prog-card-title cormorant">People Manager Resilience &amp; Team Performance Under Pressure</h3>
+        <div class="prog-card-rule"></div>
+
+        <div class="prog-card-row"><span class="prog-card-row-label cinzel">Best for</span><span class="prog-card-row-value">Supervisors and people managers</span></div>
+        <div class="prog-card-row"><span class="prog-card-row-label cinzel">Focus</span><span class="prog-card-row-value">Co-regulation, stress signals, team rituals, psychologically safe performance conversations</span></div>
+        <div class="prog-card-row"><span class="prog-card-row-label cinzel">Outcome</span><span class="prog-card-row-value">More steady leadership under stress; stronger co‑regulation and psychologically safe performance conversations</span></div>
+        <div class="prog-card-row"><span class="prog-card-row-label cinzel">Included</span><span class="prog-card-row-value">Manager toolkit</span></div>
+
+        <div class="prog-card-spacer"></div>
+        <div class="prog-card-cta">
+          <a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-outline btn-sm" target="_blank" rel="noopener noreferrer">Enquire →</a>
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <!-- ── FLAGSHIP 2-DAY ── -->
-  <section id="flagship-prog">
-    <div class="flagship-inner">
-      <div class="flagship-card">
-        <div class="claimable-badge">HRD Corp Claimable</div>
-        <p class="cinzel" style="font-size:12px; color:var(--gold); margin-bottom:10px;">INTENSIVE INTERVENTION</p>
-        <h3 class="cormorant" style="font-size:32px;">Resilience for Performance Under Pressure</h3>
-        <p style="font-style:italic; color:var(--text-muted); margin:10px 0 20px;">A 2-Day Resilience Skills Lab</p>
-        
-        <p class="cinzel" style="font-size:11px; color:var(--text-dim);">PRiMA 2024 Application</p>
-        <ul class="flagship-includes-list">
-          <li><strong>Specific Training:</strong> Targeted control for work units with high psychological demands.</li>
-          <li><strong>Hazard Mitigation:</strong> Addressing Work Demand and Support hazards via PR6.</li>
-          <li><strong>Monitoring (Theme 7):</strong> Includes 6-week Re-measure & Impact Report.</li>
-        </ul>
+  <!-- STANDARD UPGRADES -->
+  <section id="training-addons" class="prog-section" data-section="training">
+    <div class="upgrade-box" style="max-width:1280px;margin:24px auto 0;background:var(--bg-card);border:1px solid var(--border);">
+      <p class="upgrade-label cinzel">Standard Upgrades (optional)</p>
+      <p class="upgrade-text cormorant" style="font-size:18px;">
+        <strong>Measurement Pack (PR6E Team)</strong> — de-identified cohort PR6E snapshot + leader readout.
+        <br><strong>Reinforcement Pack</strong> — Driven Resilience App (1–3 months) + nudges/check-ins.
+        <br><strong>Proof Pack</strong> — PR6E re-measure at 6–8 weeks + impact report.
+      </p>
+    </div>
+  </section>
+
+  <!-- ── INTENSIVES ── -->
+  <section class="prog-section--alt" data-section="intensives" id="intensives">
+    <div class="prog-section-inner">
+      <div class="section-heading">
+        <div>
+          <p class="section-label" style="color:var(--green-muted);">INTENSIVES</p>
+          <h2 class="cormorant">Bootcamps<br><em>1 Day (7 Hours)</em></h2>
+        </div>
+        <span class="section-heading-meta cinzel">3 BOOTCAMPS + FLAGSHIP · ONSITE &amp; VIRTUAL</span>
+      </div>
+      <div class="section-rule"></div>
+
+      <div class="bootcamp-grid">
+
+        <div class="bootcamp-card">
+          <div class="bootcamp-num cinzel">01</div>
+          <p class="bootcamp-tag cinzel">Teams Needing a Strong Reset</p>
+          <h3 class="bootcamp-title cormorant">Resilience Under Pressure Bootcamp</h3>
+          <div class="bootcamp-rule"></div>
+          <div class="bootcamp-detail"><strong>Duration</strong>7 hours · Full Day</div>
+          <div class="bootcamp-detail"><strong>What it covers</strong>PR6E team hotspots + Composure deep dive + scenario simulations + action plans.</div>
+          <div class="bootcamp-detail"><strong>Outcome</strong>A practical playbook to reduce reactivity and improve recovery under sustained demand.</div>
+          <div class="bootcamp-detail"><strong>Measured with</strong>PR6E baseline (individual reports)</div>
+          <div class="bootcamp-spacer"></div>
+          <div class="bootcamp-cta">
+            <a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-green btn-sm" target="_blank" rel="noopener noreferrer">Enquire →</a>
+          </div>
+        </div>
+
+        <div class="bootcamp-card">
+          <div class="bootcamp-num cinzel">02</div>
+          <p class="bootcamp-tag cinzel">Leaders &amp; Operations Teams</p>
+          <h3 class="bootcamp-title cormorant">Decision Quality Under Pressure Bootcamp</h3>
+          <div class="bootcamp-rule"></div>
+          <div class="bootcamp-detail"><strong>Duration</strong>7 hours · Full Day</div>
+          <div class="bootcamp-detail"><strong>What it covers</strong>Composure + Reasoning + change-readiness simulations.</div>
+          <div class="bootcamp-detail"><strong>Outcome</strong>Stronger decision-making habits under load, with tools for anticipation and prevention.</div>
+          <div class="bootcamp-detail"><strong>Measured with</strong>PR6E baseline (individual reports)</div>
+          <div class="bootcamp-spacer"></div>
+          <div class="bootcamp-cta">
+            <a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-green btn-sm" target="_blank" rel="noopener noreferrer">Enquire →</a>
+          </div>
+        </div>
+
+        <div class="bootcamp-card">
+          <div class="bootcamp-num cinzel">03</div>
+          <p class="bootcamp-tag cinzel">Cross-Functional Teams</p>
+          <h3 class="bootcamp-title cormorant">Resilient Teams Bootcamp</h3>
+          <div class="bootcamp-rule"></div>
+          <div class="bootcamp-detail"><strong>Duration</strong>7 hours · Full Day</div>
+          <div class="bootcamp-detail"><strong>What it covers</strong>Collaboration + Tenacity + accountability + recovery rituals.</div>
+          <div class="bootcamp-detail"><strong>Outcome</strong>Clearer team agreements, better support behaviours, and stronger sustainment rituals.</div>
+          <div class="bootcamp-detail"><strong>Measured with</strong>PR6E baseline (individual reports)</div>
+          <div class="bootcamp-spacer"></div>
+          <div class="bootcamp-cta">
+            <a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-green btn-sm" target="_blank" rel="noopener noreferrer">Enquire →</a>
+          </div>
+        </div>
+
       </div>
 
-      <div>
-        <h2 class="cormorant" style="font-size:44px; margin-bottom:24px;">Deep Capability<br><em>Uplift</em></h2>
-        <p style="margin-bottom:20px; font-size:18px; color:var(--text-muted);">
-          Our 2-day flagship lab is an evidence-based risk control designed for high-demand teams. 
-          By establishing sustainable team rhythms, we help your staff navigate pressure while 
-          meeting the <strong>PRiMA 2024</strong> recommendation for specific, intensive resilience-building training.
+      <div class="upgrade-box" style="max-width:1280px;margin:32px auto 0;background:var(--bg-card);border:1px solid var(--border);">
+        <p class="upgrade-label cinzel" style="color:var(--green-muted);">Optional upgrades</p>
+        <p class="upgrade-text cormorant" style="font-size:18px;">
+          Extend impact with the <strong>Reinforcement Pack</strong> (Driven Resilience App 1–3 months) and the
+          <strong>Proof Pack</strong> (PR6E re-measure + impact report at 6–8 weeks).
         </p>
-        <a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-terracotta">Book a Consultation</a>
       </div>
+
+    </div>
+  </section>
+
+  <!-- ── FLAGSHIP (under INTENSIVES filter) ── -->
+  <section id="flagship-prog" data-section="intensives">
+    <div class="flagship-inner">
+      <div>
+        <div class="flagship-card">
+          <div class="flagship-corner flagship-corner--tl"></div>
+          <div class="flagship-corner flagship-corner--tr"></div>
+          <div class="flagship-corner flagship-corner--bl"></div>
+          <div class="flagship-corner flagship-corner--br"></div>
+
+          <p class="flagship-card-tag cinzel">INTENSIVE · 2 DAYS · HIGH-DEMAND TEAMS</p>
+          <h3 class="flagship-card-title cormorant">Resilience for Performance Under Pressure</h3>
+          <div class="flagship-card-rule"></div>
+          <p class="flagship-card-sub cormorant">A 2-Day Resilience Skills Lab</p>
+
+          <p class="flagship-detail cinzel">Best for: <span>High-demand teams, leadership cohorts, sustained pressure environments</span></p>
+          <p class="flagship-detail cinzel">Outcome: <span>Deeper capability uplift across PR6 domains, translated into practical team operating rhythms</span></p>
+
+          <div class="flagship-includes">
+            <p class="flagship-includes-label cinzel">What's Included</p>
+            <ul class="flagship-includes-list">
+              <li><strong>PR6E baseline</strong> (individual reports)</li>
+              <li>De-identified cohort PR6E snapshot</li>
+              <li>Cohort insights summary for leaders</li>
+              <li>Targeted skills training (delivered through the PR6 model)</li>
+              <li>Individual action planning + team operating rhythm</li>
+              <li>Driven Resilience App reinforcement (1 month) <span style="color:var(--text-dim)">(recommend 3 months)</span></li>
+              <li><strong>Recommended:</strong> PR6E re-measure + impact report at 6–8 weeks</li>
+            </ul>
+            <p style="margin-top:14px;font-size:14px;color:var(--text-dim);line-height:1.6;">
+              Cohort reporting is aggregated and de-identified. Individual results are not shared with leaders without explicit consent.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flagship-content">
+        <p class="section-label">2-DAY FLAGSHIP</p>
+        <h2 class="cormorant">The Deepest<br><em>Capability Uplift</em></h2>
+        <p>
+          Two full days of immersive resilience development — measured with <strong>PR6E</strong>, translated into practical operating rhythms,
+          and reinforced beyond the room.
+        </p>
+        <p>
+          Ideal for teams under sustained pressure who need measurable change, not just motivation.
+        </p>
+        <div class="flagship-btns">
+          <a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-terracotta" target="_blank" rel="noopener noreferrer">Book a Conversation</a>
+          <a href="#training" class="btn btn-outline">See 4-hour options</a>
+        </div>
+      </div>
+
     </div>
   </section>
 
   <!-- ── RISK + STRATEGY ── -->
-  <section class="prog-section">
-    <div style="margin-bottom:50px;">
-      <p class="section-label">Consulting & Analysis</p>
-      <h2 class="cormorant" style="font-size:40px;">Mapping Assessment<br><em>to Action Plan</em></h2>
+  <section class="prog-section" data-section="consulting">
+    <div class="section-heading">
+      <div>
+        <p class="section-label" style="color:var(--green-muted);">RISK + STRATEGY</p>
+        <h2 class="cormorant">Three Evidence-Based Options<br><em>for HR</em></h2>
+      </div>
+      <span class="section-heading-meta cinzel">3 SERVICES · 2 HRS – 12 WKS</span>
     </div>
+    <div class="section-rule"></div>
 
-    <div class="consulting-card">
-      <div class="claimable-badge" style="border-color:var(--green-muted); color:var(--green-muted); background:none;">Strategic Mapping</div>
-      <h3 class="cormorant" style="font-size:28px; margin-bottom:16px;">PR6 + JSECC Psychosocial Risk Mapping</h3>
-      <div class="prog-card-row">
-        <span class="prog-card-label">PRiMA Support</span>
-        <span style="color:var(--text-muted);">Assisting Stage II assessment through the mapping of hazards.</span>
+    <div class="consulting-grid">
+
+      <div class="consulting-card">
+        <p class="consulting-card-tag cinzel">2–4 hrs · Planning &amp; Pilots</p>
+        <h3 class="consulting-card-title cormorant">PR6E Team Pulse + HR Insights Briefing</h3>
+        <div class="consulting-card-rule"></div>
+
+        <div class="consulting-card-row"><span class="consulting-card-row-label cinzel">Best for</span><span class="consulting-card-row-value">Targeting interventions before committing to training</span></div>
+        <div class="consulting-card-row"><span class="consulting-card-row-label cinzel">Outputs</span><span class="consulting-card-row-value">De-identified PR6E snapshot + top capability gaps + variance/risk pockets + recommended pathway</span></div>
+        <div class="consulting-card-row"><span class="consulting-card-row-label cinzel">Outcome</span><span class="consulting-card-row-value">Clear prioritisation: where capability gaps sit and what to do next</span></div>
+
+        <div class="consulting-card-spacer"></div>
+        <div class="consulting-card-cta">
+          <a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-green btn-sm" target="_blank" rel="noopener noreferrer">Enquire →</a>
+        </div>
       </div>
-      <div class="prog-card-row">
-        <span class="prog-card-label">Outcome</span>
-        <span style="color:var(--text-muted);">A prioritized roadmap for your organizational Plan of Action.</span>
+
+      <div class="consulting-card">
+        <p class="consulting-card-tag cinzel">2–4 hrs · Post-Programme ROI</p>
+        <h3 class="consulting-card-title cormorant">PR6E Re-measure + Impact Report</h3>
+        <div class="consulting-card-rule"></div>
+
+        <div class="consulting-card-row"><span class="consulting-card-row-label cinzel">Best for</span><span class="consulting-card-row-value">Demonstrating measurable ROI to leadership and stakeholders</span></div>
+        <div class="consulting-card-row"><span class="consulting-card-row-label cinzel">Outputs</span><span class="consulting-card-row-value">Pre/post comparison, impact narrative, sustain recommendations</span></div>
+        <div class="consulting-card-row"><span class="consulting-card-row-label cinzel">Outcome</span><span class="consulting-card-row-value">Measurable PR6E movement with a clear sustain plan for leaders</span></div>
+
+        <div class="consulting-card-spacer"></div>
+        <div class="consulting-card-cta">
+          <a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-green btn-sm" target="_blank" rel="noopener noreferrer">Enquire →</a>
+        </div>
       </div>
-      <a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-green btn-sm" style="margin-top:20px;">Request Sample Briefing →</a>
+
+      <div class="consulting-card">
+        <p class="consulting-card-tag cinzel">6–12 Weeks · Risk mapping</p>
+        <h3 class="consulting-card-title cormorant">JSECC + PR6 Pulse Psychosocial Risk &amp; Resilience Mapping</h3>
+        <div class="consulting-card-rule"></div>
+
+        <div class="consulting-card-row"><span class="consulting-card-row-label cinzel">Best for</span><span class="consulting-card-row-value">Psychosocial risk prioritisation and capability uplift planning across the organisation</span></div>
+        <div class="consulting-card-row"><span class="consulting-card-row-label cinzel">Outputs</span><span class="consulting-card-row-value">Heatmap insights + prioritised controls &amp; capability plan + leadership briefing + recommended programme pathway</span></div>
+        <div class="consulting-card-row"><span class="consulting-card-row-label cinzel">Measure</span><span class="consulting-card-row-value"><strong>JSECC + PR6 Pulse</strong></span></div>
+        <div class="consulting-card-row"><span class="consulting-card-row-label cinzel">Outcome</span><span class="consulting-card-row-value">Clarity on highest-risk work design areas and a sequenced resilience capability plan</span></div>
+
+        <div class="consulting-card-spacer"></div>
+        <div class="consulting-card-cta">
+          <a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-green btn-sm" target="_blank" rel="noopener noreferrer">Enquire →</a>
+        </div>
+      </div>
+
     </div>
   </section>
 
+  <!-- UPGRADE CALLOUT -->
+  <section id="upgrade">
+    <div class="upgrade-box">
+      <p class="upgrade-label cinzel">Optional Proof Pack — available for any training programme</p>
+      <p class="upgrade-text cormorant">
+        Add a <strong>PR6E Re-measure + Impact Report</strong> to capture measurable resilience skill movement
+        6–8 weeks post-delivery and give your leadership team measurable evidence of return on investment.
+      </p>
+    </div>
+  </section>
+
+  <!-- QUOTE -->
+  <section id="quote">
+    <div class="quote-mark cormorant">"</div>
+    <blockquote class="cormorant">
+      Resilience is not the absence of pressure.<br>It is the architecture of how you respond to it.
+    </blockquote>
+    <p class="quote-attr cinzel">DR ELIJAH · RESILIENCE TRAINING &amp; CONSULTING</p>
+  </section>
+
   <!-- CTA -->
-  <section id="cta" style="padding:100px 48px; text-align:center;">
-    <p class="section-label cinzel">Compliant. Proactive. Measured.</p>
-    <h2 class="cormorant" style="font-size:48px; margin-bottom:24px;">Prepare Your Workplace for<br><em>PRiMA 2024</em></h2>
-    <p class="cormorant" style="font-size:22px; max-width:850px; margin:0 auto 48px;">
-      Contact me today to implement <strong>resilience-building training</strong>—a recommended risk control 
-      within the <strong>PRiMA 2024 framework</strong>—utilising your <strong>HRD Corp levy</strong>.
+  <section id="cta">
+    <div class="cta-glow"></div>
+    <p class="section-label">BUILD RESILIENCE THAT LASTS</p>
+    <h2 class="cormorant">Ready to Strengthen<br><em>Your Team's Resilience?</em></h2>
+    <p class="cormorant">
+      Share your <strong>cohort size</strong>, <strong>role mix</strong>, <strong>timeline</strong>, and <strong>pressure points</strong>.
+      I’ll recommend a clean pathway: Training (4 hours) for broad uplift, Intensives (1–2 days) for hotspots, and mapping when you need risk clarity.
     </p>
-    <a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-terracotta">Enquire via WhatsApp</a>
+    <div class="cta-btns">
+      <a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-terracotta" target="_blank" rel="noopener noreferrer">Get in Touch</a>
+      <a href="index.html" class="btn btn-outline">Back to Home</a>
+    </div>
+    <p class="cta-email">Or email directly: <a href="mailto:elijah@DrElijah.org">elijah@DrElijah.org</a></p>
   </section>
 
   <!-- FOOTER -->
   <footer>
-    <p class="cinzel" style="color:var(--gold); margin-bottom:8px;">DR ELIJAH · RESILIENCE TRAINING & CONSULTING</p>
-    <p class="cinzel" style="font-size:12px; color:var(--text-dim);">&copy; 2026. All rights reserved.</p>
-    
-    <div class="disclaimer">
-      <strong>Regulatory Disclaimer:</strong> Dr Elijah provides independent resilience training and consulting services. 
-      While these programmes meet the recommendations for resilience-building training outlined in the 
-      <strong>Guidelines on Psychosocial Risk Assessment and Management at the Workplace (PRiMA) 2024</strong>, 
-      Dr Elijah is an independent provider and is not a representative of any government department. 
-      Employers remain responsible for the appointment of a Psychosocial Trained Person (PTP) and legal assessment filings.
+    <div class="footer-top">
+      <p class="footer-brand cinzel">DR ELIJAH · RESILIENCE TRAINING &amp; CONSULTING</p>
+      <p class="footer-domain cinzel">DrElijah.org</p>
     </div>
+    <div class="footer-social">
+      <a href="https://www.linkedin.com/in/drelijah/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <div class="footer-divider"></div>
+      <a href="https://www.facebook.com/DrElijah.org" target="_blank" rel="noopener noreferrer">Facebook</a>
+      <div class="footer-divider"></div>
+      <a href="https://www.instagram.com/dr.elijahting/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <div class="footer-divider"></div>
+      <a href="https://x.com/DrElijahTing" target="_blank" rel="noopener noreferrer">X</a>
+    </div>
+    <p class="footer-copy">&copy; 2026 Dr Elijah. All rights reserved.</p>
+    <p class="footer-powered">Resilience programmes powered by PR6 · Hello Driven</p>
   </footer>
 
   <script>
+    // Scroll nav
     const nav = document.getElementById('nav');
     window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 60));
+
+    // Hamburger
+    const hamburger = document.querySelector('.nav-hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      navLinks.classList.toggle('open');
+      const open = navLinks.classList.contains('open');
+      hamburger.setAttribute('aria-expanded', open);
+      hamburger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        navLinks.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+        hamburger.setAttribute('aria-label', 'Open menu');
+      });
+    });
+
+    // Scroll reveal
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.prog-card, .bootcamp-card, .consulting-card, .flagship-card, .upgrade-box').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(24px)';
+      el.style.transition = 'opacity 0.7s ease, transform 0.7s cubic-bezier(0.16,1,0.3,1)';
+      revealObserver.observe(el);
+    });
+
+    // Filter tabs (3 ways)
+    const filterTabs = document.querySelectorAll('.filter-tab');
+    const allSections = document.querySelectorAll('[data-section]');
+    const upgradeSection = document.getElementById('upgrade');
+
+    filterTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        filterTabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+
+        const filter = tab.dataset.filter;
+
+        allSections.forEach(section => {
+          if (filter === 'all' || section.dataset.section === filter) {
+            section.removeAttribute('hidden');
+          } else {
+            section.setAttribute('hidden', '');
+          }
+        });
+
+        // Upgrade callout: show with training/intensives/all (hide for Risk + Strategy)
+        if (filter === 'all' || filter === 'training' || filter === 'intensives') {
+          upgradeSection.removeAttribute('hidden');
+        } else {
+          upgradeSection.setAttribute('hidden', '');
+        }
+      });
+    });
   </script>
 
 </body>
