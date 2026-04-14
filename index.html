@@ -5,15 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dr Elijah — Resilience Training &amp; Consulting</title>
 
-  <meta name="description" content="Dr Elijah — Providing resilience-building training recommended for workplace psychosocial risk management under the PRiMA 2024 framework. HRD Corp Accredited Trainer." />
+  <!-- SEO -->
+  <meta name="description" content="Dr Elijah — Certified Resilience Coach (CReC) and CReW Implementation Partner. Corporate resilience: Training (4 hours), Intensives (1–2 days), and Risk + Strategy mapping (JSECC + PR6 Pulse), powered by PR6 Resilience Science and measured with PR6E." />
 
+  <!-- Social / OG -->
   <meta property="og:title" content="Dr Elijah — Resilience Training &amp; Consulting" />
-  <meta property="og:description" content="Implementing resilience-building training—a recommended risk control within the PRiMA 2024 framework—utilising your HRD Corp levy." />
+  <meta property="og:description" content="Three ways to strengthen resilience: Training (4 hours), Intensives (1–2 days), and Risk + Strategy mapping (JSECC + PR6 Pulse) — powered by PR6 Resilience Science and measured with PR6E." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://drelijah.org" />
   <meta property="og:image" content="https://drelijah.org/assets/images/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Dr Elijah — Resilience Training &amp; Consulting" />
+  <meta name="twitter:description" content="Three ways to strengthen resilience: Training (4 hours), Intensives (1–2 days), and Risk + Strategy mapping (JSECC + PR6 Pulse) — powered by PR6 Resilience Science and measured with PR6E." />
+  <meta name="twitter:image" content="https://drelijah.org/assets/images/og-image.jpg" />
 
+  <!-- Favicon — SVG fallback (inline). When you generate favicon files from favicon.io, upload to root + assets/icons/ -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230E0D0B'/%3E%3Crect x='1' y='1' width='30' height='30' rx='5' fill='none' stroke='%23C8A96E' stroke-width='0.75'/%3E%3Ctext x='16' y='23' font-family='Georgia%2C serif' font-size='20' font-weight='400' fill='%23C8A96E' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,251 +34,819 @@
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
     :root {
-      --gold:#C8A96E; --gold-dim:#C8A96E44; --green:#344E41; --green-muted:#5A7A66;
-      --terracotta:#C06C54; --terracotta-dim:#C06C5444; --bg:#0E0D0B; --bg-alt:#13120F;
-      --bg-card:#1A1813; --border:#2A2720; --text:#E8E4DC; --text-muted:#9A9080; --text-dim:#5A5650;
+      --gold:#C8A96E;
+      --gold-dim:#C8A96E44;
+      --green:#344E41;
+      --green-light:#344E4133;
+      --green-dim:#344E4144;
+      --green-muted:#5A7A66;
+      --terracotta:#C06C54;
+      --terracotta-light:#C06C5433;
+      --terracotta-dim:#C06C5444;
+      --bg:#0E0D0B;
+      --bg-alt:#13120F;
+      --bg-card:#1A1813;
+      --border:#2A2720;
+      --text:#E8E4DC;
+      --text-muted:#9A9080;
+      --text-dim:#5A5650;
     }
+
     html { scroll-behavior: smooth; font-size: 18px; }
-    body { font-family: 'Cormorant Garamond', Georgia, serif; background: var(--bg); color: var(--text); overflow-x: hidden; font-size: 1rem; line-height: 1.7; }
-    
+
+    body {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      background: var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
     ::selection { background:#C8A96E33; color: var(--gold); }
 
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.025;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+
+    @keyframes reveal {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes pulse-line {
+      0%, 100% { opacity: 0.2; }
+      50%       { opacity: 0.8; }
+    }
+
     .reveal { opacity: 0; animation: reveal 0.9s cubic-bezier(0.16,1,0.3,1) forwards; }
-    @keyframes reveal { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
-    
-    .cinzel { font-family: 'Cinzel', serif; } .cormorant { font-family: 'Cormorant Garamond', Georgia, serif; }
+    .d1 { animation-delay: 0.1s; }
+    .d2 { animation-delay: 0.25s; }
+    .d3 { animation-delay: 0.4s; }
+    .d4 { animation-delay: 0.55s; }
+    .d5 { animation-delay: 0.7s; }
+    .d6 { animation-delay: 0.85s; }
 
-    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 20px 48px; display: flex; justify-content: space-between; align-items: center; transition: all 0.4s ease; border-bottom: 1px solid transparent; }
-    nav.scrolled { background: rgba(14,13,11,0.85); backdrop-filter: blur(12px); border-bottom-color: var(--border); padding: 15px 48px; }
-    .nav-logo { font-family: 'Cinzel', serif; font-size: 15px; letter-spacing: 0.25em; color: var(--gold); text-decoration: none; }
+    .cinzel { font-family: 'Cinzel', serif; }
+    .cormorant { font-family: 'Cormorant Garamond', Georgia, serif; }
+
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 20px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid transparent;
+      transition: all 0.4s ease;
+    }
+    nav.scrolled {
+      border-bottom-color: var(--border);
+      background: rgba(14,13,11,0.88);
+      backdrop-filter: blur(12px);
+    }
+    .nav-logo {
+      font-family: 'Cinzel', serif;
+      font-size: 15px;
+      letter-spacing: 0.25em;
+      color: var(--gold);
+      text-decoration: none;
+    }
     .nav-links { display: flex; gap: 36px; list-style: none; }
-    .nav-links a { font-family: 'Cinzel', serif; font-size: 13px; letter-spacing: 0.15em; color: var(--text-muted); text-decoration: none; transition: color 0.3s ease; }
-    .nav-links a:hover, .nav-links a.active { color: var(--gold); }
+    .nav-links a {
+      font-family: 'Cinzel', serif;
+      font-size: 14px;
+      letter-spacing: 0.15em;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .nav-links a:hover { color: var(--gold); }
 
-    .btn { font-family: 'Cinzel', serif; font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase; padding: 16px 40px; cursor: pointer; text-decoration: none; display: inline-block; transition: all 0.3s cubic-bezier(0.16,1,0.3,1); }
-    .btn-outline { border: 1px solid var(--gold); color: var(--gold); }
-    .btn-outline:hover { background: var(--gold); color: var(--bg); transform: translateY(-2px); }
+    .nav-hamburger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      flex-direction: column;
+      gap: 5px;
+      z-index: 101;
+    }
+    .nav-hamburger span {
+      display: block;
+      width: 24px;
+      height: 1.5px;
+      background: var(--gold);
+      transition: all 0.3s ease;
+    }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+    .btn {
+      font-family: 'Cinzel', serif;
+      font-size: 14px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 16px 40px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.3s ease;
+    }
+    .btn-outline { background: transparent; border: 1px solid var(--gold); color: var(--gold); }
+    .btn-outline:hover { background: var(--gold); color: var(--bg); }
     .btn-fill { background: var(--gold); border: 1px solid var(--gold); color: var(--bg); }
-    .btn-fill:hover { background: transparent; color: var(--gold); transform: translateY(-2px); }
-    .btn-terracotta { border: 1px solid var(--terracotta); color: var(--terracotta); }
-    .btn-terracotta:hover { background: var(--terracotta); color: var(--bg); transform: translateY(-2px); }
+    .btn-fill:hover { background: transparent; color: var(--gold); }
+    .btn-terracotta { background: transparent; border: 1px solid var(--terracotta); color: var(--terracotta); }
+    .btn-terracotta:hover { background: var(--terracotta); color: var(--bg); }
 
-    #hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 120px 48px 80px; position: relative; }
-    .hero-photo { width: 160px; height: 160px; border-radius: 50%; border: 2px solid var(--gold-dim); margin-bottom: 28px; object-fit: cover; object-position: center top; /* <--- ADD THIS LINE */box-shadow: 0 0 40px rgba(200,169,110,0.05); }
-    .hero-name { font-size: clamp(52px, 8vw, 96px); font-weight: 300; margin-bottom: 8px; line-height: 1.1; letter-spacing: -0.02em; }
-    .hero-desc { max-width: 800px; font-size: 20px; color:#B0A898; margin-bottom: 48px; line-height: 1.8; font-weight: 300; }
+    .gold-divider { width: 60px; height: 1px; background: var(--gold); margin: 0 auto; }
+    .gold-line-v { width: 1px; background: linear-gradient(to bottom, transparent, var(--gold), transparent); }
 
+    .section-label {
+      font-family: 'Cinzel', serif;
+      font-size: 14px;
+      letter-spacing: 0.35em;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    /* ── HERO ── */
+    #hero {
+      min-height: 100vh;
+      display: flex; flex-direction: column;
+      justify-content: center; align-items: center;
+      text-align: center;
+      padding: 120px 48px 80px;
+      position: relative; overflow: hidden;
+    }
+    .hero-glow {
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%,-50%);
+      width: 700px; height: 700px; border-radius: 50%;
+      background: radial-gradient(circle,#C8A96E08 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-side { position: absolute; display: flex; flex-direction: column; align-items: center; gap: 8px; }
+    .hero-side-text { font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 0.3em; color:#C8A96E55; writing-mode: vertical-rl; }
+    .hero-tag { margin-bottom: 24px; text-align: center; }
+    .hero-tag .section-label { margin-bottom: 12px; }
+
+    /* Hero photo */
+    .hero-photo {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center top;
+      border: 2px solid var(--gold-dim);
+      margin-bottom: 28px;
+    }
+
+    h1.hero-name { font-size: clamp(52px, 8vw, 96px); font-weight: 300; line-height: 1.05; letter-spacing: -0.01em; margin-bottom: 8px; color: var(--text); }
+
+    h2.hero-sub { font-size: clamp(20px, 3vw, 32px); font-weight: 300; font-style: italic; color: var(--text-muted); margin-bottom: 32px; letter-spacing: 0.05em; }
+    .hero-desc { max-width: 740px; font-size: 20px; line-height: 1.8; color:#B0A898; font-weight: 300; margin-bottom: 48px; }
+    .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
+    .scroll-hint {
+      position: absolute;
+      bottom: 40px;
+      left: 0;
+      right: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+    .scroll-hint span { font-family: 'Cinzel', serif; font-size: 13px; letter-spacing: 0.3em; color:#C8A96E44; }
+    .scroll-line { width: 1px; height: 40px; background: linear-gradient(to bottom, var(--gold), transparent); animation: pulse-line 2s ease-in-out infinite; }
+
+    /* ── ROLES ── */
     #roles { padding: 100px 48px; max-width: 1200px; margin: 0 auto; }
-    .roles-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1px; background: var(--border); border: 1px solid var(--border); }
-    .role-card { background: var(--bg); padding: 48px 36px; transition: background 0.4s ease; }
-    .role-card:hover { background: var(--bg-card); }
-    .role-title { font-family: 'Cinzel', serif; font-size: 14px; letter-spacing: 0.15em; color: var(--gold); margin-bottom: 16px; text-transform: uppercase; }
-    .role-body { color: var(--text-muted); font-size: 17px; font-weight: 300; line-height: 1.8; }
+    .roles-header { text-align: center; margin-bottom: 64px; }
+    .roles-header h2 { font-size: clamp(32px, 4vw, 48px); font-weight: 300; letter-spacing: 0.02em; }
+    .roles-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1px; background: var(--border); }
+    .role-card { background: var(--bg); padding: 48px 36px; border: 1px solid var(--border); transition: all 0.4s cubic-bezier(0.16,1,0.3,1); }
+    .role-card:hover { border-color: var(--gold-dim); transform: translateY(-4px); background: var(--bg-card); }
+    .role-card--pastoral .role-icon { color: var(--green-muted); }
+    .role-card--pastoral .role-title { color: var(--green-muted); }
+    .role-card--pastoral:hover { border-color: var(--green-dim); }
+    .role-icon { font-size: 24px; color: var(--gold); margin-bottom: 20px; }
+    .role-title { font-family: 'Cinzel', serif; font-size: 15px; letter-spacing: 0.15em; color: var(--gold); margin-bottom: 16px; text-transform: uppercase; }
+    .role-body { font-size: 17px; line-height: 1.9; color: var(--text-muted); font-weight: 300; }
 
+    /* ── METHODOLOGY ── */
     #methodology { padding: 100px 48px; background: var(--bg-alt); }
-    .methodology-inner { max-width: 1000px; margin: 0 auto; }
-    .framework-item { display: flex; align-items: flex-start; gap: 48px; padding: 48px 0; border-bottom: 1px solid var(--border); }
+    .methodology-inner { max-width: 1200px; margin: 0 auto; }
+    .methodology-header { text-align: center; margin-bottom: 64px; }
+    .methodology-header h2 { font-size: clamp(32px, 4vw, 48px); font-weight: 300; }
+    .framework-item { display: flex; align-items: center; gap: 48px; padding: 40px 0; border-bottom: 1px solid var(--border); }
     .framework-item:last-child { border-bottom: none; }
-    .framework-name { font-size: 26px; font-weight: 400; margin-bottom: 12px; }
-    .framework-desc { color: var(--text-muted); font-weight: 300; font-size: 18px; line-height: 1.8; }
+    .framework-num { font-family: 'Cinzel', serif; font-size: 36px; opacity: 0.3; min-width: 60px; text-align: center; }
+    .framework-name { font-size: 26px; font-weight: 500; margin-bottom: 8px; }
+    .framework-desc { font-size: 18px; line-height: 1.8; color: var(--text-muted); font-weight: 300; max-width: 800px; }
+    .methodology-cta { text-align: center; margin-top: 48px; }
+    .methodology-cta a {
+      font-family: 'Cinzel', serif;
+      font-size: 14px;
+      letter-spacing: 0.2em;
+      color: var(--gold);
+      text-decoration: none;
+      border-bottom: 1px solid var(--gold-dim);
+      padding-bottom: 2px;
+      transition: border-color 0.3s;
+    }
+    .methodology-cta a:hover { border-color: var(--gold); }
 
-    #flagship { padding: 120px 48px; }
+    /* ── FLAGSHIP ── */
+    #flagship { padding: 100px 48px; }
     .flagship-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
-    .flagship-card { background: var(--bg-card); border: 1px solid var(--border); padding: 52px 48px; position: relative; overflow: hidden; }
-    .flagship-card::before { content: ''; position: absolute; inset: 12px; border: 1px solid #C8A96E15; pointer-events: none; }
-    .flagship-detail { font-size: 15px; color: var(--text-dim); font-family: 'Cinzel', serif; letter-spacing: 0.05em; margin-bottom: 10px; }
-    .flagship-detail span { color: var(--text-muted); font-family: 'Cormorant Garamond', serif; font-size: 17px; letter-spacing: 0; font-style: italic; }
+    .flagship-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      padding: 48px;
+      position: relative;
+    }
+    .flagship-card::before { content: ''; position: absolute; inset: 12px; border: 1px solid#C8A96E18; pointer-events: none; }
+    .flagship-card-tag { font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 0.35em; color: var(--gold); margin-bottom: 20px; }
+    .flagship-card-title { font-size: 28px; font-weight: 300; line-height: 1.3; color: var(--text); margin-bottom: 8px; }
+    .flagship-card-rule { width: 40px; height: 1px; background: var(--gold); margin: 16px 0; }
+    .flagship-card-sub { font-size: 16px; font-style: italic; color: var(--text-muted); margin-bottom: 24px; }
+    .flagship-detail { font-size: 15px; color: var(--text-dim); font-family: 'Cinzel', serif; letter-spacing: 0.1em; margin-bottom: 8px; }
+    .flagship-detail span { color: var(--text-muted); font-family: 'Cormorant Garamond', serif; font-size: 17px; letter-spacing: 0; }
 
+    .flagship-content .section-label { margin-bottom: 24px; }
+    .flagship-content h2 { font-size: clamp(28px, 3.5vw, 42px); font-weight: 300; line-height: 1.3; margin-bottom: 24px; }
+    .flagship-content h2 em { font-style: italic; color: var(--text-muted); }
+    .flagship-content p { font-size: 18px; line-height: 1.9; color: var(--text-muted); font-weight: 300; margin-bottom: 16px; }
+    .flagship-content p:last-of-type { margin-bottom: 40px; }
+
+    /* ── QUOTE ── */
+    #quote { padding: 100px 48px; background: linear-gradient(135deg, var(--bg-alt) 0%,#141A16 100%); text-align: center; }
+    .quote-mark { font-size: 72px; color:#344E4130; line-height: 1; margin-bottom: -8px; }
+    blockquote { font-size: clamp(22px, 3vw, 32px); font-weight: 300; font-style: italic; line-height: 1.6; color:#D0C8BC; max-width: 800px; margin: 0 auto 32px; }
+    .quote-attr { font-family: 'Cinzel', serif; font-size: 14px; letter-spacing: 0.3em; color: var(--gold); }
+
+    /* ── CREDENTIALS ── */
     #credentials { padding: 80px 48px; }
-    .cred-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 48px 32px; max-width: 1100px; margin: 0 auto; }
+    .cred-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 48px 40px;
+      max-width: 980px;
+      margin: 0 auto;
+    }
     .cred-item { text-align: center; }
-    .cred-label { font-family: 'Cinzel', serif; font-size: 15px; color: var(--gold); margin-bottom: 6px; letter-spacing: 0.1em; }
-    .cred-sub { font-size: 12px; color: var(--text-dim); font-family: 'Cinzel', serif; letter-spacing: 0.1em; text-transform: uppercase; }
+    .cred-label { font-family: 'Cinzel', serif; font-size: 16px; color: var(--gold); margin-bottom: 6px; }
+    .cred-sub { font-size: 14px; color: var(--text-dim); letter-spacing: 0.1em; font-family: 'Cinzel', serif; }
+    .cred-item--new .cred-label { color: var(--green-muted); }
 
-    #cta { padding: 120px 48px; text-align: center; background: radial-gradient(circle at center, #1A1813 0%, #0E0D0B 100%); }
+    /* ── TESTIMONIALS ── */
+    #testimonials { padding: 80px 48px; background: var(--bg-alt); }
+    .testimonials-inner { max-width: 900px; margin: 0 auto; text-align: center; }
+    .testimonials-inner h2 { font-size: clamp(28px, 3.5vw, 40px); font-weight: 300; margin-bottom: 48px; }
+    .testimonial-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+    .testimonial-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      padding: 36px;
+      text-align: left;
+      position: relative;
+    }
+    .testimonial-card::before {
+      content: '"';
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 48px;
+      color: var(--gold-dim);
+      line-height: 1;
+      position: absolute;
+      top: 20px;
+      left: 24px;
+    }
+    .testimonial-text {
+      font-size: 17px;
+      line-height: 1.8;
+      color: var(--text-muted);
+      font-weight: 300;
+      font-style: italic;
+      margin-bottom: 16px;
+      padding-top: 20px;
+    }
+    .testimonial-attr {
+      font-family: 'Cinzel', serif;
+      font-size: 12px;
+      letter-spacing: 0.15em;
+      color: var(--text-dim);
+    }
 
-    footer { padding: 60px 48px; border-top: 1px solid var(--border); text-align: center; }
-    .disclaimer { font-size: 12px; color: var(--text-dim); max-width: 850px; margin: 32px auto 0; line-height: 1.8; font-family: sans-serif; opacity: 0.7; }
+    /* ── SECTORS ── */
+    #sectors { padding: 48px 48px 0; text-align: center; }
+    .sectors-text {
+      font-family: 'Cinzel', serif;
+      font-size: 13px;
+      letter-spacing: 0.15em;
+      color: var(--text-dim);
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.8;
+    }
 
-    @media (max-width: 900px) {
-      .cred-grid { grid-template-columns: repeat(2, 1fr); gap: 40px 20px; }
-      .flagship-inner { grid-template-columns: 1fr; text-align: center; }
-      #hero { padding: 100px 24px; }
-      nav { padding: 20px 24px; }
-      .nav-links { display: none; } /* Navigation should ideally use a hamburger on mobile */
+    /* HRD Corp Accredited Trainer Badge */
+    .hrd-trainer-section {
+      padding: 40px 48px;
+      text-align: center;
+    }
+    .hrd-trainer-section img {
+      width: 120px;
+      height: auto;
+      opacity: 0.95;
+      transition: opacity 0.3s ease;
+    }
+    .hrd-trainer-section img:hover {
+      opacity: 1;
+    }
+
+    @media (max-width: 768px) {
+      .hrd-trainer-section { padding: 32px 24px; }
+      .hrd-trainer-section img { width: 100px; }
+    }
+
+    /* ── CTA ── */
+    #cta { padding: 120px 48px; text-align: center; position: relative; overflow: hidden; }
+    .cta-glow { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle,#C8A96E06 0%, transparent 65%); pointer-events: none; }
+    #cta .section-label { margin-bottom: 24px; }
+    #cta h2 { font-size: clamp(36px, 5vw, 64px); font-weight: 300; line-height: 1.2; margin-bottom: 24px; }
+    #cta h2 em { font-style: italic; }
+    #cta p { font-size: 20px; color: var(--text-muted); max-width: 760px; margin: 0 auto 48px; line-height: 1.8; }
+    .cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .cta-email {
+      font-family: 'Cinzel', serif;
+      font-size: 13px;
+      letter-spacing: 0.15em;
+      color: var(--text-dim);
+      margin-top: 20px;
+    }
+    .cta-email a { color: var(--gold); text-decoration: none; border-bottom: 1px solid var(--gold-dim); transition: border-color 0.3s; }
+    .cta-email a:hover { border-color: var(--gold); }
+
+    /* ── FOOTER ── */
+    footer {
+      padding: 40px 48px 32px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+    .footer-top {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .footer-brand { font-family: 'Cinzel', serif; font-size: 13px; letter-spacing: 0.2em; color: var(--gold); }
+    .footer-domain { font-family: 'Cinzel', serif; font-size: 13px; letter-spacing: 0.1em; color: var(--text-dim); }
+    .footer-social { display: flex; gap: 24px; align-items: center; }
+    .footer-social a {
+      color: var(--text-dim);
+      text-decoration: none;
+      font-family: 'Cinzel', serif;
+      font-size: 14px;
+      letter-spacing: 0.15em;
+      transition: color 0.3s;
+    }
+    .footer-social a:hover { color: var(--gold); }
+    .footer-divider { width: 1px; height: 12px; background: var(--border); }
+    .footer-copy { font-family: 'Cinzel', serif; font-size: 12px; letter-spacing: 0.1em; color: var(--text-dim); }
+    .footer-powered { font-family: 'Cinzel', serif; font-size: 10px; letter-spacing: 0.1em; color: var(--text-dim); opacity: 0.4; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      nav { padding: 16px 24px; }
+      .nav-hamburger { display: flex; }
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        gap: 0;
+        background: rgba(14,13,11,0.95);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border);
+        padding: 16px 24px;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links a { padding: 12px 0; }
+
+      #hero { padding: 100px 24px 60px; }
+      .hero-side { display: none; }
+      .hero-photo { width: 120px; height: 120px; }
+
+      #roles { padding: 60px 24px; }
+      #methodology { padding: 60px 24px; }
+      .framework-item { flex-direction: column; gap: 16px; }
+      .framework-num { min-width: auto; font-size: 28px; }
+
+      #flagship { padding: 60px 24px; }
+      .flagship-inner { grid-template-columns: 1fr; gap: 48px; }
+
+      #quote { padding: 60px 24px; }
+
+      #credentials { padding: 60px 24px; }
+      .cred-grid { grid-template-columns: repeat(2, 1fr); gap: 36px 24px; }
+      .cred-label { font-size: 18px; }
+      .cred-sub { font-size: 15px; }
+
+      #testimonials { padding: 60px 24px; }
+      .testimonial-grid { grid-template-columns: 1fr; }
+
+      #sectors { padding: 32px 24px 0; }
+
+      #cta { padding: 80px 24px; }
+
+      .section-label { font-size: 16px; letter-spacing: 0.2em; }
+      .btn { font-size: 15px; padding: 16px 32px; }
+
+      .role-title { font-size: 16px; letter-spacing: 0.1em; }
+      .role-body { font-size: 18px; }
+      .framework-name { font-size: 24px; }
+      .framework-desc { font-size: 18px; }
+      .quote-attr { font-size: 15px; letter-spacing: 0.2em; }
+
+      .footer-social a { font-size: 16px; }
+      .footer-brand { font-size: 14px; letter-spacing: 0.15em; }
+      .footer-domain { font-size: 14px; }
+
+      .flagship-card { padding: 32px 24px; }
+      .flagship-card-title { font-size: 24px; }
+      .flagship-content p { font-size: 18px; }
+
+      .nav-logo { font-size: 16px; }
+
+      footer { padding: 32px 24px; flex-direction: column; text-align: center; }
+      .footer-top { justify-content: center; }
+      .footer-social { flex-wrap: wrap; justify-content: center; gap: 16px; }
     }
   </style>
 </head>
 
 <body>
 
+  <!-- NAV -->
   <nav id="nav">
     <a href="#hero" class="nav-logo">DR ELIJAH</a>
     <ul class="nav-links">
       <li><a href="about.html">About</a></li>
       <li><a href="programmes.html">Programmes</a></li>
+      <li><a href="#methodology">Methodology</a></li>
+      <li><a href="about.html#story">Story</a></li>
       <li><a href="#cta">Contact</a></li>
     </ul>
+    <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
 
+  <!-- HERO -->
   <section id="hero">
-    <p class="cinzel" style="font-size:13px; letter-spacing:0.4em; color:var(--gold); margin-bottom:20px;">Resilience-Building Training</p>
+    <div class="hero-glow"></div>
+
+    <div class="hero-side" style="top:20%; left:8%;">
+      <div class="gold-line-v" style="height:80px;"></div>
+      <span class="hero-side-text">SIBU · SARAWAK · MALAYSIA</span>
+    </div>
+
+    <div class="hero-side" style="bottom:20%; right:8%;">
+      <span class="hero-side-text">PERFORM · RECOVER · THRIVE</span>
+      <div class="gold-line-v" style="height:80px;"></div>
+    </div>
+
+    <div class="hero-tag reveal">
+      <p class="section-label">RESILIENCE TRAINING &amp; CONSULTING</p>
+      <div class="gold-divider"></div>
+    </div>
+
     <img src="assets/images/hero-photo.jpg" alt="Dr Elijah Ting" class="hero-photo reveal d1" />
+
     <h1 class="hero-name cormorant reveal d2">Dr Elijah</h1>
-    <h2 class="hero-sub cormorant reveal d3" style="font-size: 28px; font-style: italic; color: var(--text-muted); margin-bottom: 32px;">Ting Moi Kieng</h2>
+    <h2 class="hero-sub cormorant reveal d3">Ting Moi Kieng</h2>
 
     <p class="hero-desc reveal d4">
-      Providing <strong>resilience-building training</strong>—one of the key interventions recommended to 
-      address workplace psychosocial hazards within the <strong>PRiMA 2024</strong> framework. 
-      Evidence-based programmes designed for broad workforce rollout and targeted intensive risk control.
+      Three ways to strengthen resilience: <strong>Training (4 hours)</strong> for broad uplift,
+      <strong>Intensives (1–2 days)</strong> for hotspots, and <strong>Risk + Strategy</strong> mapping using
+      <strong>JSECC + PR6 Pulse</strong>. Skills uplift is measured with <strong>PR6E</strong>.
     </p>
 
     <div class="hero-btns reveal d5">
-      <a href="programmes.html" class="btn btn-fill">Browse HRD Corp Claimable Programmes →</a>
-      <a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-terracotta" target="_blank">Enquire Now</a>
+      <a href="programmes.html" class="btn btn-fill">Browse Programmes →</a>
+      <a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-terracotta" target="_blank" rel="noopener noreferrer">Work With Me</a>
+    </div>
+
+    <div class="scroll-hint reveal d6">
+      <span>SCROLL</span>
+      <div class="scroll-line"></div>
     </div>
   </section>
 
+  <!-- ABOUT / ROLES -->
   <section id="roles">
-    <div style="text-align:center; margin-bottom:64px;">
-      <p class="cinzel" style="font-size:12px; letter-spacing:0.3em; color:var(--gold); margin-bottom:12px;">THE FOUNDATION</p>
-      <h2 class="cormorant" style="font-size:42px; font-weight: 300;">Expertise in Psychosocial Safety</h2>
+    <div class="roles-header">
+      <p class="section-label">WHAT I DO</p>
+      <h2 class="cormorant">Four Roles. One Foundation.</h2>
     </div>
 
     <div class="roles-grid">
       <div class="role-card">
+        <div class="role-icon"><span aria-hidden="true">◈</span></div>
         <p class="role-title">Certified Resilience Coach</p>
-        <p class="role-body">Certified with Hello Driven: <strong>CReC</strong>, <strong>CReW Implementation Partner</strong>, and <strong>JSECC</strong> — delivering PR6-led interventions that meet the recommendations for workplace resilience-building.</p>
+        <p class="role-body">
+          Certified with Hello Driven: <strong>CReC</strong>, <strong>CReW Implementation Partner</strong>, <strong>PRE Instructor</strong>,
+          <strong>JSECC</strong> Certified, and <strong>Big 5</strong> Certified — delivering PR6-led programmes with measurement through <strong>PR6E</strong>.
+        </p>
       </div>
+
       <div class="role-card">
-        <p class="role-title">L&amp;D Consultant</p>
-        <p class="role-body">HRD Corp accredited trainer assisting organisations in implementing <strong>Stage III Risk Controls</strong> through measurable, science-backed learning experiences.</p>
+        <div class="role-icon"><span aria-hidden="true">✦</span></div>
+        <p class="role-title">Executive L&amp;D Consultant</p>
+        <p class="role-body">HRD Corp accredited trainer bringing structured, measurable learning experiences to organisations across Malaysia and the wider region.</p>
       </div>
-      <div class="role-card">
-        <p class="role-title">Nursing Professional</p>
-        <p class="role-body">BSc (Hons) Nursing background providing clinical grounding to the practice of preventing mental and physical ill-health in high-pressure work environments.</p>
+
+      <div class="role-card role-card--pastoral">
+        <div class="role-icon"><span aria-hidden="true">◉</span></div>
+        <p class="role-title">Pastoral Leader</p>
+        <p class="role-body">Leadership formation and pastoral care across faith-based and community organisations — bringing depth, grounding, and human presence into every coaching relationship.</p>
       </div>
+
       <div class="role-card">
+        <div class="role-icon"><span aria-hidden="true">⬡</span></div>
         <p class="role-title">Practitioner-Scholar</p>
-        <p class="role-body">Applying doctoral-level research to the science of human resilience, bringing academic rigour and evidence-based methodologies into every training room.</p>
+        <p class="role-body">Doctoral research in L&amp;D, now applied to the science and practice of human resilience under pressure — bringing academic rigour into every training room. Author of <em>The Transformation Architect™</em> (2026).</p>
       </div>
     </div>
   </section>
 
+  <!-- METHODOLOGY -->
   <section id="methodology">
     <div class="methodology-inner">
-      <div style="text-align:center; margin-bottom:64px;">
-        <p class="cinzel" style="font-size:12px; letter-spacing:0.3em; color:var(--gold); margin-bottom:12px;">PRiMA 2024 ALIGNMENT</p>
-        <h2 class="cormorant" style="font-size:42px; font-weight: 300;">Meeting Training Recommendations</h2>
+      <div class="methodology-header">
+        <p class="section-label">THE METHODOLOGY</p>
+        <h2 class="cormorant">Built on PR6 Resilience Science</h2>
       </div>
 
       <div>
         <div class="framework-item">
-          <div class="framework-num cinzel" style="color:var(--gold-dim); font-size:32px; min-width:80px;">01</div>
+          <div class="framework-num cinzel" style="color:#C8A96E;">1</div>
           <div>
-            <h3 class="framework-name cormorant">Resilience-Building Training (Theme 4)</h3>
-            <p class="framework-desc">Our core training meets the recommendation in the <strong>PRIMA Action Table</strong> (Action 5) to provide specific resilience-building training to assist employees in managing occupational stress.</p>
+            <h3 class="framework-name cormorant" style="color:#C8A96E;">PR6 Model</h3>
+            <p class="framework-desc">
+              <strong>Six evidence-based domains of human resilience.</strong><br>
+              Vision, Composure, Reasoning, Tenacity, Collaboration, and Health — each measured, profiled, and developed through a structured, science-backed approach that gives participants a clear picture of where they stand and what to build.
+            </p>
           </div>
         </div>
+
         <div class="framework-item">
-          <div class="framework-num cinzel" style="color:var(--gold-dim); font-size:32px; min-width:80px;">02</div>
+          <div class="framework-num cinzel" style="color:var(--green-muted);">2</div>
           <div>
-            <h3 class="framework-name cormorant">PR6 Science-Backed Domains</h3>
-            <p class="framework-desc">Utilising the six evidence-based domains (Vision, Composure, Reasoning, Tenacity, Collaboration, Health) to deliver the individual-focused interventions aligned with the recommendations of the PRiMA 2024 framework.</p>
+            <h3 class="framework-name cormorant" style="color:var(--green-muted);">PR6E Measurement</h3>
+            <p class="framework-desc">
+              <strong>Baseline and re-measurement for measurable capability uplift.</strong><br>
+              PR6E is included in PRE and Intensives where specified, and available as a Team Pulse + HR Insights Briefing —
+              giving teams a clear, de-identified cohort snapshot and practical priorities.
+            </p>
           </div>
         </div>
+
         <div class="framework-item">
-          <div class="framework-num cinzel" style="color:var(--gold-dim); font-size:32px; min-width:80px;">03</div>
+          <div class="framework-num cinzel" style="color:#C8A96E;">3</div>
           <div>
-            <h3 class="framework-name cormorant">Measured Skill Movement (Theme 7)</h3>
-            <p class="framework-desc">Assisting the <strong>Monitoring & Review</strong> requirement through PR6E measurement, providing employers with evidence of the effectiveness of their implemented risk controls.</p>
+            <h3 class="framework-name cormorant" style="color:#C8A96E;">Driven Resilience App Reinforcement</h3>
+            <p class="framework-desc">
+              <strong>Reinforcement beyond the room (1–3 months).</strong><br>
+              The Driven Resilience App can be included to sustain habits, increase skill repetition, and reduce training decay after workshops and intensives.
+            </p>
+          </div>
+        </div>
+
+        <div class="framework-item">
+          <div class="framework-num cinzel" style="color:var(--green-muted);">4</div>
+          <div>
+            <h3 class="framework-name cormorant" style="color:var(--green-muted);">Onsite &amp; Virtual Delivery</h3>
+            <p class="framework-desc">
+              <strong>Delivered flexibly to meet your teams where they are.</strong><br>
+              From 4-hour training sessions to 1–2 day intensives and multi-week consulting engagements — programmes are designed to fit operational reality without compromising depth or impact.
+            </p>
           </div>
         </div>
       </div>
 
-      <div style="text-align:center; margin-top:56px;">
-        <a href="programmes.html" class="cinzel" style="color:var(--gold); text-decoration:none; border-bottom:1px solid var(--gold-dim); font-size: 14px; letter-spacing: 0.1em; padding-bottom: 4px;">→ View HRD Corp Claimable Programmes</a>
+      <div class="methodology-cta">
+        <a href="programmes.html">→ See the full programme catalogue</a>
       </div>
     </div>
   </section>
 
+  <!-- FLAGSHIP PROGRAMME -->
   <section id="flagship">
     <div class="flagship-inner">
       <div class="flagship-card">
-        <p class="cinzel" style="font-size:11px; letter-spacing: 0.3em; color: var(--gold); margin-bottom: 12px;">INTENSIVE RISK CONTROL</p>
-        <h3 class="cormorant" style="font-size: 32px; font-weight: 300; margin-bottom: 8px;">Resilience for Performance Under Pressure</h3>
-        <div style="width:40px; height:1px; background:var(--gold); margin:20px 0;"></div>
-        <p class="cormorant" style="font-size: 18px; font-style: italic; color: var(--text-muted); margin-bottom: 28px;">Targeted intervention for high-demand work units.</p>
-        <p class="flagship-detail">Best for: <span>Teams under sustained pressure</span></p>
-        <p class="flagship-detail">PRiMA Use: <span>Meeting recommendations for specific, intensive training</span></p>
+        <p class="flagship-card-tag">FLAGSHIP · 2 DAYS · HIGH-DEMAND TEAMS</p>
+        <h3 class="flagship-card-title cormorant">Resilience for Performance Under Pressure</h3>
+        <div class="flagship-card-rule"></div>
+        <p class="flagship-card-sub cormorant">2-Day Resilience Skills Lab</p>
+        <p class="flagship-detail">Best for: <span>High-demand teams, leadership cohorts</span></p>
+        <p class="flagship-detail">
+          Includes: <span><strong>PR6E baseline</strong> (individual reports) + de-identified cohort snapshot + leader insights summary + Driven Resilience App (1 month, recommend 3) + recommended PR6E re-measure at 6–8 weeks</span>
+        </p>
+        <p class="flagship-detail" style="text-transform:none; letter-spacing:0.06em;">
+          <span style="font-style:italic;">Cohort reporting is aggregated and de-identified. Individual results are not shared without explicit consent.</span>
+        </p>
       </div>
 
       <div class="flagship-content">
-        <p class="cinzel" style="font-size:12px; letter-spacing:0.3em; color:var(--gold); margin-bottom:12px;">FLAGSHIP PROGRAMME</p>
-        <h2 class="cormorant" style="font-size: 40px; font-weight: 300; margin-bottom: 24px;">Evidence-Based<br><em>Capability Uplift</em></h2>
-        <p style="font-size: 18px; color: var(--text-muted); font-weight: 300; line-height: 1.8; margin-bottom: 32px;">A two-day immersive lab designed to address psychosocial hazards in units identified with high work demands. We move beyond awareness to establish practical operating rhythms that sustain performance.</p>
-        <a href="programmes.html" class="btn btn-outline">Explore All Programmes →</a>
+        <p class="section-label">FLAGSHIP PROGRAMME</p>
+        <h2 class="cormorant">The Deepest<br><em>Resilience Experience</em></h2>
+        <p>Two full days of immersive resilience development — baseline PR6E measurement, targeted skills training across the six PR6 domains, and a cohort-level debrief that gives leaders data they can act on.</p>
+        <p>Built for teams under sustained pressure who need more than a workshop — they need a shift in how they think, recover, and lead.</p>
+        <a href="programmes.html" class="btn btn-outline">View All Programmes →</a>
       </div>
     </div>
   </section>
 
+  <!-- QUOTE -->
+  <section id="quote">
+    <div class="quote-mark cormorant">"</div>
+    <blockquote class="cormorant">
+      Resilience is not the absence of pressure.<br>It is the architecture of how you respond to it.
+    </blockquote>
+    <p class="quote-attr cinzel">DR ELIJAH · RESILIENCE TRAINING &amp; CONSULTING</p>
+  </section>
+
+  <!-- CREDENTIALS -->
   <section id="credentials">
     <div class="cred-grid">
-      <div class="cred-item"><p class="cred-label">CReC</p><p class="cred-sub">Resilience Coach</p></div>
-      <div class="cred-item"><p class="cred-label">CReW</p><p class="cred-sub">Workplace Partner</p></div>
-      <div class="cred-item"><p class="cred-label">PRE</p><p class="cred-sub">Certified Instructor</p></div>
-      <div class="cred-item"><p class="cred-label">JSECC</p><p class="cred-sub">Risk Mapping</p></div>
-      
-      <div class="cred-item"><p class="cred-label">BSc Nursing</p><p class="cred-sub">Clinical Grounding</p></div>
-      <div class="cred-item"><p class="cred-label">MDiv</p><p class="cred-sub">Spiritually Grounded</p></div>
-      <div class="cred-item"><p class="cred-label">Exec. MBA</p><p class="cred-sub">Strategic Leadership</p></div>
-      <div class="cred-item"><p class="cred-label">Exec. Doctorate</p><p class="cred-sub">Transformation Science</p></div>
+      <div class="cred-item cred-item--new">
+        <p class="cred-label cinzel">CReC</p>
+        <p class="cred-sub cinzel">Certified Resilience Coach</p>
+      </div>
+      <div class="cred-item cred-item--new">
+        <p class="cred-label cinzel">CReW</p>
+        <p class="cred-sub cinzel">Implementation Partner</p>
+      </div>
+      <div class="cred-item cred-item--new">
+        <p class="cred-label cinzel">PRE</p>
+        <p class="cred-sub cinzel">Instructor</p>
+      </div>
+
+      <div class="cred-item cred-item--new">
+        <p class="cred-label cinzel">JSECC</p>
+        <p class="cred-sub cinzel">Certified</p>
+      </div>
+      <div class="cred-item cred-item--new">
+        <p class="cred-label cinzel">Big 5</p>
+        <p class="cred-sub cinzel">Certified</p>
+      </div>
+      <div class="cred-item">
+        <p class="cred-label cinzel">HRD Corp</p>
+        <p class="cred-sub cinzel">Accredited Trainer</p>
+      </div>
+
+      <div class="cred-item">
+        <p class="cred-label cinzel">BSc (Hons) Nursing</p>
+        <p class="cred-sub cinzel">Holistic Development</p>
+      </div>
+      <div class="cred-item">
+        <p class="cred-label cinzel">Master of Divinity</p>
+        <p class="cred-sub cinzel">Spiritually Grounded</p>
+      </div>
+      <div class="cred-item">
+        <p class="cred-label cinzel">Executive MBA</p>
+        <p class="cred-sub cinzel">Business Strategy</p>
+      </div>
+      <div class="cred-item">
+        <p class="cred-label cinzel">Exec. Doctorate L&amp;D</p>
+        <p class="cred-sub cinzel">Transformation Framework</p>
+      </div>
     </div>
   </section>
 
+  <!-- HRD Corp Accredited Trainer -->
+  <section class="hrd-trainer-section">
+    <img src="/assets/images/hrd-corp-accredited-trainer.png" 
+         alt="HRD Corp Accredited Trainer" />
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials">
+    <div class="testimonials-inner">
+      <p class="section-label">FROM PAST TRAINING PARTICIPANTS</p>
+      <h2 class="cormorant">What They Say</h2>
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <p class="testimonial-text">Thank you for the five days of training us to be the best trainer versions of ourselves. Your personal story on your training journey has been very inspiring.</p>
+          <p class="testimonial-attr">KK · TRAINING PARTICIPANT</p>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-text">Thank you for guiding us throughout the joyful learning sessions.</p>
+          <p class="testimonial-attr">CL · TRAINING PARTICIPANT</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
   <section id="cta">
-    <p class="cinzel" style="font-size:12px; letter-spacing:0.3em; color:var(--gold); margin-bottom:12px;">PROACTIVE. EVIDENCE-BASED. MEASURED.</p>
-    <h2 class="cormorant" style="font-size:48px; font-weight: 300; margin-bottom: 24px;">Prepare Your Workplace for<br><em>PRiMA 2024</em></h2>
-    <p class="cormorant" style="font-size:22px; max-width:850px; margin:0 auto 48px; color: var(--text-muted);">
-      Implement <strong>resilience-building training</strong>—a recommended risk control within the PRiMA 2024 framework—utilising your <strong>HRD Corp levy</strong>.
+    <div class="cta-glow"></div>
+    <p class="section-label">BUILD RESILIENCE THAT LASTS</p>
+    <h2 class="cormorant">Ready to Strengthen<br><em>Your Team's Resilience?</em></h2>
+    <p class="cormorant">
+      Share your <strong>cohort size</strong>, <strong>role mix</strong>, <strong>timeline</strong>, and <strong>pressure points</strong>.
+      I'll recommend a clean pathway: Training (4 hours), Intensives (1–2 days), or Risk + Strategy mapping.
     </p>
     <div class="cta-btns">
-      <a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-terracotta" target="_blank">Enquire via WhatsApp</a>
-      <a href="programmes.html" class="btn btn-outline" style="margin-left: 12px;">Browse Solutions</a>
+      <a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-terracotta" target="_blank" rel="noopener noreferrer">Get in Touch</a>
+      <a href="programmes.html" class="btn btn-outline">View Programmes</a>
     </div>
+    <p class="cta-email">Or email directly: <a href="mailto:elijah@DrElijah.org">elijah@DrElijah.org</a></p>
   </section>
 
+  <!-- FOOTER -->
   <footer>
-    <p class="cinzel" style="color:var(--gold); margin-bottom:8px; font-size: 14px; letter-spacing: 0.2em;">DR ELIJAH · RESILIENCE TRAINING & CONSULTING</p>
-    <p class="cinzel" style="font-size:11px; color:var(--text-dim); letter-spacing: 0.1em;">&copy; 2026. All rights reserved.</p>
-    
-    <div class="disclaimer">
-      <strong>Regulatory Disclaimer:</strong> Dr Elijah provides independent resilience training and consulting services. 
-      While these programmes meet the recommendations for resilience-building training outlined in the 
-      <strong>Guidelines on Psychosocial Risk Assessment and Management at the Workplace (PRiMA) 2024</strong>, 
-      Dr Elijah is an independent provider and is not a representative of any government department. 
-      Employers remain responsible for the appointment of a Psychosocial Trained Person (PTP) and legal assessment filings.
+    <div class="footer-top">
+      <p class="footer-brand cinzel">DR ELIJAH · RESILIENCE TRAINING &amp; CONSULTING</p>
+      <p class="footer-domain cinzel">DrElijah.org</p>
     </div>
+    <div class="footer-social">
+      <a href="https://www.linkedin.com/in/drelijah/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <div class="footer-divider"></div>
+      <a href="https://www.facebook.com/DrElijah.org" target="_blank" rel="noopener noreferrer">Facebook</a>
+      <div class="footer-divider"></div>
+      <a href="https://www.instagram.com/dr.elijahting/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <div class="footer-divider"></div>
+      <a href="https://x.com/DrElijahTing" target="_blank" rel="noopener noreferrer">X</a>
+    </div>
+    <p class="footer-copy">&copy; 2026 Dr Elijah. All rights reserved.</p>
+    <p class="footer-powered">Resilience programmes powered by PR6 · Hello Driven</p>
   </footer>
 
   <script>
+    // Scroll nav
     const nav = document.getElementById('nav');
-    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 60));
-    
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    // Hamburger
+    const hamburger = document.querySelector('.nav-hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      navLinks.classList.toggle('open');
+      const open = navLinks.classList.contains('open');
+      hamburger.setAttribute('aria-expanded', open);
+      hamburger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        navLinks.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+        hamburger.setAttribute('aria-label', 'Open menu');
+      });
+    });
+
+    // Scroll reveal
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.style.opacity = '1';
           entry.target.style.transform = 'translateY(0)';
+          observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.1 });
+    }, { threshold: 0.12 });
 
-    document.querySelectorAll('.role-card, .framework-item, .cred-item, .flagship-card').forEach(el => {
+    document.querySelectorAll('.role-card, .framework-item, .cred-item, .flagship-card, .testimonial-card').forEach(el => {
       el.style.opacity = '0';
       el.style.transform = 'translateY(24px)';
-      el.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
+      el.style.transition = 'opacity 0.7s ease, transform 0.7s cubic-bezier(0.16,1,0.3,1)';
       observer.observe(el);
     });
   </script>
