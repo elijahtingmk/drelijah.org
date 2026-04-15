@@ -1,15 +1,16 @@
 <!DOCTYPE html>
+
 <html lang="en-GB">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Workplace Resilience Programmes | Dr Elijah</title>
+  <title>Workplace Resilience Programmes | Dr Elijah</title>
   <meta
     name="description"
     content="Workplace resilience solutions for organisations under pressure. Evidence‑based workshops, intensives, manager development, and psychosocial risk support for leaders and teams in Malaysia."
   />
 
-  <meta property="og:title" content="Workplace Resilience Programmes | Dr Elijah" />
+  <meta property="og:title" content="Workplace Resilience Programmes | Dr Elijah" />
   <meta
     property="og:description"
     content="Build a workforce that performs under pressure through evidence‑based resilience training, intensives, and psychosocial risk support."
@@ -738,6 +739,44 @@
       margin-top: 28px;
     }
 
+    /* ── PRisMA mapping chip row (appears inside programme cards) ────── */
+    .prisma-map {
+      margin-top: 14px;
+      padding: 14px 16px;
+      background: #C8A96E08;
+      border-left: 2px solid var(--gold-dim);
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--text-muted);
+    }
+    .prisma-map-label {
+      font-family: 'Cinzel', serif;
+      font-size: 10px;
+      letter-spacing: 0.25em;
+      color: var(--gold);
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 6px;
+    }
+    .prisma-map-row {
+      display: block;
+      margin-bottom: 3px;
+    }
+    .prisma-map-row:last-child {
+      margin-bottom: 0;
+    }
+    .prisma-map-key {
+      font-family: 'Cinzel', serif;
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      color: var(--text-dim);
+      text-transform: uppercase;
+    }
+    .prisma-map-val {
+      color: var(--text);
+      font-weight: 300;
+    }
+
     .bootcamp-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -1377,11 +1416,12 @@
       display: none !important;
     }
   </style>
+
 </head>
 
 <body>
   <nav id="nav">
-    <a href="index.html" class="nav-logo cinzel">DR ELIJAH</a>
+    <a href="index.html" class="nav-logo cinzel">DR ELIJAH</a>
     <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -1418,7 +1458,7 @@
         <li>Managers struggling to lead calmly under pressure</li>
         <li>Stress, burnout, or change fatigue affecting performance</li>
         <li>Teams becoming reactive during conflict or uncertainty</li>
-        <li>Need for HRD Corp claimable leadership and resilience development</li>
+        <li>Need for HRD Corp claimable leadership and resilience development</li>
         <li>Need for measurable evidence beyond motivational training</li>
         <li>Need to support wellbeing while maintaining operational performance</li>
       </ul>
@@ -1438,80 +1478,101 @@
         </p>
       </div>
 
-      <div class="ca-block">
-        <span class="ca-block-label">Where We Fit</span>
-        <h3>Your PRisMA Journey</h3>
-        <p class="ca-block-desc">
-          The PRisMA framework follows a three-stage process. Our programmes are specifically designed to
-          support <strong>Stage III: Risk Control</strong>.
-        </p>
-        <div class="ca-stages">
-          <div class="ca-stage ca-stage--dim">
-            <span class="ca-stage-num">Stage I &amp; II</span>
-            <span class="ca-stage-title">Screening &amp; Assessment</span>
-            <p>Your internal Psychosocial Trained Person (PTP) or OHD identifies workplace hazards using tools like the LEO26 survey.</p>
-          </div>
-          <div class="ca-stage ca-stage--active">
-            <span class="ca-stage-badge">Our Speciality</span>
-            <span class="ca-stage-num">Stage III</span>
-            <span class="ca-stage-title">Risk Control Support</span>
-            <p>Once hazards are identified, the law requires a PRiMA (Psychosocial Risk Management Action Plan). This is where we step in.</p>
-          </div>
-        </div>
+```
+  <div class="ca-block">
+    <span class="ca-block-label">Where We Fit</span>
+    <h3>Your PRisMA Journey</h3>
+    <p class="ca-block-desc">
+      The PRisMA framework follows a three-stage process. Our programmes are specifically designed to
+      support <strong>Stage III: Risk Control</strong>.
+    </p>
+    <div class="ca-stages">
+      <div class="ca-stage ca-stage--dim">
+        <span class="ca-stage-num">Stage I &amp; II</span>
+        <span class="ca-stage-title">Screening &amp; Assessment</span>
+        <p>Your internal Psychosocial Trained Person (PTP) or OHD identifies workplace hazards using tools like the LEO26 survey.</p>
       </div>
-
-      <div class="ca-block">
-        <span class="ca-block-label">Bridging the Gap</span>
-        <h3>From &#x201C;Assessment&#x201D; to &#x201C;Action&#x201D;</h3>
-        <p class="ca-block-desc">
-          Under the PRiMA Action Plan, employers must implement controls to mitigate identified hazards.
-          Our programmes serve as <strong>Evidence-Based Administrative Controls</strong> for the most common workplace stressors.
-        </p>
-        <div class="ca-hazards">
-          <div class="ca-hazard">
-            <span class="ca-hazard-name">High Work Demands</span>
-            <p>Mitigation through energy management and cognitive load training.</p>
-          </div>
-          <div class="ca-hazard">
-            <span class="ca-hazard-name">Low Job Control</span>
-            <p>Building adaptability and internal locus of control.</p>
-          </div>
-          <div class="ca-hazard">
-            <span class="ca-hazard-name">Poor Workplace Relationships</span>
-            <p>Enhancing EQ and assertive communication to prevent conflict.</p>
-          </div>
-          <div class="ca-hazard">
-            <span class="ca-hazard-name">Role Ambiguity</span>
-            <p>Developing strategic focus and proactive communication.</p>
-          </div>
-        </div>
+      <div class="ca-stage ca-stage--active">
+        <span class="ca-stage-badge">Our Speciality</span>
+        <span class="ca-stage-num">Stage III</span>
+        <span class="ca-stage-title">Risk Control Support</span>
+        <p>Once hazards are identified, the law requires a PRiMA (Psychosocial Risk Management Action Plan). This is where we step in.</p>
       </div>
-
-      <div class="ca-block">
-        <span class="ca-block-label">Why Partner With Us</span>
-        <div class="ca-benefits">
-          <div class="ca-benefit">
-            <span class="ca-benefit-title">HRD Corp Claimable</span>
-            <p>High-impact interventions that utilise your training levy.</p>
-          </div>
-          <div class="ca-benefit">
-            <span class="ca-benefit-title">Audit-Ready Documentation</span>
-            <p>Attendance and impact data to help your Safety Committee document &#x201C;Duty of Care&#x201D; for DOSH audits.</p>
-          </div>
-          <div class="ca-benefit">
-            <span class="ca-benefit-title">Expert Delivery</span>
-            <p>Led by an HRD Corp Accredited Trainer specialising in workplace resilience.</p>
-          </div>
-        </div>
-      </div>
-
-      <p class="disclaimer">
-        Note on Compliance: Formal PRisMA assessments (Stage I &amp; II) should be conducted by a PTP. Our programmes
-        focus on Stage III implementation by providing the resilience training and capability building mandated in your
-        PRiMA Action Plan. Our services are organisational interventions and do not constitute clinical assessment or
-        medical treatment.
-      </p>
     </div>
+  </div>
+
+  <div class="ca-block">
+    <span class="ca-block-label">Bridging the Gap</span>
+    <h3>From &#x201C;Assessment&#x201D; to &#x201C;Action&#x201D;</h3>
+    <p class="ca-block-desc">
+      Under the PRiMA Action Plan, employers must implement controls to mitigate identified hazards.
+      Our programmes serve as <strong>Evidence-Based Administrative Controls</strong> for the most common workplace stressors.
+    </p>
+    <div class="ca-hazards">
+      <div class="ca-hazard">
+        <span class="ca-hazard-name">High Work Demands</span>
+        <p>Mitigation through energy management and cognitive load training.</p>
+      </div>
+      <div class="ca-hazard">
+        <span class="ca-hazard-name">Low Job Control</span>
+        <p>Building adaptability and internal locus of control.</p>
+      </div>
+      <div class="ca-hazard">
+        <span class="ca-hazard-name">Poor Workplace Relationships</span>
+        <p>Enhancing EQ and assertive communication to prevent conflict.</p>
+      </div>
+      <div class="ca-hazard">
+        <span class="ca-hazard-name">Role Ambiguity</span>
+        <p>Developing strategic focus and proactive communication.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="ca-block">
+    <span class="ca-block-label">EPC23 Alignment</span>
+    <h3>How Our Programmes Map to EPC23</h3>
+    <p class="ca-block-desc">
+      Every programme on this page satisfies <strong>EPC23 items 16 &amp; 20</strong> &mdash; the Training &amp; Education
+      controls mandated in your PRiMA Action Plan. Individual programmes extend further into Social Support,
+      Control, Workload, Job Matching, and Working Environment themes. The specific LEO26 components (JC / WD / JS),
+      EPC23 items, and PRiMA themes each programme addresses are listed directly on every card below.
+    </p>
+    <p class="ca-block-desc" style="margin-bottom: 0;">
+      <strong>Scope note.</strong> Training-based controls address capability-building hazards. A complete PRiMA
+      response may also require structural or policy controls &mdash; for example EPC23 items 2 (complaint-handling
+      fairness), 9 (job security), 11 (staffing levels), 19 (employee voice), and 22 (workplace violence policy).
+      These typically require HR policy work alongside training. We are happy to flag these in your scoping
+      conversation.
+    </p>
+  </div>
+
+  <div class="ca-block">
+    <span class="ca-block-label">Why Partner With Us</span>
+    <div class="ca-benefits">
+      <div class="ca-benefit">
+        <span class="ca-benefit-title">HRD Corp Claimable</span>
+        <p>High-impact interventions that utilise your training levy.</p>
+      </div>
+      <div class="ca-benefit">
+        <span class="ca-benefit-title">Audit-Ready Documentation</span>
+        <p>Attendance and impact data to help your Safety Committee document &#x201C;Duty of Care&#x201D; for DOSH audits.</p>
+      </div>
+      <div class="ca-benefit">
+        <span class="ca-benefit-title">Expert Delivery</span>
+        <p>Led by an HRD Corp Accredited Trainer specialising in workplace resilience.</p>
+      </div>
+    </div>
+  </div>
+
+  <p class="disclaimer">
+    Note on Compliance: Formal PRisMA assessments (Stage I &amp; II) should be conducted by a PTP. Our programmes
+    focus on Stage III implementation by providing the resilience training and capability building mandated in your
+    PRiMA Action Plan. Our services are organisational interventions and do not constitute clinical assessment or
+    medical treatment.
+  </p>
+</div>
+```
+
   </section>
 
   <div id="filter-bar">
@@ -1576,6 +1637,12 @@
           <span class="prog-card-row-label cinzel">Upgrade path</span
           ><span class="prog-card-row-value">Reinforcement app + team snapshot + re‑measure &amp; impact report</span>
         </div>
+        <div class="prisma-map">
+          <span class="prisma-map-label">PRisMA 2024 Mapping</span>
+          <span class="prisma-map-row"><span class="prisma-map-key">LEO26:</span> <span class="prisma-map-val">JC + WD + JS (foundational)</span></span>
+          <span class="prisma-map-row"><span class="prisma-map-key">EPC23:</span> <span class="prisma-map-val">16, 20</span></span>
+          <span class="prisma-map-row"><span class="prisma-map-key">PRiMA themes:</span> <span class="prisma-map-val">Training &amp; Education; Social Support; Control</span></span>
+        </div>
         <div class="prog-card-spacer"></div>
         <div class="prog-card-cta">
           <a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-outline btn-sm" target="_blank" rel="noopener noreferrer"
@@ -1602,6 +1669,12 @@
         <div class="prog-card-row">
           <span class="prog-card-row-label cinzel">Includes</span
           ><span class="prog-card-row-value">Practice drills + structured resilience tools</span>
+        </div>
+        <div class="prisma-map">
+          <span class="prisma-map-label">PRisMA 2024 Mapping</span>
+          <span class="prisma-map-row"><span class="prisma-map-key">LEO26:</span> <span class="prisma-map-val">WD (Q4–Q6, Q25–Q26)</span></span>
+          <span class="prisma-map-row"><span class="prisma-map-key">EPC23:</span> <span class="prisma-map-val">16, 20</span></span>
+          <span class="prisma-map-row"><span class="prisma-map-key">PRiMA themes:</span> <span class="prisma-map-val">Training &amp; Education; Workload</span></span>
         </div>
         <div class="prog-card-spacer"></div>
         <div class="prog-card-cta">
@@ -1630,6 +1703,12 @@
           <span class="prog-card-row-label cinzel">Includes</span
           ><span class="prog-card-row-value">Scenario tools + practical decision frameworks</span>
         </div>
+        <div class="prisma-map">
+          <span class="prisma-map-label">PRisMA 2024 Mapping</span>
+          <span class="prisma-map-row"><span class="prisma-map-key">LEO26:</span> <span class="prisma-map-val">JC (Q12, Q14, Q16) + WD</span></span>
+          <span class="prisma-map-row"><span class="prisma-map-key">EPC23:</span> <span class="prisma-map-val">16, 20</span></span>
+          <span class="prisma-map-row"><span class="prisma-map-key">PRiMA themes:</span> <span class="prisma-map-val">Training &amp; Education; Job Matching</span></span>
+        </div>
         <div class="prog-card-spacer"></div>
         <div class="prog-card-cta">
           <a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-outline btn-sm" target="_blank" rel="noopener noreferrer"
@@ -1656,6 +1735,12 @@
         <div class="prog-card-row">
           <span class="prog-card-row-label cinzel">Includes</span
           ><span class="prog-card-row-value">Role practice + communication frameworks</span>
+        </div>
+        <div class="prisma-map">
+          <span class="prisma-map-label">PRisMA 2024 Mapping</span>
+          <span class="prisma-map-row"><span class="prisma-map-key">LEO26:</span> <span class="prisma-map-val">JS (Q17–Q24)</span></span>
+          <span class="prisma-map-row"><span class="prisma-map-key">EPC23:</span> <span class="prisma-map-val">15, 16, 20, 21</span></span>
+          <span class="prisma-map-row"><span class="prisma-map-key">PRiMA themes:</span> <span class="prisma-map-val">Social Support; Transparency &amp; Fairness</span></span>
         </div>
         <div class="prog-card-spacer"></div>
         <div class="prog-card-cta">
@@ -1684,6 +1769,12 @@
           <span class="prog-card-row-label cinzel">Includes</span
           ><span class="prog-card-row-value">Sustain plan + recovery practices</span>
         </div>
+        <div class="prisma-map">
+          <span class="prisma-map-label">PRisMA 2024 Mapping</span>
+          <span class="prisma-map-row"><span class="prisma-map-key">LEO26:</span> <span class="prisma-map-val">WD (Q4, Q25, Q26)</span></span>
+          <span class="prisma-map-row"><span class="prisma-map-key">EPC23:</span> <span class="prisma-map-val">16, 20</span></span>
+          <span class="prisma-map-row"><span class="prisma-map-key">PRiMA themes:</span> <span class="prisma-map-val">Workload; Working Environment</span></span>
+        </div>
         <div class="prog-card-spacer"></div>
         <div class="prog-card-cta">
           <a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-outline btn-sm" target="_blank" rel="noopener noreferrer"
@@ -1711,6 +1802,12 @@
           <span class="prog-card-row-label cinzel">Includes</span
           ><span class="prog-card-row-value">Goal plan + motivation tools</span>
         </div>
+        <div class="prisma-map">
+          <span class="prisma-map-label">PRisMA 2024 Mapping</span>
+          <span class="prisma-map-row"><span class="prisma-map-key">LEO26:</span> <span class="prisma-map-val">JC (Q1–Q3, Q12, Q14)</span></span>
+          <span class="prisma-map-row"><span class="prisma-map-key">EPC23:</span> <span class="prisma-map-val">7, 16, 20</span></span>
+          <span class="prisma-map-row"><span class="prisma-map-key">PRiMA themes:</span> <span class="prisma-map-val">Training &amp; Education; Social Support</span></span>
+        </div>
         <div class="prog-card-spacer"></div>
         <div class="prog-card-cta">
           <a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-outline btn-sm" target="_blank" rel="noopener noreferrer"
@@ -1737,6 +1834,13 @@
         <div class="prog-card-row">
           <span class="prog-card-row-label cinzel">Includes</span
           ><span class="prog-card-row-value">Manager toolkit + team conversation guides</span>
+        </div>
+        <div class="prisma-map">
+          <span class="prisma-map-label">PRisMA 2024 Mapping</span>
+          <span class="prisma-map-row"><span class="prisma-map-key">LEO26:</span> <span class="prisma-map-val">JS (Q18, Q20, Q21, Q23, Q24)</span></span>
+          <span class="prisma-map-row"><span class="prisma-map-key">EPC23:</span> <span class="prisma-map-val">10, 13, 16, 20</span></span>
+          <span class="prisma-map-row"><span class="prisma-map-key">PRiMA themes:</span> <span class="prisma-map-val">Social Support; Control; Transparency &amp; Fairness</span></span>
+          <span class="prisma-map-row" style="margin-top: 6px; font-style: italic; color: var(--text-dim); font-size: 13px;">Directly supports the PRisMA Preface emphasis on &ldquo;training for managers at all levels.&rdquo;</span>
         </div>
         <div class="prog-card-spacer"></div>
         <div class="prog-card-cta">
@@ -1782,6 +1886,12 @@
           <div class="bootcamp-detail"><strong>What it covers</strong>PR6E hotspots, Composure deep dive, scenario simulations, action planning</div>
           <div class="bootcamp-detail"><strong>Business impact</strong>Reduced reactivity and stronger recovery under sustained pressure</div>
           <div class="bootcamp-detail"><strong>Measured with</strong>PR6E baseline (individual reports)</div>
+          <div class="prisma-map">
+            <span class="prisma-map-label">PRisMA 2024 Mapping</span>
+            <span class="prisma-map-row"><span class="prisma-map-key">LEO26:</span> <span class="prisma-map-val">WD + JC (deeper Composure work)</span></span>
+            <span class="prisma-map-row"><span class="prisma-map-key">EPC23:</span> <span class="prisma-map-val">16, 20</span></span>
+            <span class="prisma-map-row"><span class="prisma-map-key">PRiMA themes:</span> <span class="prisma-map-val">Training &amp; Education; Workload; Control</span></span>
+          </div>
           <div class="bootcamp-spacer"></div>
           <div class="bootcamp-cta">
             <a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-green btn-sm" target="_blank" rel="noopener noreferrer"
@@ -1798,6 +1908,12 @@
           <div class="bootcamp-detail"><strong>What it covers</strong>Composure, Reasoning, change‑readiness simulations</div>
           <div class="bootcamp-detail"><strong>Business impact</strong>Sharper decisions, stronger anticipation, better response quality under load</div>
           <div class="bootcamp-detail"><strong>Measured with</strong>PR6E baseline (individual reports)</div>
+          <div class="prisma-map">
+            <span class="prisma-map-label">PRisMA 2024 Mapping</span>
+            <span class="prisma-map-row"><span class="prisma-map-key">LEO26:</span> <span class="prisma-map-val">JC (Q12, Q14, Q16) + WD</span></span>
+            <span class="prisma-map-row"><span class="prisma-map-key">EPC23:</span> <span class="prisma-map-val">16, 20</span></span>
+            <span class="prisma-map-row"><span class="prisma-map-key">PRiMA themes:</span> <span class="prisma-map-val">Training &amp; Education; Job Matching; Control</span></span>
+          </div>
           <div class="bootcamp-spacer"></div>
           <div class="bootcamp-cta">
             <a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-green btn-sm" target="_blank" rel="noopener noreferrer"
@@ -1814,6 +1930,12 @@
           <div class="bootcamp-detail"><strong>What it covers</strong>Collaboration, Tenacity, accountability, recovery rituals</div>
           <div class="bootcamp-detail"><strong>Business impact</strong>Clearer team agreements, stronger support behaviours, better sustainment rituals</div>
           <div class="bootcamp-detail"><strong>Measured with</strong>PR6E baseline (individual reports)</div>
+          <div class="prisma-map">
+            <span class="prisma-map-label">PRisMA 2024 Mapping</span>
+            <span class="prisma-map-row"><span class="prisma-map-key">LEO26:</span> <span class="prisma-map-val">JS (full subscale) + WD (Q25, Q26)</span></span>
+            <span class="prisma-map-row"><span class="prisma-map-key">EPC23:</span> <span class="prisma-map-val">16, 20, 21</span></span>
+            <span class="prisma-map-row"><span class="prisma-map-key">PRiMA themes:</span> <span class="prisma-map-val">Social Support; Transparency &amp; Fairness; Workload</span></span>
+          </div>
           <div class="bootcamp-spacer"></div>
           <div class="bootcamp-cta">
             <a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-green btn-sm" target="_blank" rel="noopener noreferrer"
@@ -1859,6 +1981,13 @@
             <p style="margin-top: 14px; font-size: 14px; color: var(--text-dim); line-height: 1.6;">
               Cohort reporting is aggregated and de‑identified. Individual results are not shared with leaders without explicit consent.
             </p>
+          </div>
+          <div class="prisma-map" style="margin-top: 20px;">
+            <span class="prisma-map-label">PRisMA 2024 Mapping</span>
+            <span class="prisma-map-row"><span class="prisma-map-key">LEO26:</span> <span class="prisma-map-val">JC + WD + JS (all three, deep uplift)</span></span>
+            <span class="prisma-map-row"><span class="prisma-map-key">EPC23:</span> <span class="prisma-map-val">10, 13, 16, 20, 21</span></span>
+            <span class="prisma-map-row"><span class="prisma-map-key">PRiMA themes:</span> <span class="prisma-map-val">Training &amp; Education; Social Support; Control; Workload; Working Environment</span></span>
+            <span class="prisma-map-row" style="margin-top: 6px; font-style: italic; color: var(--text-dim); font-size: 13px;">Positioned as the comprehensive Stage III intervention when multiple LEO26 components register high-risk.</span>
           </div>
         </div>
       </div>
@@ -1911,6 +2040,12 @@
           <span class="consulting-card-row-label cinzel">Business value</span
           ><span class="consulting-card-row-value">Clear prioritisation on where resilience capability gaps sit and what to do next</span>
         </div>
+        <div class="prisma-map">
+          <span class="prisma-map-label">PRisMA 2024 Mapping</span>
+          <span class="prisma-map-row"><span class="prisma-map-key">PRisMA stage:</span> <span class="prisma-map-val">Bridges Stage II → Stage III planning</span></span>
+          <span class="prisma-map-row"><span class="prisma-map-key">Function:</span> <span class="prisma-map-val">Resilience-capability layer complementing LEO26; informs PRiMA Action Plan sequencing</span></span>
+          <span class="prisma-map-row" style="margin-top: 6px; font-style: italic; color: var(--text-dim); font-size: 13px;">Does not replace the statutory LEO26 / EPC23 process conducted by your PTP.</span>
+        </div>
         <div class="consulting-card-spacer"></div>
         <div class="consulting-card-cta">
           <a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-green btn-sm" target="_blank" rel="noopener noreferrer"
@@ -1933,6 +2068,11 @@
         <div class="consulting-card-row">
           <span class="consulting-card-row-label cinzel">Business value</span
           ><span class="consulting-card-row-value">Clear evidence of resilience movement and stronger basis for future investment</span>
+        </div>
+        <div class="prisma-map">
+          <span class="prisma-map-label">PRisMA 2024 Mapping</span>
+          <span class="prisma-map-row"><span class="prisma-map-key">PRisMA stage:</span> <span class="prisma-map-val">Supports Step 11 (Reassessment)</span></span>
+          <span class="prisma-map-row"><span class="prisma-map-key">Function:</span> <span class="prisma-map-val">Evidence for the 12-month re-evaluation cycle; demonstrates EPC23 items 16 &amp; 20 effectiveness</span></span>
         </div>
         <div class="consulting-card-spacer"></div>
         <div class="consulting-card-cta">
@@ -1961,6 +2101,12 @@
           <span class="consulting-card-row-label cinzel">Business value</span
           ><span class="consulting-card-row-value">Clarity on higher‑risk work design areas and a sequenced capability‑building response</span>
         </div>
+        <div class="prisma-map">
+          <span class="prisma-map-label">PRisMA 2024 Mapping</span>
+          <span class="prisma-map-row"><span class="prisma-map-key">PRisMA stage:</span> <span class="prisma-map-val">Parallels Stage I–II, sequences into Stage III</span></span>
+          <span class="prisma-map-row"><span class="prisma-map-key">Function:</span> <span class="prisma-map-val">Organisation-wide psychosocial risk mapping with capability overlay; produces heatmap, prioritised controls, programme pathway</span></span>
+          <span class="prisma-map-row" style="margin-top: 6px; font-style: italic; color: var(--text-dim); font-size: 13px;">Complements &mdash; does not substitute &mdash; statutory Stage I–II assessment by a Psychosocial Trained Person (PTP) using LEO26 &amp; EPC23.</span>
+        </div>
         <div class="consulting-card-spacer"></div>
         <div class="consulting-card-cta">
           <a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-green btn-sm" target="_blank" rel="noopener noreferrer"
@@ -1986,7 +2132,7 @@
     <blockquote class="cormorant">
       Resilience is not the absence of pressure.<br />It is the architecture of how you respond to it.
     </blockquote>
-    <p class="quote-attr cinzel">DR ELIJAH · WORKPLACE RESILIENCE</p>
+    <p class="quote-attr cinzel">DR ELIJAH · WORKPLACE RESILIENCE</p>
   </section>
 
   <section id="cta">
@@ -2010,7 +2156,7 @@
 
   <footer>
     <div class="footer-top">
-      <p class="footer-brand cinzel">DR ELIJAH · WORKPLACE RESILIENCE SOLUTIONS</p>
+      <p class="footer-brand cinzel">DR ELIJAH · WORKPLACE RESILIENCE SOLUTIONS</p>
     </div>
     <div class="footer-social">
       <a href="https://www.linkedin.com/in/drelijah/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
@@ -2021,7 +2167,7 @@
       <div class="footer-divider"></div>
       <a href="https://x.com/DrElijahTing" target="_blank" rel="noopener noreferrer">X</a>
     </div>
-    <p class="footer-copy">&copy; 2026 Dr Elijah. All rights reserved.</p>
+    <p class="footer-copy">&copy; 2026 Dr Elijah. All rights reserved.</p>
     <p class="footer-powered">Evidence‑Based Workplace Resilience Solutions</p>
   </footer>
 
@@ -2097,5 +2243,6 @@
       });
     });
   </script>
+
 </body>
 </html>
