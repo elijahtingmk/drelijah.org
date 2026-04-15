@@ -359,9 +359,9 @@
       text-transform: uppercase;
     }
 
-    /* Compliance alignment section summarising PRisMA and PRiMA */
+    /* ── PRisMA / OSHA compliance section ─────────────────────────────── */
     .compliance-alignment {
-      padding: 56px 32px;
+      padding: 72px 32px;
       max-width: 960px;
       margin: 0 auto;
       border-top: 1px solid var(--border-dim);
@@ -370,47 +370,213 @@
     .compliance-alignment-inner {
       text-align: left;
     }
-    .compliance-alignment h2 {
-      font-family: 'Cinzel', serif;
-      font-size: 15px;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 28px;
+
+    /* Header */
+    .ca-header {
       text-align: center;
+      margin-bottom: 48px;
     }
-    .compliance-alignment p,
-    .compliance-alignment li {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 17px;
-      line-height: 1.7;
-      color: var(--text);
-      margin-bottom: 16px;
-    }
-    .compliance-alignment .lead {
-      font-size: 19px;
-      color: var(--text);
+    .ca-suptitle {
+      font-family: 'Cinzel', serif;
+      font-size: 10px;
+      letter-spacing: 0.35em;
+      color: var(--gold);
+      text-transform: uppercase;
+      display: block;
       margin-bottom: 18px;
     }
-    .compliance-alignment ul {
-      margin: 10px 0 0 20px;
-      padding-left: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
+    .compliance-alignment h2 {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(17px, 2.2vw, 24px);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text);
+      line-height: 1.45;
+      margin-bottom: 18px;
     }
-    .compliance-alignment .disclaimer {
+    .ca-tagline {
+      font-family: 'Cinzel', serif;
+      font-size: 11px;
+      letter-spacing: 0.3em;
+      color: var(--gold);
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 24px;
+    }
+    .ca-intro {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 17px;
+      line-height: 1.8;
+      color: var(--text-muted);
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    /* Subsection card blocks */
+    .ca-block {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      padding: 32px 36px;
+      margin-bottom: 14px;
+      position: relative;
+    }
+    .ca-block-label {
+      font-family: 'Cinzel', serif;
+      font-size: 10px;
+      letter-spacing: 0.35em;
+      color: var(--gold);
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 6px;
+    }
+    .ca-block h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(20px, 2.5vw, 26px);
+      font-weight: 300;
+      color: var(--text);
+      margin-bottom: 14px;
+      line-height: 1.3;
+    }
+    .ca-block-desc {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 16px;
+      color: var(--text-muted);
+      line-height: 1.75;
+      margin-bottom: 20px;
+    }
+    .ca-block-desc strong {
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    /* Stage comparison */
+    .ca-stages {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .ca-stage {
+      border: 1px solid var(--border-dim);
+      padding: 20px 22px;
+      position: relative;
+    }
+    .ca-stage--dim {
+      opacity: 0.5;
+    }
+    .ca-stage--active {
+      border-color: var(--gold-dim);
+      background: #C8A96E05;
+    }
+    .ca-stage-num {
+      font-family: 'Cinzel', serif;
+      font-size: 10px;
+      letter-spacing: 0.25em;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 8px;
+    }
+    .ca-stage--active .ca-stage-num {
+      color: var(--gold);
+    }
+    .ca-stage-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 17px;
+      font-weight: 500;
+      color: var(--text);
+      display: block;
+      margin-bottom: 10px;
+    }
+    .ca-stage-badge {
+      position: absolute;
+      top: -1px;
+      right: -1px;
+      font-family: 'Cinzel', serif;
+      font-size: 9px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--bg);
+      background: var(--gold);
+      padding: 3px 10px;
+    }
+    .ca-stage p {
+      font-family: 'Cormorant Garamond', serif;
       font-size: 15px;
+      color: var(--text-muted);
+      line-height: 1.65;
+      margin-bottom: 0;
+    }
+
+    /* Hazards grid */
+    .ca-hazards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .ca-hazard {
+      padding: 16px 20px;
+      border-left: 2px solid var(--gold-dim);
+    }
+    .ca-hazard-name {
+      font-family: 'Cinzel', serif;
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      color: var(--gold);
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 6px;
+    }
+    .ca-hazard p {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 15px;
+      color: var(--text-muted);
+      line-height: 1.65;
+      margin-bottom: 0;
+    }
+
+    /* Benefits trio */
+    .ca-benefits {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+    .ca-benefit {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      padding: 20px 22px;
+      transition: border-color 0.3s ease;
+    }
+    .ca-benefit:hover {
+      border-color: var(--gold-dim);
+    }
+    .ca-benefit-title {
+      font-family: 'Cinzel', serif;
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text);
+      display: block;
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+    .ca-benefit p {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 15px;
+      color: var(--text-muted);
+      line-height: 1.65;
+      margin-bottom: 0;
+    }
+
+    /* Disclaimer */
+    .compliance-alignment .disclaimer {
+      font-size: 13px;
       color: var(--text-dim);
       font-style: italic;
-      margin-top: 28px;
+      margin-top: 24px;
       padding-top: 20px;
       border-top: 1px dashed var(--border-dim);
-    }
-    .compliance-alignment em {
-      font-style: italic;
-      color: var(--gold);
-      font-weight: 600;
+      line-height: 1.75;
     }
 
     #filter-bar {
@@ -1146,14 +1312,17 @@
         letter-spacing: 0.15em;
       }
       .compliance-alignment {
-        padding: 32px 16px;
+        padding: 40px 16px;
       }
-      .compliance-alignment p,
-      .compliance-alignment li {
-        font-size: 15px;
+      .ca-stages,
+      .ca-hazards {
+        grid-template-columns: 1fr;
       }
-      .compliance-alignment .lead {
-        font-size: 16px;
+      .ca-benefits {
+        grid-template-columns: 1fr;
+      }
+      .ca-block {
+        padding: 24px 20px;
       }
       #filter-bar {
         padding: 48px 24px;
@@ -1285,60 +1454,84 @@
 
   <section class="compliance-alignment">
     <div class="compliance-alignment-inner">
-      <h2>Supporting Your PRisMA 2024 &amp; OSHA 2022 Compliance</h2>
-      <p class="lead">Wellbeing | Risk Control | Capability Building</p>
-      <p>
-        In line with the Occupational Safety and Health (Amendment) Act 2022, Malaysian employers now have a
-        statutory “Duty of Care” to manage psychosocial risks just as they do physical ones. PRisMA 2024 is the
-        official DOSH framework for meeting these obligations.
-      </p>
-      <h3>Where We Fit in Your PRisMA Journey</h3>
-      <p>
-        The PRisMA framework follows a three-stage process. Our programmes are specifically designed to support
-        Stage III: Risk Control.
-      </p>
-      <ul>
-        <li>
-          <strong>Stage I &amp; II (Screening &amp; Assessment):</strong> Your internal Psychosocial Trained Person
-          (PTP) or OHD identifies workplace hazards using tools like the LEO26 survey.
-        </li>
-        <li>
-          <strong>Stage III (Risk Control Support — Our Speciality):</strong> Once hazards are identified, the law
-          requires a PRiMA (Psychosocial Risk Management Action Plan). This is where we step in.
-        </li>
-      </ul>
-      <h3>Bridging the Gap Between “Assessment” and “Action”</h3>
-      <p>
-        Under the PRiMA Action Plan, employers must implement controls to mitigate identified hazards. Our programmes
-        serve as Evidence-Based Administrative Controls for the most common workplace stressors, including:
-      </p>
-      <ul>
-        <li>
-          <strong>High Work Demands:</strong> Mitigation through energy management and cognitive load training.
-        </li>
-        <li>
-          <strong>Low Job Control:</strong> Building adaptability and internal locus of control.
-        </li>
-        <li>
-          <strong>Poor Workplace Relationships:</strong> Enhancing EQ and assertive communication to prevent conflict.
-        </li>
-        <li>
-          <strong>Role Ambiguity:</strong> Developing strategic focus and proactive communication.
-        </li>
-      </ul>
-      <h3>Why Partner with Us?</h3>
-      <ul>
-        <li>
-          <strong>HRD Corp Claimable:</strong> High-impact interventions that utilise your training levy.
-        </li>
-        <li>
-          <strong>Audit-Ready Documentation:</strong> We provide attendance and impact data to help your Safety
-          Committee document “Duty of Care” for DOSH audits.
-        </li>
-        <li>
-          <strong>Expert Delivery:</strong> Led by an HRD Corp Accredited Trainer specialising in workplace resilience.
-        </li>
-      </ul>
+      <div class="ca-header">
+        <span class="ca-suptitle">PRisMA 2024 &middot; OSHA 2022</span>
+        <h2>Supporting Your PRisMA 2024 &amp; OSHA 2022 Compliance</h2>
+        <span class="ca-tagline">Wellbeing &nbsp;&thinsp;|&thinsp;&nbsp; Risk Control &nbsp;&thinsp;|&thinsp;&nbsp; Capability Building</span>
+        <p class="ca-intro">
+          In line with the Occupational Safety and Health (Amendment) Act 2022, Malaysian employers now have a
+          statutory “Duty of Care” to manage psychosocial risks just as they do physical ones.
+          PRisMA 2024 is the official DOSH framework for meeting these obligations.
+        </p>
+      </div>
+
+      <div class="ca-block">
+        <span class="ca-block-label">Where We Fit</span>
+        <h3>Your PRisMA Journey</h3>
+        <p class="ca-block-desc">
+          The PRisMA framework follows a three-stage process. Our programmes are specifically designed to
+          support <strong>Stage III: Risk Control</strong>.
+        </p>
+        <div class="ca-stages">
+          <div class="ca-stage ca-stage--dim">
+            <span class="ca-stage-num">Stage I &amp; II</span>
+            <span class="ca-stage-title">Screening &amp; Assessment</span>
+            <p>Your internal Psychosocial Trained Person (PTP) or OHD identifies workplace hazards using tools like the LEO26 survey.</p>
+          </div>
+          <div class="ca-stage ca-stage--active">
+            <span class="ca-stage-badge">Our Speciality</span>
+            <span class="ca-stage-num">Stage III</span>
+            <span class="ca-stage-title">Risk Control Support</span>
+            <p>Once hazards are identified, the law requires a PRiMA (Psychosocial Risk Management Action Plan). This is where we step in.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="ca-block">
+        <span class="ca-block-label">Bridging the Gap</span>
+        <h3>From &#x201C;Assessment&#x201D; to &#x201C;Action&#x201D;</h3>
+        <p class="ca-block-desc">
+          Under the PRiMA Action Plan, employers must implement controls to mitigate identified hazards.
+          Our programmes serve as <strong>Evidence-Based Administrative Controls</strong> for the most common workplace stressors.
+        </p>
+        <div class="ca-hazards">
+          <div class="ca-hazard">
+            <span class="ca-hazard-name">High Work Demands</span>
+            <p>Mitigation through energy management and cognitive load training.</p>
+          </div>
+          <div class="ca-hazard">
+            <span class="ca-hazard-name">Low Job Control</span>
+            <p>Building adaptability and internal locus of control.</p>
+          </div>
+          <div class="ca-hazard">
+            <span class="ca-hazard-name">Poor Workplace Relationships</span>
+            <p>Enhancing EQ and assertive communication to prevent conflict.</p>
+          </div>
+          <div class="ca-hazard">
+            <span class="ca-hazard-name">Role Ambiguity</span>
+            <p>Developing strategic focus and proactive communication.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="ca-block">
+        <span class="ca-block-label">Why Partner With Us</span>
+        <div class="ca-benefits">
+          <div class="ca-benefit">
+            <span class="ca-benefit-title">HRD Corp Claimable</span>
+            <p>High-impact interventions that utilise your training levy.</p>
+          </div>
+          <div class="ca-benefit">
+            <span class="ca-benefit-title">Audit-Ready Documentation</span>
+            <p>Attendance and impact data to help your Safety Committee document &#x201C;Duty of Care&#x201D; for DOSH audits.</p>
+          </div>
+          <div class="ca-benefit">
+            <span class="ca-benefit-title">Expert Delivery</span>
+            <p>Led by an HRD Corp Accredited Trainer specialising in workplace resilience.</p>
+          </div>
+        </div>
+      </div>
+
       <p class="disclaimer">
         Note on Compliance: Formal PRisMA assessments (Stage I &amp; II) should be conducted by a PTP. Our programmes
         focus on Stage III implementation by providing the resilience training and capability building mandated in your
