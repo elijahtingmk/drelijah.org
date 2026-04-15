@@ -65,7 +65,9 @@
 
     html {
       scroll-behavior: smooth;
-      font-size: 18px;
+      /* 112.5% of the user's browser default (16px → 18px), so the page
+         scales when readers adjust their browser font-size preference. */
+      font-size: 112.5%;
     }
 
     body {
@@ -335,7 +337,7 @@
       left: 0;
       top: 1px;
       color: var(--gold);
-      font-size: 10px;
+      font-size: 11px;
     }
 
     /* ── PRisMA / OSHA compliance section ─────────────────────────────── */
@@ -357,7 +359,7 @@
     }
     .ca-suptitle {
       font-family: 'Cinzel', serif;
-      font-size: 10px;
+      font-size: 11px;
       letter-spacing: 0.35em;
       color: var(--gold);
       text-transform: uppercase;
@@ -401,7 +403,7 @@
     }
     .ca-block-label {
       font-family: 'Cinzel', serif;
-      font-size: 10px;
+      font-size: 11px;
       letter-spacing: 0.35em;
       color: var(--gold);
       text-transform: uppercase;
@@ -448,7 +450,7 @@
     }
     .ca-stage-num {
       font-family: 'Cinzel', serif;
-      font-size: 10px;
+      font-size: 11px;
       letter-spacing: 0.25em;
       color: var(--text-dim);
       text-transform: uppercase;
@@ -498,7 +500,7 @@
     }
     .ca-hazard-name {
       font-family: 'Cinzel', serif;
-      font-size: 10px;
+      font-size: 11px;
       letter-spacing: 0.2em;
       color: var(--gold);
       text-transform: uppercase;
@@ -530,7 +532,7 @@
     }
     .ca-benefit-title {
       font-family: 'Cinzel', serif;
-      font-size: 10px;
+      font-size: 11px;
       letter-spacing: 0.2em;
       text-transform: uppercase;
       color: var(--text);
@@ -751,7 +753,7 @@
     }
     .prisma-map-label {
       font-family: 'Cinzel', serif;
-      font-size: 10px;
+      font-size: 11px;
       letter-spacing: 0.25em;
       color: var(--gold);
       text-transform: uppercase;
@@ -767,7 +769,7 @@
     }
     .prisma-map-key {
       font-family: 'Cinzel', serif;
-      font-size: 10px;
+      font-size: 11px;
       letter-spacing: 0.12em;
       color: var(--text-dim);
       text-transform: uppercase;
@@ -980,7 +982,7 @@
     .flagship-includes-list li::before {
       content: '◈';
       color: var(--gold);
-      font-size: 10px;
+      font-size: 11px;
       margin-top: 4px;
       flex-shrink: 0;
     }
@@ -1275,7 +1277,7 @@
     }
     .footer-powered {
       font-family: 'Cinzel', serif;
-      font-size: 10px;
+      font-size: 11px;
       letter-spacing: 0.1em;
       color: var(--text-dim);
       opacity: 0.4;
@@ -1478,6 +1480,7 @@
         </p>
       </div>
 
+```
   <div class="ca-block">
     <span class="ca-block-label">Where We Fit</span>
     <h3>Your PRisMA Journey</h3>
@@ -1570,6 +1573,7 @@
     medical treatment.
   </p>
 </div>
+```
 
   </section>
 
