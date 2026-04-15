@@ -347,19 +347,43 @@
     blockquote { font-size: clamp(22px, 3vw, 32px); font-weight: 300; font-style: italic; line-height: 1.6; color:#D0C8BC; max-width: 800px; margin: 0 auto 32px; }
     .quote-attr { font-family: 'Cinzel', serif; font-size: 14px; letter-spacing: 0.3em; color: var(--gold); }
 
-    /* CREDENTIALS */
-    #credentials { padding: 80px 48px; }
-    .cred-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 48px 40px;
-      max-width: 980px;
-      margin: 0 auto;
-    }
-    .cred-item { text-align: center; }
-    .cred-label { font-family: 'Cinzel', serif; font-size: 16px; color: var(--gold); margin-bottom: 6px; }
-    .cred-sub { font-size: 14px; color: var(--text-dim); letter-spacing: 0.1em; font-family: 'Cinzel', serif; }
-    .cred-item--green .cred-label { color: var(--green-muted); }
+	/* CREDENTIALS */
+	#credentials { padding: 80px 48px; }
+	
+	.cred-grid {
+	  display: grid;
+	  grid-template-columns: repeat(3, 1fr);
+	  gap: 48px 40px;
+	  max-width: 980px;
+	  margin: 0 auto;
+	}
+	
+	.cred-item { text-align: center; }
+	
+	.cred-label {
+	  font-family: 'Cinzel', serif;
+	  font-size: 16px;
+	  color: var(--gold);
+	  margin-bottom: 6px;
+	}
+	
+	.cred-sub {
+	  font-size: 14px;
+	  color: var(--text-dim);
+	  letter-spacing: 0.1em;
+	  font-family: 'Cinzel', serif;
+	}
+	
+	.cred-item--green .cred-label {
+	  color: var(--green-muted);
+	}
+	
+	/* FINAL BOOK ITEM MOBILE FIX */
+	@media (max-width: 768px) {
+	  #credentials .cred-item[style*="grid-column: 2 / 3;"] {
+	    grid-column: 1 / -1 !important;
+	  }
+	}
 
     /* HRD badge */
     .hrd-trainer-section {
@@ -745,54 +769,60 @@
     </section>
 
     <!-- CREDENTIALS -->
-    <section id="credentials">
-      <div class="cred-grid">
-        <div class="cred-item cred-item--green">
-          <p class="cred-label cinzel">CReC</p>
-          <p class="cred-sub cinzel">Certified Resilience Coach</p>
-        </div>
-        <div class="cred-item cred-item--green">
-          <p class="cred-label cinzel">CReW</p>
-          <p class="cred-sub cinzel">Implementation Partner</p>
-        </div>
-        <div class="cred-item cred-item--green">
-          <p class="cred-label cinzel">PRE</p>
-          <p class="cred-sub cinzel">Instructor</p>
-        </div>
-
-        <div class="cred-item">
-          <p class="cred-label cinzel">JSECC</p>
-          <p class="cred-sub cinzel">Certified</p>
-        </div>
-        <div class="cred-item">
-          <p class="cred-label cinzel">Big 5</p>
-          <p class="cred-sub cinzel">Certified</p>
-        </div>
-        <div class="cred-item">
-          <p class="cred-label cinzel">HRD Corp</p>
-          <p class="cred-sub cinzel">Accredited Trainer</p>
-        </div>
-        
-        <div class="cred-item">
- 		 <p class="cred-label cinzel">BSc (Hons) Nursing</p>
- 		 <p class="cred-sub cinzel">Human Health Perspective</p>
-		</div>
-
-        <div class="cred-item">
-          <p class="cred-label cinzel">Executive MBA</p>
-          <p class="cred-sub cinzel">Business Strategy</p>
-        </div>
-        <div class="cred-item">
-          <p class="cred-label cinzel">Exec. Doctorate L&amp;D</p>
-          <p class="cred-sub cinzel">Learning &amp; Development</p>
-        </div>
-        <div class="cred-item">
-          <p class="cred-label cinzel">2026</p>
-          <p class="cred-sub cinzel">Author of The Transformation Architect™</p>
-        </div>
-      </div>
-    </section>
-
+	<section id="credentials">
+	  <div class="cred-grid">
+	    <div class="cred-item cred-item--green">
+	      <p class="cred-label cinzel">CReC</p>
+	      <p class="cred-sub cinzel">Certified Resilience Coach</p>
+	    </div>
+	
+	    <div class="cred-item cred-item--green">
+	      <p class="cred-label cinzel">CReW</p>
+	      <p class="cred-sub cinzel">Implementation Partner</p>
+	    </div>
+	
+	    <div class="cred-item cred-item--green">
+	      <p class="cred-label cinzel">PRE</p>
+	      <p class="cred-sub cinzel">Instructor</p>
+	    </div>
+	
+	    <div class="cred-item">
+	      <p class="cred-label cinzel">JSECC</p>
+	      <p class="cred-sub cinzel">Certified</p>
+	    </div>
+	
+	    <div class="cred-item">
+	      <p class="cred-label cinzel">Big 5</p>
+	      <p class="cred-sub cinzel">Certified</p>
+	    </div>
+	
+	    <div class="cred-item">
+	      <p class="cred-label cinzel">HRD Corp</p>
+	      <p class="cred-sub cinzel">Accredited Trainer</p>
+	    </div>
+	
+	    <div class="cred-item">
+	      <p class="cred-label cinzel">BSc (Hons) Nursing</p>
+	      <p class="cred-sub cinzel">Human Health Perspective</p>
+	    </div>
+	
+	    <div class="cred-item">
+	      <p class="cred-label cinzel">Executive MBA</p>
+	      <p class="cred-sub cinzel">Business Strategy</p>
+	    </div>
+	
+	    <div class="cred-item">
+	      <p class="cred-label cinzel">Exec. Doctorate L&amp;D</p>
+	      <p class="cred-sub cinzel">Learning &amp; Development</p>
+	    </div>
+	
+	    <div class="cred-item" style="grid-column: 2 / 3;">
+	      <p class="cred-label cinzel">2026</p>
+	      <p class="cred-sub cinzel">Author of The Transformation Architect™</p>
+	    </div>
+	  </div>
+	</section>
+	  
     <!-- HRD Corp Accredited Trainer -->
     <section class="hrd-trainer-section">
       <img
