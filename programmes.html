@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en-GB">
 <head>
   <meta charset="UTF-8" />
@@ -126,6 +127,9 @@
     .d4 {
       animation-delay: 0.55s;
     }
+    .d5 {
+      animation-delay: 0.7s;
+    }
 
     .cinzel {
       font-family: 'Cinzel', serif;
@@ -173,7 +177,7 @@
       transition: color 0.3s;
     }
     .nav-links a:hover,
-    .nav-links a.active {
+    .nav-links a.current {
       color: var(--gold);
     }
     .nav-hamburger {
@@ -222,6 +226,15 @@
     .btn-outline:hover {
       background: var(--gold);
       color: var(--bg);
+    }
+    .btn-fill {
+      background: var(--gold);
+      border: 1px solid var(--gold);
+      color: var(--bg);
+    }
+    .btn-fill:hover {
+      background: transparent;
+      color: var(--gold);
     }
     .btn-terracotta {
       background: transparent;
@@ -283,12 +296,23 @@
       font-style: italic;
       color: var(--text-muted);
     }
-    #page-hero .hero-desc {
-      font-size: 20px;
-      line-height: 1.8;
-      color: #B0A898;
+    #page-hero .hero-sub {
+      font-size: clamp(20px, 2.4vw, 26px);
       font-weight: 300;
+      font-style: italic;
+      color: var(--text-muted);
+      margin-bottom: 18px;
+      line-height: 1.5;
       max-width: 860px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    #page-hero .hero-desc {
+      font-size: 17px;
+      line-height: 1.7;
+      color: #9A9080;
+      font-weight: 300;
+      max-width: 760px;
       margin: 0 auto 40px;
     }
     .hero-btns {
@@ -704,12 +728,7 @@
       background: var(--gold-dim);
       margin: 16px 0;
     }
-    /* Fix long labels overlapping descriptions by wrapping rows */
     .prog-card-row {
-      /* Each row uses flexbox so the label and value line up neatly. When the
-         row wraps onto multiple lines (e.g. on smaller screens or when the
-         label is long), the value will flow below the label without
-         overlapping. */
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
@@ -719,10 +738,6 @@
       color: var(--text-muted);
     }
     .prog-card-row-label {
-      /* Give the label its own space. The min‑width prevents long labels
-         from colliding with the value. Setting flex-basis ensures the
-         label does not shrink below its content width and pushes the
-         value onto the next line when necessary. */
       font-family: 'Cinzel', serif;
       font-size: 11px;
       letter-spacing: 0.15em;
@@ -733,8 +748,6 @@
       white-space: normal;
     }
     .prog-card-row-value {
-      /* Allow the value to take up the remaining horizontal space and wrap
-         as needed. */
       font-weight: 300;
       flex: 1 1 0;
     }
@@ -1432,6 +1445,7 @@
       display: none !important;
     }
   </style>
+
 </head>
 
 <body>
@@ -1442,9 +1456,8 @@
     </button>
     <ul class="nav-links">
       <li><a href="about.html">About</a></li>
-      <li><a href="programmes.html" class="active">Programmes</a></li>
+      <li><a href="programmes.html" class="current">Programmes</a></li>
       <li><a href="index.html#methodology">Methodology</a></li>
-      <li><a href="about.html#story">Story</a></li>
       <li><a href="#cta">Contact</a></li>
     </ul>
   </nav>
@@ -1455,11 +1468,14 @@
     <h1 class="cormorant reveal d2">
       Build a Workforce That<br /><em>Performs Under Pressure</em>
     </h1>
-    <p class="hero-desc reveal d3">
-      Building calmer leaders, steadier teams, and sustainable performance for organisations facing stress, burnout risk, leadership pressure, change fatigue, and performance volatility.
+    <p class="hero-sub cormorant reveal d3">
+      Building calmer leaders, steadier teams, and sustainable performance under pressure.
     </p>
-    <div class="hero-btns reveal d4">
-      <a href="#cta" class="btn btn-terracotta">Request Proposal</a>
+    <p class="hero-desc reveal d4">
+      For organisations facing stress, burnout risk, leadership pressure, change fatigue, and performance volatility.
+    </p>
+    <div class="hero-btns reveal d5">
+      <a href="#cta" class="btn btn-fill">Request Proposal</a>
       <a href="#filter-bar" class="btn btn-outline">Browse Solutions</a>
     </div>
   </section>
@@ -1492,98 +1508,101 @@
         </p>
       </div>
 
-      <div class="ca-block">
-        <span class="ca-block-label">Where We Fit</span>
-        <h3>Your PRisMA Journey</h3>
-        <p class="ca-block-desc">
-          The PRisMA framework follows a three-stage process. Our programmes are specifically designed to
-          support <strong>Stage III: Risk Control</strong>.
-        </p>
-        <div class="ca-stages">
-          <div class="ca-stage ca-stage--dim">
-            <span class="ca-stage-num">Stage I &amp; II</span>
-            <span class="ca-stage-title">Screening &amp; Assessment</span>
-            <p>Your internal Psychosocial Trained Person (PTP) or OHD identifies workplace hazards using tools like the LEO26 survey.</p>
-          </div>
-          <div class="ca-stage ca-stage--active">
-            <span class="ca-stage-badge">Our Speciality</span>
-            <span class="ca-stage-num">Stage III</span>
-            <span class="ca-stage-title">Risk Control Support</span>
-            <p>Once hazards are identified, the law requires a PRiMA (Psychosocial Risk Management Action Plan). This is where we step in.</p>
-          </div>
-        </div>
+```
+  <div class="ca-block">
+    <span class="ca-block-label">Where We Fit</span>
+    <h3>Your PRisMA Journey</h3>
+    <p class="ca-block-desc">
+      The PRisMA framework follows a three-stage process. Our programmes are specifically designed to
+      support <strong>Stage III: Risk Control</strong>.
+    </p>
+    <div class="ca-stages">
+      <div class="ca-stage ca-stage--dim">
+        <span class="ca-stage-num">Stage I &amp; II</span>
+        <span class="ca-stage-title">Screening &amp; Assessment</span>
+        <p>Your internal Psychosocial Trained Person (PTP) or OHD identifies workplace hazards using tools like the LEO26 survey.</p>
       </div>
-
-      <div class="ca-block">
-        <span class="ca-block-label">Bridging the Gap</span>
-        <h3>From &#x201C;Assessment&#x201D; to &#x201C;Action&#x201D;</h3>
-        <p class="ca-block-desc">
-          Under the PRiMA Action Plan, employers must implement controls to mitigate identified hazards.
-          Our programmes serve as <strong>Evidence-Based Administrative Controls</strong> for the most common workplace stressors.
-        </p>
-        <div class="ca-hazards">
-          <div class="ca-hazard">
-            <span class="ca-hazard-name">High Work Demands</span>
-            <p>Mitigation through energy management and cognitive load training.</p>
-          </div>
-          <div class="ca-hazard">
-            <span class="ca-hazard-name">Low Job Control</span>
-            <p>Building adaptability and internal locus of control.</p>
-          </div>
-          <div class="ca-hazard">
-            <span class="ca-hazard-name">Poor Workplace Relationships</span>
-            <p>Enhancing EQ and assertive communication to prevent conflict.</p>
-          </div>
-          <div class="ca-hazard">
-            <span class="ca-hazard-name">Role Ambiguity</span>
-            <p>Developing strategic focus and proactive communication.</p>
-          </div>
-        </div>
+      <div class="ca-stage ca-stage--active">
+        <span class="ca-stage-badge">Our Speciality</span>
+        <span class="ca-stage-num">Stage III</span>
+        <span class="ca-stage-title">Risk Control Support</span>
+        <p>Once hazards are identified, the law requires a PRiMA (Psychosocial Risk Management Action Plan). This is where we step in.</p>
       </div>
-
-      <div class="ca-block">
-        <span class="ca-block-label">EPC23 Alignment</span>
-        <h3>How Our Programmes Map to EPC23</h3>
-        <p class="ca-block-desc">
-          Every programme on this page satisfies <strong>EPC23 items 16 &amp; 20</strong> &mdash; the Training &amp; Education
-          controls mandated in your PRiMA Action Plan. Individual programmes extend further into Social Support,
-          Control, Workload, Job Matching, and Working Environment themes. The specific LEO26 components (JC / WD / JS),
-          EPC23 items, and PRiMA themes each programme addresses are listed directly on every card below.
-        </p>
-        <p class="ca-block-desc" style="margin-bottom: 0;">
-          <strong>Scope note.</strong> Training-based controls address capability-building hazards. A complete PRiMA
-          response may also require structural or policy controls &mdash; for example EPC23 items 2 (complaint-handling
-          fairness), 9 (job security), 11 (staffing levels), 19 (employee voice), and 22 (workplace violence policy).
-          These typically require HR policy work alongside training. We are happy to flag these in your scoping
-          conversation.
-        </p>
-      </div>
-
-      <div class="ca-block">
-        <span class="ca-block-label">Why Partner With Us</span>
-        <div class="ca-benefits">
-          <div class="ca-benefit">
-            <span class="ca-benefit-title">HRD Corp Claimable</span>
-            <p>High-impact interventions that utilise your training levy.</p>
-          </div>
-          <div class="ca-benefit">
-            <span class="ca-benefit-title">Audit-Ready Documentation</span>
-            <p>Attendance and impact data to help your Safety Committee document &#x201C;Duty of Care&#x201D; for DOSH audits.</p>
-          </div>
-          <div class="ca-benefit">
-            <span class="ca-benefit-title">Expert Delivery</span>
-            <p>Led by an HRD Corp Accredited Trainer specialising in workplace resilience.</p>
-          </div>
-        </div>
-      </div>
-
-      <p class="disclaimer">
-        Note on Compliance: Formal PRisMA assessments (Stage I &amp; II) should be conducted by a PTP. Our programmes
-        focus on Stage III implementation by providing the resilience training and capability building mandated in your
-        PRiMA Action Plan. Our services are organisational interventions and do not constitute clinical assessment or
-        medical treatment.
-      </p>
     </div>
+  </div>
+
+  <div class="ca-block">
+    <span class="ca-block-label">Bridging the Gap</span>
+    <h3>From &#x201C;Assessment&#x201D; to &#x201C;Action&#x201D;</h3>
+    <p class="ca-block-desc">
+      Under the PRiMA Action Plan, employers must implement controls to mitigate identified hazards.
+      Our programmes serve as <strong>Evidence-Based Administrative Controls</strong> for the most common workplace stressors.
+    </p>
+    <div class="ca-hazards">
+      <div class="ca-hazard">
+        <span class="ca-hazard-name">High Work Demands</span>
+        <p>Mitigation through energy management and cognitive load training.</p>
+      </div>
+      <div class="ca-hazard">
+        <span class="ca-hazard-name">Low Job Control</span>
+        <p>Building adaptability and internal locus of control.</p>
+      </div>
+      <div class="ca-hazard">
+        <span class="ca-hazard-name">Poor Workplace Relationships</span>
+        <p>Enhancing EQ and assertive communication to prevent conflict.</p>
+      </div>
+      <div class="ca-hazard">
+        <span class="ca-hazard-name">Role Ambiguity</span>
+        <p>Developing strategic focus and proactive communication.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="ca-block">
+    <span class="ca-block-label">EPC23 Alignment</span>
+    <h3>How Our Programmes Map to EPC23</h3>
+    <p class="ca-block-desc">
+      Every programme on this page satisfies <strong>EPC23 items 16 &amp; 20</strong> &mdash; the Training &amp; Education
+      controls mandated in your PRiMA Action Plan. Individual programmes extend further into Social Support,
+      Control, Workload, Job Matching, and Working Environment themes. The specific LEO26 components (JC / WD / JS),
+      EPC23 items, and PRiMA themes each programme addresses are listed directly on every card below.
+    </p>
+    <p class="ca-block-desc" style="margin-bottom: 0;">
+      <strong>Scope note.</strong> Training-based controls address capability-building hazards. A complete PRiMA
+      response may also require structural or policy controls &mdash; for example EPC23 items 2 (complaint-handling
+      fairness), 9 (job security), 11 (staffing levels), 19 (employee voice), and 22 (workplace violence policy).
+      These typically require HR policy work alongside training. We are happy to flag these in your scoping
+      conversation.
+    </p>
+  </div>
+
+  <div class="ca-block">
+    <span class="ca-block-label">Why Partner With Us</span>
+    <div class="ca-benefits">
+      <div class="ca-benefit">
+        <span class="ca-benefit-title">HRD Corp Claimable</span>
+        <p>High-impact interventions that utilise your training levy.</p>
+      </div>
+      <div class="ca-benefit">
+        <span class="ca-benefit-title">Audit-Ready Documentation</span>
+        <p>Attendance and impact data to help your Safety Committee document &#x201C;Duty of Care&#x201D; for DOSH audits.</p>
+      </div>
+      <div class="ca-benefit">
+        <span class="ca-benefit-title">Expert Delivery</span>
+        <p>Led by an HRD Corp Accredited Trainer specialising in workplace resilience.</p>
+      </div>
+    </div>
+  </div>
+
+  <p class="disclaimer">
+    Note on Compliance: Formal PRisMA assessments (Stage I &amp; II) should be conducted by a PTP. Our programmes
+    focus on Stage III implementation by providing the resilience training and capability building mandated in your
+    PRiMA Action Plan. Our services are organisational interventions and do not constitute clinical assessment or
+    medical treatment.
+  </p>
+</div>
+```
+
   </section>
 
   <div id="filter-bar">
@@ -2013,7 +2032,7 @@
           Ideal for teams under sustained pressure who need measurable change, clearer habits, and stronger manager confidence — not just inspiration.
         </p>
         <div class="flagship-btns">
-          <a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-terracotta" target="_blank" rel="noopener noreferrer"
+          <a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-fill" target="_blank" rel="noopener noreferrer"
             >Book consultation</a
           >
           <a href="#training" class="btn btn-outline">See 4‑hour options</a>
@@ -2155,7 +2174,7 @@
       <strong>current pressure points</strong>. I’ll recommend the most suitable pathway for measurable resilience improvement.
     </p>
     <div class="cta-btns">
-      <a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-terracotta" target="_blank" rel="noopener noreferrer"
+      <a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-fill" target="_blank" rel="noopener noreferrer"
         >Request Proposal</a
       >
       <a href="index.html" class="btn btn-outline">Back to Home</a>
@@ -2255,5 +2274,6 @@
       });
     });
   </script>
+
 </body>
 </html>
