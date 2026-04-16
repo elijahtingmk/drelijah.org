@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en-GB">
 <head>
   <meta charset="UTF-8" />
@@ -6,12 +7,12 @@
   <title>About Dr Elijah | Workplace Resilience Solutions</title>
   <meta
     name="description"
-    content="Learn how Dr Elijah’s journey from nursing, ministry, and leadership development shaped his work in workplace resilience solutions for organisations under pressure."
+    content="Learn how Dr Elijah’s journey from nursing, pastoral practice, and leadership development shaped his work in workplace resilience solutions for organisations under pressure."
   />
   <meta property="og:title" content="About Dr Elijah | Workplace Resilience Solutions" />
   <meta
     property="og:description"
-    content="From nursing and ministry to workplace resilience solutions — the story behind Dr Elijah’s human-centred, evidence-based approach."
+    content="From nursing and pastoral practice to workplace resilience solutions — the story behind Dr Elijah’s human-centred, evidence-based approach."
   />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://drelijah.org/about.html" />
@@ -22,7 +23,7 @@
   <meta name="twitter:title" content="About Dr Elijah | Workplace Resilience Solutions" />
   <meta
     name="twitter:description"
-    content="From nursing and ministry to workplace resilience solutions — the story behind Dr Elijah’s human-centred, evidence-based approach."
+    content="From nursing and pastoral practice to workplace resilience solutions — the story behind Dr Elijah’s human-centred, evidence-based approach."
   />
   <meta name="twitter:image" content="https://drelijah.org/assets/images/og-image.jpg" />
 
@@ -124,6 +125,7 @@
       transition: color 0.3s;
     }
     .nav-links a:hover { color: var(--gold); }
+    .nav-links a.current { color: var(--gold); }
     .nav-hamburger {
       display: none;
       background: none;
@@ -156,8 +158,8 @@
       display: inline-block;
       transition: all 0.3s ease;
     }
-    .btn-terracotta { background: transparent; border: 1px solid var(--terracotta); color: var(--terracotta); }
-    .btn-terracotta:hover { background: var(--terracotta); color: var(--bg); }
+    .btn-fill { background: var(--gold); border: 1px solid var(--gold); color: var(--bg); }
+    .btn-fill:hover { background: transparent; color: var(--gold); }
     .btn-outline { background: transparent; border: 1px solid var(--gold); color: var(--gold); }
     .btn-outline:hover { background: var(--gold); color: var(--bg); }
 
@@ -202,7 +204,7 @@
       line-height: 1.9;
       color: var(--text-muted);
       font-weight: 300;
-      margin-bottom: 16px;
+      margin-bottom: 18px;
     }
 
     /* ── JOURNEY ── */
@@ -262,13 +264,19 @@
       font-weight: 300;
       margin-bottom: 24px;
     }
-    .mission p:last-child {
+    .mission p {
       max-width: 760px;
-      margin: 0 auto;
+      margin: 0 auto 16px;
       font-size: 19px;
       line-height: 1.9;
       color: var(--text-muted);
       font-weight: 300;
+    }
+    .mission p:last-child { margin-bottom: 0; }
+    .mission p.lead {
+      font-size: 22px;
+      color: var(--text);
+      font-style: italic;
     }
 
     /* ── WHY ORGANISATIONS ENGAGE ME ── */
@@ -457,18 +465,19 @@
       .footer-social { flex-wrap: wrap; justify-content: center; gap: 16px; }
     }
   </style>
+
 </head>
 
 <body>
 
   <!-- NAV -->
+
   <nav id="nav">
     <a href="index.html" class="nav-logo">DR ELIJAH</a>
     <ul class="nav-links">
-      <li><a href="about.html">About</a></li>
+      <li><a href="about.html" class="current">About</a></li>
       <li><a href="programmes.html">Programmes</a></li>
       <li><a href="index.html#methodology">Methodology</a></li>
-      <li><a href="#story" style="color:var(--gold);">Story</a></li>
       <li><a href="#about-cta">Contact</a></li>
     </ul>
     <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
@@ -477,100 +486,115 @@
   </nav>
 
   <!-- HERO / INTRO -->
+
   <section class="about-hero">
-    <img src="assets/images/about-photo.jpg" alt="Dr Elijah Ting" class="about-photo reveal" />
+    <img src="assets/images/about-photo.jpg" alt="Dr Elijah Ting, Workplace Resilience Specialist" title="Dr Elijah Ting — Sibu, Sarawak" class="about-photo reveal" />
 
-    <div class="about-intro reveal d1">
-      <p class="section-label">ABOUT</p>
-      <h1 class="cormorant">Dr Elijah</h1>
-      <p class="subtitle cormorant">Evidence-based workplace resilience for organisations under pressure</p>
+```
+<div class="about-intro reveal d1">
+  <p class="section-label">ABOUT</p>
+  <h1 class="cormorant">Dr Elijah</h1>
+  <p class="subtitle cormorant">Evidence-based workplace resilience for organisations under pressure</p>
 
-     <p>
-        I help organisations build calmer leaders, steadier teams, and sustainable performance under pressure.
-      </p>
-      <p>
-        My foundation began in <strong>nursing</strong>, where I learned to stay composed when stakes were high and to recognise pressure early. In <strong>ministry</strong>, I deepened my understanding of meaning, suffering, and human connection.
-      </p>
-      <p>
-        An <strong>Executive MBA</strong> and an <strong>Executive Doctorate in Learning &amp; Development</strong> strengthened my work in leadership, adult learning, and measurable capability building. Today, I bring these strands together through evidence-based workplace resilience solutions for organisations facing stress, change, and performance pressure.
-      </p>
-    </div>
+  <p>
+    I help organisations build calmer leaders, steadier teams, and sustainable performance under pressure — through evidence-based training, practical skill-building, and measurable capability development.
+  </p>
+  <p>
+    My foundation began in <strong>nursing</strong>, where I learned to stay composed when stakes were high. Through years of <strong>pastoral practice</strong>, I deepened my understanding of meaning, suffering, and human connection. An <strong>Executive MBA</strong> and an <strong>Executive Doctorate in Learning &amp; Development</strong> then strengthened my work in leadership, adult learning, and measurable capability building.
+  </p>
+</div>
+```
+
   </section>
 
   <!-- JOURNEY TIMELINE -->
+
   <section class="journey" id="story">
     <div class="journey-inner">
       <p class="section-label" style="text-align:center;">THE JOURNEY</p>
       <h2 class="cormorant">From Bedside to Boardroom</h2>
       <p class="journey-intro">Each step has taught me how to help leaders and teams stay grounded, communicate more clearly, and perform more steadily under pressure.</p>
 
-      <div class="journey-step">
-        <p class="journey-era">Nursing</p>
-        <p class="journey-desc"><strong>BSc (Hons) Nursing</strong> — clinical care, holistic assessment, and the discipline of staying composed when lives depend on it.</p>
-      </div>
+```
+  <div class="journey-step">
+    <p class="journey-era">Nursing</p>
+    <p class="journey-desc"><strong>BSc (Hons) Nursing</strong> — clinical care, holistic assessment, and the discipline of staying composed when lives depend on it.</p>
+  </div>
 
-      <div class="journey-step">
-        <p class="journey-era">Ministry</p>
-        <p class="journey-desc"><strong>Master of Divinity</strong> — pastoral theology, meaning-making, and years of walking with people through loss, change, and restoration.</p>
-      </div>
+  <div class="journey-step">
+    <p class="journey-era">Ministry</p>
+    <p class="journey-desc"><strong>Master of Divinity</strong> — pastoral theology, meaning-making, and years of walking with people through loss, change, and restoration.</p>
+  </div>
 
-      <div class="journey-step">
-        <p class="journey-era">Business</p>
-        <p class="journey-desc"><strong>Executive MBA</strong> — organisational strategy, financial stewardship, and the structures that make sustainable growth possible.</p>
-      </div>
+  <div class="journey-step">
+    <p class="journey-era">Business</p>
+    <p class="journey-desc"><strong>Executive MBA</strong> — organisational strategy, financial stewardship, and the structures that make sustainable growth possible.</p>
+  </div>
 
-      <div class="journey-step">
-        <p class="journey-era">Research</p>
-        <p class="journey-desc"><strong>Executive Doctorate in L&amp;D</strong> — doctoral-level work in learning, adult development, communication, and leadership effectiveness.</p>
-      </div>
+  <div class="journey-step">
+    <p class="journey-era">Research</p>
+    <p class="journey-desc"><strong>Executive Doctorate in L&amp;D</strong> — doctoral-level work in learning, adult development, communication, and leadership effectiveness.</p>
+  </div>
 
-      <div class="journey-step">
-        <p class="journey-era">Resilience</p>
-        <p class="journey-desc"><strong>Certified Resilience Coach (CReC)</strong> — now delivering PR6-powered resilience programmes with measurement, practical skill-building, and sustained reinforcement as an <strong>HRD Corp Accredited Trainer</strong> in Malaysia.</p>
-      </div>
-    </div>
+  <div class="journey-step">
+    <p class="journey-era">Resilience</p>
+    <p class="journey-desc"><strong>Certified Resilience Coach (CReC)</strong> — now delivering PR6-powered resilience programmes with assessment, practical skill-building, and sustained reinforcement as an <strong>HRD Corp Accredited Trainer</strong> in Malaysia.</p>
+  </div>
+</div>
+```
+
   </section>
 
   <!-- MISSION -->
+
   <section class="mission">
     <p class="section-label">MY MISSION</p>
     <h2 class="cormorant">Human-Centred Resilience</h2>
+    <p class="lead cormorant">
+      Resilience is not only surviving pressure — it is sustaining clarity, energy, leadership, and performance through it.
+    </p>
     <p class="cormorant">
-      I help organisations build resilience that lasts through evidence-based science, practical skill-building, and human-centred communication. Resilience is not only surviving pressure — it is sustaining clarity, energy, leadership, and performance through it.
+      I help organisations build resilience that lasts through evidence-based science, practical skill-building, and human-centred communication.
     </p>
   </section>
 
   <!-- WHY ORGANISATIONS ENGAGE ME -->
+
   <section class="engage-reasons">
     <div class="engage-reasons-inner">
       <p class="section-label">WHY ORGANISATIONS ENGAGE ME</p>
       <h2 class="cormorant">Human Insight. Business Relevance. Practical Application.</h2>
 
-      <div class="engage-grid">
-        <div class="engage-card">
-          <p class="engage-title">Human-Centred Foundation</p>
-          <p class="engage-text">Grounded in clinical care, pastoral practice, and real-world people work — not theory alone.</p>
-        </div>
-
-        <div class="engage-card">
-          <p class="engage-title">Corporate &amp; Academic Depth</p>
-          <p class="engage-text">Strengthened by executive business training and doctoral-level learning and development work.</p>
-        </div>
-
-        <div class="engage-card">
-          <p class="engage-title">Practical Workplace Resilience</p>
-          <p class="engage-text">Focused on skill-building, leadership steadiness, and measurable capability under pressure.</p>
-        </div>
-      </div>
+```
+  <div class="engage-grid">
+    <div class="engage-card">
+      <p class="engage-title">Human-Centred Foundation</p>
+      <p class="engage-text">Grounded in clinical care, pastoral practice, and real-world people work — not theory alone.</p>
     </div>
+
+    <div class="engage-card">
+      <p class="engage-title">Corporate &amp; Academic Depth</p>
+      <p class="engage-text">Strengthened by executive business training and doctoral-level learning and development work.</p>
+    </div>
+
+    <div class="engage-card">
+      <p class="engage-title">Practical Workplace Resilience</p>
+      <p class="engage-text">Focused on skill-building, leadership steadiness, and measurable capability under pressure.</p>
+    </div>
+  </div>
+</div>
+```
+
   </section>
 
   <!-- HRD Corp Accredited Trainer -->
+
   <section class="hrd-trainer-section">
     <img src="/assets/images/hrd-corp-accredited-trainer.png" alt="HRD Corp Accredited Trainer" />
   </section>
 
   <!-- CTA -->
+
   <section class="about-cta" id="about-cta">
     <p class="section-label">LET'S DISCUSS YOUR PRESSURE POINTS</p>
     <h2 class="cormorant">Ready to Build<br><em>Resilience That Lasts?</em></h2>
@@ -578,13 +602,14 @@
       Share your team size, roles, timeline, and current pressure points. I’ll recommend the most suitable pathway for measurable resilience improvement.
     </p>
     <div class="about-cta-btns">
-      <a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-terracotta" target="_blank" rel="noopener noreferrer">Request Proposal</a>
+      <a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-fill" target="_blank" rel="noopener noreferrer">Request Proposal</a>
       <a href="programmes.html" class="btn btn-outline">Browse Solutions</a>
     </div>
     <p class="about-cta-email">Or email directly: <a href="mailto:elijah@DrElijah.org">elijah@DrElijah.org</a></p>
   </section>
 
   <!-- FOOTER -->
+
   <footer>
     <div class="footer-top">
       <p class="footer-brand cinzel">DR ELIJAH · WORKPLACE RESILIENCE</p>
@@ -599,7 +624,7 @@
       <div class="footer-divider"></div>
       <a href="https://x.com/DrElijahTing" target="_blank" rel="noopener noreferrer">X</a>
     </div>
-    <p class="footer-copy">&copy; 2026 Dr Elijah. All rights reserved.</p>
+    <p class="footer-copy">&copy; 2026 Ting Moi Kieng (Dr Elijah). All rights reserved.</p>
     <p class="footer-powered">Evidence-Based Workplace Resilience Solutions</p>
   </footer>
 
