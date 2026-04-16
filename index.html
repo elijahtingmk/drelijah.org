@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en-GB">
 <head>
   <meta charset="UTF-8" />
@@ -6,8 +7,8 @@
 <title>Workplace Resilience Solutions | Dr Elijah</title>
 
 <meta
-  name="description"
-  content="Evidence-based workplace resilience solutions for organisations under pressure. Build calmer leaders, steadier teams, and sustainable performance through workshops, intensives, and resilience support."
+name="description"
+content="Evidence-based workplace resilience solutions for organisations under pressure. Build calmer leaders, steadier teams, and sustainable performance through workshops, intensives, and resilience support."
 />
 
 <meta property="og:title" content="Workplace Resilience Solutions | Dr Elijah" />
@@ -30,6 +31,7 @@
   <meta name="twitter:image" content="https://drelijah.org/assets/images/og-image.jpg" />
 
   <!-- Favicon -->
+
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230E0D0B'/%3E%3Crect x='1' y='1' width='30' height='30' rx='5' fill='none' stroke='%23C8A96E' stroke-width='0.75'/%3E%3Ctext x='16' y='23' font-family='Georgia%2C serif' font-size='20' font-weight='400' fill='%23C8A96E' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E" />
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -263,16 +265,16 @@
       font-weight: 300;
       font-style: italic;
       color: var(--text-muted);
-      margin-bottom: 28px;
+      margin-bottom: 20px;
       letter-spacing: 0.03em;
       max-width: 840px;
     }
 
 	.hero-desc {
-	  max-width: 700px;
-	  font-size: 18px;
-      line-height: 1.8;
-      color:#B0A898;
+	  max-width: 720px;
+	  font-size: 17px;
+      line-height: 1.7;
+      color:#9A9080;
       font-weight: 300;
       margin-bottom: 40px;
     }
@@ -360,40 +362,63 @@
 
 	/* CREDENTIALS */
 	#credentials { padding: 80px 48px; }
-	
+
+	.cred-header {
+	  text-align: center;
+	  margin-bottom: 56px;
+	}
+	.cred-header h2 {
+	  font-size: clamp(28px, 3.5vw, 40px);
+	  font-weight: 300;
+	}
+
+	.cred-tier {
+	  max-width: 980px;
+	  margin: 0 auto 48px;
+	}
+	.cred-tier:last-child { margin-bottom: 0; }
+
+	.cred-tier-label {
+	  font-family: 'Cinzel', serif;
+	  font-size: 11px;
+	  letter-spacing: 0.35em;
+	  color: var(--gold);
+	  text-transform: uppercase;
+	  text-align: center;
+	  margin-bottom: 8px;
+	}
+	.cred-tier-rule {
+	  width: 40px;
+	  height: 1px;
+	  background: var(--gold-dim);
+	  margin: 0 auto 28px;
+	}
+
 	.cred-grid {
 	  display: grid;
-	  grid-template-columns: repeat(3, 1fr);
-	  gap: 48px 40px;
-	  max-width: 980px;
-	  margin: 0 auto;
+	  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+	  gap: 32px 28px;
 	}
-	
+
 	.cred-item { text-align: center; }
-	
+
 	.cred-label {
 	  font-family: 'Cinzel', serif;
-	  font-size: 16px;
+	  font-size: 15px;
 	  color: var(--gold);
 	  margin-bottom: 6px;
 	}
-	
+
 	.cred-sub {
 	  font-size: 14px;
 	  color: var(--text-dim);
-	  letter-spacing: 0.1em;
-	  font-family: 'Cinzel', serif;
+	  letter-spacing: 0.05em;
+	  font-family: 'Cormorant Garamond', serif;
+	  line-height: 1.5;
 	}
-	
-	.cred-item--green .cred-label {
+
+	.cred-tier--green .cred-label {
 	  color: var(--green-muted);
-	}
-	
-	/* FINAL BOOK ITEM MOBILE FIX */
-	@media (max-width: 768px) {
-	  #credentials .cred-item[style*="grid-column: 2 / 3;"] {
-	    grid-column: 1 / -1 !important;
-	  }
 	}
 
     /* HRD badge */
@@ -409,42 +434,39 @@
     }
     .hrd-trainer-section img:hover { opacity: 1; }
 
-    /* TESTIMONIALS */
-    #testimonials { padding: 80px 48px; background: var(--bg-alt); }
-    .testimonials-inner { max-width: 900px; margin: 0 auto; text-align: center; }
-    .testimonials-inner h2 { font-size: clamp(28px, 3.5vw, 40px); font-weight: 300; margin-bottom: 48px; }
-    .testimonial-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
-    .testimonial-card {
+    /* WHAT TO EXPECT (was TESTIMONIALS) */
+    #what-to-expect { padding: 80px 48px; background: var(--bg-alt); }
+    .wte-inner { max-width: 960px; margin: 0 auto; text-align: center; }
+    .wte-inner h2 { font-size: clamp(28px, 3.5vw, 40px); font-weight: 300; margin-bottom: 48px; }
+    .wte-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+    .wte-card {
       background: var(--bg-card);
       border: 1px solid var(--border);
       padding: 36px;
       text-align: left;
-      position: relative;
     }
-    .testimonial-card::before {
-      content: '"';
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 48px;
-      color: var(--gold-dim);
-      line-height: 1;
-      position: absolute;
-      top: 20px;
-      left: 24px;
+    .wte-card-label {
+      font-family: 'Cinzel', serif;
+      font-size: 11px;
+      letter-spacing: 0.25em;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 14px;
     }
-    .testimonial-text {
+    .wte-text {
       font-size: 17px;
       line-height: 1.8;
       color: var(--text-muted);
       font-weight: 300;
-      font-style: italic;
-      margin-bottom: 16px;
-      padding-top: 20px;
     }
-    .testimonial-attr {
+    .wte-tags {
       font-family: 'Cinzel', serif;
       font-size: 12px;
       letter-spacing: 0.15em;
       color: var(--text-dim);
+      margin-top: 20px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
     }
 
     /* CTA */
@@ -533,7 +555,7 @@
 	   #hero { padding: 100px 24px 48px; }
 	   .scroll-hint { display: none; }
 
-      #roles, #methodology, #flagship, #quote, #credentials, #testimonials, #cta {
+      #roles, #methodology, #flagship, #quote, #credentials, #what-to-expect, #cta {
         padding-left: 24px;
         padding-right: 24px;
       }
@@ -541,8 +563,8 @@
       .framework-item { flex-direction: column; gap: 16px; }
       .framework-num { min-width: auto; font-size: 28px; }
       .flagship-inner { grid-template-columns: 1fr; gap: 48px; }
-      .cred-grid { grid-template-columns: repeat(2, 1fr); gap: 36px 24px; }
-      .testimonial-grid { grid-template-columns: 1fr; }
+      .cred-grid { grid-template-columns: repeat(2, 1fr); gap: 28px 20px; }
+      .wte-grid { grid-template-columns: 1fr; }
 
       .section-label { font-size: 16px; letter-spacing: 0.2em; }
       .btn { font-size: 15px; padding: 16px 32px; }
@@ -565,19 +587,20 @@
       .hrd-trainer-section img { width: 100px; }
     }
   </style>
+
 </head>
 
 <body>
   <a href="#main-content" class="skip-link">Skip to content</a>
 
   <!-- NAV -->
+
   <nav id="nav">
     <a href="#hero" class="nav-logo">DR ELIJAH</a>
     <ul class="nav-links">
       <li><a href="about.html">About</a></li>
       <li><a href="programmes.html">Programmes</a></li>
       <li><a href="#methodology">Methodology</a></li>
-      <li><a href="about.html#story">Story</a></li>
       <li><a href="#cta">Contact</a></li>
     </ul>
     <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
@@ -590,22 +613,24 @@
     <section id="hero">
       <div class="hero-glow"></div>
 
-      <div class="hero-side" style="top:20%; left:8%;">
-        <div class="gold-line-v" style="height:80px;"></div>
-        <span class="hero-side-text">SIBU · SARAWAK · MALAYSIA</span>
-      </div>
+```
+  <div class="hero-side" style="top:20%; left:8%;">
+    <div class="gold-line-v" style="height:80px;"></div>
+    <span class="hero-side-text">SIBU · SARAWAK · MALAYSIA</span>
+  </div>
 
-      <div class="hero-side" style="bottom:20%; right:8%;">
-        <span class="hero-side-text">PERFORM · RECOVER · THRIVE</span>
-        <div class="gold-line-v" style="height:80px;"></div>
-      </div>
+  <div class="hero-side" style="bottom:20%; right:8%;">
+    <span class="hero-side-text">PERFORM · RECOVER · THRIVE</span>
+    <div class="gold-line-v" style="height:80px;"></div>
+  </div>
 
-      <div class="hero-tag reveal">
-        <p class="section-label">WORKPLACE RESILIENCE SOLUTIONS</p>
-        <div class="gold-divider"></div>
-      </div>
+  <div class="hero-tag reveal">
+    <p class="section-label">WORKPLACE RESILIENCE SOLUTIONS</p>
+    <div class="gold-divider"></div>
+  </div>
 
-      <img src="assets/images/hero-photo.jpg" alt="Dr Elijah Ting" class="hero-photo reveal d1" />
+  <img src="assets/images/hero-photo.jpg" alt="Dr Elijah Ting, Workplace Resilience Specialist" title="Dr Elijah Ting, Workplace Resilience Specialist — Sibu, Sarawak" class="hero-photo reveal d1" />
+```
 
 <h1 class="hero-name cormorant reveal d2">
   Build a Workforce That<br>
@@ -613,12 +638,11 @@
 </h1>
 
 <h2 class="hero-sub cormorant reveal d3">
-  Building calmer leaders, steadier teams, and sustainable performance for organisations facing stress, burnout risk, leadership pressure, change fatigue, and performance volatility.
+  Building calmer leaders, steadier teams, and sustainable performance under pressure.
 </h2>
 
 <p class="hero-desc reveal d4">
-  Powered by <strong>PR6 resilience science</strong>, strengthened through practical skill-building, and supported by
-  <strong>measurement, reinforcement, and de-identified cohort insights</strong>.
+  For organisations facing stress, burnout risk, leadership pressure, change fatigue, and performance volatility.
 </p>
 
 <div class="hero-btns reveal d5">
@@ -626,14 +650,17 @@
   <a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Request Proposal</a>
 </div>
 
-      <div class="scroll-hint reveal d6">
-        <span>SCROLL</span>
-        <div class="scroll-line"></div>
-      </div>
-    </section>
+```
+  <div class="scroll-hint reveal d6">
+    <span>SCROLL</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
 
-    <!-- WHAT ORGANISATIONS NEED -->
-    <section id="roles">
+<!-- WHAT ORGANISATIONS NEED -->
+<section id="roles">
+```
+
   <div class="roles-header">
     <p class="section-label">WHAT ORGANISATIONS NEED</p>
     <h2 class="cormorant">Support for Pressure, Change, and Performance</h2>
@@ -648,228 +675,256 @@
       </p>
     </div>
 
-    <div class="role-card role-card--green">
-      <div class="role-icon"><span aria-hidden="true">✦</span></div>
-      <p class="role-title">Strengthen Leadership Under Pressure</p>
-      <p class="role-body">
-        Equip managers and leaders to think clearly, communicate well, and steady their teams during change, uncertainty, and sustained demand.
-      </p>
+```
+<div class="role-card role-card--green">
+  <div class="role-icon"><span aria-hidden="true">✦</span></div>
+  <p class="role-title">Steady Leaders Under Pressure</p>
+  <p class="role-body">
+    Equip managers and leaders to think clearly, communicate well, and steady their teams during change, uncertainty, and sustained demand.
+  </p>
+</div>
+
+<div class="role-card">
+  <div class="role-icon"><span aria-hidden="true">⬡</span></div>
+  <p class="role-title">Improve Team Communication</p>
+  <p class="role-body">
+    Build healthier boundary-setting, clearer requests, stronger repair conversations, and more resilient support behaviours at work.
+  </p>
+</div>
+
+<div class="role-card role-card--green">
+  <div class="role-icon"><span aria-hidden="true">◉</span></div>
+  <p class="role-title">Sustain Performance Over Time</p>
+  <p class="role-body">
+    Combine resilience skills, reinforcement, and optional measurement so capability development lasts beyond the workshop itself.
+  </p>
+</div>
+```
+
+  </div>
+</section>
+
+```
+<!-- METHODOLOGY -->
+<section id="methodology">
+  <div class="methodology-inner">
+    <div class="methodology-header">
+      <p class="section-label">HOW THE APPROACH WORKS</p>
+```
+
+<h2 class="cormorant">Measure. Build. Sustain.</h2>
+        </div>
+
+```
+    <div>
+      <div class="framework-item">
+        <div class="framework-num cinzel" style="color:#C8A96E;">1</div>
+        <div>
+          <h3 class="framework-name cormorant" style="color:#C8A96E;">PR6 Model</h3>
+          <p class="framework-desc">
+            <strong>Six domains of workplace resilience.</strong><br>
+            PR6 helps leaders and teams understand where resilience is strong, where it is vulnerable, and what
+            needs to be built next.
+          </p>
+        </div>
+      </div>
+
+      <div class="framework-item">
+        <div class="framework-num cinzel" style="color:var(--green-muted);">2</div>
+        <div>
+          <h3 class="framework-name cormorant" style="color:var(--green-muted);">PR6E Capability Assessment</h3>
+          <p class="framework-desc">
+            <strong>Baseline, insights, and re-assessment.</strong><br>
+            PR6E supports targeted development through individual capability profiles, de-identified cohort insights, and a
+            clearer view of progress over time.
+          </p>
+        </div>
+      </div>
+
+      <div class="framework-item">
+        <div class="framework-num cinzel" style="color:#C8A96E;">3</div>
+        <div>
+          <h3 class="framework-name cormorant" style="color:#C8A96E;">Reinforcement Beyond the Room</h3>
+          <p class="framework-desc">
+            <strong>Reduce training decay.</strong><br>
+            Optional reinforcement through the Driven Resilience App helps sustain habits, repetition, and practical
+            application after workshops and intensives.
+          </p>
+        </div>
+      </div>
+
+      <div class="framework-item">
+        <div class="framework-num cinzel" style="color:var(--green-muted);">4</div>
+        <div>
+          <h3 class="framework-name cormorant" style="color:var(--green-muted);">Flexible Delivery</h3>
+          <p class="framework-desc">
+            <strong>Built for organisational reality.</strong><br>
+            Delivery can be onsite or virtual, from short workshops to intensives and consulting pathways, without
+            losing focus on practical transfer and measurable value.
+          </p>
+        </div>
+      </div>
     </div>
 
-    <div class="role-card">
-      <div class="role-icon"><span aria-hidden="true">⬡</span></div>
-      <p class="role-title">Improve Team Communication</p>
-      <p class="role-body">
-        Build healthier boundary-setting, clearer requests, stronger repair conversations, and more resilient support behaviours at work.
-      </p>
-    </div>
-
-    <div class="role-card role-card--green">
-      <div class="role-icon"><span aria-hidden="true">◉</span></div>
-      <p class="role-title">Sustain Performance Over Time</p>
-      <p class="role-body">
-        Combine resilience skills, reinforcement, and optional measurement so capability development lasts beyond the workshop itself.
-      </p>
+    <div class="methodology-cta">
+      <a href="programmes.html">→ See the full programme catalogue</a>
     </div>
   </div>
 </section>
 
-    <!-- METHODOLOGY -->
-    <section id="methodology">
-      <div class="methodology-inner">
-        <div class="methodology-header">
-          <p class="section-label">HOW THE APPROACH WORKS</p>
-<h2 class="cormorant">Assessment. Capability Building. Reinforcement.</h2>
-        </div>
+<!-- FLAGSHIP PROGRAMME -->
+<section id="flagship">
+  <div class="flagship-inner">
+    <div class="flagship-card">
+      <p class="flagship-card-tag">FLAGSHIP · 2 DAYS · HIGH-DEMAND TEAMS</p>
+      <h3 class="flagship-card-title cormorant">Resilience for Performance Under Pressure</h3>
+      <div class="flagship-card-rule"></div>
+      <p class="flagship-card-sub cormorant">2-Day Resilience Skills Lab</p>
+      <p class="flagship-detail">Best for: <span>Leadership cohorts and teams under sustained pressure</span></p>
+      <p class="flagship-detail">
+        Includes:
+        <span><strong>PR6E capability baseline</strong>, de-identified cohort snapshot, leader insights summary, app reinforcement, and optional re-assessment at 6–8 weeks</span>
+      </p>
+      <p class="flagship-detail" style="text-transform:none; letter-spacing:0.06em;">
+        <span style="font-style:italic;">Individual results remain private unless explicit consent is given.</span>
+      </p>
+    </div>
 
-        <div>
-          <div class="framework-item">
-            <div class="framework-num cinzel" style="color:#C8A96E;">1</div>
-            <div>
-              <h3 class="framework-name cormorant" style="color:#C8A96E;">PR6 Model</h3>
-              <p class="framework-desc">
-                <strong>Six domains of workplace resilience.</strong><br>
-                PR6 helps leaders and teams understand where resilience is strong, where it is vulnerable, and what
-                needs to be built next.
-              </p>
-            </div>
-          </div>
+    <div class="flagship-content">
+      <p class="section-label">SIGNATURE ENGAGEMENT</p>
+      <h2 class="cormorant">A Deeper Way to Build<br><em>Workplace Resilience</em></h2>
+      <p>
+        This intensive combines assessment, skills training, and leader-level insight to help teams improve how
+        they think, recover, communicate, and perform under pressure.
+      </p>
+      <p>
+        It is designed for organisations that need more than a one-off workshop. They need a practical pathway
+        leaders can apply in real work environments.
+      </p>
+      <a href="programmes.html" class="btn btn-outline">See Corporate Options</a>
+    </div>
+  </div>
+</section>
 
-          <div class="framework-item">
-            <div class="framework-num cinzel" style="color:var(--green-muted);">2</div>
-            <div>
-              <h3 class="framework-name cormorant" style="color:var(--green-muted);">PR6E Measurement</h3>
-              <p class="framework-desc">
-                <strong>Baseline, insights, and re-measurement.</strong><br>
-                PR6E supports targeted development through individual assessment, de-identified cohort insights, and a
-                clearer view of progress over time.
-              </p>
-            </div>
-          </div>
+<!-- QUOTE -->
+<section id="quote">
+  <div class="quote-mark cormorant">"</div>
+  <blockquote class="cormorant">
+    Resilience is not the absence of pressure.<br>It is the architecture of how you respond to it.
+  </blockquote>
+  <p class="quote-attr cinzel">DR ELIJAH · WORKPLACE RESILIENCE</p>
+</section>
 
-          <div class="framework-item">
-            <div class="framework-num cinzel" style="color:#C8A96E;">3</div>
-            <div>
-              <h3 class="framework-name cormorant" style="color:#C8A96E;">Reinforcement Beyond the Room</h3>
-              <p class="framework-desc">
-                <strong>Reduce training decay.</strong><br>
-                Optional reinforcement through the Driven Resilience App helps sustain habits, repetition, and practical
-                application after workshops and intensives.
-              </p>
-            </div>
-          </div>
+<!-- CREDENTIALS -->
+<section id="credentials">
+  <div class="cred-header">
+    <p class="section-label">CREDENTIALS &amp; ACCREDITATIONS</p>
+    <h2 class="cormorant">Evidence-Based Foundation</h2>
+  </div>
 
-          <div class="framework-item">
-            <div class="framework-num cinzel" style="color:var(--green-muted);">4</div>
-            <div>
-              <h3 class="framework-name cormorant" style="color:var(--green-muted);">Flexible Delivery</h3>
-              <p class="framework-desc">
-                <strong>Built for organisational reality.</strong><br>
-                Delivery can be onsite or virtual, from short workshops to intensives and consulting pathways, without
-                losing focus on practical transfer and measurable value.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="methodology-cta">
-          <a href="programmes.html">→ See the full programme catalogue</a>
-        </div>
+  <!-- Tier 1: Resilience Certifications -->
+  <div class="cred-tier cred-tier--green">
+    <p class="cred-tier-label">Resilience Certifications</p>
+    <div class="cred-tier-rule"></div>
+    <div class="cred-grid">
+      <div class="cred-item">
+        <p class="cred-label cinzel">CReC</p>
+        <p class="cred-sub">Certified Resilience Coach (Hello Driven)</p>
       </div>
-    </section>
-
-    <!-- FLAGSHIP PROGRAMME -->
-    <section id="flagship">
-      <div class="flagship-inner">
-        <div class="flagship-card">
-          <p class="flagship-card-tag">FLAGSHIP · 2 DAYS · HIGH-DEMAND TEAMS</p>
-          <h3 class="flagship-card-title cormorant">Resilience for Performance Under Pressure</h3>
-          <div class="flagship-card-rule"></div>
-          <p class="flagship-card-sub cormorant">2-Day Resilience Skills Lab</p>
-          <p class="flagship-detail">Best for: <span>Leadership cohorts and teams under sustained pressure</span></p>
-          <p class="flagship-detail">
-            Includes:
-            <span><strong>PR6E baseline</strong>, de-identified cohort snapshot, leader insights summary, app reinforcement, and optional re-measurement at 6–8 weeks</span>
-          </p>
-          <p class="flagship-detail" style="text-transform:none; letter-spacing:0.06em;">
-            <span style="font-style:italic;">Individual results remain private unless explicit consent is given.</span>
-          </p>
-        </div>
-
-        <div class="flagship-content">
-          <p class="section-label">SIGNATURE ENGAGEMENT</p>
-          <h2 class="cormorant">A Deeper Way to Build<br><em>Workplace Resilience</em></h2>
-          <p>
-            This intensive combines assessment, skills training, and leader-level insight to help teams improve how
-            they think, recover, communicate, and perform under pressure.
-          </p>
-          <p>
-            It is designed for organisations that need more than a one-off workshop. They need a practical pathway
-            leaders can apply in real work environments.
-          </p>
-          <a href="programmes.html" class="btn btn-outline">See Corporate Options</a>
-        </div>
+      <div class="cred-item">
+        <p class="cred-label cinzel">CReW</p>
+        <p class="cred-sub">PR6 Implementation Partner</p>
       </div>
-    </section>
+      <div class="cred-item">
+        <p class="cred-label cinzel">PRE</p>
+        <p class="cred-sub">Personal Resilience Essentials Instructor</p>
+      </div>
+    </div>
+  </div>
 
-    <!-- QUOTE -->
-    <section id="quote">
-      <div class="quote-mark cormorant">"</div>
-      <blockquote class="cormorant">
-        Resilience is not the absence of pressure.<br>It is the architecture of how you respond to it.
-      </blockquote>
-      <p class="quote-attr cinzel">DR ELIJAH · WORKPLACE RESILIENCE</p>
-    </section>
+  <!-- Tier 2: Assessment Certifications -->
+  <div class="cred-tier">
+    <p class="cred-tier-label">Assessment Certifications</p>
+    <div class="cred-tier-rule"></div>
+    <div class="cred-grid">
+      <div class="cred-item">
+        <p class="cred-label cinzel">PR6E</p>
+        <p class="cred-sub">Resilience Capability Assessment</p>
+      </div>
+      <div class="cred-item">
+        <p class="cred-label cinzel">JSECC</p>
+        <p class="cred-sub">Workplace Health &amp; Engagement Assessment</p>
+      </div>
+      <div class="cred-item">
+        <p class="cred-label cinzel">Big Five</p>
+        <p class="cred-sub">Workplace Personality Assessment</p>
+      </div>
+    </div>
+  </div>
 
-    <!-- CREDENTIALS -->
-	<section id="credentials">
-	  <div class="cred-grid">
-	    <div class="cred-item cred-item--green">
-	      <p class="cred-label cinzel">CReC</p>
-	      <p class="cred-sub cinzel">Certified Resilience Coach</p>
-	    </div>
-	
-	    <div class="cred-item cred-item--green">
-	      <p class="cred-label cinzel">CReW</p>
-	      <p class="cred-sub cinzel">Implementation Partner</p>
-	    </div>
-	
-	    <div class="cred-item cred-item--green">
-	      <p class="cred-label cinzel">PRE</p>
-	      <p class="cred-sub cinzel">Instructor</p>
-	    </div>
-	
-	    <div class="cred-item">
-	      <p class="cred-label cinzel">JSECC</p>
-	      <p class="cred-sub cinzel">Certified</p>
-	    </div>
-	
-	    <div class="cred-item">
-	      <p class="cred-label cinzel">Big 5</p>
-	      <p class="cred-sub cinzel">Certified</p>
-	    </div>
-	
-	    <div class="cred-item">
-	      <p class="cred-label cinzel">HRD Corp</p>
-	      <p class="cred-sub cinzel">Accredited Trainer</p>
-	    </div>
-	
-	    <div class="cred-item">
-	      <p class="cred-label cinzel">BSc (Hons) Nursing</p>
-	      <p class="cred-sub cinzel">Human Health Perspective</p>
-	    </div>
-	
-	    <div class="cred-item">
-	      <p class="cred-label cinzel">Executive MBA</p>
-	      <p class="cred-sub cinzel">Business Strategy</p>
-	    </div>
-	
-	    <div class="cred-item">
-	      <p class="cred-label cinzel">Exec. Doctorate L&amp;D</p>
-	      <p class="cred-sub cinzel">Learning &amp; Development</p>
-	    </div>
-	
-	    <div class="cred-item" style="grid-column: 2 / 3;">
-	      <p class="cred-label cinzel">2026</p>
-	      <p class="cred-sub cinzel">Author of The Transformation Architect™</p>
-	    </div>
-	  </div>
-	</section>
-	  
-    <!-- HRD Corp Accredited Trainer -->
-    <section class="hrd-trainer-section">
-      <img
-        src="/assets/images/hrd-corp-accredited-trainer.png"
-        alt="HRD Corp Accredited Trainer"
-      />
-    </section>
+  <!-- Tier 3: Accreditations & Qualifications -->
+  <div class="cred-tier">
+    <p class="cred-tier-label">Accreditations &amp; Qualifications</p>
+    <div class="cred-tier-rule"></div>
+    <div class="cred-grid">
+      <div class="cred-item">
+        <p class="cred-label cinzel">HRD Corp</p>
+        <p class="cred-sub">Accredited Trainer (Malaysia)</p>
+      </div>
+      <div class="cred-item">
+        <p class="cred-label cinzel">BSc (Hons) Nursing</p>
+        <p class="cred-sub">Human Health Foundation</p>
+      </div>
+      <div class="cred-item">
+        <p class="cred-label cinzel">Executive MBA</p>
+        <p class="cred-sub">Business Strategy</p>
+      </div>
+      <div class="cred-item">
+        <p class="cred-label cinzel">Exec. Doctorate</p>
+        <p class="cred-sub">Learning &amp; Development</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- TESTIMONIALS -->
-    <section id="testimonials">
-  <div class="testimonials-inner">
-    <p class="section-label">TRUST &amp; CREDIBILITY</p>
-    <h2 class="cormorant">Built for Real Workplaces</h2>
-    <div class="testimonial-grid">
-      <div class="testimonial-card">
-        <p class="testimonial-text">
+<!-- HRD Corp Accredited Trainer -->
+<section class="hrd-trainer-section">
+  <img
+    src="/assets/images/hrd-corp-accredited-trainer.png"
+    alt="HRD Corp Accredited Trainer"
+  />
+</section>
+
+<!-- WHAT TO EXPECT (replaces fake testimonials) -->
+<section id="what-to-expect">
+  <div class="wte-inner">
+    <p class="section-label">WHAT TO EXPECT</p>
+    <h2 class="cormorant">Evidence. Expertise. Experience.</h2>
+    <div class="wte-grid">
+      <div class="wte-card">
+        <p class="wte-card-label">The Approach</p>
+        <p class="wte-text">
           Evidence-based workplace resilience solutions designed for practical transfer, measurable capability-building, and sustained application beyond the room.
         </p>
-        <p class="testimonial-attr">PR6-BASED · PRACTICAL · MEASURABLE</p>
+        <p class="wte-tags">PR6-BASED &middot; PRACTICAL &middot; MEASURABLE</p>
       </div>
-      <div class="testimonial-card">
-        <p class="testimonial-text">
+      <div class="wte-card">
+        <p class="wte-card-label">The Practitioner</p>
+        <p class="wte-text">
           Delivered by an HRD Corp Accredited Trainer with an Executive Doctorate in Learning &amp; Development and a strong foundation in leadership, communication, and adult learning.
         </p>
-        <p class="testimonial-attr">HRD CORP Accredited Trainer · EXEC. DOCTORATE L&amp;D · EXECUTIVE MBA</p>
+        <p class="wte-tags">HRD CORP Accredited Trainer &middot; EXEC. DOCTORATE L&amp;D &middot; EXECUTIVE MBA</p>
       </div>
     </div>
   </div>
 </section>
 
-    <!-- CTA -->
-    <section id="cta">
-      <div class="cta-glow"></div>
-      <p class="section-label">LET'S DISCUSS YOUR PRESSURE POINTS</p>
+<!-- CTA -->
+<section id="cta">
+  <div class="cta-glow"></div>
+  <p class="section-label">LET'S DISCUSS YOUR PRESSURE POINTS</p>
+```
+
 <h2 class="cormorant">Ready to Build<br><em>Resilience That Lasts?</em></h2>
 <p class="cormorant">
   Share your <strong>team size</strong>, <strong>roles</strong>, <strong>timeline</strong>, and
@@ -884,6 +939,7 @@
   </main>
 
   <!-- FOOTER -->
+
   <footer>
     <div class="footer-top">
       <p class="footer-brand cinzel">DR ELIJAH · WORKPLACE RESILIENCE</p>
@@ -938,12 +994,13 @@
       });
     }, { threshold: 0.12 });
 
-    document.querySelectorAll('.role-card, .framework-item, .cred-item, .flagship-card, .testimonial-card').forEach(el => {
+    document.querySelectorAll('.role-card, .framework-item, .cred-item, .flagship-card, .wte-card').forEach(el => {
       el.style.opacity = '0';
       el.style.transform = 'translateY(24px)';
       el.style.transition = 'opacity 0.7s ease, transform 0.7s cubic-bezier(0.16,1,0.3,1)';
       observer.observe(el);
     });
   </script>
+
 </body>
 </html>
