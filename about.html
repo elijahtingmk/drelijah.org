@@ -49,7 +49,12 @@
       --terracotta:#C06C54;
     }
 
-    html { scroll-behavior: smooth; font-size: 18px; }
+    html {
+      scroll-behavior: smooth;
+      /* 112.5% of the user's browser default (16px → 18px), so the page
+         scales when readers adjust their browser font-size preference. */
+      font-size: 112.5%;
+    }
 
     body {
       font-family: 'Cormorant Garamond', Georgia, serif;
@@ -399,7 +404,7 @@
     }
     .footer-powered {
       font-family: 'Cinzel', serif;
-      font-size: 10px;
+      font-size: 11px;
       letter-spacing: 0.1em;
       color: var(--text-dim);
       opacity: 0.4;
@@ -548,7 +553,7 @@
         </div>
 
         <div class="engage-card">
-          <p class="engage-title">Corporate & Academic Depth</p>
+          <p class="engage-title">Corporate &amp; Academic Depth</p>
           <p class="engage-text">Strengthened by executive business training and doctoral-level learning and development work.</p>
         </div>
 
@@ -582,7 +587,7 @@
   <!-- FOOTER -->
   <footer>
     <div class="footer-top">
-      <p class="footer-brand cinzel">DR ELIJAH · WORKPLACE RESILIENCE SOLUTIONS</p>
+      <p class="footer-brand cinzel">DR ELIJAH · WORKPLACE RESILIENCE</p>
       <p class="footer-domain cinzel">DrElijah.org</p>
     </div>
     <div class="footer-social">
