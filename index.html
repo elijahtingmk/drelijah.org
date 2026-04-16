@@ -56,7 +56,12 @@
       --text-dim:#5A5650;
     }
 
-    html { scroll-behavior: smooth; font-size: 18px; }
+    html {
+      scroll-behavior: smooth;
+      /* 112.5% of the user's browser default (16px → 18px), so the page
+         scales when readers adjust their browser font-size preference. */
+      font-size: 112.5%;
+    }
 
     body {
       font-family: 'Cormorant Garamond', Georgia, serif;
@@ -493,7 +498,7 @@
     .footer-social a:hover { color: var(--gold); }
     .footer-divider { width: 1px; height: 12px; background: var(--border); }
     .footer-copy { font-family: 'Cinzel', serif; font-size: 12px; letter-spacing: 0.1em; color: var(--text-dim); }
-    .footer-powered { font-family: 'Cinzel', serif; font-size: 10px; letter-spacing: 0.1em; color: var(--text-dim); opacity: 0.4; }
+    .footer-powered { font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 0.1em; color: var(--text-dim); opacity: 0.4; }
 
     /* RESPONSIVE */
     @media (max-width: 768px) {
@@ -561,7 +566,7 @@
 
   <!-- NAV -->
   <nav id="nav">
-    <a href="#hero" class="nav-logo"></a>
+    <a href="#hero" class="nav-logo">DR ELIJAH</a>
     <ul class="nav-links">
       <li><a href="about.html">About</a></li>
       <li><a href="programmes.html">Programmes</a></li>
@@ -594,7 +599,7 @@
         <div class="gold-divider"></div>
       </div>
 
-      <img src="assets/images/hero-photo.jpg" alt=" Ting" class="hero-photo reveal d1" />
+      <img src="assets/images/hero-photo.jpg" alt="Dr Elijah Ting" class="hero-photo reveal d1" />
 
 <h1 class="hero-name cormorant reveal d2">
   Build a Workforce That<br>
@@ -767,7 +772,7 @@
       <blockquote class="cormorant">
         Resilience is not the absence of pressure.<br>It is the architecture of how you respond to it.
       </blockquote>
-      <p class="quote-attr cinzel"> · WORKPLACE RESILIENCE</p>
+      <p class="quote-attr cinzel">DR ELIJAH · WORKPLACE RESILIENCE</p>
     </section>
 
     <!-- CREDENTIALS -->
@@ -836,7 +841,7 @@
     <!-- TESTIMONIALS -->
     <section id="testimonials">
   <div class="testimonials-inner">
-    <p class="section-label">TRUST & CREDIBILITY</p>
+    <p class="section-label">TRUST &amp; CREDIBILITY</p>
     <h2 class="cormorant">Built for Real Workplaces</h2>
     <div class="testimonial-grid">
       <div class="testimonial-card">
