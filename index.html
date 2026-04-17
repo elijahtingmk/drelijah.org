@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en-GB">
 <head>
   <meta charset="UTF-8" />
@@ -294,6 +293,74 @@ content="Evidence-based workplace resilience solutions for organisations under p
     .scroll-hint span { font-family: 'Cinzel', serif; font-size: 13px; letter-spacing: 0.3em; color:#C8A96E44; }
     .scroll-line { width: 1px; height: 40px; background: linear-gradient(to bottom, var(--gold), transparent); animation: pulse-line 2s ease-in-out infinite; }
 
+    /* PRisMA STAGE III POSITIONING STRIP */
+    #prisma-positioning {
+      padding: 72px 48px;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, var(--bg) 0%, #121110 100%);
+      position: relative;
+    }
+    .prisma-positioning-inner {
+      max-width: 920px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .prisma-positioning-label {
+      font-size: 11px;
+      letter-spacing: 0.35em;
+      color: var(--gold);
+      /* No text-transform — source text is hand-cased so PRisMA renders correctly. */
+      margin-bottom: 18px;
+      display: block;
+    }
+    .prisma-positioning-inner h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(24px, 3vw, 34px);
+      font-weight: 300;
+      line-height: 1.35;
+      color: var(--text);
+      margin-bottom: 20px;
+      letter-spacing: 0.01em;
+    }
+    .prisma-positioning-inner h2 em {
+      font-style: italic;
+      color: var(--gold);
+    }
+    .prisma-positioning-desc {
+      font-size: 17px;
+      line-height: 1.8;
+      color: var(--text-muted);
+      font-weight: 300;
+      max-width: 760px;
+      margin: 0 auto 22px;
+    }
+    .prisma-positioning-desc strong {
+      color: var(--text);
+      font-weight: 500;
+    }
+    .prisma-positioning-boundary {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 14px;
+      font-style: italic;
+      color: var(--text-dim);
+      line-height: 1.6;
+      max-width: 640px;
+      margin: 0 auto 22px;
+    }
+    .prisma-positioning-link {
+      display: inline-block;
+      font-size: 13px;
+      letter-spacing: 0.25em;
+      color: var(--gold);
+      text-decoration: none;
+      text-transform: uppercase;
+      border-bottom: 1px solid var(--gold-dim);
+      padding-bottom: 3px;
+      transition: border-color 0.3s;
+    }
+    .prisma-positioning-link:hover { border-color: var(--gold); }
+
     /* WHAT ORGANISATIONS NEED */
     #roles { padding: 100px 48px; max-width: 1200px; margin: 0 auto; }
     .roles-header { text-align: center; margin-bottom: 64px; }
@@ -568,7 +635,7 @@ content="Evidence-based workplace resilience solutions for organisations under p
 	   #hero { padding: 100px 24px 48px; }
 	   .scroll-hint { display: none; }
 
-      #roles, #methodology, #flagship, #quote, #credentials, #what-to-expect, #cta {
+      #roles, #methodology, #flagship, #quote, #credentials, #what-to-expect, #cta, #prisma-positioning {
         padding-left: 24px;
         padding-right: 24px;
       }
@@ -659,14 +726,29 @@ content="Evidence-based workplace resilience solutions for organisations under p
 </p>
 
 <div class="hero-btns reveal d5">
-  <a href="programmes.html" class="btn btn-fill">Browse Solutions</a>
-  <a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Request Proposal</a>
+  <a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-fill" target="_blank" rel="noopener noreferrer">Request Proposal</a>
+  <a href="programmes.html#start-here" class="btn btn-outline">Find Your Pathway</a>
 </div>
 
 
   <div class="scroll-hint reveal d6">
     <span>SCROLL</span>
     <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- PRisMA STAGE III POSITIONING STRIP -->
+<section id="prisma-positioning">
+  <div class="prisma-positioning-inner">
+    <p class="prisma-positioning-label cinzel">MALAYSIAN EMPLOYERS &middot; OSHA 2022 &middot; PRisMA 2024</p>
+    <h2 class="cormorant">Evidence-Based Training for <em>PRisMA Stage III Action Plans</em></h2>
+    <p class="prisma-positioning-desc">
+      Specialising in <strong>Stage III Risk Control</strong> training and capability-building &mdash; the Training &amp; Education controls mandated in your PRiMA Action Plan under EPC23 items 16 &amp; 20. A considered training partner for Malaysian employers meeting their psychosocial duty of care under the OSHA Amendment Act 2022.
+    </p>
+    <p class="prisma-positioning-boundary">
+      Not a Psychosocial Trained Person (PTP). Statutory Stage I/II assessments (LEO26/EPC23) are conducted by a certified PTP.
+    </p>
+    <a href="programmes.html#start-here" class="prisma-positioning-link cinzel">Explore the Stage III Pathway &rarr;</a>
   </div>
 </section>
 
