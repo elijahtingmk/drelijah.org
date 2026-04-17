@@ -852,6 +852,63 @@
     .prog-card-spacer { flex: 1; }
     .prog-card-cta { margin-top: 28px; }
 
+    /* ── Consolidated "menu" cards (Focused Modules, Bootcamp Themes) ── */
+    .prog-menu-label {
+      font-family: 'Cinzel', serif;
+      font-size: 11px;
+      letter-spacing: 0.25em;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-top: 22px;
+      margin-bottom: 14px;
+      padding-top: 18px;
+      border-top: 1px solid var(--border);
+      display: block;
+    }
+    .prog-menu-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-bottom: 4px;
+    }
+    .prog-menu-list li {
+      font-size: 15px;
+      line-height: 1.6;
+      color: var(--text-muted);
+      padding-left: 20px;
+      position: relative;
+    }
+    .prog-menu-list li::before {
+      content: '◈';
+      position: absolute;
+      left: 0;
+      top: 3px;
+      color: var(--gold);
+      font-size: 10px;
+    }
+    .prog-menu-list .menu-name {
+      color: var(--text);
+      font-weight: 500;
+      display: block;
+    }
+    .prog-menu-list .menu-domain {
+      font-family: 'Cinzel', serif;
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      margin-left: 6px;
+      font-weight: 400;
+    }
+    .prog-menu-list .menu-desc {
+      font-style: italic;
+      font-size: 14px;
+      color: var(--text-muted);
+      display: block;
+      margin-top: 2px;
+    }
+
     /* ── PRisMA mapping collapsible (appears inside programme cards) ──── */
     details.prisma-map {
       margin-top: 14px;
@@ -1831,12 +1888,11 @@
         <p class="pathway-scenario">Early Warning Signs</p>
         <h3 class="pathway-title">We're seeing stress, reactivity, or communication strain</h3>
         <div class="pathway-rule"></div>
-        <p class="pathway-desc">Targeted 4-hour workshops address specific capability gaps without pulling teams offline for a full day.</p>
+        <p class="pathway-desc">A targeted 4-hour module addresses a specific capability gap without pulling teams offline for a full day.</p>
         <div class="pathway-spacer"></div>
         <p class="pathway-recommend">Consider starting with</p>
-        <p class="pathway-option"><a href="#training">Calm Under Pressure</a></p>
-        <p class="pathway-option"><a href="#training">Resilient Communication &amp; Boundaries</a></p>
-        <p class="pathway-option"><a href="#training">Energy, Recovery &amp; Sustainable Performance</a></p>
+        <p class="pathway-option"><a href="#training">Focused 4-Hour Modules <span style="color:var(--text-dim);">(Composure, Collaboration, or Health themes)</span></a></p>
+        <p class="pathway-option"><a href="#training">PRE: Personal Resilience Essentials <span style="color:var(--text-dim);">(broad foundations)</span></a></p>
       </div>
 
       <!-- Pathway 2: Flagship -->
@@ -1861,7 +1917,7 @@
         <div class="pathway-spacer"></div>
         <p class="pathway-recommend">Consider starting with</p>
         <p class="pathway-option"><a href="#training">People Manager Resilience <span style="color:var(--text-dim);">(4 hrs)</span></a></p>
-        <p class="pathway-option"><a href="#intensives">Decision Quality Under Pressure <span style="color:var(--text-dim);">(1-day bootcamp)</span></a></p>
+        <p class="pathway-option"><a href="#intensives">1-Day Resilience Bootcamp <span style="color:var(--text-dim);">(Decision Quality theme)</span></a></p>
       </div>
 
       <!-- Pathway 4: Not yet ready to train -->
@@ -1906,14 +1962,14 @@
     <div class="section-heading">
       <div>
         <p class="section-label">4‑HOUR WORKFORCE SOLUTIONS</p>
-        <h2 class="cormorant">Workshops for Broad Uplift<br /><em>and Fast Rollout</em></h2>
+        <h2 class="cormorant">Workshops for Broad Uplift<br /><em>and Focused Depth</em></h2>
       </div>
-      <span class="section-heading-meta cinzel">7 SOLUTIONS · ONSITE &amp; VIRTUAL</span>
+      <span class="section-heading-meta cinzel">3 CORE PROGRAMMES · ONSITE &amp; VIRTUAL</span>
     </div>
     <div class="section-rule"></div>
     <p class="outcome-intro cormorant">
-      Best for organisation-wide development, manager capability uplift, or focused intervention for teams showing
-      early stress, communication, or recovery challenges.
+      Three anchor 4-hour programmes: one for broad workforce rollout, one for manager capability uplift,
+      and one focused-module pathway for teams needing depth in a specific PR6 domain.
     </p>
     <div class="prog-grid">
       <!-- Card 1: PRE -->
@@ -1950,162 +2006,7 @@
         </div>
       </div>
 
-      <!-- Card 2: Calm Under Pressure -->
-      <div class="prog-card">
-        <p class="prog-card-tag cinzel">4 hrs · Composure</p>
-        <h3 class="prog-card-title cormorant">Calm Under Pressure</h3>
-        <div class="prog-card-rule"></div>
-        <div class="prog-card-row">
-          <span class="prog-card-row-label cinzel">Best for</span><span class="prog-card-row-value">High‑stress roles, teams showing reactivity, overwhelm, or emotional spillover</span>
-        </div>
-        <div class="prog-card-row">
-          <span class="prog-card-row-label cinzel">Business impact</span><span class="prog-card-row-value">Improved self‑regulation, fewer reactive escalations, steadier recovery after difficult moments</span>
-        </div>
-        <div class="prog-card-row">
-          <span class="prog-card-row-label cinzel">Focus</span><span class="prog-card-row-value">Calm breathing, emotion labelling, mindfulness basics, cognitive reappraisal drills</span>
-        </div>
-        <div class="prog-card-row">
-          <span class="prog-card-row-label cinzel">Includes</span><span class="prog-card-row-value">Practice drills + structured resilience tools</span>
-        </div>
-        <details class="prisma-map">
-          <summary><span class="prisma-map-label">PRisMA 2024 Mapping</span></summary>
-          <div class="prisma-map-content">
-            <span class="prisma-map-row"><span class="prisma-map-key">LEO26:</span> <span class="prisma-map-val">WD (Q4–Q6, Q25–Q26)</span></span>
-            <span class="prisma-map-row"><span class="prisma-map-key">EPC23:</span> <span class="prisma-map-val">16, 20</span></span>
-            <span class="prisma-map-row"><span class="prisma-map-key">PRiMA Themes:</span> <span class="prisma-map-val">Training &amp; Education; Workload</span></span>
-          </div>
-        </details>
-        <div class="prog-card-spacer"></div>
-        <div class="prog-card-cta">
-          <a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-outline btn-sm" target="_blank" rel="noopener noreferrer">Request proposal</a>
-        </div>
-      </div>
-
-      <!-- Card 3: Thinking Clearly -->
-      <div class="prog-card">
-        <p class="prog-card-tag cinzel">4 hrs · Reasoning</p>
-        <h3 class="prog-card-title cormorant">Thinking Clearly Under Stress</h3>
-        <div class="prog-card-rule"></div>
-        <div class="prog-card-row">
-          <span class="prog-card-row-label cinzel">Best for</span><span class="prog-card-row-value">Operations, project teams, and fast‑changing environments</span>
-        </div>
-        <div class="prog-card-row">
-          <span class="prog-card-row-label cinzel">Business impact</span><span class="prog-card-row-value">Better anticipation, stronger decision quality, improved problem‑solving when conditions shift</span>
-        </div>
-        <div class="prog-card-row">
-          <span class="prog-card-row-label cinzel">Focus</span><span class="prog-card-row-value">Anticipation, prevention, resourcefulness, belief‑checking, embracing change, scenario planning</span>
-        </div>
-        <div class="prog-card-row">
-          <span class="prog-card-row-label cinzel">Includes</span><span class="prog-card-row-value">Scenario tools + practical decision frameworks</span>
-        </div>
-        <details class="prisma-map">
-          <summary><span class="prisma-map-label">PRisMA 2024 Mapping</span></summary>
-          <div class="prisma-map-content">
-            <span class="prisma-map-row"><span class="prisma-map-key">LEO26:</span> <span class="prisma-map-val">JC (Q12, Q14, Q16) + WD</span></span>
-            <span class="prisma-map-row"><span class="prisma-map-key">EPC23:</span> <span class="prisma-map-val">16, 20</span></span>
-            <span class="prisma-map-row"><span class="prisma-map-key">PRiMA Themes:</span> <span class="prisma-map-val">Training &amp; Education; Job Matching</span></span>
-          </div>
-        </details>
-        <div class="prog-card-spacer"></div>
-        <div class="prog-card-cta">
-          <a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-outline btn-sm" target="_blank" rel="noopener noreferrer">Request proposal</a>
-        </div>
-      </div>
-
-      <!-- Card 4: Resilient Communication -->
-      <div class="prog-card">
-        <p class="prog-card-tag cinzel">4 hrs · Collaboration</p>
-        <h3 class="prog-card-title cormorant">Resilient Communication &amp; Boundaries</h3>
-        <div class="prog-card-rule"></div>
-        <div class="prog-card-row">
-          <span class="prog-card-row-label cinzel">Best for</span><span class="prog-card-row-value">Cross‑functional teams, client‑facing teams, service leaders</span>
-        </div>
-        <div class="prog-card-row">
-          <span class="prog-card-row-label cinzel">Business impact</span><span class="prog-card-row-value">Clearer requests, better boundary‑setting, stronger support behaviours, healthier repair conversations</span>
-        </div>
-        <div class="prog-card-row">
-          <span class="prog-card-row-label cinzel">Focus</span><span class="prog-card-row-value">Help‑seeking scripts, boundary language, de‑escalation, trust micro‑skills, repair conversations</span>
-        </div>
-        <div class="prog-card-row">
-          <span class="prog-card-row-label cinzel">Includes</span><span class="prog-card-row-value">Role practice + communication frameworks</span>
-        </div>
-        <details class="prisma-map">
-          <summary><span class="prisma-map-label">PRisMA 2024 Mapping</span></summary>
-          <div class="prisma-map-content">
-            <span class="prisma-map-row"><span class="prisma-map-key">LEO26:</span> <span class="prisma-map-val">JS (Q17–Q24)</span></span>
-            <span class="prisma-map-row"><span class="prisma-map-key">EPC23:</span> <span class="prisma-map-val">15, 16, 20, 21</span></span>
-            <span class="prisma-map-row"><span class="prisma-map-key">PRiMA Themes:</span> <span class="prisma-map-val">Social Support; Transparency &amp; Fairness</span></span>
-          </div>
-        </details>
-        <div class="prog-card-spacer"></div>
-        <div class="prog-card-cta">
-          <a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-outline btn-sm" target="_blank" rel="noopener noreferrer">Request proposal</a>
-        </div>
-      </div>
-
-      <!-- Card 5: Energy, Recovery -->
-      <div class="prog-card">
-        <p class="prog-card-tag cinzel">4 hrs · Health + Tenacity</p>
-        <h3 class="prog-card-title cormorant">Energy, Recovery &amp; Sustainable Performance</h3>
-        <div class="prog-card-rule"></div>
-        <div class="prog-card-row">
-          <span class="prog-card-row-label cinzel">Best for</span><span class="prog-card-row-value">Burnout‑risk teams, shift roles, meeting‑heavy functions</span>
-        </div>
-        <div class="prog-card-row">
-          <span class="prog-card-row-label cinzel">Business impact</span><span class="prog-card-row-value">More consistent energy, better recovery habits, stronger performance sustainability during peak periods</span>
-        </div>
-        <div class="prog-card-row">
-          <span class="prog-card-row-label cinzel">Focus</span><span class="prog-card-row-value">Sleep and recovery basics, movement micro‑habits, nutrition principles, mistake recovery, sustainable pacing</span>
-        </div>
-        <div class="prog-card-row">
-          <span class="prog-card-row-label cinzel">Includes</span><span class="prog-card-row-value">Sustain plan + recovery practices</span>
-        </div>
-        <details class="prisma-map">
-          <summary><span class="prisma-map-label">PRisMA 2024 Mapping</span></summary>
-          <div class="prisma-map-content">
-            <span class="prisma-map-row"><span class="prisma-map-key">LEO26:</span> <span class="prisma-map-val">WD (Q4, Q25, Q26)</span></span>
-            <span class="prisma-map-row"><span class="prisma-map-key">EPC23:</span> <span class="prisma-map-val">16, 20</span></span>
-            <span class="prisma-map-row"><span class="prisma-map-key">PRiMA Themes:</span> <span class="prisma-map-val">Workload; Working Environment</span></span>
-          </div>
-        </details>
-        <div class="prog-card-spacer"></div>
-        <div class="prog-card-cta">
-          <a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-outline btn-sm" target="_blank" rel="noopener noreferrer">Request proposal</a>
-        </div>
-      </div>
-
-      <!-- Card 6: Purpose, Priorities -->
-      <div class="prog-card">
-        <p class="prog-card-tag cinzel">4 hrs · Vision + Tenacity</p>
-        <h3 class="prog-card-title cormorant">Purpose, Priorities &amp; Motivation at Work</h3>
-        <div class="prog-card-rule"></div>
-        <div class="prog-card-row">
-          <span class="prog-card-row-label cinzel">Best for</span><span class="prog-card-row-value">Teams after reorgs, strategic pivots, or motivation slumps</span>
-        </div>
-        <div class="prog-card-row">
-          <span class="prog-card-row-label cinzel">Business impact</span><span class="prog-card-row-value">Sharper priorities, stronger follow‑through, improved motivation on work that matters</span>
-        </div>
-        <div class="prog-card-row">
-          <span class="prog-card-row-label cinzel">Focus</span><span class="prog-card-row-value">Values and needs clarity, priorities, SMART goals, motivation skills</span>
-        </div>
-        <div class="prog-card-row">
-          <span class="prog-card-row-label cinzel">Includes</span><span class="prog-card-row-value">Goal plan + motivation tools</span>
-        </div>
-        <details class="prisma-map">
-          <summary><span class="prisma-map-label">PRisMA 2024 Mapping</span></summary>
-          <div class="prisma-map-content">
-            <span class="prisma-map-row"><span class="prisma-map-key">LEO26:</span> <span class="prisma-map-val">JC (Q1–Q3, Q12, Q14)</span></span>
-            <span class="prisma-map-row"><span class="prisma-map-key">EPC23:</span> <span class="prisma-map-val">7, 16, 20</span></span>
-            <span class="prisma-map-row"><span class="prisma-map-key">PRiMA Themes:</span> <span class="prisma-map-val">Training &amp; Education; Social Support</span></span>
-          </div>
-        </details>
-        <div class="prog-card-spacer"></div>
-        <div class="prog-card-cta">
-          <a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-outline btn-sm" target="_blank" rel="noopener noreferrer">Request proposal</a>
-        </div>
-      </div>
-
-      <!-- Card 7: People Manager Resilience -->
+      <!-- Card 2: People Manager Resilience -->
       <div class="prog-card">
         <p class="prog-card-tag cinzel">4 hrs · For Managers</p>
         <h3 class="prog-card-title cormorant">People Manager Resilience</h3>
@@ -2136,6 +2037,64 @@
           <a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-outline btn-sm" target="_blank" rel="noopener noreferrer">Request proposal</a>
         </div>
       </div>
+
+      <!-- Consolidated: Focused 4-Hour Modules (replaces 5 individual theme cards) -->
+      <div class="prog-card">
+        <p class="prog-card-tag cinzel">4 hrs · Focused Depth</p>
+        <h3 class="prog-card-title cormorant">Focused 4-Hour Modules</h3>
+        <div class="prog-card-rule"></div>
+        <div class="prog-card-row">
+          <span class="prog-card-row-label cinzel">Best for</span><span class="prog-card-row-value">Teams needing depth in a specific PR6 domain rather than broad foundations &mdash; typically when a LEO26 component has been flagged or a specific pressure point has emerged</span>
+        </div>
+        <div class="prog-card-row">
+          <span class="prog-card-row-label cinzel">Format</span><span class="prog-card-row-value">4-hour facilitated workshop on your chosen theme; onsite or virtual</span>
+        </div>
+        <div class="prog-card-row">
+          <span class="prog-card-row-label cinzel">Business impact</span><span class="prog-card-row-value">Targeted behaviour change in the specific domain where the capability gap sits</span>
+        </div>
+        <div class="prog-card-row">
+          <span class="prog-card-row-label cinzel">Includes</span><span class="prog-card-row-value">Facilitated workshop + theme-specific tools + individual action plan</span>
+        </div>
+
+        <span class="prog-menu-label cinzel">Available Themes</span>
+        <ul class="prog-menu-list">
+          <li>
+            <span class="menu-name">Calm Under Pressure <span class="menu-domain">Composure</span></span>
+            <span class="menu-desc">Self-regulation, fewer reactive escalations, steadier recovery after difficult moments.</span>
+          </li>
+          <li>
+            <span class="menu-name">Thinking Clearly Under Stress <span class="menu-domain">Reasoning</span></span>
+            <span class="menu-desc">Anticipation, decision quality, and problem-solving when conditions shift.</span>
+          </li>
+          <li>
+            <span class="menu-name">Resilient Communication &amp; Boundaries <span class="menu-domain">Collaboration</span></span>
+            <span class="menu-desc">Help-seeking scripts, boundary language, de-escalation, repair conversations.</span>
+          </li>
+          <li>
+            <span class="menu-name">Energy, Recovery &amp; Sustainable Performance <span class="menu-domain">Health + Tenacity</span></span>
+            <span class="menu-desc">Recovery habits, sustainable pacing, and energy management through peak periods.</span>
+          </li>
+          <li>
+            <span class="menu-name">Purpose, Priorities &amp; Motivation <span class="menu-domain">Vision + Tenacity</span></span>
+            <span class="menu-desc">Values clarity, priorities, follow-through, and motivation on work that matters.</span>
+          </li>
+        </ul>
+
+        <details class="prisma-map">
+          <summary><span class="prisma-map-label">PRisMA 2024 Mapping</span></summary>
+          <div class="prisma-map-content">
+            <span class="prisma-map-row"><span class="prisma-map-key">EPC23:</span> <span class="prisma-map-val">16, 20 (all themes); additional items depending on theme selected</span></span>
+            <span class="prisma-map-row"><span class="prisma-map-key">LEO26:</span> <span class="prisma-map-val">Coverage varies by theme &mdash; Composure/Health (WD), Reasoning (JC + WD), Collaboration (JS), Vision (JC)</span></span>
+            <span class="prisma-map-row"><span class="prisma-map-key">PRiMA Themes:</span> <span class="prisma-map-val">Training &amp; Education; theme-specific coverage across Workload, Social Support, Control, Job Matching, Working Environment</span></span>
+            <span class="prisma-map-note">Specific mapping for each theme is provided in the scoping conversation.</span>
+          </div>
+        </details>
+        <div class="prog-card-spacer"></div>
+        <div class="prog-card-cta">
+          <a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-outline btn-sm" target="_blank" rel="noopener noreferrer">Request proposal</a>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -2157,69 +2116,44 @@
           <p class="section-label" style="color: var(--green-muted);">1‑DAY INTENSIVES</p>
           <h2 class="cormorant">Bootcamps for Pressured Teams<br /><em>and Leaders</em></h2>
         </div>
-        <span class="section-heading-meta cinzel">3 BOOTCAMPS + FLAGSHIP · ONSITE &amp; VIRTUAL</span>
+        <span class="section-heading-meta cinzel">1 BOOTCAMP (3 THEMES) + FLAGSHIP · ONSITE &amp; VIRTUAL</span>
       </div>
       <div class="section-rule"></div>
       <p class="outcome-intro cormorant">
-        Ideal when your organisation needs a stronger reset, deeper practice, clearer team rhythms, or focused capability-building for teams under sustained demand. All bootcamps include PR6E baseline (individual reports).
+        Ideal when your organisation needs a stronger reset, deeper practice, or focused capability-building for teams under sustained demand. The 1-day bootcamp runs in one of three focus themes; the 2-day flagship (below) covers the full PR6 framework with measurement and reinforcement. All formats include PR6E baseline.
       </p>
-      <div class="bootcamp-grid">
+      <div class="bootcamp-grid" style="grid-template-columns: minmax(0, 780px); justify-content: center;">
         <div class="bootcamp-card">
-          <div class="bootcamp-num cinzel">01</div>
-          <p class="bootcamp-tag cinzel">Teams Needing a Strong Reset</p>
-          <h3 class="bootcamp-title cormorant">Resilience Under Pressure Bootcamp</h3>
+          <p class="bootcamp-tag cinzel">Full-day intensive</p>
+          <h3 class="bootcamp-title cormorant">1-Day Resilience Bootcamp</h3>
           <div class="bootcamp-rule"></div>
-          <div class="bootcamp-detail"><strong>Duration</strong>7 hours · Full day</div>
-          <div class="bootcamp-detail"><strong>What it covers</strong>PR6E hotspots, Composure deep dive, scenario simulations, action planning</div>
-          <div class="bootcamp-detail"><strong>Business impact</strong>Reduced reactivity and stronger recovery under sustained pressure</div>
+          <div class="bootcamp-detail"><strong>Duration</strong>7 hours &middot; Full day, onsite or virtual</div>
+          <div class="bootcamp-detail"><strong>Includes</strong>PR6E baseline (individual reports), theme-aligned deep practice, scenario simulations, action planning</div>
+          <div class="bootcamp-detail"><strong>Best for</strong>Teams needing a stronger reset, deeper practice, or focused capability-building under sustained demand</div>
+
+          <span class="prog-menu-label cinzel" style="color: var(--green-muted);">Available Focus Themes</span>
+          <ul class="prog-menu-list">
+            <li>
+              <span class="menu-name">Teams Needing a Strong Reset <span class="menu-domain">Composure Emphasis</span></span>
+              <span class="menu-desc">PR6E hotspots, composure deep-dive, scenario simulations. Reduces reactivity and builds stronger recovery under sustained pressure.</span>
+            </li>
+            <li>
+              <span class="menu-name">Leaders &amp; Operations Teams <span class="menu-domain">Decision Quality</span></span>
+              <span class="menu-desc">Composure, reasoning, change-readiness simulations. Sharper decisions and better response quality under load.</span>
+            </li>
+            <li>
+              <span class="menu-name">Cross-Functional Teams <span class="menu-domain">Collaboration + Tenacity</span></span>
+              <span class="menu-desc">Collaboration, tenacity, accountability, recovery rituals. Clearer team agreements and stronger support behaviours.</span>
+            </li>
+          </ul>
+
           <details class="prisma-map">
             <summary><span class="prisma-map-label">PRisMA 2024 Mapping</span></summary>
             <div class="prisma-map-content">
-              <span class="prisma-map-row"><span class="prisma-map-key">LEO26:</span> <span class="prisma-map-val">WD + JC (deeper Composure work)</span></span>
-              <span class="prisma-map-row"><span class="prisma-map-key">EPC23:</span> <span class="prisma-map-val">16, 20</span></span>
-              <span class="prisma-map-row"><span class="prisma-map-key">PRiMA Themes:</span> <span class="prisma-map-val">Training &amp; Education; Workload; Control</span></span>
-            </div>
-          </details>
-          <div class="bootcamp-spacer"></div>
-          <div class="bootcamp-cta">
-            <a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-green btn-sm" target="_blank" rel="noopener noreferrer">Request proposal</a>
-          </div>
-        </div>
-        <div class="bootcamp-card">
-          <div class="bootcamp-num cinzel">02</div>
-          <p class="bootcamp-tag cinzel">Leaders &amp; Operations Teams</p>
-          <h3 class="bootcamp-title cormorant">Decision Quality Under Pressure Bootcamp</h3>
-          <div class="bootcamp-rule"></div>
-          <div class="bootcamp-detail"><strong>Duration</strong>7 hours · Full day</div>
-          <div class="bootcamp-detail"><strong>What it covers</strong>Composure, Reasoning, change‑readiness simulations</div>
-          <div class="bootcamp-detail"><strong>Business impact</strong>Sharper decisions, stronger anticipation, better response quality under load</div>
-          <details class="prisma-map">
-            <summary><span class="prisma-map-label">PRisMA 2024 Mapping</span></summary>
-            <div class="prisma-map-content">
-              <span class="prisma-map-row"><span class="prisma-map-key">LEO26:</span> <span class="prisma-map-val">JC (Q12, Q14, Q16) + WD</span></span>
-              <span class="prisma-map-row"><span class="prisma-map-key">EPC23:</span> <span class="prisma-map-val">16, 20</span></span>
-              <span class="prisma-map-row"><span class="prisma-map-key">PRiMA Themes:</span> <span class="prisma-map-val">Training &amp; Education; Job Matching; Control</span></span>
-            </div>
-          </details>
-          <div class="bootcamp-spacer"></div>
-          <div class="bootcamp-cta">
-            <a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-green btn-sm" target="_blank" rel="noopener noreferrer">Request proposal</a>
-          </div>
-        </div>
-        <div class="bootcamp-card">
-          <div class="bootcamp-num cinzel">03</div>
-          <p class="bootcamp-tag cinzel">Cross‑Functional Teams</p>
-          <h3 class="bootcamp-title cormorant">Resilient Teams Bootcamp</h3>
-          <div class="bootcamp-rule"></div>
-          <div class="bootcamp-detail"><strong>Duration</strong>7 hours · Full day</div>
-          <div class="bootcamp-detail"><strong>What it covers</strong>Collaboration, Tenacity, accountability, recovery rituals</div>
-          <div class="bootcamp-detail"><strong>Business impact</strong>Clearer team agreements, stronger support behaviours, better sustainment rituals</div>
-          <details class="prisma-map">
-            <summary><span class="prisma-map-label">PRisMA 2024 Mapping</span></summary>
-            <div class="prisma-map-content">
-              <span class="prisma-map-row"><span class="prisma-map-key">LEO26:</span> <span class="prisma-map-val">JS (full subscale) + WD (Q25, Q26)</span></span>
-              <span class="prisma-map-row"><span class="prisma-map-key">EPC23:</span> <span class="prisma-map-val">16, 20, 21</span></span>
-              <span class="prisma-map-row"><span class="prisma-map-key">PRiMA Themes:</span> <span class="prisma-map-val">Social Support; Transparency &amp; Fairness; Workload</span></span>
+              <span class="prisma-map-row"><span class="prisma-map-key">EPC23:</span> <span class="prisma-map-val">16, 20 (all themes); additional items depending on theme selected</span></span>
+              <span class="prisma-map-row"><span class="prisma-map-key">LEO26:</span> <span class="prisma-map-val">Coverage varies by theme &mdash; Reset (WD + JC), Leaders (JC + WD), Teams (JS full + WD)</span></span>
+              <span class="prisma-map-row"><span class="prisma-map-key">PRiMA Themes:</span> <span class="prisma-map-val">Training &amp; Education; theme-specific coverage across Workload, Control, Social Support, Transparency &amp; Fairness, Job Matching</span></span>
+              <span class="prisma-map-note">Specific mapping for each theme is provided in the scoping conversation.</span>
             </div>
           </details>
           <div class="bootcamp-spacer"></div>
@@ -2301,7 +2235,7 @@
         <p class="section-label" style="color: var(--green-muted);">RISK + STRATEGY SUPPORT</p>
         <h2 class="cormorant">Evidence-Based Options<br /><em>for HR &amp; Leadership</em></h2>
       </div>
-      <span class="section-heading-meta cinzel">3 SERVICES · 2 HRS – 12 WKS</span>
+      <span class="section-heading-meta cinzel">2 SERVICES · 2 HRS – 12 WKS</span>
     </div>
     <div class="section-rule"></div>
     <p class="outcome-intro cormorant">
@@ -2330,35 +2264,6 @@
             <span class="prisma-map-row"><span class="prisma-map-key">PRisMA Stage:</span> <span class="prisma-map-val">Bridges Stage II → Stage III planning</span></span>
             <span class="prisma-map-row"><span class="prisma-map-key">Function:</span> <span class="prisma-map-val">Resilience-capability layer complementing LEO26; informs PRiMA Action Plan sequencing</span></span>
             <span class="prisma-map-note">Does not replace the statutory LEO26 / EPC23 process conducted by your PTP.</span>
-          </div>
-        </details>
-        <div class="consulting-card-spacer"></div>
-        <div class="consulting-card-cta">
-          <a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-green btn-sm" target="_blank" rel="noopener noreferrer">Request proposal</a>
-        </div>
-      </div>
-      <div class="consulting-card">
-        <p class="consulting-card-tag cinzel">2–4 hrs · Post‑Programme ROI</p>
-        <h3 class="consulting-card-title cormorant">PR6E Re‑measure + Impact Report</h3>
-        <div class="consulting-card-rule"></div>
-        <div class="consulting-card-row">
-          <span class="consulting-card-row-label cinzel">Best for</span><span class="consulting-card-row-value">Demonstrating measurable outcomes to leadership and stakeholders</span>
-        </div>
-        <div class="consulting-card-row">
-          <span class="consulting-card-row-label cinzel">Outputs</span><span class="consulting-card-row-value">Pre/post comparison, impact narrative, sustain recommendations</span>
-        </div>
-        <div class="consulting-card-row">
-          <span class="consulting-card-row-label cinzel">Measure</span><span class="consulting-card-row-value"><strong>PR6E</strong> (pre/post comparison)</span>
-        </div>
-        <div class="consulting-card-row">
-          <span class="consulting-card-row-label cinzel">Business value</span><span class="consulting-card-row-value">Clear evidence of resilience movement and stronger basis for future investment</span>
-        </div>
-        <details class="prisma-map">
-          <summary><span class="prisma-map-label">PRisMA 2024 Mapping</span></summary>
-          <div class="prisma-map-content">
-            <span class="prisma-map-row"><span class="prisma-map-key">PRisMA Stage:</span> <span class="prisma-map-val">Supplementary evidence for Stage III training effectiveness; contributes to the 12-month re-evaluation conversation with your PTP</span></span>
-            <span class="prisma-map-row"><span class="prisma-map-key">Function:</span> <span class="prisma-map-val">Demonstrates movement in EPC23 items 16 &amp; 20 (Training &amp; Education controls) between PRisMA cycles</span></span>
-            <span class="prisma-map-note">Does not replace the statutory Step 11 re-evaluation, which must be conducted by a PTP using LEO26 &amp; EPC23.</span>
           </div>
         </details>
         <div class="consulting-card-spacer"></div>
@@ -2400,10 +2305,14 @@
 
   <section id="upgrade">
     <div class="upgrade-box">
-      <p class="upgrade-label cinzel">Optional proof pack — available for any training programme</p>
+      <p class="upgrade-label cinzel">Evidence &amp; ROI &mdash; Proof Pack for any training programme</p>
       <p class="upgrade-text cormorant">
-        Add a <strong>PR6E Re‑measure + Impact Report</strong> to capture resilience skill movement at 6–8
-        weeks post-delivery and give leadership a stronger evidence base for ROI conversations.
+        Add a <strong>PR6E Re‑measure + Impact Report</strong> at 6–8 weeks post-delivery to capture resilience
+        skill movement, document training effectiveness for EPC23 items 16 &amp; 20, and give leadership a
+        clear evidence base for ROI conversations and the 12-month PRisMA re-evaluation cycle.
+      </p>
+      <p class="upgrade-text cormorant" style="font-size: 16px; margin-top: 14px; color: var(--text-dim); font-style: italic;">
+        Supplementary evidence only. Does not replace the statutory Step 11 re-evaluation conducted by your PTP.
       </p>
     </div>
   </section>
