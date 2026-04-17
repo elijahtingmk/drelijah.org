@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en-GB">
 <head>
   <meta charset="UTF-8" />
@@ -205,6 +204,47 @@
       color: var(--text-muted);
       font-weight: 300;
       margin-bottom: 18px;
+    }
+
+    /* ── POSITIONING STRIP ── */
+    .positioning-strip {
+      padding: 56px 48px;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, var(--bg) 0%, #121110 100%);
+    }
+    .positioning-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .positioning-label {
+      font-family: 'Cinzel', serif;
+      font-size: 11px;
+      letter-spacing: 0.35em;
+      color: var(--gold);
+      /* No text-transform — preserves PRisMA mixed case. */
+      margin-bottom: 18px;
+      display: block;
+    }
+    .positioning-text {
+      font-size: 17px;
+      line-height: 1.8;
+      color: var(--text-muted);
+      font-weight: 300;
+      margin-bottom: 16px;
+    }
+    .positioning-text strong {
+      color: var(--text);
+      font-weight: 500;
+    }
+    .positioning-boundary {
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--text-dim);
+      font-style: italic;
+      max-width: 660px;
+      margin: 0 auto;
     }
 
     /* ── JOURNEY ── */
@@ -458,6 +498,8 @@
       }
       .about-photo { width: 160px; min-width: 160px; border-radius: 50%; }
 
+      .positioning-strip { padding: 40px 24px; }
+
       .journey { padding: 60px 24px; }
       .journey-step { flex-direction: column; gap: 8px; }
       .journey-era { min-width: auto; }
@@ -507,10 +549,10 @@
 <div class="about-intro reveal d1">
   <p class="section-label">ABOUT</p>
   <h1 class="cormorant">Dr Elijah</h1>
-  <p class="subtitle cormorant">Evidence-based workplace resilience for organisations under pressure</p>
+  <p class="subtitle cormorant">Workplace Resilience Specialist &mdash; evidence-based training for Malaysian employers under pressure</p>
 
   <p>
-    I help organisations build calmer leaders, steadier teams, and sustainable performance under pressure — through evidence-based training, practical skill-building, and measurable capability development.
+    I help organisations build calmer leaders, steadier teams, and sustainable performance under pressure &mdash; through evidence-based training, practical skill-building, and measurable capability development.
   </p>
   <p>
     My foundation began in <strong>nursing</strong>, where I learned to stay composed when stakes were high. Through years of <strong>pastoral practice</strong>, I deepened my understanding of meaning, suffering, and human connection. An <strong>Executive MBA</strong> and an <strong>Executive Doctorate in Learning &amp; Development</strong> then strengthened my work in leadership, adult learning, and measurable capability building.
@@ -518,6 +560,20 @@
 </div>
 
 
+  </section>
+
+  <!-- POSITIONING STRIP -->
+
+  <section class="positioning-strip">
+    <div class="positioning-inner">
+      <p class="positioning-label">HOW THIS PRACTICE IS POSITIONED</p>
+      <p class="positioning-text">
+        A considered training partner for Malaysian employers&rsquo; <strong>PRiMA Action Plans</strong> under the PRisMA 2024 framework (OSHA Amendment Act 2022). Specialising in <strong>Stage III Risk Control</strong> &mdash; the Training &amp; Education controls mandated in EPC23 items 16 &amp; 20.
+      </p>
+      <p class="positioning-boundary">
+        Not a Psychosocial Trained Person (PTP). Statutory Stage I/II assessments (LEO26/EPC23) are conducted by a certified PTP.
+      </p>
+    </div>
   </section>
 
   <!-- JOURNEY TIMELINE -->
@@ -616,7 +672,7 @@
     </p>
     <div class="about-cta-btns">
       <a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-fill" target="_blank" rel="noopener noreferrer">Request Proposal</a>
-      <a href="programmes.html" class="btn btn-outline">Browse Solutions</a>
+      <a href="programmes.html#start-here" class="btn btn-outline">Find Your Pathway</a>
     </div>
     <p class="about-cta-email">Or email directly: <a href="mailto:elijah@DrElijah.org">elijah@DrElijah.org</a></p>
   </section>
