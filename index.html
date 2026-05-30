@@ -552,6 +552,63 @@
     .cta-email a { color: var(--gold); text-decoration: none; border-bottom: 1px solid var(--gold-dim); transition: border-color 0.3s; }
     .cta-email a:hover { border-color: var(--gold); }
 
+    /* INDIVIDUALS / CAREER DIRECTION (secondary track — green accent) */
+    #individuals {
+      padding: 88px 48px;
+      background: var(--bg-alt);
+      border-top: 1px solid var(--border);
+      position: relative;
+    }
+    .individuals-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .individuals-inner .section-label {
+      color: var(--green-muted);
+    }
+    .individuals-inner h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(26px, 3.2vw, 38px);
+      font-weight: 300;
+      line-height: 1.3;
+      color: var(--text);
+      margin-bottom: 20px;
+      letter-spacing: 0.01em;
+    }
+    .individuals-rule {
+      width: 40px;
+      height: 1px;
+      background: var(--green-dim);
+      margin: 0 auto 26px;
+    }
+    .individuals-desc {
+      font-size: 17px;
+      line-height: 1.85;
+      color: var(--text-muted);
+      font-weight: 300;
+      max-width: 720px;
+      margin: 0 auto 32px;
+    }
+    .individuals-desc strong { color: var(--text); font-weight: 500; }
+    .individuals-link {
+      font-family: 'Cinzel', serif;
+      font-size: 13px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--green-muted);
+      text-decoration: none;
+      border: 1px solid var(--green-dim);
+      padding: 14px 32px;
+      display: inline-block;
+      transition: all 0.3s ease;
+    }
+    .individuals-link:hover {
+      background: var(--green-muted);
+      color: var(--bg);
+      border-color: var(--green-muted);
+    }
+
     /* FOOTER */
     footer {
       padding: 40px 48px 32px;
@@ -610,7 +667,7 @@
       .hero-photo { width: 120px; height: 120px; }
       .scroll-hint { display: none; }
 
-      #roles, #methodology, #quote, #credentials, #what-to-expect, #cta, #prisma-positioning {
+      #roles, #methodology, #quote, #credentials, #what-to-expect, #cta, #prisma-positioning, #individuals {
         padding-left: 24px;
         padding-right: 24px;
       }
@@ -654,6 +711,7 @@
       <li><a href="about.html">About</a></li>
       <li><a href="practice.html">Practice</a></li>
       <li><a href="#methodology">Methodology</a></li>
+      <li><a href="#individuals">Individuals</a></li>
       <li><a href="#cta">Contact</a></li>
     </ul>
     <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
@@ -997,6 +1055,26 @@
         <a href="practice.html" class="btn btn-outline">Explore the Practice</a>
       </div>
       <p class="cta-email">Or direct: <a href="mailto:elijah@drelijah.org">elijah@drelijah.org</a></p>
+    </section>
+
+    <!-- INDIVIDUALS / CAREER DIRECTION (secondary track) -->
+    <section id="individuals">
+      <div class="individuals-inner">
+        <p class="section-label">Beyond the Workplace</p>
+        <h2 class="cormorant">Career &amp; Life Direction for Individuals</h2>
+        <div class="individuals-rule"></div>
+        <p class="individuals-desc">
+          Alongside the organisational practice, I also work one-to-one with individuals &mdash;
+          <strong>school leavers</strong> choosing a course and career direction, and adults rethinking
+          direction at a mid-career crossroads &mdash; using <strong>Career Direct&reg;</strong>, an
+          evidence-based assessment of personality, interests, skills, and values.
+        </p>
+        <a href="https://careerdirect.org/consultant/5gnoe44mt0zxodh491k"
+           class="individuals-link cinzel"
+           target="_blank" rel="noopener noreferrer">
+          View My Career Direct Profile &rarr;
+        </a>
+      </div>
     </section>
   </main>
 
