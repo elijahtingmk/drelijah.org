@@ -31,6 +31,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png" />
   <link rel="manifest" href="/assets/favicons/site.webmanifest" />
+  <meta name="theme-color" content="#0E0D0B" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -118,6 +119,13 @@
       display: block;
       height: 36px;
       width: auto;
+    }
+    .nav-logo img + .nav-logo-text { display: none; }
+    .nav-logo-text {
+      font-family: 'Cinzel', serif;
+      font-size: 15px;
+      letter-spacing: 0.25em;
+      color: var(--gold);
     }
     @media (max-width: 768px) {
       .nav-logo img { height: 28px; }
@@ -529,7 +537,8 @@
   <!-- NAV -->
   <nav id="nav">
     <a href="index.html" class="nav-logo" aria-label="Elijah Ting — Workplace Resilience">
-      <img src="assets/images/logo-wordmark-on-dark.png" alt="Elijah Ting — Workplace Resilience" />
+      <img src="assets/images/logo-wordmark-on-dark.png" alt="Elijah Ting — Workplace Resilience" onerror="this.remove()" />
+      <span class="nav-logo-text cinzel">ELIJAH TING</span>
     </a>
     <ul class="nav-links">
       <li><a href="about.html" class="current">About</a></li>
