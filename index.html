@@ -30,11 +30,12 @@
   <meta name="twitter:image" content="https://drelijah.org/assets/images/og-image.jpg" />
 
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230E0D0B'/%3E%3Crect x='1' y='1' width='30' height='30' rx='5' fill='none' stroke='%23C8A96E' stroke-width='0.75'/%3E%3Ctext x='16' y='23' font-family='Georgia%2C serif' font-size='20' font-weight='400' fill='%23C8A96E' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E" />
   <link rel="icon" href="/assets/favicons/favicon.ico" sizes="any" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png" />
+  <link rel="manifest" href="/assets/favicons/site.webmanifest" />
+  <meta name="theme-color" content="#0E0D0B" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -140,11 +141,22 @@
       backdrop-filter: blur(12px);
     }
     .nav-logo {
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+    }
+    .nav-logo img {
+      display: block;
+      height: 36px;
+      width: auto;
+    }
+    /* fallback text shows only if the wordmark image fails to load */
+    .nav-logo img + .nav-logo-text { display: none; }
+    .nav-logo-text {
       font-family: 'Cinzel', serif;
       font-size: 15px;
       letter-spacing: 0.25em;
       color: var(--gold);
-      text-decoration: none;
     }
     .nav-links { display: flex; gap: 36px; list-style: none; }
     .nav-links a {
@@ -687,7 +699,7 @@
       .quote-attr { font-size: 15px; letter-spacing: 0.2em; }
       .footer-social a { font-size: 16px; }
       .footer-brand, .footer-domain { font-size: 14px; }
-      .nav-logo { font-size: 16px; }
+      .nav-logo img { height: 28px; }
 
       .hero-credentials { padding: 10px 18px; gap: 8px 14px; }
       .hero-credentials span { font-size: 10px; }
@@ -706,7 +718,10 @@
 
   <!-- NAV -->
   <nav id="nav">
-    <a href="#hero" class="nav-logo">ELIJAH TING, Ex Doc (L&D)</a>
+    <a href="#hero" class="nav-logo" aria-label="Elijah Ting — Workplace Resilience">
+      <img src="assets/images/logo-wordmark-on-dark.png" alt="Elijah Ting — Workplace Resilience" onerror="this.remove()" />
+      <span class="nav-logo-text cinzel">ELIJAH TING</span>
+    </a>
     <ul class="nav-links">
       <li><a href="about.html">About</a></li>
       <li><a href="practice.html">Practice</a></li>
