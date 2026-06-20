@@ -62,6 +62,26 @@ def ring_mask(rc_frac=0.40, w_frac=0.078, gap_deg=27.0, rot_deg=8.0,
     return m
 
 
+def source_mask():
+    """Open-ring mask taken from the supplied brand artwork.
+
+    Uses the alpha channel of assets/images/logo-ring-source.png so the
+    favicons match the nav wordmark exactly. Trimmed to the mark's bounding
+    box and centred full-bleed in the SS canvas (padding is added later by
+    favicon_tile / ring_png), mirroring the old ring_mask framing.
+    """
+    import os
+    root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    src = Image.open(os.path.join(root, "assets", "images",
+                                  "logo-ring-source.png")).convert("RGBA")
+    a = src.split()[-1]
+    a = a.crop(a.getbbox())
+    side = max(a.size)
+    sq = Image.new("L", (side, side), 0)
+    sq.paste(a, ((side - a.width) // 2, (side - a.height) // 2))
+    return sq.resize((SS, SS), Image.LANCZOS)
+
+
 def colorize(mask, color):
     """RGBA image: `color` where mask, transparent elsewhere."""
     img = Image.new("RGBA", mask.size, (color[0], color[1], color[2], 0))
@@ -93,7 +113,7 @@ def favicon_tile(size, pad_frac=0.16, rounded=True):
         bg = rounded_rect_bg(SS, BROWN)
     else:
         bg = Image.new("RGBA", (SS, SS), BROWN)
-    ring = colorize(ring_mask(), CREAM)
+    ring = colorize(source_mask(), CREAM)
     pad = int(SS * pad_frac)
     inner = resize(ring, SS - 2 * pad)
     bg.alpha_composite(inner, (pad, pad))
@@ -101,7 +121,7 @@ def favicon_tile(size, pad_frac=0.16, rounded=True):
 
 
 def ring_png(size, color, pad_frac=0.04):
-    ring = colorize(ring_mask(), color)
+    ring = colorize(source_mask(), color)
     pad = int(SS * pad_frac)
     inner = resize(ring, SS - 2 * pad)
     canvas = Image.new("RGBA", (SS, SS), (0, 0, 0, 0))
