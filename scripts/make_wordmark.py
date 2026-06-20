@@ -43,14 +43,20 @@ def build():
     block_h = name_h + gap_name_sub + sub_size
     block_top = (H - block_h) // 2
 
-    # ring on the left, a touch taller than the text block
-    ring = Image.open(os.path.join(IMG, "logo-ring-on-dark.png")).convert("RGBA")
+    # exact brand ring (logo-ring-source.png): recolour the black mark to
+    # cream via its alpha channel, then trim to the mark's bounding box so
+    # sizing is consistent regardless of canvas padding.
+    src = Image.open(os.path.join(IMG, "logo-ring-source.png")).convert("RGBA")
+    ring = Image.new("RGBA", src.size, CREAM)
+    ring.putalpha(src.split()[-1])
+    ring = ring.crop(ring.getbbox())
     ring_h = int(block_h * 1.12)
-    ring_scaled = ring.resize((ring_h, ring_h), Image.LANCZOS)
+    ring_w = int(ring.width * ring_h / ring.height)
+    ring_scaled = ring.resize((ring_w, ring_h), Image.LANCZOS)
     ring_x = 120
     canvas.alpha_composite(ring_scaled, (ring_x, (H - ring_h) // 2))
 
-    text_x = ring_x + ring_h + int(name_size * 0.42)
+    text_x = ring_x + ring_w + int(name_size * 0.42)
 
     # name (cream)
     draw.text((text_x - nb[0], block_top - nb[1]), NAME, font=name_font, fill=CREAM)
