@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Workplace Resilience Training | Dr. Elijah — HRD Corp Claimable, Non-Clinical (PR6)</title>
+  <meta
+    name="description"
+    content="Proactive, HRD Corp claimable workplace resilience training based on the Predictive 6 Factor Resilience (PR6) model by Hello Driven. Non-clinical, preventative capability-building delivered by Dr. Elijah, Certified Resilience Coach."
+  />
+
+  <meta property="og:title" content="Workplace Resilience Training | Dr. Elijah — HRD Corp Claimable, Non-Clinical (PR6)" />
+  <meta
+    property="og:description"
+    content="Proactive, HRD Corp claimable, non-clinical workplace resilience training built on the PR6 model by Hello Driven."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://drelijah.org/resilience-training.html" />
+  <meta property="og:image" content="https://drelijah.org/assets/images/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Workplace Resilience Training | Dr. Elijah — HRD Corp Claimable, Non-Clinical (PR6)" />
+  <meta
+    name="twitter:description"
+    content="Proactive, HRD Corp claimable, non-clinical workplace resilience training built on the PR6 model by Hello Driven."
+  />
+  <meta name="twitter:image" content="https://drelijah.org/assets/images/og-image.jpg" />
+
+  <link rel="icon" href="/assets/favicons/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png" />
+  <link rel="manifest" href="/assets/favicons/site.webmanifest" />
+  <meta name="theme-color" content="#0E0D0B" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Cinzel:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --gold: #C8A96E;
+      --gold-dim: #C8A96E44;
+      --green: #344E41;
+      --green-light: #344E4133;
+      --green-dim: #344E4144;
+      --green-muted: #5A7A66;
+      --terracotta: #C06C54;
+      --bg: #0E0D0B;
+      --bg-alt: #13120F;
+      --bg-card: #1A1813;
+      --border: #2A2720;
+      --border-dim: #2A272066;
+      --text: #E8E4DC;
+      --text-muted: #9A9080;
+      --text-dim: #5A5650;
+    }
+
+    html { scroll-behavior: smooth; font-size: 112.5%; }
+
+    body {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      background: var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    ::selection { background: #C8A96E33; color: var(--gold); }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.025;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+
+    @keyframes reveal {
+      from { opacity: 0; transform: translateY(28px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .reveal { opacity: 0; animation: reveal 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+    .d1 { animation-delay: 0.1s; }
+    .d2 { animation-delay: 0.25s; }
+    .d3 { animation-delay: 0.4s; }
+    .d4 { animation-delay: 0.55s; }
+    .d5 { animation-delay: 0.7s; }
+
+    .cinzel { font-family: 'Cinzel', serif; }
+    .cormorant { font-family: 'Cormorant Garamond', Georgia, serif; }
+
+    /* ── Navigation ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 20px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid transparent;
+      transition: all 0.4s ease;
+    }
+    nav.scrolled {
+      border-bottom-color: var(--border);
+      background: rgba(14, 13, 11, 0.88);
+      backdrop-filter: blur(12px);
+    }
+    .nav-logo { display: inline-flex; align-items: center; text-decoration: none; }
+    .nav-logo img { display: block; height: 36px; width: auto; }
+    .nav-logo img + .nav-logo-text { display: none; }
+    .nav-logo-text {
+      font-family: 'Cinzel', serif;
+      font-size: 15px;
+      letter-spacing: 0.25em;
+      color: var(--gold);
+    }
+    @media (max-width: 768px) { .nav-logo img { height: 28px; } }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links a {
+      font-family: 'Cinzel', serif;
+      font-size: 14px;
+      letter-spacing: 0.15em;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .nav-links a:hover,
+    .nav-links a.current { color: var(--gold); }
+    .nav-links a.current.green { color: var(--green-muted); }
+    .nav-hamburger {
+      display: none;
+      background: none; border: none; cursor: pointer;
+      padding: 8px; flex-direction: column; gap: 5px; z-index: 101;
+    }
+    .nav-hamburger span {
+      display: block; width: 24px; height: 1.5px;
+      background: var(--gold); transition: all 0.3s ease;
+    }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+    /* ── Buttons ── */
+    .btn {
+      font-family: 'Cinzel', serif;
+      font-size: 14px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 16px 40px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.3s ease;
+    }
+    .btn-green { background: var(--green-muted); border: 1px solid var(--green-muted); color: var(--bg); }
+    .btn-green:hover { background: transparent; color: var(--green-muted); }
+    .btn-outline { background: transparent; border: 1px solid var(--green-muted); color: var(--green-muted); }
+    .btn-outline:hover { background: var(--green-muted); color: var(--bg); }
+    .btn-gold { background: transparent; border: 1px solid var(--gold); color: var(--gold); }
+    .btn-gold:hover { background: var(--gold); color: var(--bg); }
+
+    .section-label {
+      font-family: 'Cinzel', serif;
+      font-size: 14px;
+      letter-spacing: 0.35em;
+      color: var(--green-muted);
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    /* ── Hero ── */
+    #page-hero {
+      padding: 160px 48px 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-hero-glow {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 700px; height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #5A7A6610 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-identity {
+      margin-bottom: 22px;
+    }
+    .hero-identity-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(26px, 3.4vw, 38px);
+      font-weight: 400;
+      color: var(--gold);
+      line-height: 1.1;
+      letter-spacing: 0.02em;
+    }
+    .hero-role {
+      font-family: 'Cinzel', serif;
+      font-size: 12px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-top: 10px;
+    }
+    #page-hero h1 {
+      font-size: clamp(38px, 5.4vw, 68px);
+      font-weight: 300;
+      line-height: 1.1;
+      letter-spacing: -0.01em;
+      margin-bottom: 16px;
+    }
+    #page-hero h1 em { font-style: italic; color: var(--green-muted); }
+    #page-hero .hero-sub {
+      font-size: clamp(20px, 2.4vw, 26px);
+      font-weight: 300;
+      font-style: italic;
+      color: var(--text-muted);
+      margin-bottom: 18px;
+      line-height: 1.5;
+      max-width: 820px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    #page-hero .hero-desc {
+      font-size: 17px;
+      line-height: 1.7;
+      color: #9A9080;
+      font-weight: 300;
+      max-width: 760px;
+      margin: 0 auto 28px;
+    }
+    .hero-credential-strip {
+      display: inline-flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 14px 22px;
+      padding: 14px 28px;
+      margin-bottom: 36px;
+      border: 1px solid var(--green-dim);
+      background: #5A7A6610;
+    }
+    .hero-credential-strip span {
+      font-family: 'Cinzel', serif;
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      color: var(--green-muted);
+      text-transform: uppercase;
+    }
+    .hero-credential-strip .dot { color: var(--text-dim); font-size: 8px; letter-spacing: 0; }
+    .hero-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+    /* ── Boundary callout ── */
+    .boundary-strip { padding: 0 48px 64px; }
+    .boundary-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--green-muted);
+      padding: 32px 40px;
+    }
+    .boundary-inner .scope-label {
+      font-family: 'Cinzel', serif;
+      font-size: 11px;
+      letter-spacing: 0.3em;
+      color: var(--green-muted);
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 12px;
+    }
+    .boundary-inner p {
+      font-size: 16px;
+      line-height: 1.8;
+      color: var(--text-muted);
+    }
+    .boundary-inner strong { color: var(--text); font-weight: 500; }
+
+    /* ── PR6 model ── */
+    #pr6 {
+      padding: 90px 48px;
+      max-width: 1240px;
+      margin: 0 auto;
+    }
+    .pr6-header { text-align: center; margin-bottom: 56px; }
+    .pr6-header h2 {
+      font-size: clamp(28px, 3.6vw, 44px);
+      font-weight: 300;
+      line-height: 1.2;
+      margin-bottom: 14px;
+    }
+    .pr6-header h2 em { font-style: italic; color: var(--green-muted); }
+    .pr6-header p {
+      font-size: 17px;
+      color: var(--text-muted);
+      max-width: 740px;
+      margin: 0 auto;
+      line-height: 1.75;
+    }
+    .pr6-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border);
+    }
+    .pr6-card {
+      background: var(--bg-card);
+      padding: 34px 30px;
+      transition: background 0.4s ease;
+    }
+    .pr6-card:hover { background: #1F1D17; }
+    .pr6-num {
+      font-family: 'Cinzel', serif;
+      font-size: 12px;
+      letter-spacing: 0.3em;
+      color: var(--green-muted);
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 12px;
+    }
+    .pr6-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 26px;
+      font-weight: 400;
+      color: var(--text);
+      margin-bottom: 10px;
+    }
+    .pr6-card p {
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--text-muted);
+      font-weight: 300;
+    }
+
+    /* ── Outcomes ── */
+    #outcomes { padding: 90px 48px; background: var(--bg-alt); }
+    .outcomes-inner { max-width: 1100px; margin: 0 auto; text-align: center; }
+    .outcomes-inner h2 {
+      font-size: clamp(28px, 3.5vw, 42px);
+      font-weight: 300;
+      margin-bottom: 40px;
+    }
+    .outcomes-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+    .outcome-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      padding: 32px 30px;
+      text-align: left;
+    }
+    .outcome-title {
+      font-family: 'Cinzel', serif;
+      font-size: 14px;
+      letter-spacing: 0.12em;
+      color: var(--green-muted);
+      margin-bottom: 14px;
+    }
+    .outcome-text { font-size: 17px; line-height: 1.8; color: var(--text-muted); font-weight: 300; }
+
+    /* ── HRD claimable ── */
+    #hrd { padding: 90px 48px; max-width: 1000px; margin: 0 auto; }
+    .hrd-box {
+      background: linear-gradient(155deg, var(--bg-card) 0%, #181C18 100%);
+      border: 1px solid var(--green-dim);
+      padding: 44px 48px;
+      text-align: center;
+    }
+    .hrd-box .section-label { color: var(--green-muted); }
+    .hrd-box h2 {
+      font-size: clamp(26px, 3.2vw, 38px);
+      font-weight: 300;
+      margin-bottom: 18px;
+    }
+    .hrd-box p {
+      font-size: 17px;
+      line-height: 1.8;
+      color: var(--text-muted);
+      max-width: 720px;
+      margin: 0 auto 24px;
+      font-weight: 300;
+    }
+    .hrd-box img { width: 110px; height: auto; opacity: 0.95; margin-top: 8px; }
+
+    /* ── Scope & boundary ── */
+    #scope-boundary { padding: 80px 48px; max-width: 980px; margin: 0 auto; }
+    .scope-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--green-muted);
+      padding: 40px 44px;
+    }
+    .scope-box .scope-label {
+      font-family: 'Cinzel', serif;
+      font-size: 11px;
+      letter-spacing: 0.35em;
+      color: var(--green-muted);
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      display: block;
+    }
+    .scope-box h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(22px, 2.6vw, 30px);
+      font-weight: 300;
+      color: var(--text);
+      margin-bottom: 22px;
+      line-height: 1.35;
+    }
+    .scope-box h3 em { font-style: italic; color: var(--text-muted); }
+    .scope-box p { font-size: 16px; line-height: 1.8; color: var(--text-muted); margin-bottom: 14px; }
+    .scope-box p:last-child { margin-bottom: 0; }
+    .scope-box strong { color: var(--text); font-weight: 500; }
+
+    /* ── Cross-link to compliance ── */
+    .crosslink { padding: 60px 48px; max-width: 1000px; margin: 0 auto; }
+    .crosslink-inner {
+      border: 1px solid var(--gold-dim);
+      background: #C8A96E08;
+      padding: 32px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .crosslink-inner .cl-text { max-width: 620px; }
+    .crosslink-inner .cl-label {
+      font-family: 'Cinzel', serif;
+      font-size: 11px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 8px;
+    }
+    .crosslink-inner h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 24px;
+      font-weight: 300;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+    .crosslink-inner p { font-size: 15px; color: var(--text-muted); line-height: 1.6; }
+
+    /* ── CTA ── */
+    #cta { padding: 110px 48px; text-align: center; position: relative; overflow: hidden; }
+    .cta-glow {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 600px; height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #5A7A660A 0%, transparent 65%);
+      pointer-events: none;
+    }
+    #cta .section-label { margin-bottom: 24px; }
+    #cta h2 { font-size: clamp(34px, 5vw, 60px); font-weight: 300; line-height: 1.2; margin-bottom: 24px; }
+    #cta h2 em { font-style: italic; }
+    #cta p {
+      font-size: 19px;
+      color: var(--text-muted);
+      max-width: 720px;
+      margin: 0 auto 36px;
+      line-height: 1.8;
+    }
+    .cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .cta-email {
+      font-family: 'Cinzel', serif;
+      font-size: 13px;
+      letter-spacing: 0.15em;
+      color: var(--text-dim);
+      margin-top: 20px;
+    }
+    .cta-email a { color: var(--green-muted); text-decoration: none; border-bottom: 1px solid var(--green-dim); }
+
+    /* ── Footer ── */
+    footer {
+      padding: 40px 48px 32px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+    .footer-top {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .footer-brand { font-family: 'Cinzel', serif; font-size: 13px; letter-spacing: 0.2em; color: var(--gold); }
+    .footer-domain { font-family: 'Cinzel', serif; font-size: 13px; letter-spacing: 0.15em; color: var(--text-dim); }
+    .footer-social { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; justify-content: center; }
+    .footer-social a {
+      font-family: 'Cinzel', serif;
+      font-size: 13px;
+      letter-spacing: 0.12em;
+      color: var(--text-dim);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .footer-social a:hover { color: var(--gold); }
+    .footer-divider { width: 1px; height: 12px; background: var(--border); }
+    .footer-copy { font-family: 'Cinzel', serif; font-size: 12px; letter-spacing: 0.1em; color: var(--text-dim); }
+    .footer-powered { font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 0.1em; color: var(--text-dim); opacity: 0.4; }
+    .footer-disclaimer {
+      max-width: 920px;
+      margin: 6px auto 0;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 12.5px;
+      line-height: 1.65;
+      color: var(--text-dim);
+      text-align: center;
+      letter-spacing: 0.01em;
+    }
+    .footer-disclaimer strong { color: var(--text-muted); font-weight: 500; }
+
+    /* ── Responsive ── */
+    @media (max-width: 1024px) {
+      .pr6-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 900px) {
+      nav { padding: 16px 24px; }
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        flex-direction: column;
+        gap: 0;
+        background: rgba(14, 13, 11, 0.95);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border);
+        padding: 16px 24px;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links a { padding: 12px 0; }
+      .nav-hamburger { display: flex; }
+      #page-hero { padding: 130px 24px 56px; }
+      .boundary-strip { padding: 0 24px 48px; }
+      .boundary-inner { padding: 28px 24px; }
+      #pr6 { padding: 60px 24px; }
+      .pr6-grid { grid-template-columns: 1fr; }
+      #outcomes { padding: 60px 24px; }
+      .outcomes-grid { grid-template-columns: 1fr; }
+      #hrd { padding: 60px 24px; }
+      .hrd-box { padding: 36px 28px; }
+      #scope-boundary { padding: 56px 24px; }
+      .scope-box { padding: 32px 28px; }
+      .crosslink { padding: 48px 24px; }
+      .crosslink-inner { padding: 28px 24px; flex-direction: column; text-align: center; align-items: center; }
+      #cta { padding: 70px 24px; }
+      footer { padding: 32px 24px; flex-direction: column; text-align: center; }
+      .footer-top { justify-content: center; }
+      .footer-social { flex-wrap: wrap; justify-content: center; gap: 16px; }
+    }
+    @media (max-width: 560px) {
+      .btn { padding: 14px 28px; font-size: 13px; }
+      .hero-credential-strip { padding: 12px 18px; gap: 8px 14px; }
+      .hero-credential-strip span { font-size: 10px; }
+    }
+  </style>
+</head>
+
+<body>
+  <nav id="nav">
+    <a href="index.html" class="nav-logo" aria-label="Dr. Elijah — Executive L&amp;D Consultant &amp; Certified Resilience Coach">
+      <img src="assets/images/logo-wordmark-on-dark.png" alt="Dr. Elijah — Executive L&amp;D Consultant &amp; Certified Resilience Coach" onerror="this.remove()" />
+      <span class="nav-logo-text cinzel">DR. ELIJAH</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="practice.html">PRisMA Compliance</a></li>
+      <li><a href="resilience-training.html" class="current green">Resilience Training</a></li>
+      <li><a href="#cta">Contact</a></li>
+    </ul>
+    <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section id="page-hero">
+    <div class="page-hero-glow"></div>
+    <div class="hero-identity reveal d1">
+      <p class="hero-identity-name cormorant">Dr. Elijah</p>
+      <p class="hero-role">Executive L&amp;D Consultant &amp; Certified Resilience Coach</p>
+    </div>
+    <p class="section-label reveal d1">Solution 02 · Workplace Resilience Training</p>
+    <h1 class="cormorant reveal d2">
+      Proactive Resilience,<br /><em>Built to Last</em>
+    </h1>
+    <p class="hero-sub cormorant reveal d3">
+      Calmer leaders, steadier teams, and sustainable performance under pressure.
+    </p>
+    <p class="hero-desc reveal d4">
+      Proactive, <strong>HRD Corp claimable</strong>, <strong>non-clinical</strong> workplace resilience
+      training based on the <strong>Predictive 6 Factor Resilience (PR6)</strong> model by Hello Driven.
+      This is preventative capability-building — skills, habits, and reinforcement — not clinical
+      psychology, therapy, or medical treatment.
+    </p>
+
+    <div class="hero-credential-strip reveal d4">
+      <span>Certified Resilience Coach</span>
+      <span class="dot">●</span>
+      <span>HRD Corp Accredited Trainer</span>
+      <span class="dot">●</span>
+      <span>PR6 by Hello Driven</span>
+    </div>
+
+    <div class="hero-btns reveal d5">
+      <a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-green" target="_blank" rel="noopener noreferrer">Enquire About Training</a>
+      <a href="#pr6" class="btn btn-outline">See the PR6 Model</a>
+    </div>
+  </section>
+
+  <!-- BOUNDARY CALLOUT -->
+  <section class="boundary-strip">
+    <div class="boundary-inner">
+      <span class="scope-label">Where This Sits</span>
+      <p>
+        This is a <strong>distinct service from PRisMA OSH compliance</strong>. Resilience training is a
+        <strong>proactive, preventative</strong> capability programme that an organisation can run at any time
+        — it is not a statutory psychosocial-risk assessment and does not replace one. It is also
+        <strong>non-clinical</strong>: it builds everyday skills and habits, and does not constitute clinical
+        psychological therapy, psychiatric evaluation, or medical counselling.
+      </p>
+    </div>
+  </section>
+
+  <!-- PR6 MODEL -->
+  <section id="pr6">
+    <div class="pr6-header">
+      <p class="section-label">The Evidence Base</p>
+      <h2 class="cormorant">The Predictive 6 Factor Resilience <em>(PR6) Model</em></h2>
+      <p>
+        Developed by Hello Driven and used across organisations worldwide, PR6 maps resilience across six
+        interconnected domains. Training and reinforcement are built around the domains where a team is most
+        stretched — turning resilience from an abstract idea into specific, practisable behaviour.
+      </p>
+    </div>
+
+    <div class="pr6-grid">
+      <div class="pr6-card">
+        <span class="pr6-num">Factor 01</span>
+        <h3 class="cormorant">Vision</h3>
+        <p>Sense of purpose, goals, and meaning — the direction that keeps effort coherent when pressure rises.</p>
+      </div>
+      <div class="pr6-card">
+        <span class="pr6-num">Factor 02</span>
+        <h3 class="cormorant">Composure</h3>
+        <p>Regulating emotions and staying calm under pressure — noticing reactivity early and steadying it.</p>
+      </div>
+      <div class="pr6-card">
+        <span class="pr6-num">Factor 03</span>
+        <h3 class="cormorant">Reasoning</h3>
+        <p>Problem-solving, resourcefulness, and anticipation — thinking clearly when the path is uncertain.</p>
+      </div>
+      <div class="pr6-card">
+        <span class="pr6-num">Factor 04</span>
+        <h3 class="cormorant">Tenacity</h3>
+        <p>Persistence, realistic optimism, and the capacity to recover and keep going after setbacks.</p>
+      </div>
+      <div class="pr6-card">
+        <span class="pr6-num">Factor 05</span>
+        <h3 class="cormorant">Collaboration</h3>
+        <p>Support networks and connection — the relationships and communication that carry teams through strain.</p>
+      </div>
+      <div class="pr6-card">
+        <span class="pr6-num">Factor 06</span>
+        <h3 class="cormorant">Health</h3>
+        <p>Sleep, nutrition, and physical wellbeing — the bodily foundation that everything else is built on.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUTCOMES -->
+  <section id="outcomes">
+    <div class="outcomes-inner">
+      <p class="section-label">What Training Builds</p>
+      <h2 class="cormorant">Practical Capability, Reinforced Over Time</h2>
+      <div class="outcomes-grid">
+        <div class="outcome-card">
+          <p class="outcome-title">Reduced Stress Reactivity</p>
+          <p class="outcome-text">
+            Teams respond with greater calm, clarity, and self-regulation during workload spikes, conflict,
+            and operational pressure.
+          </p>
+        </div>
+        <div class="outcome-card">
+          <p class="outcome-title">Steadier Leaders</p>
+          <p class="outcome-text">
+            Managers learn to think clearly, communicate well, and steady their teams through change,
+            uncertainty, and sustained demand.
+          </p>
+        </div>
+        <div class="outcome-card">
+          <p class="outcome-title">Healthier Communication</p>
+          <p class="outcome-text">
+            Clearer requests, better boundary-setting, stronger repair conversations, and more resilient
+            support behaviours at work.
+          </p>
+        </div>
+        <div class="outcome-card">
+          <p class="outcome-title">Habits That Stick</p>
+          <p class="outcome-text">
+            Reinforcement — including the Driven Resilience App where appropriate — sustains repetition and
+            application long after the workshop ends.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HRD CLAIMABLE -->
+  <section id="hrd">
+    <div class="hrd-box">
+      <p class="section-label">Funding the Training</p>
+      <h2 class="cormorant">HRD Corp Claimable Delivery</h2>
+      <p>
+        Programmes are delivered by an <strong>HRD Corp Accredited Trainer</strong>, so levy-paying Malaysian
+        employers can fund resilience training through their HRD Corp levy where applicable — proactively,
+        without needing a statutory trigger.
+      </p>
+      <img src="/assets/images/hrd-corp-accredited-trainer.png" alt="HRD Corp Accredited Trainer" />
+    </div>
+  </section>
+
+  <!-- SCOPE & BOUNDARY -->
+  <section id="scope-boundary">
+    <div class="scope-box">
+      <span class="scope-label">Scope &amp; Boundary</span>
+      <h3 class="cormorant">What This Training Is <em>— and What It Is Not</em></h3>
+      <p>
+        <strong>Proactive, non-clinical capability-building.</strong> Workplace resilience training builds
+        everyday skills, habits, and team behaviours. It is preventative and educational in nature, and does
+        not constitute clinical assessment, psychological therapy, psychiatric evaluation, or medical
+        counselling. Participants identified as needing clinical support are signposted to qualified providers.
+      </p>
+      <p>
+        <strong>Distinct from statutory PRisMA assessment.</strong> This training is not a substitute for the
+        statutory LEO26 / EPC23 psychosocial-risk assessment cycle. Where an organisation carries OSHA 2022
+        obligations, those are handled separately under DOSH PTP competency on the
+        <a href="practice.html" style="color: var(--green-muted); text-decoration: none; border-bottom: 1px solid var(--green-dim);">PRisMA Compliance</a> track.
+      </p>
+      <p>
+        <strong>Data handling under PDPA 2010.</strong> Any individual resilience data collected through
+        assessment tools is processed under the Personal Data Protection Act 2010. Cohort reporting is
+        de-identified; individual results are not disclosed to leadership without explicit consent.
+      </p>
+    </div>
+  </section>
+
+  <!-- CROSS-LINK -->
+  <section class="crosslink">
+    <div class="crosslink-inner">
+      <div class="cl-text">
+        <span class="cl-label">Looking for the Other Solution?</span>
+        <h3 class="cormorant">PRisMA OSH Compliance</h3>
+        <p>System-level psychosocial-risk screening (LEO26 and EPC23) under DOSH PTP competency, for employers carrying statutory OSHA 2022 obligations.</p>
+      </div>
+      <a href="practice.html" class="btn btn-gold">View Compliance</a>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="cta">
+    <div class="cta-glow"></div>
+    <p class="section-label">Start a Conversation</p>
+    <h2 class="cormorant">Bring Resilience Training <em>to Your Team</em></h2>
+    <p>
+      Tell me about your team, your pressure points, and your timeline — and we'll shape a proactive,
+      HRD Corp claimable programme around the PR6 domains where it will matter most.
+    </p>
+    <div class="cta-btns">
+      <a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-green" target="_blank" rel="noopener noreferrer">Enquire About Training</a>
+      <a href="index.html" class="btn btn-outline">Back to Home</a>
+    </div>
+    <p class="cta-email">Or direct: <a href="mailto:elijah@drelijah.org">elijah@drelijah.org</a></p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-top">
+      <p class="footer-brand cinzel">DR. ELIJAH &middot; WORKPLACE RESILIENCE</p>
+      <p class="footer-domain cinzel">drelijah.org</p>
+    </div>
+    <div class="footer-social">
+      <a href="https://www.linkedin.com/in/drelijah/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <div class="footer-divider"></div>
+      <a href="https://www.facebook.com/drelijah.org" target="_blank" rel="noopener noreferrer">Facebook</a>
+      <div class="footer-divider"></div>
+      <a href="https://www.instagram.com/elijah.resilience/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <div class="footer-divider"></div>
+      <a href="https://x.com/drelijahting" target="_blank" rel="noopener noreferrer">X</a>
+    </div>
+    <p class="footer-copy">&copy; 2026 Ting Moi Kieng. All rights reserved.</p>
+    <p class="footer-powered">Evidence-Based Workplace Resilience Solutions</p>
+    <p class="footer-disclaimer">
+      <strong>Disclaimer:</strong> Academic credentials are fundamentally conferred as an Executive Doctorate
+      in Learning &amp; Development by East Bridge University, Paris (a private higher education institution
+      operating under French &lsquo;hors contrat&rsquo; status). The title &lsquo;Dr.&rsquo; is utilized strictly
+      in an academic and professional L&amp;D context. All resilience coaching, training, and PRisMA assessments
+      delivered are non-clinical, OSH system-level, and preventative in nature, and do not constitute clinical
+      psychological therapy, psychiatric evaluation, or medical counseling.
+    </p>
+  </footer>
+
+  <script>
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 60));
+
+    const hamburger = document.querySelector('.nav-hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      navLinks.classList.toggle('open');
+      const open = navLinks.classList.contains('open');
+      hamburger.setAttribute('aria-expanded', open);
+      hamburger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        navLinks.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+        hamburger.setAttribute('aria-label', 'Open menu');
+      });
+    });
+
+    const revealObserver = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    document
+      .querySelectorAll('.pr6-card, .outcome-card, .hrd-box, .scope-box, .boundary-inner, .crosslink-inner')
+      .forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(24px)';
+        el.style.transition = 'opacity 0.7s ease, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1)';
+        revealObserver.observe(el);
+      });
+  </script>
+</body>
+</html>

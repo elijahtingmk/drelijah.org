@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Full-Cycle PRisMA Practice | Elijah Ting, Ex Doc (L&D)</title>
+  <title>Dr. Elijah | Executive L&D Consultant & Certified Resilience Coach</title>
 
   <meta
     name="description"
-    content="DOSH-certified PTP and HRD Corp Accredited Trainer delivering the full PRisMA 2024 cycle for Malaysian organisations — Stage I screening, Stage II assessment, Stage III training, and the 12-month re-evaluation, under one practice."
+    content="Dr. Elijah — Executive L&D Consultant & Certified Resilience Coach. Two distinct solutions for Malaysian organisations: PRisMA OSH compliance (system-level psychosocial-risk screening under DOSH PTP competency) and proactive, HRD Corp claimable, non-clinical workplace resilience training built on the PR6 model by Hello Driven."
   />
 
-  <meta property="og:title" content="Full-Cycle PRisMA Practice | Elijah Ting, Ex Doc (L&D)" />
+  <meta property="og:title" content="Dr. Elijah | Executive L&D Consultant & Certified Resilience Coach" />
   <meta
     property="og:description"
-    content="DOSH-certified PTP delivering the full PRisMA 2024 cycle — assessment, control, and re-evaluation — under one practice."
+    content="Two distinct solutions: PRisMA OSH compliance under DOSH PTP competency, and proactive HRD Corp claimable, non-clinical workplace resilience training (PR6 model)."
   />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://drelijah.org/index.html" />
@@ -22,10 +22,10 @@
   <meta property="og:image:height" content="630" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Full-Cycle PRisMA Practice | Elijah Ting, Ex Doc (L&D)" />
+  <meta name="twitter:title" content="Dr. Elijah | Executive L&D Consultant & Certified Resilience Coach" />
   <meta
     name="twitter:description"
-    content="DOSH-certified PTP delivering the full PRisMA 2024 cycle — assessment, control, and re-evaluation — under one practice."
+    content="Two distinct solutions: PRisMA OSH compliance under DOSH PTP competency, and proactive HRD Corp claimable, non-clinical workplace resilience training (PR6 model)."
   />
   <meta name="twitter:image" content="https://drelijah.org/assets/images/og-image.jpg" />
 
@@ -251,6 +251,23 @@
       border: 2px solid var(--gold-dim);
       margin-bottom: 28px;
     }
+    .hero-identity { margin-bottom: 22px; }
+    .hero-identity-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(30px, 4vw, 44px);
+      font-weight: 400;
+      color: var(--gold);
+      line-height: 1.1;
+      letter-spacing: 0.02em;
+    }
+    .hero-role {
+      font-family: 'Cinzel', serif;
+      font-size: 13px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-top: 10px;
+    }
     @media (max-height: 900px) {
       .scroll-hint { display: none; }
     }
@@ -379,6 +396,117 @@
       transition: border-color 0.3s;
     }
     .prisma-positioning-link:hover { border-color: var(--gold); }
+
+    /* TWO DISTINCT SOLUTIONS */
+    #two-solutions {
+      padding: 96px 48px;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, var(--bg) 0%, #121110 100%);
+    }
+    .ts-inner { max-width: 1200px; margin: 0 auto; }
+    .ts-head { text-align: center; margin-bottom: 56px; }
+    .ts-head h2 {
+      font-size: clamp(28px, 3.6vw, 44px);
+      font-weight: 300;
+      line-height: 1.25;
+      margin-bottom: 16px;
+    }
+    .ts-intro {
+      font-size: 17px;
+      line-height: 1.8;
+      color: var(--text-muted);
+      font-weight: 300;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+    .ts-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+    .ts-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      padding: 44px 40px;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .ts-card:hover { transform: translateY(-4px); }
+    .ts-card--gold { border-top: 3px solid var(--gold); }
+    .ts-card--gold:hover { border-color: var(--gold-dim); border-top-color: var(--gold); }
+    .ts-card--green { border-top: 3px solid var(--green-muted); }
+    .ts-card--green:hover { border-color: var(--green-dim); border-top-color: var(--green-muted); }
+    .ts-card-label {
+      font-family: 'Cinzel', serif;
+      font-size: 11px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+    .ts-card--gold .ts-card-label { color: var(--gold); }
+    .ts-card--green .ts-card-label { color: var(--green-muted); }
+    .ts-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(24px, 2.8vw, 32px);
+      font-weight: 300;
+      line-height: 1.25;
+      color: var(--text);
+      margin-bottom: 16px;
+    }
+    .ts-card > p {
+      font-size: 16px;
+      line-height: 1.8;
+      color: var(--text-muted);
+      font-weight: 300;
+      margin-bottom: 22px;
+    }
+    .ts-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+    .ts-list li {
+      font-size: 15px;
+      line-height: 1.6;
+      color: var(--text-muted);
+      padding-left: 20px;
+      position: relative;
+    }
+    .ts-list li::before {
+      content: '\25C8';
+      position: absolute;
+      left: 0;
+      top: 2px;
+      font-size: 10px;
+    }
+    .ts-card--gold .ts-list li::before { color: var(--gold); }
+    .ts-card--green .ts-list li::before { color: var(--green-muted); }
+    .ts-spacer { flex: 1; }
+    .ts-link {
+      font-family: 'Cinzel', serif;
+      font-size: 13px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: 1px solid;
+      padding: 14px 30px;
+      display: inline-block;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+    .ts-card--gold .ts-link { color: var(--gold); border-color: var(--gold); }
+    .ts-card--gold .ts-link:hover { background: var(--gold); color: var(--bg); }
+    .ts-card--green .ts-link { color: var(--green-muted); border-color: var(--green-muted); }
+    .ts-card--green .ts-link:hover { background: var(--green-muted); color: var(--bg); }
+    .ts-boundary {
+      max-width: 880px;
+      margin: 40px auto 0;
+      text-align: center;
+      font-size: 14px;
+      line-height: 1.7;
+      color: var(--text-dim);
+      font-style: italic;
+    }
 
     /* WHAT ORGANISATIONS NEED */
     #roles { padding: 100px 48px; max-width: 1200px; margin: 0 auto; }
@@ -653,6 +781,17 @@
     .footer-divider { width: 1px; height: 12px; background: var(--border); }
     .footer-copy { font-family: 'Cinzel', serif; font-size: 12px; letter-spacing: 0.1em; color: var(--text-dim); }
     .footer-powered { font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 0.1em; color: var(--text-dim); opacity: 0.4; }
+    .footer-disclaimer {
+      max-width: 920px;
+      margin: 6px auto 0;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 12.5px;
+      line-height: 1.65;
+      color: var(--text-dim);
+      text-align: center;
+      letter-spacing: 0.01em;
+    }
+    .footer-disclaimer strong { color: var(--text-muted); font-weight: 500; }
 
     /* RESPONSIVE */
     @media (max-width: 768px) {
@@ -679,10 +818,13 @@
       .hero-photo { width: 120px; height: 120px; }
       .scroll-hint { display: none; }
 
-      #roles, #methodology, #quote, #credentials, #what-to-expect, #cta, #prisma-positioning, #individuals {
+      #roles, #methodology, #quote, #credentials, #what-to-expect, #cta, #prisma-positioning, #individuals, #two-solutions {
         padding-left: 24px;
         padding-right: 24px;
       }
+      #two-solutions { padding-top: 60px; padding-bottom: 60px; }
+      .ts-grid { grid-template-columns: 1fr; gap: 20px; }
+      .ts-card { padding: 36px 28px; }
 
       .framework-item { flex-direction: column; gap: 16px; }
       .framework-num { min-width: auto; font-size: 28px; }
@@ -718,15 +860,14 @@
 
   <!-- NAV -->
   <nav id="nav">
-    <a href="#hero" class="nav-logo" aria-label="Elijah Ting — Workplace Resilience">
-      <img src="assets/images/logo-wordmark-on-dark.png" alt="Elijah Ting — Workplace Resilience" onerror="this.remove()" />
-      <span class="nav-logo-text cinzel">ELIJAH TING</span>
+    <a href="#hero" class="nav-logo" aria-label="Dr. Elijah — Executive L&amp;D Consultant &amp; Certified Resilience Coach">
+      <img src="assets/images/logo-wordmark-on-dark.png" alt="Dr. Elijah — Executive L&amp;D Consultant &amp; Certified Resilience Coach" onerror="this.remove()" />
+      <span class="nav-logo-text cinzel">DR. ELIJAH</span>
     </a>
     <ul class="nav-links">
       <li><a href="about.html">About</a></li>
-      <li><a href="practice.html">Practice</a></li>
-      <li><a href="#methodology">Methodology</a></li>
-      <li><a href="#individuals">Individuals</a></li>
+      <li><a href="practice.html">PRisMA Compliance</a></li>
+      <li><a href="resilience-training.html">Resilience Training</a></li>
       <li><a href="#cta">Contact</a></li>
     </ul>
     <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
@@ -749,19 +890,19 @@
         <div class="gold-line-v" style="height:80px;"></div>
       </div>
 
-      <div class="hero-tag reveal">
-        <p class="section-label">Full-Cycle PRisMA Practice</p>
-        <div class="gold-divider"></div>
-      </div>
-
       <img
         src="assets/images/hero-photo.jpg"
-        alt="Elijah Ting, Workplace Resilience Specialist"
-        title="Elijah Ting, Workplace Resilience Specialist — Sibu, Sarawak"
+        alt="Dr. Elijah — Executive L&amp;D Consultant &amp; Certified Resilience Coach"
+        title="Dr. Elijah — Executive L&amp;D Consultant &amp; Certified Resilience Coach, Sibu, Sarawak"
         class="hero-photo reveal d1"
       />
 
-      <h1 class="hero-name cormorant reveal d2">
+      <div class="hero-identity reveal d2">
+        <p class="hero-identity-name cormorant">Dr. Elijah</p>
+        <p class="hero-role">Executive L&amp;D Consultant &amp; Certified Resilience Coach</p>
+      </div>
+
+      <h1 class="hero-name cormorant reveal d3">
         Build a Workforce That<br>
         Performs Under Pressure
       </h1>
@@ -771,20 +912,23 @@
       </h2>
 
       <p class="hero-desc reveal d4">
-        Full-cycle PRisMA support for Malaysian organisations carrying statutory psychosocial-risk
-        obligations under OSHA 1994 (as amended 2022) &mdash; Stage I screening, Stage II assessment,
-        Stage III training, and the 12-month re-evaluation, under one practice.
+        Two clearly bounded solutions for Malaysian organisations:
+        <strong>PRisMA OSH compliance</strong> &mdash; system-level psychosocial-risk screening under DOSH PTP
+        competency &mdash; and proactive, <strong>HRD Corp claimable workplace resilience training</strong>.
+        Non-clinical, preventative, and evidence-based.
       </p>
 
       <div class="hero-credentials reveal d4">
         <span>DOSH-Certified PTP</span>
         <span class="dot">&bull;</span>
         <span>HRD Corp Accredited Trainer</span>
+        <span class="dot">&bull;</span>
+        <span>Certified Resilience Coach</span>
       </div>
 
       <div class="hero-btns reveal d5">
         <a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-fill" target="_blank" rel="noopener noreferrer">Book Scoping Call</a>
-        <a href="practice.html" class="btn btn-outline">Explore the Practice</a>
+        <a href="#two-solutions" class="btn btn-outline">Explore the Two Solutions</a>
       </div>
 
       <div class="scroll-hint reveal d6">
@@ -793,19 +937,62 @@
       </div>
     </section>
 
-    <!-- PRisMA POSITIONING STRIP -->
-    <section id="prisma-positioning">
-      <div class="prisma-positioning-inner">
-        <p class="prisma-positioning-label cinzel">MALAYSIAN EMPLOYERS &middot; OSHA 2022 &middot; PRisMA 2024</p>
-        <h2 class="cormorant">End-to-End Statutory Cycle, <em>Under One Practice</em></h2>
-        <p class="prisma-positioning-desc">
-          A <strong>DOSH-certified Psychosocial Trained Person</strong> and <strong>HRD Corp Accredited
-          Trainer</strong> delivering the full PRisMA 2024 cycle &mdash; Stage I screening (LEO26), Stage II
-          assessment (EPC23), Stage III training, and the 12-month statutory re-evaluation. Assessment
-          findings flow directly into controls design without the methodology drift that comes from running
-          separate providers.
+    <!-- TWO DISTINCT SOLUTIONS -->
+    <section id="two-solutions">
+      <div class="ts-inner">
+        <div class="ts-head">
+          <p class="section-label">Two Distinct Solutions</p>
+          <h2 class="cormorant">Clear Lines Between Compliance and Capability</h2>
+          <p class="ts-intro">
+            Two services, two regulatory lanes, deliberately kept separate. One is statutory OSH risk
+            screening conducted under DOSH competency. The other is proactive, non-clinical capability
+            training. Neither constitutes clinical psychology, therapy, or medical care.
+          </p>
+        </div>
+
+        <div class="ts-grid">
+          <!-- Solution 1: PRisMA OSH Compliance -->
+          <div class="ts-card ts-card--gold">
+            <p class="ts-card-label">Solution 01 &middot; Compliance</p>
+            <h3 class="cormorant">PRisMA OSH Compliance Solutions</h3>
+            <p>
+              System-level psychosocial-risk screening for Malaysian employers carrying statutory obligations
+              under OSHA 1994 (as amended 2022), conducted under official DOSH PTP competency.
+            </p>
+            <ul class="ts-list">
+              <li>Stage I screening with <strong>LEO26</strong> across work units</li>
+              <li>Stage II assessment with the <strong>EPC23</strong> employer practice checklist</li>
+              <li>Risk classified at the <strong>system and organisational level</strong> &mdash; not individual diagnosis</li>
+              <li>Defensible <strong>PRiMA Action Plan</strong> for DOSH and your Safety Committee</li>
+            </ul>
+            <div class="ts-spacer"></div>
+            <a href="practice.html" class="ts-link cinzel">Explore PRisMA Compliance &rarr;</a>
+          </div>
+
+          <!-- Solution 2: Workplace Resilience Training -->
+          <div class="ts-card ts-card--green">
+            <p class="ts-card-label">Solution 02 &middot; Capability</p>
+            <h3 class="cormorant">Workplace Resilience Training</h3>
+            <p>
+              Proactive, <strong>HRD Corp claimable</strong>, non-clinical training based on the Predictive
+              6 Factor Resilience <strong>(PR6) model by Hello Driven</strong> &mdash; run at any time, with
+              no statutory trigger required.
+            </p>
+            <ul class="ts-list">
+              <li>Built on the evidence-based <strong>PR6 framework</strong></li>
+              <li><strong>HRD Corp claimable</strong> delivery for levy-paying employers</li>
+              <li><strong>Preventative and non-clinical</strong> &mdash; skills, habits, reinforcement</li>
+              <li>Outcome measurement and app-based reinforcement where appropriate</li>
+            </ul>
+            <div class="ts-spacer"></div>
+            <a href="resilience-training.html" class="ts-link cinzel">Explore Resilience Training &rarr;</a>
+          </div>
+        </div>
+
+        <p class="ts-boundary">
+          Both solutions are preventative and OSH system-level in nature. They do not constitute clinical
+          psychological therapy, psychiatric evaluation, or medical counselling.
         </p>
-        <a href="practice.html" class="prisma-positioning-link cinzel">Explore the Full-Cycle Practice &rarr;</a>
       </div>
     </section>
 
@@ -927,7 +1114,7 @@
       <blockquote class="cormorant">
         Resilience is not the absence of pressure.<br>It is the architecture of how you respond to it.
       </blockquote>
-      <p class="quote-attr cinzel">Elijah Ting &middot; Workplace Resilience</p>
+      <p class="quote-attr cinzel">Dr. Elijah Ting &middot; Workplace Resilience</p>
     </section>
 
     <!-- CREDENTIALS -->
@@ -1067,7 +1254,7 @@
       </p>
       <div class="cta-btns">
         <a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-fill" target="_blank" rel="noopener noreferrer">Book Scoping Call</a>
-        <a href="practice.html" class="btn btn-outline">Explore the Practice</a>
+        <a href="#two-solutions" class="btn btn-outline">Explore the Two Solutions</a>
       </div>
       <p class="cta-email">Or direct: <a href="mailto:elijah@drelijah.org">elijah@drelijah.org</a></p>
     </section>
@@ -1096,7 +1283,7 @@
   <!-- FOOTER -->
   <footer>
     <div class="footer-top">
-      <p class="footer-brand cinzel">ELIJAH TING &middot; WORKPLACE RESILIENCE</p>
+      <p class="footer-brand cinzel">DR. ELIJAH &middot; WORKPLACE RESILIENCE</p>
       <p class="footer-domain cinzel">drelijah.org</p>
     </div>
     <div class="footer-social">
@@ -1110,6 +1297,14 @@
     </div>
     <p class="footer-copy">&copy; 2026 Ting Moi Kieng. All rights reserved.</p>
     <p class="footer-powered">Evidence-Based Workplace Resilience Solutions</p>
+    <p class="footer-disclaimer">
+      <strong>Disclaimer:</strong> Academic credentials are fundamentally conferred as an Executive Doctorate
+      in Learning &amp; Development by East Bridge University, Paris (a private higher education institution
+      operating under French &lsquo;hors contrat&rsquo; status). The title &lsquo;Dr.&rsquo; is utilized strictly
+      in an academic and professional L&amp;D context. All resilience coaching, training, and PRisMA assessments
+      delivered are non-clinical, OSH system-level, and preventative in nature, and do not constitute clinical
+      psychological therapy, psychiatric evaluation, or medical counseling.
+    </p>
   </footer>
 
   <script>

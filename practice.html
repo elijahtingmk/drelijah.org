@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Full-Cycle PRisMA Practice | Elijah Ting, Ex Doc (L&D)</title>
+  <title>PRisMA OSH Compliance Solutions | Dr. Elijah — DOSH-Certified PTP</title>
   <meta
     name="description"
-    content="A DOSH-certified PTP practice delivering the full PRisMA 2024 cycle — Stage I screening, Stage II assessment, Stage III training — under a single practitioner. For Malaysian organisations carrying statutory psychosocial-risk obligations."
+    content="System-level psychosocial-risk screening under PRisMA 2024 — Stage I (LEO26) and Stage II (EPC23) — conducted under official DOSH PTP competency. For Malaysian organisations carrying statutory OSHA 2022 obligations. OSH system-level and preventative; non-clinical."
   />
 
-  <meta property="og:title" content="Full-Cycle PRisMA Practice | Elijah Ting, Ex Doc (L&D)" />
+  <meta property="og:title" content="PRisMA OSH Compliance Solutions | Dr. Elijah — DOSH-Certified PTP" />
   <meta
     property="og:description"
-    content="DOSH-certified PTP delivering the full PRisMA 2024 cycle — assessment, control, and re-evaluation — under one practitioner."
+    content="System-level psychosocial-risk screening (LEO26 and EPC23) under official DOSH PTP competency, for Malaysian employers carrying statutory OSHA 2022 obligations."
   />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://drelijah.org/practice.html" />
@@ -20,10 +20,10 @@
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Full-Cycle PRisMA Practice | Elijah Ting, Ex Doc (L&D)" />
+  <meta name="twitter:title" content="PRisMA OSH Compliance Solutions | Dr. Elijah — DOSH-Certified PTP" />
   <meta
     name="twitter:description"
-    content="DOSH-certified PTP delivering the full PRisMA 2024 cycle — assessment, control, and re-evaluation — under one practitioner."
+    content="System-level psychosocial-risk screening (LEO26 and EPC23) under official DOSH PTP competency, for Malaysian employers carrying statutory OSHA 2022 obligations."
   />
   <meta name="twitter:image" content="https://drelijah.org/assets/images/og-image.jpg" />
 
@@ -260,6 +260,23 @@
       border-radius: 50%;
       background: radial-gradient(circle, #C8A96E07 0%, transparent 70%);
       pointer-events: none;
+    }
+    .hero-identity { margin-bottom: 20px; }
+    .hero-identity-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(26px, 3.4vw, 38px);
+      font-weight: 400;
+      color: var(--gold);
+      line-height: 1.1;
+      letter-spacing: 0.02em;
+    }
+    .hero-role {
+      font-family: 'Cinzel', serif;
+      font-size: 12px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-top: 10px;
     }
     #page-hero h1 {
       font-size: clamp(40px, 6vw, 76px);
@@ -1140,6 +1157,48 @@
       color: var(--text-dim);
       opacity: 0.4;
     }
+    .footer-disclaimer {
+      max-width: 920px;
+      margin: 6px auto 0;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 12.5px;
+      line-height: 1.65;
+      color: var(--text-dim);
+      text-align: center;
+      letter-spacing: 0.01em;
+    }
+    .footer-disclaimer strong { color: var(--text-muted); font-weight: 500; }
+
+    /* ── Cross-link to resilience training ─────────────────────────── */
+    .crosslink { padding: 60px 48px; max-width: 1000px; margin: 0 auto; }
+    .crosslink-inner {
+      border: 1px solid var(--green-dim);
+      background: #5A7A6610;
+      padding: 32px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .crosslink-inner .cl-text { max-width: 620px; }
+    .crosslink-inner .cl-label {
+      font-family: 'Cinzel', serif;
+      font-size: 11px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--green-muted);
+      display: block;
+      margin-bottom: 8px;
+    }
+    .crosslink-inner h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 24px;
+      font-weight: 300;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+    .crosslink-inner p { font-size: 15px; color: var(--text-muted); line-height: 1.6; }
 
     /* ── Responsive ────────────────────────────────────────────────── */
     @media (max-width: 1024px) {
@@ -1179,6 +1238,8 @@
       #credentials { padding: 60px 24px; }
       #scope-boundary { padding: 56px 24px; }
       .scope-box { padding: 32px 28px; }
+      .crosslink { padding: 48px 24px; }
+      .crosslink-inner { padding: 28px 24px; flex-direction: column; text-align: center; align-items: center; }
       #quote { padding: 70px 24px; }
       #cta { padding: 70px 24px; }
       .cta-protocol { padding: 24px 24px; }
@@ -1197,15 +1258,14 @@
 
 <body>
   <nav id="nav">
-    <a href="index.html" class="nav-logo" aria-label="Elijah Ting — Workplace Resilience">
-      <img src="assets/images/logo-wordmark-on-dark.png" alt="Elijah Ting — Workplace Resilience" onerror="this.remove()" />
-      <span class="nav-logo-text cinzel">ELIJAH TING</span>
+    <a href="index.html" class="nav-logo" aria-label="Dr. Elijah — Executive L&amp;D Consultant &amp; Certified Resilience Coach">
+      <img src="assets/images/logo-wordmark-on-dark.png" alt="Dr. Elijah — Executive L&amp;D Consultant &amp; Certified Resilience Coach" onerror="this.remove()" />
+      <span class="nav-logo-text cinzel">DR. ELIJAH</span>
     </a>
     <ul class="nav-links">
       <li><a href="about.html">About</a></li>
-      <li><a href="practice.html" class="current">Practice</a></li>
-      <li><a href="index.html#methodology">Methodology</a></li>
-      <li><a href="index.html#individuals">Individuals</a></li>
+      <li><a href="practice.html" class="current">PRisMA Compliance</a></li>
+      <li><a href="resilience-training.html">Resilience Training</a></li>
       <li><a href="#cta">Scoping Call</a></li>
     </ul>
     <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
@@ -1218,22 +1278,29 @@
        ═══════════════════════════════════════════════════════════════ -->
   <section id="page-hero">
     <div class="page-hero-glow"></div>
-    <p class="section-label reveal d1">Full-Cycle PRisMA Practice</p>
+    <div class="hero-identity reveal d1">
+      <p class="hero-identity-name cormorant">Dr. Elijah</p>
+      <p class="hero-role">Executive L&amp;D Consultant &amp; Certified Resilience Coach</p>
+    </div>
+    <p class="section-label reveal d1">Solution 01 · PRisMA OSH Compliance</p>
     <h1 class="cormorant reveal d2">
-      One Practitioner.<br /><em>The Entire Statutory Cycle.</em>
+      System-Level Risk Screening.<br /><em>Under DOSH PTP Competency.</em>
     </h1>
     <p class="hero-sub cormorant reveal d3">
-      Calmer leaders, steadier teams, and sustainable performance under pressure.
+      Defensible, OSH system-level psychosocial-risk assessment — not individual diagnosis.
     </p>
     <p class="hero-desc reveal d4">
-      A DOSH-certified Psychosocial Trained Person and HRD Corp Accredited Trainer delivering the
-      full PRisMA 2024 cycle — Stage I screening, Stage II assessment, Stage III training and re-evaluation —
-      under a single engagement, for Malaysian organisations carrying statutory psychosocial-risk
-      obligations under OSHA 1994 (as amended 2022).
+      System-level psychosocial-risk screening under PRisMA 2024 — Stage I (LEO26) and Stage II (EPC23) —
+      conducted personally under official DOSH PTP competency, for Malaysian organisations carrying statutory
+      obligations under OSHA 1994 (as amended 2022). This is preventative, OSH system-level work — it is not
+      clinical psychological assessment. The Stage III controls that follow are delivered as separate,
+      non-clinical <a href="resilience-training.html" style="color: var(--gold); text-decoration: none; border-bottom: 1px solid var(--gold-dim);">workplace resilience training</a>.
     </p>
 
     <div class="hero-credential-strip reveal d4">
       <span>DOSH-Certified PTP</span>
+      <span class="dot">●</span>
+      <span>PTP/ASV-053/26</span>
       <span class="dot">●</span>
       <span>HRD Corp Accredited Trainer</span>
     </div>
@@ -1567,7 +1634,21 @@
     <blockquote class="cormorant">
       Resilience is not the absence of pressure.<br />It is the architecture of how you respond to it.
     </blockquote>
-    <p class="quote-attr cinzel">Elijah Ting &middot; Workplace Resilience</p>
+    <p class="quote-attr cinzel">Dr. Elijah Ting &middot; Workplace Resilience</p>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       CROSS-LINK — the second, distinct solution
+       ═══════════════════════════════════════════════════════════════ -->
+  <section class="crosslink">
+    <div class="crosslink-inner">
+      <div class="cl-text">
+        <span class="cl-label">The Other Solution</span>
+        <h3 class="cormorant">Workplace Resilience Training</h3>
+        <p>Proactive, HRD Corp claimable, non-clinical training built on the PR6 model by Hello Driven — distinct from statutory PRisMA assessment, and runnable at any time.</p>
+      </div>
+      <a href="resilience-training.html" class="btn btn-green btn-sm">View Training</a>
+    </div>
   </section>
 
   <!-- ═══════════════════════════════════════════════════════════════
@@ -1613,7 +1694,7 @@
        ═══════════════════════════════════════════════════════════════ -->
   <footer>
     <div class="footer-top">
-      <p class="footer-brand cinzel">ELIJAH TING &middot; WORKPLACE RESILIENCE</p>
+      <p class="footer-brand cinzel">DR. ELIJAH &middot; WORKPLACE RESILIENCE</p>
       <p class="footer-domain cinzel">drelijah.org</p>
     </div>
     <div class="footer-social">
@@ -1627,6 +1708,14 @@
     </div>
     <p class="footer-copy">&copy; 2026 Ting Moi Kieng. All rights reserved.</p>
     <p class="footer-powered">Evidence-Based Workplace Resilience Solutions</p>
+    <p class="footer-disclaimer">
+      <strong>Disclaimer:</strong> Academic credentials are fundamentally conferred as an Executive Doctorate
+      in Learning &amp; Development by East Bridge University, Paris (a private higher education institution
+      operating under French &lsquo;hors contrat&rsquo; status). The title &lsquo;Dr.&rsquo; is utilized strictly
+      in an academic and professional L&amp;D context. All resilience coaching, training, and PRisMA assessments
+      delivered are non-clinical, OSH system-level, and preventative in nature, and do not constitute clinical
+      psychological therapy, psychiatric evaluation, or medical counseling.
+    </p>
   </footer>
 
   <script>
