@@ -263,7 +263,7 @@
 }
 
 
-@media (max-width: 1120px) {
+@media (max-width: 900px) {
   nav { padding: 16px 24px; }
   .nav-links {
     display: none;
