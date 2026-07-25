@@ -41,818 +41,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Cinzel:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet" />
 
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --gold:#C8A96E;
-      --gold-dim:#C8A96E44;
-      --green:#344E41;
-      --green-light:#344E4133;
-      --green-dim:#344E4144;
-      --green-muted:#5A7A66;
-      --terracotta:#C06C54;
-      --terracotta-light:#C06C5433;
-      --terracotta-dim:#C06C5444;
-      --bg:#0E0D0B;
-      --bg-alt:#13120F;
-      --bg-card:#1A1813;
-      --border:#2A2720;
-      --text:#E8E4DC;
-      --text-muted:#B0A48F;
-      --text-dim:#5A5650;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      font-size: 112.5%;
-    }
-
-    body {
-      font-family: 'Newsreader', Georgia, serif;
-      background: var(--bg);
-      color: var(--text);
-      overflow-x: hidden;
-      font-size: 1rem;
-      line-height: 1.7;
-    }
-
-    ::selection { background:#C8A96E33; color: var(--gold); }
-
-    body::before {
-      content: '';
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      z-index: 0;
-      opacity: 0.025;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-    }
-
-    .skip-link {
-      position: absolute;
-      top: -48px;
-      left: 16px;
-      background: var(--gold);
-      color: var(--bg);
-      padding: 10px 14px;
-      text-decoration: none;
-      z-index: 200;
-      font-family: 'Cinzel', serif;
-      font-size: 12px;
-      letter-spacing: 0.1em;
-    }
-    .skip-link:focus { top: 16px; }
-
-    @keyframes reveal {
-      from { opacity: 0; transform: translateY(28px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes pulse-line {
-      0%, 100% { opacity: 0.2; }
-      50%       { opacity: 0.8; }
-    }
-
-    .reveal { opacity: 0; animation: reveal 0.9s cubic-bezier(0.16,1,0.3,1) forwards; }
-    .d1 { animation-delay: 0.1s; }
-    .d2 { animation-delay: 0.25s; }
-    .d3 { animation-delay: 0.4s; }
-    .d4 { animation-delay: 0.55s; }
-    .d5 { animation-delay: 0.7s; }
-    .d6 { animation-delay: 0.85s; }
-
-    .cinzel { font-family: 'Cinzel', serif; }
-    h1, h2, h3, h4, .cormorant { font-family: 'Cormorant Garamond', Georgia, serif; }
-
-    nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 100;
-      padding: 20px 48px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid transparent;
-      transition: all 0.4s ease;
-    }
-    nav.scrolled {
-      border-bottom-color: var(--border);
-      background: rgba(14,13,11,0.88);
-      backdrop-filter: blur(12px);
-    }
-    .nav-logo {
-      display: inline-flex;
-      align-items: center;
-      text-decoration: none;
-    }
-    .nav-logo img {
-      display: block;
-      height: 36px;
-      width: auto;
-    }
-    /* fallback text shows only if the wordmark image fails to load */
-    .nav-logo img + .nav-logo-text { display: none; }
-    .nav-logo-text {
-      font-family: 'Cinzel', serif;
-      font-size: 15px;
-      letter-spacing: 0.25em;
-      color: var(--gold);
-    }
-    .nav-links { display: flex; gap: 36px; list-style: none; }
-    .nav-links a {
-      font-family: 'Cinzel', serif;
-      font-size: 14px;
-      letter-spacing: 0.15em;
-      color: var(--text-muted);
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-    .nav-links a:hover { color: var(--gold); }
-
-    .nav-hamburger {
-      display: none;
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 8px;
-      flex-direction: column;
-      gap: 5px;
-      z-index: 101;
-    }
-    .nav-hamburger span {
-      display: block;
-      width: 24px;
-      height: 1.5px;
-      background: var(--gold);
-      transition: all 0.3s ease;
-    }
-    .nav-hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
-    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
-    .nav-hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
-
-    .btn {
-      font-family: 'Cinzel', serif;
-      font-size: 14px;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      padding: 16px 40px;
-      cursor: pointer;
-      text-decoration: none;
-      display: inline-block;
-      transition: all 0.3s ease;
-    }
-    .btn-outline { background: transparent; border: 1px solid var(--gold); color: var(--gold); }
-    .btn-outline:hover { background: var(--gold); color: var(--bg); }
-    .btn-fill { background: var(--gold); border: 1px solid var(--gold); color: var(--bg); }
-    .btn-fill:hover { background: transparent; color: var(--gold); }
-
-    .gold-divider { width: 60px; height: 1px; background: var(--gold); margin: 0 auto; }
-    .gold-line-v { width: 1px; background: linear-gradient(to bottom, transparent, var(--gold), transparent); }
-
-    .section-label {
-      font-family: 'Cinzel', serif;
-      font-size: 14px;
-      letter-spacing: 0.35em;
-      color: var(--gold);
-      text-transform: uppercase;
-      margin-bottom: 16px;
-    }
-
-    /* HERO */
-    #hero {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 140px 48px 120px;
-      position: relative;
-      overflow: hidden;
-    }
-    .hero-glow {
-      position: absolute; top: 50%; left: 50%;
-      transform: translate(-50%,-50%);
-      width: 700px; height: 700px; border-radius: 50%;
-      background: radial-gradient(circle,#C8A96E08 0%, transparent 70%);
-      pointer-events: none;
-    }
-    .hero-side { position: absolute; display: flex; flex-direction: column; align-items: center; gap: 8px; }
-    .hero-side-text { font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 0.3em; color:#C8A96E55; writing-mode: vertical-rl; }
-    .hero-tag { margin-bottom: 24px; text-align: center; }
-    .hero-tag .section-label { margin-bottom: 12px; }
-
-    .hero-photo {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      object-fit: cover;
-      object-position: center top;
-      border: 2px solid var(--gold-dim);
-      margin-bottom: 28px;
-    }
-    .hero-identity { margin-bottom: 22px; }
-    .hero-identity-name {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(30px, 4vw, 44px);
-      font-weight: 400;
-      color: var(--gold);
-      line-height: 1.1;
-      letter-spacing: 0.02em;
-    }
-    .hero-role {
-      font-family: 'Cinzel', serif;
-      font-size: 13px;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      margin-top: 10px;
-    }
-    @media (max-height: 900px) {
-      .scroll-hint { display: none; }
-    }
-    h1.hero-name {
-      font-size: clamp(42px, 6vw, 72px);
-      font-weight: 300;
-      line-height: 1.12;
-      letter-spacing: -0.01em;
-      margin-bottom: 18px;
-      color: var(--text);
-      max-width: 880px;
-    }
-
-    h2.hero-sub {
-      font-size: clamp(20px, 2.4vw, 28px);
-      font-weight: 300;
-      font-style: italic;
-      color: var(--text-muted);
-      margin-bottom: 20px;
-      letter-spacing: 0.03em;
-      max-width: 840px;
-    }
-
-    .hero-desc {
-      max-width: 740px;
-      font-size: 17px;
-      line-height: 1.75;
-      color:#9A9080;
-      font-weight: 300;
-      margin-bottom: 28px;
-    }
-
-    .hero-credentials {
-      display: inline-flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      gap: 12px 20px;
-      padding: 12px 26px;
-      margin-bottom: 36px;
-      border: 1px solid var(--gold-dim);
-      background: #C8A96E08;
-    }
-    .hero-credentials span {
-      font-family: 'Cinzel', serif;
-      font-size: 11px;
-      letter-spacing: 0.2em;
-      color: var(--gold);
-      text-transform: uppercase;
-    }
-    .hero-credentials .dot {
-      color: var(--text-dim);
-      font-size: 8px;
-      letter-spacing: 0;
-    }
-
-    .hero-btns { display: flex; margin-top: 4px; gap: 16px; flex-wrap: wrap; justify-content: center; }
-
-    .scroll-hint {
-      position: absolute;
-      bottom: 40px;
-      left: 0;
-      right: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 8px;
-    }
-    .scroll-hint span { font-family: 'Cinzel', serif; font-size: 13px; letter-spacing: 0.3em; color:#C8A96E44; }
-    .scroll-line { width: 1px; height: 40px; background: linear-gradient(to bottom, var(--gold), transparent); animation: pulse-line 2s ease-in-out infinite; }
-
-    /* PRisMA POSITIONING STRIP */
-    #prisma-positioning {
-      padding: 72px 48px;
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      background: linear-gradient(180deg, var(--bg) 0%, #121110 100%);
-      position: relative;
-    }
-    .prisma-positioning-inner {
-      max-width: 920px;
-      margin: 0 auto;
-      text-align: center;
-    }
-    .prisma-positioning-label {
-      font-size: 11px;
-      letter-spacing: 0.35em;
-      color: var(--gold);
-      margin-bottom: 18px;
-      display: block;
-    }
-    .prisma-positioning-inner h2 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(24px, 3vw, 34px);
-      font-weight: 300;
-      line-height: 1.35;
-      color: var(--text);
-      margin-bottom: 20px;
-      letter-spacing: 0.01em;
-    }
-    .prisma-positioning-inner h2 em {
-      font-style: italic;
-      color: var(--gold);
-    }
-    .prisma-positioning-desc {
-      font-size: 17px;
-      line-height: 1.8;
-      color: var(--text-muted);
-      font-weight: 300;
-      max-width: 760px;
-      margin: 0 auto 22px;
-    }
-    .prisma-positioning-desc strong {
-      color: var(--text);
-      font-weight: 500;
-    }
-    .prisma-positioning-link {
-      display: inline-block;
-      font-size: 13px;
-      letter-spacing: 0.25em;
-      color: var(--gold);
-      text-decoration: none;
-      text-transform: uppercase;
-      border-bottom: 1px solid var(--gold-dim);
-      padding-bottom: 3px;
-      transition: border-color 0.3s;
-    }
-    .prisma-positioning-link:hover { border-color: var(--gold); }
-
-    /* TWO DISTINCT SOLUTIONS */
-    #two-solutions {
-      padding: 96px 48px;
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      background: linear-gradient(180deg, var(--bg) 0%, #121110 100%);
-    }
-    .ts-inner { max-width: 1200px; margin: 0 auto; }
-    .ts-head { text-align: center; margin-bottom: 56px; }
-    .ts-head h2 {
-      font-size: clamp(28px, 3.6vw, 44px);
-      font-weight: 300;
-      line-height: 1.25;
-      margin-bottom: 16px;
-    }
-    .ts-intro {
-      font-size: 17px;
-      line-height: 1.8;
-      color: var(--text-muted);
-      font-weight: 300;
-      max-width: 760px;
-      margin: 0 auto;
-    }
-    .ts-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
-    .ts-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      padding: 44px 40px;
-      display: flex;
-      flex-direction: column;
-      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .ts-card:hover { transform: translateY(-4px); }
-    .ts-card--gold { border-top: 3px solid var(--gold); }
-    .ts-card--gold:hover { border-color: var(--gold-dim); border-top-color: var(--gold); }
-    .ts-card--green { border-top: 3px solid var(--green-muted); }
-    .ts-card--green:hover { border-color: var(--green-dim); border-top-color: var(--green-muted); }
-    .ts-card-label {
-      font-family: 'Cinzel', serif;
-      font-size: 11px;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      margin-bottom: 14px;
-    }
-    .ts-card--gold .ts-card-label { color: var(--gold); }
-    .ts-card--green .ts-card-label { color: var(--green-muted); }
-    .ts-card h3 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(24px, 2.8vw, 32px);
-      font-weight: 300;
-      line-height: 1.25;
-      color: var(--text);
-      margin-bottom: 16px;
-    }
-    .ts-card > p {
-      font-size: 16px;
-      line-height: 1.8;
-      color: var(--text-muted);
-      font-weight: 300;
-      margin-bottom: 22px;
-    }
-    .ts-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      margin-bottom: 28px;
-    }
-    .ts-list li {
-      font-size: 15px;
-      line-height: 1.6;
-      color: var(--text-muted);
-      padding-left: 20px;
-      position: relative;
-    }
-    .ts-list li::before {
-      content: '\25C8';
-      position: absolute;
-      left: 0;
-      top: 2px;
-      font-size: 10px;
-    }
-    .ts-card--gold .ts-list li::before { color: var(--gold); }
-    .ts-card--green .ts-list li::before { color: var(--green-muted); }
-    .ts-spacer { flex: 1; }
-    .ts-link {
-      font-family: 'Cinzel', serif;
-      font-size: 13px;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      text-decoration: none;
-      border: 1px solid;
-      padding: 14px 30px;
-      display: inline-block;
-      text-align: center;
-      transition: all 0.3s ease;
-    }
-    .ts-card--gold .ts-link { color: var(--gold); border-color: var(--gold); }
-    .ts-card--gold .ts-link:hover { background: var(--gold); color: var(--bg); }
-    .ts-card--green .ts-link { color: var(--green-muted); border-color: var(--green-muted); }
-    .ts-card--green .ts-link:hover { background: var(--green-muted); color: var(--bg); }
-    .ts-boundary {
-      max-width: 880px;
-      margin: 40px auto 0;
-      text-align: center;
-      font-size: 14px;
-      line-height: 1.7;
-      color: var(--text-dim);
-      font-style: italic;
-    }
-
-    /* WHAT ORGANISATIONS NEED */
-    #roles { padding: 100px 48px; max-width: 1200px; margin: 0 auto; }
-    .roles-header { text-align: center; margin-bottom: 64px; }
-    .roles-header h2 { font-size: clamp(32px, 4vw, 48px); font-weight: 300; letter-spacing: 0.02em; }
-    .roles-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1px; background: var(--border); }
-    .role-card { background: var(--bg); padding: 48px 36px; border: 1px solid var(--border); transition: all 0.4s cubic-bezier(0.16,1,0.3,1); }
-    .role-card:hover { border-color: var(--gold-dim); transform: translateY(-4px); background: var(--bg-card); }
-    .role-card--green .role-icon,
-    .role-card--green .role-title { color: var(--green-muted); }
-    .role-card--green:hover { border-color: var(--green-dim); }
-    .role-icon { font-size: 24px; color: var(--gold); margin-bottom: 20px; }
-    .role-title { font-family: 'Cinzel', serif; font-size: 15px; letter-spacing: 0.15em; color: var(--gold); margin-bottom: 16px; text-transform: uppercase; }
-    .role-body { font-size: 17px; line-height: 1.9; color: var(--text-muted); font-weight: 300; }
-
-    /* METHODOLOGY */
-    #methodology { padding: 100px 48px; background: var(--bg-alt); }
-    .methodology-inner { max-width: 1200px; margin: 0 auto; }
-    .methodology-header { text-align: center; margin-bottom: 64px; }
-    .methodology-header h2 { font-size: clamp(32px, 4vw, 48px); font-weight: 300; }
-    .framework-item { display: flex; align-items: center; gap: 48px; padding: 40px 0; border-bottom: 1px solid var(--border); }
-    .framework-item:last-child { border-bottom: none; }
-    .framework-num { font-family: 'Cinzel', serif; font-size: 36px; opacity: 0.3; min-width: 60px; text-align: center; }
-    .framework-name { font-size: 26px; font-weight: 500; margin-bottom: 8px; }
-    .framework-desc { font-size: 18px; line-height: 1.8; color: var(--text-muted); font-weight: 300; max-width: 800px; }
-    .methodology-cta { text-align: center; margin-top: 48px; }
-    .methodology-cta a {
-      font-family: 'Cinzel', serif;
-      font-size: 14px;
-      letter-spacing: 0.2em;
-      color: var(--gold);
-      text-decoration: none;
-      border-bottom: 1px solid var(--gold-dim);
-      padding-bottom: 2px;
-      transition: border-color 0.3s;
-    }
-    .methodology-cta a:hover { border-color: var(--gold); }
-
-    /* QUOTE */
-    #quote { padding: 100px 48px; background: linear-gradient(135deg, var(--bg-alt) 0%, #141A16 100%); text-align: center; }
-    .quote-mark { font-size: 72px; color:#344E4130; line-height: 1; margin-bottom: -8px; }
-    blockquote { font-size: clamp(22px, 3vw, 32px); font-weight: 300; font-style: italic; line-height: 1.6; color:#D0C8BC; max-width: 800px; margin: 0 auto 32px; }
-    .quote-attr { font-family: 'Cinzel', serif; font-size: 14px; letter-spacing: 0.3em; color: var(--gold); }
-
-    /* CREDENTIALS */
-    #credentials { padding: 80px 48px; }
-
-    .cred-header {
-      text-align: center;
-      margin-bottom: 56px;
-    }
-    .cred-header h2 {
-      font-size: clamp(28px, 3.5vw, 40px);
-      font-weight: 300;
-    }
-
-    .cred-tier {
-      max-width: 980px;
-      margin: 0 auto 48px;
-    }
-    .cred-tier:last-child { margin-bottom: 0; }
-
-    .cred-tier-label {
-      font-family: 'Cinzel', serif;
-      font-size: 11px;
-      letter-spacing: 0.35em;
-      color: var(--gold);
-      text-transform: uppercase;
-      text-align: center;
-      margin-bottom: 8px;
-    }
-    .cred-tier-rule {
-      width: 40px;
-      height: 1px;
-      background: var(--gold-dim);
-      margin: 0 auto 28px;
-    }
-
-    .cred-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 32px 28px;
-    }
-
-    .cred-item { text-align: center; }
-
-    .cred-label {
-      font-family: 'Cinzel', serif;
-      font-size: 15px;
-      color: var(--gold);
-      margin-bottom: 6px;
-    }
-
-    .cred-sub {
-      font-size: 14px;
-      color: var(--text-dim);
-      letter-spacing: 0.05em;
-      font-family: 'Cormorant Garamond', serif;
-      line-height: 1.5;
-    }
-
-    .cred-tier--green .cred-label {
-      color: var(--green-muted);
-    }
-    .cred-tier--green .cred-tier-label {
-      color: var(--green-muted);
-    }
-    .cred-tier--green .cred-tier-rule {
-      background: var(--green-dim);
-    }
-
-    /* HRD badge */
-    .hrd-trainer-section {
-      padding: 40px 48px;
-      text-align: center;
-    }
-    .hrd-trainer-section img {
-      width: 120px;
-      height: auto;
-      opacity: 0.95;
-      transition: opacity 0.3s ease;
-    }
-    .hrd-trainer-section img:hover { opacity: 1; }
-
-    /* WHAT TO EXPECT */
-    #what-to-expect { padding: 80px 48px; background: var(--bg-alt); }
-    .wte-inner { max-width: 960px; margin: 0 auto; text-align: center; }
-    .wte-inner h2 { font-size: clamp(28px, 3.5vw, 40px); font-weight: 300; margin-bottom: 48px; }
-    .wte-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
-    .wte-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      padding: 36px;
-      text-align: left;
-    }
-    .wte-card-label {
-      font-family: 'Cinzel', serif;
-      font-size: 11px;
-      letter-spacing: 0.25em;
-      color: var(--gold);
-      text-transform: uppercase;
-      margin-bottom: 14px;
-    }
-    .wte-text {
-      font-size: 17px;
-      line-height: 1.8;
-      color: var(--text-muted);
-      font-weight: 300;
-    }
-    .wte-tags {
-      font-family: 'Cinzel', serif;
-      font-size: 12px;
-      letter-spacing: 0.15em;
-      color: var(--text-dim);
-      margin-top: 20px;
-      padding-top: 16px;
-      border-top: 1px solid var(--border);
-    }
-
-    /* CTA */
-    #cta { padding: 120px 48px; text-align: center; position: relative; overflow: hidden; }
-    .cta-glow {
-      position: absolute;
-      top: 50%; left: 50%;
-      transform: translate(-50%,-50%);
-      width: 600px; height: 600px;
-      border-radius: 50%;
-      background: radial-gradient(circle,#C8A96E06 0%, transparent 65%);
-      pointer-events: none;
-    }
-    #cta .section-label { margin-bottom: 24px; }
-    #cta h2 { font-size: clamp(36px, 5vw, 64px); font-weight: 300; line-height: 1.2; margin-bottom: 24px; }
-    #cta h2 em { font-style: italic; }
-    #cta p { font-size: 20px; color: var(--text-muted); max-width: 760px; margin: 0 auto 48px; line-height: 1.8; }
-    .cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
-    .cta-email {
-      font-family: 'Cinzel', serif;
-      font-size: 13px;
-      letter-spacing: 0.15em;
-      color: var(--text-dim);
-      margin-top: 20px;
-    }
-    .cta-email a { color: var(--gold); text-decoration: none; border-bottom: 1px solid var(--gold-dim); transition: border-color 0.3s; }
-    .cta-email a:hover { border-color: var(--gold); }
-
-    /* INDIVIDUALS / CAREER DIRECTION (secondary track — green accent) */
-    #individuals {
-      padding: 88px 48px;
-      background: var(--bg-alt);
-      border-top: 1px solid var(--border);
-      position: relative;
-    }
-    .individuals-inner {
-      max-width: 860px;
-      margin: 0 auto;
-      text-align: center;
-    }
-    .individuals-inner .section-label {
-      color: var(--green-muted);
-    }
-    .individuals-inner h2 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(26px, 3.2vw, 38px);
-      font-weight: 300;
-      line-height: 1.3;
-      color: var(--text);
-      margin-bottom: 20px;
-      letter-spacing: 0.01em;
-    }
-    .individuals-rule {
-      width: 40px;
-      height: 1px;
-      background: var(--green-dim);
-      margin: 0 auto 26px;
-    }
-    .individuals-desc {
-      font-size: 17px;
-      line-height: 1.85;
-      color: var(--text-muted);
-      font-weight: 300;
-      max-width: 720px;
-      margin: 0 auto 32px;
-    }
-    .individuals-desc strong { color: var(--text); font-weight: 500; }
-    .individuals-link {
-      font-family: 'Cinzel', serif;
-      font-size: 13px;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--green-muted);
-      text-decoration: none;
-      border: 1px solid var(--green-dim);
-      padding: 14px 32px;
-      display: inline-block;
-      transition: all 0.3s ease;
-    }
-    .individuals-link:hover {
-      background: var(--green-muted);
-      color: var(--bg);
-      border-color: var(--green-muted);
-    }
-
-    /* FOOTER */
-    footer {
-      padding: 40px 48px 32px;
-      border-top: 1px solid var(--border);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
-    }
-    .footer-top {
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 16px;
-    }
-    .footer-brand { font-family: 'Cinzel', serif; font-size: 13px; letter-spacing: 0.2em; color: var(--gold); }
-    .footer-domain { font-family: 'Cinzel', serif; font-size: 13px; letter-spacing: 0.1em; color: var(--text-dim); }
-    .footer-social { display: flex; gap: 24px; align-items: center; }
-    .footer-social a {
-      color: var(--text-dim);
-      text-decoration: none;
-      font-family: 'Cinzel', serif;
-      font-size: 14px;
-      letter-spacing: 0.15em;
-      transition: color 0.3s;
-    }
-    .footer-social a:hover { color: var(--gold); }
-    .footer-divider { width: 1px; height: 12px; background: var(--border); }
-    .footer-copy { font-family: 'Cinzel', serif; font-size: 12px; letter-spacing: 0.1em; color: var(--text-dim); }
-    .footer-powered { font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 0.1em; color: var(--text-dim); opacity: 0.4; }
-    .footer-disclaimer {
-      max-width: 920px;
-      margin: 6px auto 0;
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: 12.5px;
-      line-height: 1.65;
-      color: var(--text-dim);
-      text-align: center;
-      letter-spacing: 0.01em;
-    }
-    .footer-disclaimer strong { color: var(--text-muted); font-weight: 500; }
-
-    /* RESPONSIVE */
-    @media (max-width: 768px) {
-      nav { padding: 16px 24px; }
-      .nav-hamburger { display: flex; }
-      .nav-links {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        flex-direction: column;
-        gap: 0;
-        background: rgba(14,13,11,0.95);
-        backdrop-filter: blur(12px);
-        border-bottom: 1px solid var(--border);
-        padding: 16px 24px;
-      }
-      .nav-links.open { display: flex; }
-      .nav-links a { padding: 12px 0; }
-
-      #hero { padding: 100px 24px 48px; }
-      .hero-side { display: none; }
-      .hero-photo { width: 120px; height: 120px; }
-      .scroll-hint { display: none; }
-
-      #roles, #methodology, #quote, #credentials, #what-to-expect, #cta, #prisma-positioning, #individuals, #two-solutions {
-        padding-left: 24px;
-        padding-right: 24px;
-      }
-      #two-solutions { padding-top: 60px; padding-bottom: 60px; }
-      .ts-grid { grid-template-columns: 1fr; gap: 20px; }
-      .ts-card { padding: 36px 28px; }
-
-      .framework-item { flex-direction: column; gap: 16px; }
-      .framework-num { min-width: auto; font-size: 28px; }
-      .cred-grid { grid-template-columns: repeat(2, 1fr); gap: 28px 20px; }
-      .wte-grid { grid-template-columns: 1fr; }
-
-      .section-label { font-size: 16px; letter-spacing: 0.2em; }
-      .btn { font-size: 15px; padding: 16px 32px; }
-
-      .role-title { font-size: 16px; letter-spacing: 0.1em; }
-      .role-body, .framework-desc { font-size: 18px; }
-
-      .framework-name { font-size: 24px; }
-      .quote-attr { font-size: 15px; letter-spacing: 0.2em; }
-      .footer-social a { font-size: 16px; }
-      .footer-brand, .footer-domain { font-size: 14px; }
-      .nav-logo img { height: 28px; }
-
-      .hero-credentials { padding: 10px 18px; gap: 8px 14px; }
-      .hero-credentials span { font-size: 10px; }
-
-      footer { padding: 32px 24px; flex-direction: column; text-align: center; }
-      .footer-top { justify-content: center; }
-      .footer-social { flex-wrap: wrap; justify-content: center; gap: 16px; }
-      .hrd-trainer-section { padding: 32px 24px; }
-      .hrd-trainer-section img { width: 100px; }
-    }
-  </style>
+  <link rel="stylesheet" href="assets/css/main.css">
 </head>
 
 <body>
@@ -866,8 +55,9 @@
     </a>
     <ul class="nav-links">
       <li><a href="about.html">About</a></li>
-      <li><a href="practice.html">PRisMA Compliance</a></li>
+      <li><a href="earned-leadership.html">Earned Leadership</a></li>
       <li><a href="resilience-training.html">Resilience Training</a></li>
+      <li><a href="practice.html">PRisMA Compliance</a></li>
       <li><a href="#cta">Contact</a></li>
     </ul>
     <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
@@ -886,14 +76,14 @@
       </div>
 
       <div class="hero-side" style="bottom:20%; right:8%;">
-        <span class="hero-side-text">ASSESS &middot; CONTROL &middot; RE-EVALUATE</span>
+        <span class="hero-side-text">LEAD &middot; STEADY &middot; COMPLY</span>
         <div class="gold-line-v" style="height:80px;"></div>
       </div>
 
       <img
         src="assets/images/hero-photo.jpg"
-        alt="Dr. Elijah — Executive L&amp;D Consultant &amp; Certified Resilience Coach"
-        title="Dr. Elijah — Executive L&amp;D Consultant &amp; Certified Resilience Coach, Sibu, Sarawak"
+        alt="Dr. Elijah — Executive L&amp;D Consultant"
+        title="Dr. Elijah — Executive L&amp;D Consultant, Sibu, Sarawak"
         class="hero-photo reveal d1"
       />
 
@@ -902,33 +92,32 @@
         <p class="hero-role">Executive L&amp;D Consultant &amp; Certified Resilience Coach</p>
       </div>
 
-      <h1 class="hero-name cormorant reveal d3">
-        Build a Workforce That<br>
-        Performs Under Pressure
+      <h1 class="hero-name cormorant reveal d3" style="font-size:clamp(36px, 5.5vw, 68px);">
+        Build Leaders Who Earn Followers,<br>
+        Teams That Stand Under Pressure,<br>
+        and Systems That Comply
       </h1>
 
-      <h2 class="hero-sub cormorant reveal d3">
-        Calmer leaders, steadier teams, and sustainable performance under pressure.
+      <h2 class="hero-sub cormorant reveal d3" style="color:var(--gold); font-size:clamp(20px, 2.5vw, 30px); letter-spacing:0.05em; margin-bottom:20px;">
+        Authority is Earned. Teams are Steaded. Systems are Compliant.
       </h2>
 
       <p class="hero-desc reveal d4">
-        Two clearly bounded solutions for Malaysian organisations:
-        <strong>PRisMA OSH compliance</strong> &mdash; system-level psychosocial-risk screening under DOSH PTP
-        competency &mdash; and proactive, <strong>HRD Corp claimable workplace resilience training</strong>.
-        Non-clinical, preventative, and evidence-based.
+        Integrated solutions for Malaysian organisations: <strong>Earned Leadership™ (赢心领导力)</strong> executive decision engines,
+        <strong>proactive workplace resilience capability</strong>, and statutory <strong>PRisMA OSH psychosocial risk screening</strong> under DOSH PTP competency.
       </p>
 
       <div class="hero-credentials reveal d4">
-        <span>DOSH-Certified PTP</span>
-        <span class="dot">&bull;</span>
         <span>HRD Corp Accredited Trainer</span>
         <span class="dot">&bull;</span>
-        <span>Certified Resilience Coach</span>
+        <span>DOSH-Certified PTP</span>
+        <span class="dot">&bull;</span>
+        <span>Ex Doc (L&amp;D) &bull; PhD (Ongoing)</span>
       </div>
 
       <div class="hero-btns reveal d5">
         <a href="https://wa.me/message/DTN4ST4TTRBWG1" class="btn btn-fill" target="_blank" rel="noopener noreferrer">Book Scoping Call</a>
-        <a href="#two-solutions" class="btn btn-outline">Explore the Two Solutions</a>
+        <a href="#three-solutions" class="btn btn-outline">Explore Three Solutions</a>
       </div>
 
       <div class="scroll-hint reveal d6">
@@ -937,61 +126,75 @@
       </div>
     </section>
 
-    <!-- TWO DISTINCT SOLUTIONS -->
-    <section id="two-solutions">
-      <div class="ts-inner">
-        <div class="ts-head">
-          <p class="section-label">Two Distinct Solutions</p>
-          <h2 class="cormorant">Clear Lines Between Compliance and Capability</h2>
-          <p class="ts-intro">
-            Two services, two regulatory lanes, deliberately kept separate. One is statutory OSH risk
-            screening conducted under DOSH PTP competency. The other is proactive, non-clinical capability
-            training. Neither constitutes clinical psychology, therapy, or medical care.
+    <!-- THREE INTEGRATED SOLUTIONS -->
+    <section id="three-solutions">
+      <div class="ts-inner" style="max-width:1180px; margin:0 auto; padding:80px 32px;">
+        <div class="ts-head" style="text-align:center; max-width:820px; margin:0 auto 48px;">
+          <p class="section-label" style="color:var(--gold);">Three Integrated Solutions</p>
+          <h2 class="cormorant" style="font-size:42px; font-weight:300;">Clear Lines Between Leadership, Capability, and Compliance</h2>
+          <p class="ts-intro" style="font-size:18px; color:var(--text-muted); line-height:1.7;">
+            Three distinct solutions, three organizational levers. One is executive decision-making under uncertainty (Earned Leadership™). The second is proactive team resilience (PR6 Model). The third is statutory OSH psychosocial risk screening (PRisMA under DOSH PTP competency).
           </p>
         </div>
 
-        <div class="ts-grid">
-          <!-- Solution 1: PRisMA OSH Compliance -->
-          <div class="ts-card ts-card--gold">
-            <p class="ts-card-label">Solution 01 &middot; Compliance</p>
-            <h3 class="cormorant">PRisMA OSH Compliance Solutions</h3>
-            <p>
-              System-level psychosocial-risk screening for Malaysian employers carrying statutory obligations
-              under OSHA 1994 (as amended 2022), conducted under official DOSH PTP competency.
+        <div class="pillars-grid-3">
+          <!-- Pillar 1: Earned Leadership -->
+          <div class="ts-card ts-card--gold" style="border:1px solid var(--gold-dim); background:var(--bg-card); padding:32px 24px; border-radius:4px; display:flex; flex-direction:column;">
+            <p class="ts-card-label" style="color:var(--gold); font-family:'Cinzel',serif; font-size:11px; letter-spacing:0.2em; margin-bottom:8px;">Pillar 01 &middot; Leadership</p>
+            <h3 class="cormorant" style="font-size:28px; margin-bottom:12px;">Earned Leadership™<br><span style="font-size:0.75em; color:var(--gold);">(赢心领导力)</span></h3>
+            <p style="font-size:15px; color:var(--text-muted); line-height:1.6; margin-bottom:16px;">
+              A 14-hour executive decision engine for leaders facing uncertainty, decision constraints, and team alignment. Win hearts, not compliance.
             </p>
-            <ul class="ts-list">
-              <li>Stage I screening with <strong>LEO26</strong> across work units</li>
-              <li>Stage II assessment with the <strong>EPC23</strong> employer practice checklist</li>
-              <li>Risk classified at the <strong>system and organisational level</strong> &mdash; not individual diagnosis</li>
-              <li>Defensible <strong>PRiMA Action Plan</strong> for DOSH and your Safety Committee</li>
+            <ul class="ts-list" style="list-style:none; padding:0; margin-bottom:24px; font-size:14px; color:var(--text); line-height:1.8;">
+              <li style="margin-bottom:8px;">&bull; <strong>The Fog Principle:</strong> Leading before outcomes are known</li>
+              <li style="margin-bottom:8px;">&bull; <strong>3 Pillars:</strong> Decision rights, Communication, and Aura</li>
+              <li style="margin-bottom:8px;">&bull; <strong>4-Level Earned Ladder:</strong> Positional to Earned Commitment</li>
+              <li style="margin-bottom:8px;">&bull; Delivered by an <strong>HRD Corp Accredited Trainer</strong></li>
             </ul>
-            <div class="ts-spacer"></div>
-            <a href="practice.html" class="ts-link cinzel">Explore PRisMA Compliance &rarr;</a>
+            <div style="margin-top:auto;">
+              <a href="earned-leadership.html" class="ts-link cinzel" style="color:var(--gold); text-decoration:none; font-size:13px; letter-spacing:0.15em;">Explore Earned Leadership &rarr;</a>
+            </div>
           </div>
 
-          <!-- Solution 2: Workplace Resilience Training -->
-          <div class="ts-card ts-card--green">
-            <p class="ts-card-label">Solution 02 &middot; Capability</p>
-            <h3 class="cormorant">Workplace Resilience Training</h3>
-            <p>
-              Proactive, <strong>HRD Corp claimable</strong>, non-clinical training based on the Predictive
-              6 Factor Resilience <strong>(PR6) model by Hello Driven</strong> &mdash; run at any time, with
-              no statutory trigger required.
+          <!-- Pillar 2: Workplace Resilience Training -->
+          <div class="ts-card ts-card--green" style="border:1px solid var(--border); background:var(--bg-card); padding:32px 24px; border-radius:4px; display:flex; flex-direction:column;">
+            <p class="ts-card-label" style="color:var(--green-muted); font-family:'Cinzel',serif; font-size:11px; letter-spacing:0.2em; margin-bottom:8px;">Pillar 02 &middot; Capability</p>
+            <h3 class="cormorant" style="font-size:28px; margin-bottom:12px;">Workplace Resilience Training</h3>
+            <p style="font-size:15px; color:var(--text-muted); line-height:1.6; margin-bottom:16px;">
+              Proactive, non-clinical capability training based on the Predictive 6 Factor Resilience <strong>(PR6) model by Hello Driven</strong>.
             </p>
-            <ul class="ts-list">
-              <li>Built on the evidence-based <strong>PR6 framework</strong></li>
-              <li><strong>HRD Corp claimable</strong> delivery for levy-paying employers</li>
-              <li><strong>Preventative and non-clinical</strong> &mdash; skills, habits, reinforcement</li>
-              <li>Outcome measurement and app-based reinforcement where appropriate</li>
+            <ul class="ts-list" style="list-style:none; padding:0; margin-bottom:24px; font-size:14px; color:var(--text); line-height:1.8;">
+              <li style="margin-bottom:8px;">&bull; Built on the evidence-based <strong>PR6 framework</strong></li>
+              <li style="margin-bottom:8px;">&bull; <strong>Preventative & Non-Clinical:</strong> Skills, habits, reinforcement</li>
+              <li style="margin-bottom:8px;">&bull; Outcome measurement and app-based reinforcement</li>
+              <li style="margin-bottom:8px;">&bull; Delivered by an <strong>HRD Corp Accredited Trainer</strong></li>
             </ul>
-            <div class="ts-spacer"></div>
-            <a href="resilience-training.html" class="ts-link cinzel">Explore Resilience Training &rarr;</a>
+            <div style="margin-top:auto;">
+              <a href="resilience-training.html" class="ts-link cinzel" style="color:var(--green-muted); text-decoration:none; font-size:13px; letter-spacing:0.15em;">Explore Resilience Training &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Pillar 3: PRisMA OSH Compliance -->
+          <div class="ts-card" style="border:1px solid var(--border); background:var(--bg-card); padding:32px 24px; border-radius:4px; display:flex; flex-direction:column;">
+            <p class="ts-card-label" style="color:var(--text-muted); font-family:'Cinzel',serif; font-size:11px; letter-spacing:0.2em; margin-bottom:8px;">Pillar 03 &middot; Compliance</p>
+            <h3 class="cormorant" style="font-size:28px; margin-bottom:12px;">PRisMA OSH Compliance Solutions</h3>
+            <p style="font-size:15px; color:var(--text-muted); line-height:1.6; margin-bottom:16px;">
+              System-level psychosocial-risk screening for Malaysian employers carrying statutory obligations under OSHA 1994 (amended 2022), under DOSH PTP competency.
+            </p>
+            <ul class="ts-list" style="list-style:none; padding:0; margin-bottom:24px; font-size:14px; color:var(--text); line-height:1.8;">
+              <li style="margin-bottom:8px;">&bull; Stage I screening with <strong>LEO26</strong> across work units</li>
+              <li style="margin-bottom:8px;">&bull; Stage II assessment with the <strong>EPC23</strong> checklist</li>
+              <li style="margin-bottom:8px;">&bull; Risk classified at the <strong>system level</strong></li>
+              <li style="margin-bottom:8px;">&bull; Defensible <strong>PRiMA Action Plan</strong> for DOSH</li>
+            </ul>
+            <div style="margin-top:auto;">
+              <a href="practice.html" class="ts-link cinzel" style="color:var(--text-muted); text-decoration:none; font-size:13px; letter-spacing:0.15em;">Explore PRisMA Compliance &rarr;</a>
+            </div>
           </div>
         </div>
 
-        <p class="ts-boundary">
-          Both solutions are preventative and OSH system-level in nature. They do not constitute clinical
-          psychological therapy, psychiatric evaluation, or medical counselling.
+        <p class="ts-boundary" style="text-align:center; margin-top:36px; font-size:14px; color:var(--text-dim);">
+          All solutions are preventative and OSH system-level in nature. They do not constitute clinical psychological therapy, psychiatric evaluation, or medical counselling.
         </p>
       </div>
     </section>
@@ -1207,10 +410,7 @@
 
     <!-- HRD Corp Accredited Trainer -->
     <section class="hrd-trainer-section">
-      <img
-        src="/assets/images/hrd-corp-accredited-trainer.png"
-        alt="HRD Corp Accredited Trainer"
-      />
+      <img src="/assets/images/hrd-corp-accredited-trainer.png" alt="HRD Corp Accredited Trainer" loading="lazy" />
     </section>
 
     <!-- WHAT TO EXPECT -->
@@ -1307,48 +507,6 @@
     </p>
   </footer>
 
-  <script>
-    const nav = document.getElementById('nav');
-    window.addEventListener('scroll', () => {
-      nav.classList.toggle('scrolled', window.scrollY > 60);
-    });
-
-    const hamburger = document.querySelector('.nav-hamburger');
-    const navLinks = document.querySelector('.nav-links');
-
-    hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('open');
-      navLinks.classList.toggle('open');
-      const open = navLinks.classList.contains('open');
-      hamburger.setAttribute('aria-expanded', open);
-      hamburger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
-    });
-
-    navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        hamburger.classList.remove('open');
-        navLinks.classList.remove('open');
-        hamburger.setAttribute('aria-expanded', 'false');
-        hamburger.setAttribute('aria-label', 'Open menu');
-      });
-    });
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.12 });
-
-    document.querySelectorAll('.role-card, .framework-item, .cred-item, .wte-card').forEach(el => {
-      el.style.opacity = '0';
-      el.style.transform = 'translateY(24px)';
-      el.style.transition = 'opacity 0.7s ease, transform 0.7s cubic-bezier(0.16,1,0.3,1)';
-      observer.observe(el);
-    });
-  </script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
