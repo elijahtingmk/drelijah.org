@@ -3,7 +3,7 @@
 
 Composes the brand open-ring mark with a two-line lockup:
   - "Dr. Elijah Ting" in a bold serif, cream (for dark backgrounds)
-  - "WORKPLACE RESILIENCE" in letter-spaced terracotta small caps
+  - "LEADERSHIP · PSYCHOSOCIAL SAFETY & RESILIENCE" in letter-spaced terracotta small caps
 
 Output: assets/images/logo-wordmark-on-dark.png (transparent RGBA).
 
@@ -30,11 +30,11 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 IMG = os.path.join(ROOT, "assets", "images")
 
 NAME = "Dr. Elijah Ting"
-SUB = "WORKPLACE RESILIENCE"
+SUB = "LEADERSHIP · PSYCHOSOCIAL SAFETY & RESILIENCE"
 
 
 def build(theme="dark"):
-    W, H = 5200, 1400
+    W, H = 7400, 1400
     canvas = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     draw = ImageDraw.Draw(canvas)
 
