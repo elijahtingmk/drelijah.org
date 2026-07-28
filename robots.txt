@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Private sermon notes — also marked noindex on the pages themselves.
+Disallow: /sermons/
+
+Sitemap: https://drelijah.org/sitemap.xml

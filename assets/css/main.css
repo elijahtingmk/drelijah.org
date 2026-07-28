@@ -135,6 +135,9 @@
       transition: color 0.3s;
     }
     .nav-links a:hover { color: var(--gold); }
+    /* Active page marker. .green switches the accent for the resilience track. */
+    .nav-links a.current { color: var(--gold); }
+    .nav-links a.current.green { color: var(--green-muted); }
 
     .nav-hamburger {
       display: none;
@@ -172,6 +175,15 @@
     .btn-outline:hover { background: var(--gold); color: var(--bg); }
     .btn-fill { background: var(--gold); border: 1px solid var(--gold); color: var(--bg); }
     .btn-fill:hover { background: transparent; color: var(--gold); }
+    /* Green track (Resilience Training) */
+    .btn-green { background: var(--green-muted); border: 1px solid var(--green-muted); color: var(--bg); }
+    .btn-green:hover { background: transparent; color: var(--green-muted); }
+    /* Gold outline used for cross-links into the compliance track */
+    .btn-gold { background: transparent; border: 1px solid var(--gold); color: var(--gold); }
+    .btn-gold:hover { background: var(--gold); color: var(--bg); }
+    /* Compact variant for in-card CTAs. Doubled specificity so it survives the
+       responsive .btn overrides further down the sheet. */
+    .btn.btn-sm { font-size: 12px; padding: 12px 24px; letter-spacing: 0.16em; }
 
     .gold-divider { width: 60px; height: 1px; background: var(--gold); margin: 0 auto; }
     .gold-line-v { width: 1px; background: linear-gradient(to bottom, transparent, var(--gold), transparent); }
