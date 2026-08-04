@@ -483,6 +483,13 @@
     .prisma-positioning-link:hover { border-color: var(--gold); }
 
     /* TWO DISTINCT SOLUTIONS */
+    /* NOTE: this rule is currently dead. The homepage section was renamed to
+       id="three-solutions" but this selector was not updated, so the padding,
+       borders and background gradient below no longer reach it — the inline
+       padding on .ts-inner in index.html is standing in for them. The child
+       .ts-* rules still apply because they are class-based. Renaming this
+       selector would restore the borders and gradient, which is a visible
+       desktop change, so it is left alone pending a decision. */
     #two-solutions {
       padding: 96px 48px;
       border-top: 1px solid var(--border);
@@ -859,11 +866,14 @@
       .hero-photo { width: 120px; height: 120px; }
       .scroll-hint { display: none; }
 
-      #roles, #methodology, #quote, #credentials, #what-to-expect, #cta, #prisma-positioning, #individuals, #two-solutions {
+      /* #methodology, #prisma-positioning, #individuals and #two-solutions have
+         been dropped from this list: no element on any page carries those ids.
+         See the note above the #two-solutions rule — that one was renamed in the
+         markup, not removed. */
+      #roles, #quote, #credentials, #what-to-expect, #cta {
         padding-left: 24px;
         padding-right: 24px;
       }
-      #two-solutions { padding-top: 60px; padding-bottom: 60px; }
       .ts-grid { grid-template-columns: 1fr; gap: 20px; }
       .ts-card { padding: 36px 28px; }
 
@@ -2441,3 +2451,103 @@
 
 
 
+
+/* ── 9. RESPONSIVE — ABOUT, PRACTICE, RESILIENCE & LEADERSHIP ──
+      Sections 5-8 above were authored without breakpoints, so their
+      multi-column grids stayed at full column count on phones. The rules
+      below collapse those grids and reduce side padding. Breakpoints reuse
+      the values already in this file (992 / 860 / 768 / 560). Nothing here
+      applies above 992px, so desktop rendering is unchanged. ── */
+
+    /* Partnership journey is five phases wide — two columns first, then one.
+       The connector line is a horizontal rule across the row, so it is hidden
+       once the phases no longer sit in a single row. */
+    @media (max-width: 992px) {
+      .journey-track { grid-template-columns: repeat(2, 1fr); }
+      .journey-track::before { display: none; }
+    }
+
+    /* Three-column card grids. 860px matches the existing .ladder-grid and
+       .syllabus-grid breakpoints. */
+    @media (max-width: 860px) {
+      .tier-grid { grid-template-columns: 1fr; }
+      .stage-track { grid-template-columns: 1fr; }
+      .pr6-grid { grid-template-columns: 1fr; }
+      .engage-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      /* Remaining multi-column grids */
+      .journey-track { grid-template-columns: 1fr; }
+      .buyer-grid { grid-template-columns: 1fr; gap: 14px; }
+      .outcomes-grid { grid-template-columns: 1fr; }
+
+      /* About — the hero photo is width + min-width 220px in a flex row with a
+         64px gap, which leaves almost nothing for the text on a phone. */
+      .about-hero { flex-direction: column; gap: 32px; padding: 120px 24px 60px; }
+      .about-photo { width: 200px; min-width: 0; align-self: center; }
+      .positioning-strip { padding: 40px 24px; }
+      .journey { padding: 60px 24px; }
+      .journey-step { flex-direction: column; gap: 10px; padding: 22px 0; }
+      .journey-era { min-width: 0; padding-top: 0; }
+      .mission { padding: 60px 24px; }
+      .engage-reasons { padding: 60px 24px; }
+      .engage-card { padding: 28px 24px; }
+
+      /* Practice — #page-hero is shared with Resilience and Coaching */
+      #page-hero { padding: 120px 24px 60px; }
+      .buyer-strip { padding: 0 24px 48px; }
+      .buyer-strip-inner { padding: 28px 24px; }
+      #fit-check { padding: 60px 24px; }
+      #partnership-journey { padding: 60px 24px; }
+      #tier-architecture { padding: 60px 24px; }
+      .compliance-context { padding: 60px 24px; }
+      .stage-block { padding: 28px 24px; }
+      #scope-boundary { padding: 60px 24px; }
+      .scope-box { padding: 28px 24px; }
+
+      /* Resilience training */
+      #pr6 { padding: 60px 24px; }
+      .pr6-card { padding: 28px 24px; }
+      #outcomes { padding: 60px 24px; }
+      .outcome-card { padding: 28px 24px; }
+      #hrd { padding: 60px 24px; }
+      .hrd-box { padding: 32px 24px; }
+
+      /* Cross-link block — Home, Practice, Resilience, Coaching */
+      .crosslink { padding: 48px 24px; }
+      .crosslink-inner { padding: 28px 24px; }
+
+      /* Shared sections whose mobile padding was already being defeated: the
+         768px block near the top of this file sets these to 24px, but the
+         Practice and Resilience sections redefine them as base rules further
+         down, which wins on equal specificity. Restated here, at the end of
+         the cascade. Horizontal axis only, as the original rule did. */
+      #quote, #credentials, #cta, #fit-check, #partnership-journey,
+      #tier-architecture, #scope-boundary, #pr6, #outcomes, #hrd {
+        padding-left: 24px;
+        padding-right: 24px;
+      }
+      .hrd-trainer-section { padding: 32px 24px; }
+      .boundary-strip { padding: 0 24px 48px; }
+      .boundary-inner { padding: 28px 24px; }
+      .fit-criteria { padding-left: 24px; padding-right: 24px; }
+      .cta-protocol { padding-left: 24px; padding-right: 24px; }
+
+      /* Earned Leadership sets its section padding inline, and the homepage
+         sets it on .ts-inner. Inline styles outrank a stylesheet rule, so
+         !important is required to reach them. Scoped to the horizontal axis so
+         the vertical rhythm is left alone. */
+      section[style*="48px"] {
+        padding-left: 24px !important;
+        padding-right: 24px !important;
+      }
+      .ts-inner { padding-left: 24px !important; padding-right: 24px !important; }
+    }
+
+    /* The 768px rule at the top of this file pins .cred-grid to two columns,
+       overriding its own auto-fit base rule. Two columns of credential text is
+       too narrow below ~560px. */
+    @media (max-width: 560px) {
+      .cred-grid { grid-template-columns: 1fr; }
+    }
