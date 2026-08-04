@@ -424,73 +424,14 @@
     .scroll-hint span { font-family: 'Cinzel', serif; font-size: 13px; letter-spacing: 0.3em; color:#C8A96E44; }
     .scroll-line { width: 1px; height: 40px; background: linear-gradient(to bottom, var(--gold), transparent); animation: pulse-line 2s ease-in-out infinite; }
 
-    /* PRisMA POSITIONING STRIP */
-    #prisma-positioning {
-      padding: 72px 48px;
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      background: linear-gradient(180deg, var(--bg) 0%, #121110 100%);
-      position: relative;
-    }
-    .prisma-positioning-inner {
-      max-width: 920px;
-      margin: 0 auto;
-      text-align: center;
-    }
-    .prisma-positioning-label {
-      font-size: 11px;
-      letter-spacing: 0.35em;
-      color: var(--gold);
-      margin-bottom: 18px;
-      display: block;
-    }
-    .prisma-positioning-inner h2 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(24px, 3vw, 34px);
-      font-weight: 300;
-      line-height: 1.35;
-      color: var(--text);
-      margin-bottom: 20px;
-      letter-spacing: 0.01em;
-    }
-    .prisma-positioning-inner h2 em {
-      font-style: italic;
-      color: var(--gold);
-    }
-    .prisma-positioning-desc {
-      font-size: 17px;
-      line-height: 1.8;
-      color: var(--text-muted);
-      font-weight: 300;
-      max-width: 760px;
-      margin: 0 auto 22px;
-    }
-    .prisma-positioning-desc strong {
-      color: var(--text);
-      font-weight: 500;
-    }
-    .prisma-positioning-link {
-      display: inline-block;
-      font-size: 13px;
-      letter-spacing: 0.25em;
-      color: var(--gold);
-      text-decoration: none;
-      text-transform: uppercase;
-      border-bottom: 1px solid var(--gold-dim);
-      padding-bottom: 3px;
-      transition: border-color 0.3s;
-    }
-    .prisma-positioning-link:hover { border-color: var(--gold); }
 
-    /* TWO DISTINCT SOLUTIONS */
-    /* NOTE: this rule is currently dead. The homepage section was renamed to
-       id="three-solutions" but this selector was not updated, so the padding,
-       borders and background gradient below no longer reach it — the inline
-       padding on .ts-inner in index.html is standing in for them. The child
-       .ts-* rules still apply because they are class-based. Renaming this
-       selector would restore the borders and gradient, which is a visible
-       desktop change, so it is left alone pending a decision. */
-    #two-solutions {
+    /* THREE INTEGRATED SOLUTIONS */
+    /* Renamed from #two-solutions to match the markup: the homepage section
+       became id="three-solutions" but this selector was never updated, so its
+       padding, borders and background gradient had stopped reaching it. The
+       inline padding that stood in for them has been removed from index.html.
+       The .ts-* child rules were unaffected throughout, being class-based. */
+    #three-solutions {
       padding: 96px 48px;
       border-top: 1px solid var(--border);
       border-bottom: 1px solid var(--border);
@@ -614,28 +555,6 @@
     .role-title { font-family: 'Cinzel', serif; font-size: 15px; letter-spacing: 0.15em; color: var(--gold); margin-bottom: 16px; text-transform: uppercase; }
     .role-body { font-size: 17px; line-height: 1.9; color: var(--text-muted); font-weight: 300; }
 
-    /* METHODOLOGY */
-    #methodology { padding: 100px 48px; background: var(--bg-alt); }
-    .methodology-inner { max-width: 1200px; margin: 0 auto; }
-    .methodology-header { text-align: center; margin-bottom: 64px; }
-    .methodology-header h2 { font-size: clamp(32px, 4vw, 48px); font-weight: 300; }
-    .framework-item { display: flex; align-items: center; gap: 48px; padding: 40px 0; border-bottom: 1px solid var(--border); }
-    .framework-item:last-child { border-bottom: none; }
-    .framework-num { font-family: 'Cinzel', serif; font-size: 36px; opacity: 0.3; min-width: 60px; text-align: center; }
-    .framework-name { font-size: 26px; font-weight: 500; margin-bottom: 8px; }
-    .framework-desc { font-size: 18px; line-height: 1.8; color: var(--text-muted); font-weight: 300; max-width: 800px; }
-    .methodology-cta { text-align: center; margin-top: 48px; }
-    .methodology-cta a {
-      font-family: 'Cinzel', serif;
-      font-size: 14px;
-      letter-spacing: 0.2em;
-      color: var(--gold);
-      text-decoration: none;
-      border-bottom: 1px solid var(--gold-dim);
-      padding-bottom: 2px;
-      transition: border-color 0.3s;
-    }
-    .methodology-cta a:hover { border-color: var(--gold); }
 
     /* QUOTE */
     #quote { padding: 100px 48px; background: linear-gradient(135deg, var(--bg-alt) 0%, #141A16 100%); text-align: center; }
@@ -785,7 +704,13 @@
     .cta-email a:hover { border-color: var(--gold); }
 
     /* INDIVIDUALS / CAREER DIRECTION (secondary track — green accent) */
-    #individuals {
+    /* Renamed from #individuals to match the markup. /coaching's Three Tracks
+       section carries id="tracks" and uses the .individuals-* children below,
+       but this selector was never updated, so the section had no padding at all
+       and its content ran to the viewport edge below 1180px. The .individuals-*
+       child names are left as they are — renaming them would touch the markup on
+       /coaching for no functional gain. */
+    #tracks {
       padding: 88px 48px;
       background: var(--bg-alt);
       border-top: 1px solid var(--border);
@@ -823,23 +748,6 @@
       margin: 0 auto 32px;
     }
     .individuals-desc strong { color: var(--text); font-weight: 500; }
-    .individuals-link {
-      font-family: 'Cinzel', serif;
-      font-size: 13px;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--green-muted);
-      text-decoration: none;
-      border: 1px solid var(--green-dim);
-      padding: 14px 32px;
-      display: inline-block;
-      transition: all 0.3s ease;
-    }
-    .individuals-link:hover {
-      background: var(--green-muted);
-      color: var(--bg);
-      border-color: var(--green-muted);
-    }
 
     /* RESPONSIVE */
     @media (max-width: 768px) {
@@ -866,10 +774,11 @@
       .hero-photo { width: 120px; height: 120px; }
       .scroll-hint { display: none; }
 
-      /* #methodology, #prisma-positioning, #individuals and #two-solutions have
-         been dropped from this list: no element on any page carries those ids.
-         See the note above the #two-solutions rule — that one was renamed in the
-         markup, not removed. */
+      /* Four ids were dropped from this list. #methodology and
+         #prisma-positioning matched nothing and their rules have now been
+         deleted outright. #two-solutions has been renamed #three-solutions to
+         match the markup, with its mobile padding in section 9. #individuals has
+         likewise been renamed #tracks to match /coaching's markup. */
       #roles, #quote, #credentials, #what-to-expect, #cta {
         padding-left: 24px;
         padding-right: 24px;
@@ -877,8 +786,6 @@
       .ts-grid { grid-template-columns: 1fr; gap: 20px; }
       .ts-card { padding: 36px 28px; }
 
-      .framework-item { flex-direction: column; gap: 16px; }
-      .framework-num { min-width: auto; font-size: 28px; }
       .cred-grid { grid-template-columns: repeat(2, 1fr); gap: 28px 20px; }
       .wte-grid { grid-template-columns: 1fr; }
 
@@ -886,9 +793,8 @@
       .btn { font-size: 15px; padding: 16px 32px; }
 
       .role-title { font-size: 16px; letter-spacing: 0.1em; }
-      .role-body, .framework-desc { font-size: 18px; }
+      .role-body { font-size: 18px; }
 
-      .framework-name { font-size: 24px; }
       .quote-attr { font-size: 15px; letter-spacing: 0.2em; }
       .footer-social a { font-size: 16px; }
       .footer-brand, .footer-domain { font-size: 14px; }
@@ -2450,8 +2356,6 @@
     }
 
 
-
-
 /* ── 9. RESPONSIVE — ABOUT, PRACTICE, RESILIENCE & LEADERSHIP ──
       Sections 5-8 above were authored without breakpoints, so their
       multi-column grids stayed at full column count on phones. The rules
@@ -2534,15 +2438,21 @@
       .fit-criteria { padding-left: 24px; padding-right: 24px; }
       .cta-protocol { padding-left: 24px; padding-right: 24px; }
 
-      /* Earned Leadership sets its section padding inline, and the homepage
-         sets it on .ts-inner. Inline styles outrank a stylesheet rule, so
-         !important is required to reach them. Scoped to the horizontal axis so
-         the vertical rhythm is left alone. */
+      /* #three-solutions now carries its padding from the stylesheet again, so
+         it needs the same mobile treatment as the other sections. The 60px
+         vertical values restore what the original 768px block specified for this
+         section under its former id. */
+      #three-solutions { padding: 60px 24px; }
+      #tracks { padding: 60px 24px; }
+
+      /* Earned Leadership still sets its section padding inline, and inline
+         styles outrank a stylesheet rule, so !important is required to reach
+         them. Scoped to the horizontal axis so the vertical rhythm is left
+         alone. */
       section[style*="48px"] {
         padding-left: 24px !important;
         padding-right: 24px !important;
       }
-      .ts-inner { padding-left: 24px !important; padding-right: 24px !important; }
     }
 
     /* The 768px rule at the top of this file pins .cred-grid to two columns,
