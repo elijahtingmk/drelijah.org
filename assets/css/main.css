@@ -483,14 +483,12 @@
     .prisma-positioning-link:hover { border-color: var(--gold); }
 
     /* TWO DISTINCT SOLUTIONS */
-    /* NOTE: this rule is currently dead. The homepage section was renamed to
-       id="three-solutions" but this selector was not updated, so the padding,
-       borders and background gradient below no longer reach it — the inline
-       padding on .ts-inner in index.html is standing in for them. The child
-       .ts-* rules still apply because they are class-based. Renaming this
-       selector would restore the borders and gradient, which is a visible
-       desktop change, so it is left alone pending a decision. */
-    #two-solutions {
+    /* Renamed from #two-solutions to match the markup: the homepage section
+       became id="three-solutions" but this selector was never updated, so its
+       padding, borders and background gradient had stopped reaching it. The
+       inline padding that stood in for them has been removed from index.html.
+       The .ts-* child rules were unaffected throughout, being class-based. */
+    #three-solutions {
       padding: 96px 48px;
       border-top: 1px solid var(--border);
       border-bottom: 1px solid var(--border);
@@ -866,10 +864,10 @@
       .hero-photo { width: 120px; height: 120px; }
       .scroll-hint { display: none; }
 
-      /* #methodology, #prisma-positioning, #individuals and #two-solutions have
-         been dropped from this list: no element on any page carries those ids.
-         See the note above the #two-solutions rule — that one was renamed in the
-         markup, not removed. */
+      /* #methodology, #prisma-positioning and #individuals have been dropped
+         from this list: no element on any page carries those ids. #two-solutions
+         was also dropped — it has since been renamed #three-solutions to match
+         the markup, and its mobile padding now lives in section 9. */
       #roles, #quote, #credentials, #what-to-expect, #cta {
         padding-left: 24px;
         padding-right: 24px;
@@ -2534,15 +2532,20 @@
       .fit-criteria { padding-left: 24px; padding-right: 24px; }
       .cta-protocol { padding-left: 24px; padding-right: 24px; }
 
-      /* Earned Leadership sets its section padding inline, and the homepage
-         sets it on .ts-inner. Inline styles outrank a stylesheet rule, so
-         !important is required to reach them. Scoped to the horizontal axis so
-         the vertical rhythm is left alone. */
+      /* #three-solutions now carries its padding from the stylesheet again, so
+         it needs the same mobile treatment as the other sections. The 60px
+         vertical values restore what the original 768px block specified for this
+         section under its former id. */
+      #three-solutions { padding: 60px 24px; }
+
+      /* Earned Leadership still sets its section padding inline, and inline
+         styles outrank a stylesheet rule, so !important is required to reach
+         them. Scoped to the horizontal axis so the vertical rhythm is left
+         alone. */
       section[style*="48px"] {
         padding-left: 24px !important;
         padding-right: 24px !important;
       }
-      .ts-inner { padding-left: 24px !important; padding-right: 24px !important; }
     }
 
     /* The 768px rule at the top of this file pins .cred-grid to two columns,
