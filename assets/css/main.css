@@ -704,14 +704,13 @@
     .cta-email a:hover { border-color: var(--gold); }
 
     /* INDIVIDUALS / CAREER DIRECTION (secondary track — green accent) */
-    /* NOTE: this selector is dead, but its child .individuals-* rules are live —
-       /coaching's Three Tracks section uses them under id="tracks". So this is
-       the same rename mismatch that #two-solutions had: the padding, background
-       and border-top below never reach that section, and nothing else supplies
-       them, which leaves #tracks with no section padding at all. Renaming this
-       to #tracks would fix it but adds a visible background and border on
-       /coaching, so it is left alone pending a decision. */
-    #individuals {
+    /* Renamed from #individuals to match the markup. /coaching's Three Tracks
+       section carries id="tracks" and uses the .individuals-* children below,
+       but this selector was never updated, so the section had no padding at all
+       and its content ran to the viewport edge below 1180px. The .individuals-*
+       child names are left as they are — renaming them would touch the markup on
+       /coaching for no functional gain. */
+    #tracks {
       padding: 88px 48px;
       background: var(--bg-alt);
       border-top: 1px solid var(--border);
@@ -778,8 +777,8 @@
       /* Four ids were dropped from this list. #methodology and
          #prisma-positioning matched nothing and their rules have now been
          deleted outright. #two-solutions has been renamed #three-solutions to
-         match the markup, with its mobile padding in section 9. #individuals
-         matches nothing either, but its rule is kept — see the note above it. */
+         match the markup, with its mobile padding in section 9. #individuals has
+         likewise been renamed #tracks to match /coaching's markup. */
       #roles, #quote, #credentials, #what-to-expect, #cta {
         padding-left: 24px;
         padding-right: 24px;
@@ -2444,6 +2443,7 @@
          vertical values restore what the original 768px block specified for this
          section under its former id. */
       #three-solutions { padding: 60px 24px; }
+      #tracks { padding: 60px 24px; }
 
       /* Earned Leadership still sets its section padding inline, and inline
          styles outrank a stylesheet rule, so !important is required to reach
