@@ -1142,7 +1142,12 @@
       footer { padding: 32px 24px; text-align: center; }
       .footer-top { justify-content: center; }
       .footer-social { flex-wrap: wrap; justify-content: center; gap: 16px; }
-    }
+    /* NOTE: the rules above sat at top level followed by an unmatched closing
+       brace, which suggests a lost `@media` opening line — the damage predates
+       this file's first commit. They therefore apply at every width. The stray
+       brace is removed so the file parses cleanly; the rules are deliberately
+       left global so current rendering is unchanged. See the responsive section
+       at the foot of this file for the mobile rules. */
 
 /* ── 6. PRACTICE PAGE STYLES ── */
     /* ── Hero ──────────────────────────────────────────────────────── */
@@ -1998,7 +2003,12 @@
 
       .footer-top { justify-content: center; }
       .footer-social { flex-wrap: wrap; justify-content: center; gap: 16px; }
-    }
+    /* NOTE: the rules above sat at top level followed by an unmatched closing
+       brace, which suggests a lost `@media` opening line — the damage predates
+       this file's first commit. They therefore apply at every width. The stray
+       brace is removed so the file parses cleanly; the rules are deliberately
+       left global so current rendering is unchanged. See the responsive section
+       at the foot of this file for the mobile rules. */
     @media (max-width: 560px) {
       .btn { padding: 14px 28px; font-size: 13px; }
       .tier-card { padding: 32px 24px; }
