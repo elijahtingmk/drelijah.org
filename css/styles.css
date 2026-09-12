@@ -751,13 +751,14 @@ p:last-child { margin-bottom: 0; }
 
 .about-portrait {
   margin: 0 0 1.75rem;
+  max-width: 22rem;
 }
 .about-portrait img {
+  display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-  object-position: center top;
+  aspect-ratio: 3 / 4;
+  object-fit: contain;
   border: 1px solid var(--line);
   background: var(--paper-2);
 }
