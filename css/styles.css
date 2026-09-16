@@ -266,7 +266,7 @@ p:last-child { margin-bottom: 0; }
 }
 .btn-line:hover { background: var(--navy); color: var(--paper); }
 
-@media (max-width: 1100px) {
+@media (max-width: 860px) {
   .nav-toggle { display: inline-flex; }
   .site-nav {
     display: none;
@@ -735,41 +735,4 @@ p:last-child { margin-bottom: 0; }
   overflow: hidden;
   clip: rect(0,0,0,0);
   border: 0;
-}
-
-.zh-mark {
-  display: inline-block;
-  margin-left: 0.35em;
-  font-family: var(--serif);
-  font-weight: 500;
-  font-size: 0.55em;
-  letter-spacing: 0.04em;
-  color: var(--gold-soft);
-  vertical-align: middle;
-}
-.page-hero h1 .zh-mark { color: var(--gold-soft); }
-
-.about-portrait {
-  margin: 0 0 1.85rem;
-  max-width: 13.5rem;
-}
-.about-portrait img {
-  display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  object-position: 50% 34%;
-  border-radius: 50%;
-  border: 1px solid var(--line);
-  background: var(--paper-2);
-}
-.about-portrait figcaption {
-  margin-top: 0.7rem;
-  font-size: 0.78rem;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--muted);
-  font-weight: 600;
-  text-align: center;
 }
