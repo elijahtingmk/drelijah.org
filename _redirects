@@ -1,15 +1,9 @@
-# Redirect old URLs to new redesign URLs
+# Old URLs redirect to new canonical pretty URLs
 /practice /prisma 301
-/practice.html /prisma.html 301
-/coaching /earned-leadership 301
-/coaching.html /earned-leadership.html 301
+/practice.html /prisma 301
 /resilience-training /workplace-resilience 301
-/resilience-training.html /workplace-resilience.html 301
+/resilience-training.html /workplace-resilience 301
 
-# Clean URLs (remove .html extension)
-/earned-leadership /earned-leadership.html 200
-/workplace-resilience /workplace-resilience.html 200
-/prisma /prisma.html 200
-/solutions /solutions.html 200
-/about /about.html 200
-/contact /contact.html 200
+# Note: .html versions of canonical pages (prisma.html, workplace-resilience.html, etc.) 
+# are served automatically by Netlify for their pretty URL equivalents.
+# Do NOT add .html -> pretty-URL redirects here - they create loops.
