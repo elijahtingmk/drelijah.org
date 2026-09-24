@@ -536,6 +536,16 @@ p:last-child { margin-bottom: 0; }
 /* CTA band */
 .cta-band { text-align: left; }
 .cta-band .lede { margin-bottom: 1.6rem; }
+.cta-bullets {
+  margin: 0 0 2rem;
+  padding-left: 1.3rem;
+  max-width: 42rem;
+}
+.cta-bullets li {
+  margin-bottom: 0.5em;
+  color: color-mix(in srgb, var(--paper) 78%, #8a8070);
+  line-height: 1.55;
+}
 .cta-actions {
   display: flex;
   flex-wrap: wrap;
