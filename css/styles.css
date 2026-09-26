@@ -615,7 +615,7 @@ p:last-child { margin-bottom: 0; }
 }
 .cta-bullets li {
   margin-bottom: 0.5em;
-  color: color-mix(in srgb, var(--paper) 78%, #8a8070);
+  color: var(--muted);
   line-height: 1.55;
 }
 .cta-actions {
