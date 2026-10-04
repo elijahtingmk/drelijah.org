@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contact | Elijah Ting, ED – L&D — Book a 30-minute scoping call</title>
-  <meta name="description" content="Book a 30-minute scoping call with Elijah Ting, ED – L&D. Email elijah@drelijah.org. Sibu, Sarawak, Malaysia.">
+  <meta name="description" content="Book a 30-minute scoping call with Elijah Ting, ED – L&D. Use the form or email elijah@drelijah.org. Sibu, Sarawak, Malaysia.">
   <meta name="theme-color" content="#0c1424">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -44,7 +44,7 @@
         <a href="solutions.html">Solutions</a>
         <a href="about.html">About</a>
         <a href="contact.html" aria-current="page">Contact</a>
-        <a class="btn btn-primary" href="mailto:elijah@drelijah.org?subject=Scoping%20call">Book a call</a>
+        <a class="btn btn-primary" href="#book">Book a call</a>
       </nav>
     </div>
   </header>
@@ -61,12 +61,101 @@
 
     <section class="section">
       <div class="wrap contact-grid">
-        <div class="contact-panel">
-          <p class="kicker">Direct</p>
-          <h2>Email</h2>
-          <a class="email-xl" href="mailto:elijah@drelijah.org?subject=Scoping%20call">elijah@drelijah.org</a>
-          <p>That is the primary door. Use it to book the call, ask about a cohort, or enquire about 1:1 coaching.</p>
-          <p><a class="btn btn-primary" href="mailto:elijah@drelijah.org?subject=Scoping%20call">Open an email to book</a></p>
+        <div class="contact-panel" id="book">
+          <p class="kicker">Book the call</p>
+          <h2>Tell me what you are facing</h2>
+          <p class="disclaimer">All three solutions are preventative and non-clinical. If what you need is clinical therapy, psychiatric evaluation, or medical counselling, this is not that door.</p>
+
+          <div class="form-notice is-success" data-enquiry-sent hidden role="status">
+            <strong>Thank you — your request is in.</strong>
+            Elijah will reply within three working days.
+          </div>
+          <div class="form-notice is-error" data-enquiry-error hidden role="alert">
+            <strong>That did not go through.</strong>
+            <span data-enquiry-error-text>Please check the form and try again.</span>
+            Or email <a href="mailto:elijah@drelijah.org?subject=Scoping%20call">elijah@drelijah.org</a>.
+          </div>
+
+          <!-- Posts to the enquiry endpoint on big5.drelijah.org, which saves the
+               request and sends a Telegram alert, then redirects back here.
+               To switch on Cloudflare Turnstile, put its site key in
+               data-turnstile-sitekey and set TURNSTILE_SECRET on the b5 Worker. -->
+          <form class="enquiry-form" data-enquiry-form data-turnstile-sitekey=""
+                action="https://big5.drelijah.org/api/enquiry" method="post">
+            <input type="hidden" name="from" value="">
+            <input type="hidden" name="started" value="">
+            <div class="hp" aria-hidden="true">
+              <label>Leave this empty <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+            </div>
+
+            <div class="field-row">
+              <label class="field">
+                <span>Name</span>
+                <input type="text" name="name" required maxlength="100" autocomplete="name">
+              </label>
+              <label class="field">
+                <span>Work email</span>
+                <input type="email" name="email" required maxlength="200" autocomplete="email">
+              </label>
+            </div>
+
+            <label class="field">
+              <span>Organisation <em>optional for 1:1 coaching</em></span>
+              <input type="text" name="organisation" maxlength="150" autocomplete="organization">
+            </label>
+
+            <label class="field">
+              <span>What do you need?</span>
+              <select name="need" required>
+                <option value="" disabled selected>Choose one</option>
+                <option value="prisma">PRisMA compliance (Stage I / II / III)</option>
+                <option value="resilience">Workplace Resilience training (half-day, includes LEO26)</option>
+                <option value="leadership">Earned Leadership™</option>
+                <option value="coaching">1:1 executive, leadership or career coaching</option>
+                <option value="unsure">Not sure yet — help me decide</option>
+              </select>
+            </label>
+
+            <div class="field-row">
+              <label class="field">
+                <span>Size <em>optional</em></span>
+                <select name="size">
+                  <option value="">—</option>
+                  <option value="me">Just me (coaching)</option>
+                  <option value="under-30">Under 30 people</option>
+                  <option value="30-100">30–100</option>
+                  <option value="100-500">100–500</option>
+                  <option value="500-plus">500+</option>
+                </select>
+              </label>
+              <label class="field">
+                <span>HRD Corp claimable? <em>optional</em></span>
+                <select name="hrd">
+                  <option value="">—</option>
+                  <option value="yes">Yes</option>
+                  <option value="no">No</option>
+                  <option value="unsure">Not sure</option>
+                </select>
+              </label>
+            </div>
+
+            <label class="field">
+              <span>What are you facing? <em>optional</em></span>
+              <textarea name="message" rows="3" maxlength="2000" placeholder="A DOSH expectation, a leadership bench under strain, a team holding on by habit, or one executive."></textarea>
+            </label>
+
+            <label class="field">
+              <span>Phone / WhatsApp <em>optional</em></span>
+              <input type="tel" name="phone" maxlength="40" autocomplete="tel">
+            </label>
+
+            <div data-turnstile-slot></div>
+
+            <button class="btn btn-primary" type="submit">Request the scoping call</button>
+            <p class="form-note">Elijah will reply within three working days. Your details are used only to respond to this request — see the <a href="privacy.html">privacy notice</a>.</p>
+          </form>
+
+          <p class="form-alt">Prefer email? <a href="mailto:elijah@drelijah.org?subject=Scoping%20call">elijah@drelijah.org</a></p>
         </div>
         <div class="prose">
           <h2>What the half-hour is for</h2>
@@ -78,7 +167,6 @@
           </ul>
           <h2>Who should write</h2>
           <p>HR and L&amp;D leads, OSH practitioners, employers and board members, and executives booking coaching for themselves or for someone they sponsor.</p>
-          <p class="disclaimer">All three solutions are preventative and non-clinical. If what you need is clinical therapy, psychiatric evaluation, or medical counselling, this is not that door — and the call will say so plainly.</p>
         </div>
       </div>
     </section>
@@ -98,14 +186,14 @@
             <li><a href="earned-leadership.html">Earned Leadership™</a></li>
             <li><a href="workplace-resilience.html">Workplace Resilience Training</a></li>
             <li><a href="prisma.html">PRisMA OSH Compliance</a></li>
-            <li><a href="contact.html">1:1 Executive Coaching</a></li>
+            <li><a href="contact.html?need=coaching#book">1:1 Executive Coaching</a></li>
           </ul>
         </div>
         <div>
           <h2>Practice</h2>
           <ul class="foot-nav">
             <li><a href="about.html">About the practitioner</a></li>
-            <li><a href="contact.html">Book a 30-minute scoping call</a></li>
+            <li><a href="#book">Book a 30-minute scoping call</a></li>
             <li>DOSH PTP/ASV-053/26</li>
             <li>HRD Corp Accredited Trainer</li>
           </ul>
@@ -113,7 +201,7 @@
       </div>
       <div class="foot-bottom">
         <span>© 2026 Elijah Ting, ED – L&D. All three solutions are preventative and non-clinical.</span>
-        <span>drelijah.org</span>
+        <span><a href="privacy.html">Privacy</a> · drelijah.org</span>
       </div>
     </div>
   </footer>

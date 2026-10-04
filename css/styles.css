@@ -818,3 +818,38 @@ p:last-child { margin-bottom: 0; }
   clip: rect(0,0,0,0);
   border: 0;
 }
+
+/* Scoping-call form (contact page) */
+.enquiry-form { display: grid; gap: 1rem; margin-top: 1.2rem; }
+.field-row { display: grid; gap: 1rem; }
+@media (min-width: 560px) {
+  .field-row { grid-template-columns: 1fr 1fr; }
+}
+.field { display: grid; gap: 0.35rem; font-weight: 600; font-size: 0.95rem; color: var(--ink); }
+.field em { font-style: normal; font-weight: 400; color: var(--muted-2); font-size: 0.85rem; margin-left: 0.3rem; }
+.field input,
+.field select,
+.field textarea {
+  font: 400 1rem/1.4 var(--sans);
+  color: var(--ink);
+  background: var(--cream);
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  padding: 0.65rem 0.75rem;
+  width: 100%;
+}
+.field textarea { resize: vertical; min-height: 5.5rem; }
+.field input:focus-visible,
+.field select:focus-visible,
+.field textarea:focus-visible { outline: 2px solid var(--focus); outline-offset: 1px; border-color: var(--gold); }
+.enquiry-form .btn { justify-self: start; cursor: pointer; }
+.enquiry-form .btn[disabled] { opacity: 0.6; cursor: progress; }
+.form-note, .form-alt { font-size: 0.9rem; color: var(--muted); margin: 0; }
+.form-alt { margin-top: 1.2rem; }
+.form-note a, .form-alt a { color: var(--navy); }
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.form-notice { padding: 0.9rem 1rem; margin: 1rem 0 0; border-left: 3px solid; background: var(--cream); }
+.form-notice strong { display: block; color: var(--ink); }
+.form-notice.is-success { border-color: var(--gold); }
+.form-notice.is-error { border-color: #a3543a; }
+.enquiry-form[hidden], .form-notice[hidden] { display: none; }
