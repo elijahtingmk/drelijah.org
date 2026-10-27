@@ -1,4 +1,4 @@
-# Elijah Ting, ED – L&D — website redesign (publish-ready)
+# Dr Elijah Ting, ED – L&D — website redesign (publish-ready)
 
 Static marketing site for [drelijah.org](https://drelijah.org). Cream / navy / gold design system. English only. No build step.
 
